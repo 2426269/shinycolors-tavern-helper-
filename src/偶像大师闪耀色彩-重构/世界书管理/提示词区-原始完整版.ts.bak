@@ -1,0 +1,583 @@
+/**
+ * 提示词区
+ * 负责为不同AI生成模式提供提示词框架
+ */
+
+/**
+ * 提示词模式枚举
+ */
+export enum PromptMode {
+  /** 技能卡生成模式 */
+  SKILL_CARD_GENERATION = 'skill_card_generation',
+}
+
+/**
+ * 提示词变量接口（用于动态替换）
+ */
+export interface PromptVariables {
+  /** 角色名称 */
+  characterName?: string;
+  /** 卡牌稀有度 */
+  rarity?: string;
+  /** 培育计划 */
+  producePlan?: string;
+  /** 推荐打法 */
+  recommendedStyle?: string;
+  /** 示例卡牌列表（Markdown表格） */
+  exampleCards?: string;
+  /** 卡牌主题/概念 */
+  theme?: string;
+  /** 培育计划机制说明（Markdown格式） */
+  producePlanMechanic?: string;
+}
+
+/**
+ * 提示词管理器
+ */
+export class PromptManager {
+  /**
+   * 技能卡生成提示词框架
+   */
+  static getSkillCardGenerationPrompt(): string {
+    return `# 技能卡生成系统
+
+## 🎯 你的角色
+你是《偶像大师 闪耀色彩》的技能卡设计师，精通**类《学园偶像大师》卡牌机制**的游戏设计和平衡性。本游戏采用卡牌战斗系统，通过技能卡、P饮料、Buff系统来实现培育和比赛玩法。
+
+## 📋 任务说明
+根据角色信息和示例卡牌，为指定角色生成一张**专属技能卡**。
+
+### 当前角色信息
+- **角色名称**: {{characterName}}
+- **卡牌稀有度**: {{rarity}}
+- **培育计划**: {{producePlan}}
+- **推荐打法**: {{recommendedStyle}}
+- **卡牌主题**: {{theme}}
+
+## 📖 游戏术语标准翻译表（⚠️ 必须严格遵守）
+
+#### 基础属性
+| 日文 | 中文翻译 | 说明 |
+|------|---------|------|
+| パラメータ | 数值 | 指打出的分数 |
+| 体力 | 体力 | 消耗资源 |
+| 元気 | 元气 | 状态资源 |
+| やる気 | 干劲 | 状态资源 |
+| 好印象 | 好印象 | 状态资源 |
+| 集中 | 集中 | 状态资源 |
+| 全力値 | 全力值 | 状态资源 |
+| スコア | 得分 | 最终演出得分 |
+
+#### 状态效果
+| 日文 | 中文翻译 |
+|------|---------|
+| 好調 | 好调 |
+| 絶好調 | 状态绝佳 |
+| 温存 | 温存 |
+| 強気 | 强气 |
+| 消費体力減少 | 消费体力减少 |
+| 消費体力削減 | 消费体力削减 |
+
+#### 通用术语
+| 日文 | 中文翻译 |
+|------|---------|
+| レッスン中 | 演出中 |
+| ターン | 回合 |
+| 重複不可 | 不可重复 |
+| 使用可能 | 可重复获得 |
+
+## 🎨 设计原则
+
+### 1️⃣ 技能卡类型说明
+
+**⚠️ 关键区别**：
+- **A卡（主动/Active/アクティブ）**：**必须包含パラメータ+X（数值+X）**，可以额外附加其他效果（元气、好印象等）
+- **M卡（精神/Mental/メンタル）**：**不包含数值**，仅提供加成效果（元気、好印象、やる気、集中、全力値、好調等）
+- **T卡（陷阱/Trap）**：提供负面效果
+
+### 2️⃣ 强度设计原则（⚠️ 核心要点）
+
+**强度平衡完全依据示例卡**：
+- **参考同稀有度示例卡**：学习它们的效果强度、成本设计、机制复杂度
+- **参考低稀有度示例卡**：确保你的设计明显更强
+- **参考高稀有度对比卡**（如有）：确保不会过强或过弱
+- **UR卡特别注意**：必须在数值、机制、协同性三方面全面超越所有SSR示例卡
+
+### 3️⃣ 培育计划特色与核心机制（⚠️ 必须严格遵守）
+
+**当前培育计划**：{{producePlan}}
+
+{{producePlanMechanic}}
+
+**⚠️ 重要规则**：
+- **必须优先使用当前培育计划的专属效果**（如：感性用好调/集中，理性用好印象/干劲，非凡用全力/强气/温存）
+- **禁止混用其他计划的核心效果**（如：感性卡不能用好印象/干劲，理性卡不能用好调/集中）
+- **可以使用通用效果**（如：体力回复、元气增加、技能卡使用数追加等）
+- **效果必须符合计划的玩法特点**（如：感性=爆发，理性=持续，非凡=灵活切换）
+
+### 4️⃣ 命名与输出格式规范（⚠️ 严格要求）
+
+**命名规范**：
+- **日文名**（nameJP）：符合偶像大师风格，优雅且富有意境
+- **中文名**（nameCN）：准确传达技能含义，易于理解
+
+**效果文本规范（重要）**：
+- ✅ **effect 和 effectEnhanced 字段必须使用纯中文**
+- ✅ 使用标准翻译表中的术语（数值、元气、好印象、干劲等）
+- ✅ 效果描述简洁明确，数值明确
+- ✅ 格式示例："数值+10 元气+2 体力回复2 ※演出中限1次 不可重复"
+- ❌ 禁止使用日文（如：パラメータ、元気、やる気等）
+
+**使用限制说明（重要）**：
+- **重複不可**：卡组里只能有一张这个卡（不可重复获得）
+- **使用可能**（可重复获得）：卡组可以有多个这个卡
+- **演出中限1次**（レッスン中1回）：一场演出中只能使用一次，使用后进入"除外"堆，下一次演出依旧可用
+- **无演出中限制**：可以多次使用，使用后进入"弃牌堆"，可以再次抽取使用
+- **回合限制**：如"此效果期间，每回合1回"
+- ⚠️ **不要所有卡都设计成"演出中限1次"** - 根据稀有度和效果强度灵活设计，低成本卡可以无限制
+
+**⚠️ 重要区别**：
+- A卡数量 ≈ M卡数量（大致相等）
+- A卡：直接增强数值（分数）
+- M卡：增强状态资源（用于触发其他效果）
+
+
+### 5️⃣ 效果文本格式要求
+**⚠️ 必须全部使用中文输出，禁止输出日文！**
+
+- ✅ 正确示例："数值+10 元气+3 体力回复2 ※演出中限1次 不可重复"
+- ❌ 错误示例："パラメータ+10 元気+3 体力回復2 ※レッスン中1回 重複不可"
+- 效果描述简洁明确
+- 数值明确，避免模糊表述
+- 使用上述标准术语翻译表
+
+## 📚 示例卡牌与强度系统
+
+### 示例卡的作用说明
+系统已根据你要生成的卡牌（**{{rarity}}级 - {{producePlan}}**）智能抽取了以下示例卡：
+
+**📊 抽取策略**：
+- **主示例卡（{{rarity}}级）**：提供设计参考，学习命名风格、效果格式、机制设计
+- **参考卡（低稀有度）**：提醒强度下限，你的设计必须明显强于这些卡
+- **对比卡（高稀有度）**：提醒强度上限，你的设计不能超过这些卡太多
+
+**⚠️ UR级特殊规则**：
+如果你要生成的是UR卡，下方将提供10张SSR卡作为参考。**你必须在所有方面超越这些SSR卡**：
+- 更高的效果数值（至少提升30-50%）
+- 更独特的机制（SSR没有的特殊效果）不可原创机制，仍使用现有的机制
+- 更强的培育计划协同性（与计划深度绑定的增益）
+
+---
+
+{{exampleCards}}
+
+---
+
+## ⚠️ 重要限制
+❌ **禁止事项**:
+- 禁止直接增加 V/D/V 属性（只能通过Buff间接提升）
+- 禁止超出稀有度对应的成本/效果范围
+- 禁止使用不符合世界观的命名
+
+✅ **必须包含**:
+- 日文和中文命名（nameJP和nameCN字段）
+- 明确的成本和稀有度
+- **强化前后两套完整的词条式效果**（effectEntries和effectEntriesEnhanced数组，每个数组至少包含1个效果词条）
+- 所有effect字段必须使用纯中文
+- 符合培育计划特色的独特效果
+
+⚠️ **严格禁止使用旧格式**：
+- ❌ 不要使用 "effect": "文本" 或 "effectEnhanced": "文本"
+- ✅ 必须使用 "effectEntries": [{icon, effect, isConsumption}, ...] 数组格式
+- ✅ 必须使用 "effectEntriesEnhanced": [{icon, effect, isConsumption}, ...] 数组格式
+
+## 📤 输出格式（⚠️ 词条式格式）
+
+**⚠️ 仅输出以下JSON格式，不要包含任何解释文字！**
+
+### 格式说明：使用词条式效果数组
+
+技能卡的效果必须以**词条数组**形式输出，每个效果单独一个词条对象。
+
+#### 效果词条对象字段说明：
+- **icon** (必填): 图标URL，根据效果类型自动匹配：
+  - 数值: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png\`
+  - 体力: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png\`
+  - 元气: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png\`
+  - 好印象: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png\`
+  - 干劲: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png\`
+  - 集中: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png\`
+  - 全力值: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png\`
+  - 好调: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png\`
+  - 状态绝佳: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png\`
+  - 强气: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png\`
+  - 温存: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png\`
+  - 消费体力减少: \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png\`
+  - 条件或其他无图标效果: \`""\`（空字符串）
+
+- **effect** (必填): 效果描述文本，必须使用纯中文，例如：
+  - "数值+10"
+  - "元气+3"
+  - "变更为强气2段"
+  - "下回合，变更为温存"
+  - "消费体力减少2回合"
+  - "全力时"（条件）
+
+- **isConsumption** (必填): 是否为消耗型效果，true或false
+
+#### 完整JSON格式字段说明：
+- **id**: 角色英文名_稀有度小写_exclusive
+- **nameJP**: 日文技能名
+- **nameCN**: 中文技能名
+- **type**: "主动"或"精神"
+- **rarity**: "N"或"R"或"SR"或"SSR"或"UR"
+- **cost**: 字符串（如："体力消耗2"、"元气消耗3"、"无消耗"）
+- **producePlan**: "感性"或"理性"或"非凡"或"自由"
+- **effectEntries**: 效果词条数组（强化前）
+- **effectEntriesEnhanced**: 效果词条数组（强化后）
+- **conditionalEffects**: 条件效果数组（可选，强化前）
+- **conditionalEffectsEnhanced**: 条件效果数组（可选，强化后）
+- **restrictions**: 限制信息对象
+  - **isDuplicatable**: true（可重复获得）或false（不可重复）
+  - **usesPerBattle**: 1（演出中限1次）或null（无限制）
+- **flavor**: 风味文本（可选）
+- **isExclusive**: true
+- **exclusiveCharacter**: 角色名
+
+⚠️ **重要**：
+1. 所有 effect 字段必须使用纯中文
+2. 不要添加JSON注释，不要使用 | 符号
+3. icon 字段根据效果类型填入完整URL
+4. 数值直接写在 effect 文本中（如"数值+10"）
+5. 条件类词条（如"全力时"）icon设为空字符串""
+
+### 📝 输出示例（完整有效的JSON格式）
+
+**示例1：理性计划SSR卡**
+\`\`\`json
+{
+  "id": "mayuzumi_fuyuko_ssr_exclusive",
+  "nameJP": "キラキラぺーパー",
+  "nameCN": "闪闪纸片",
+  "type": "主动",
+  "rarity": "SSR",
+  "cost": "无消耗",
+  "producePlan": "理性",
+  "effectEntries": [
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+      "effect": "干劲-3",
+      "isConsumption": true
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+      "effect": "数值+元气的110%",
+      "isConsumption": false
+    },
+    {
+      "icon": "",
+      "effect": "抽取1张技能卡",
+      "isConsumption": false
+    }
+  ],
+  "effectEntriesEnhanced": [
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+      "effect": "干劲-3",
+      "isConsumption": true
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+      "effect": "数值+元气的150%",
+      "isConsumption": false
+    },
+    {
+      "icon": "",
+      "effect": "抽取2张技能卡",
+      "isConsumption": false
+    }
+  ],
+  "restrictions": {
+    "isDuplicatable": false,
+    "usesPerBattle": null
+  },
+  "flavor": "在训练中闪烁的创意，化为舞台上的光芒。",
+  "isExclusive": true,
+  "exclusiveCharacter": "黛冬優子"
+}
+\`\`\`
+
+**示例2：感性计划SSR卡（含条件效果）**
+\`\`\`json
+{
+  "id": "nanakusa_nichika_ssr_exclusive",
+  "nameJP": "ほぐれるひととき",
+  "nameCN": "舒缓时刻",
+  "type": "精神",
+  "rarity": "SSR",
+  "cost": "无消耗",
+  "producePlan": "感性",
+  "effectEntries": [
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+      "effect": "好调-1",
+      "isConsumption": true
+    },
+    {
+      "icon": "",
+      "effect": "集中增加量+50%（3回合）",
+      "isConsumption": false
+    }
+  ],
+  "conditionalEffects": [
+    {
+      "icon": "",
+      "condition": "好调状态时",
+      "effect": "集中+4",
+      "isConsumption": false
+    }
+  ],
+  "effectEntriesEnhanced": [
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+      "effect": "好调-1",
+      "isConsumption": true
+    },
+    {
+      "icon": "",
+      "effect": "集中增加量+75%（3回合）",
+      "isConsumption": false
+    }
+  ],
+  "conditionalEffectsEnhanced": [
+    {
+      "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+      "condition": "好调状态时",
+      "effect": "集中+6",
+      "isConsumption": false
+    }
+  ],
+  "restrictions": {
+    "isDuplicatable": false,
+    "usesPerBattle": 1
+  },
+  "flavor": "舒缓身心，激发潜能的温柔时光。",
+  "isExclusive": true,
+  "exclusiveCharacter": "七草にちか"
+}
+\`\`\`
+
+**⚠️ 最终检查清单（生成前必须确认）**：
+1. ✅ effectEntries 数组必须包含至少1个效果词条（不能是空数组[]）
+2. ✅ effectEntriesEnhanced 数组必须包含至少1个效果词条（不能是空数组[]）
+3. ✅ 每个词条对象必须包含3个字段：icon（字符串）、effect（字符串）、isConsumption（布尔值）
+4. ✅ 所有 effect 字段的文本必须使用纯中文（禁止日文：パラメータ、元気、やる気等）
+5. ✅ 使用标准术语翻译表中的术语（数值、元气、好印象、干劲、集中、全力值等）
+6. ✅ 消耗型效果（如"干劲-3"）必须标记 isConsumption: true
+7. ✅ icon 字段必须填入完整的GitHub图标URL或空字符串""（不能省略此字段）
+8. ✅ restrictions 对象必须包含 isDuplicatable 和 usesPerBattle 两个字段
+
+## 🎯 开始生成
+请基于以上信息和**词条式格式要求**，为 **{{characterName}}** 生成一张 **{{rarity}}** 稀有度的专属技能卡。
+
+**再次强调**：effectEntries 和 effectEntriesEnhanced 数组绝对不能为空，必须包含具体的效果词条！
+`;
+  }
+
+  /**
+   * 替换提示词中的变量
+   * @param template 提示词模板
+   * @param variables 变量对象
+   * @returns 替换后的提示词
+   */
+  static replaceVariables(template: string, variables: PromptVariables): string {
+    let result = template;
+
+    // 替换所有变量
+    Object.entries(variables).forEach(([key, value]) => {
+      const placeholder = `{{${key}}}`;
+      result = result.replaceAll(placeholder, value || '');
+    });
+
+    // 清理未替换的占位符（替换为空或默认值）
+    result = result.replace(/\{\{[^}]+\}\}/g, '（未指定）');
+
+    return result;
+  }
+
+  /**
+   * 获取指定模式的提示词（优先使用自定义格式）
+   * @param mode 提示词模式
+   * @param variables 变量对象（可选）
+   * @returns 提示词内容
+   */
+  static getPrompt(mode: PromptMode, variables?: PromptVariables): string {
+    // 先尝试从全局变量读取自定义格式
+    try {
+      const globalVars = getVariables({ type: 'global' });
+      const customPromptKey = `prompt_template_${mode}`;
+      if (typeof globalVars[customPromptKey] === 'string' && globalVars[customPromptKey].trim()) {
+        console.log(`✅ 使用自定义提示词模板: ${mode}`);
+        const template = globalVars[customPromptKey];
+        return variables ? this.replaceVariables(template, variables) : template;
+      }
+    } catch (error) {
+      console.warn('⚠️ 读取自定义提示词模板失败，使用默认格式:', error);
+    }
+
+    // 如果没有自定义格式，使用默认格式
+    let template = '';
+    switch (mode) {
+      case PromptMode.SKILL_CARD_GENERATION:
+        template = this.getSkillCardGenerationPrompt();
+        break;
+      default:
+        console.error(`❌ 未知的提示词模式: ${mode}`);
+        return '';
+    }
+
+    return variables ? this.replaceVariables(template, variables) : template;
+  }
+
+  /**
+   * 获取指定模式的默认提示词模板（用于显示和恢复）
+   */
+  static getDefaultPrompt(mode: PromptMode): string {
+    switch (mode) {
+      case PromptMode.SKILL_CARD_GENERATION:
+        return this.getSkillCardGenerationPrompt();
+      default:
+        return '';
+    }
+  }
+
+  /**
+   * 获取模式对应的名称
+   */
+  private static getModeName(mode: PromptMode): string {
+    const modeNames: Record<PromptMode, string> = {
+      [PromptMode.SKILL_CARD_GENERATION]: '技能卡生成提示词',
+    };
+    return modeNames[mode] || '未知模式提示词';
+  }
+
+  /**
+   * 提示词框架的固定UID
+   */
+  private static readonly PROMPT_UID = 999999998; // 使用固定的大数字作为UID
+
+  /**
+   * 将提示词框架添加到/更新到世界书
+   * @param worldbookName 世界书名称
+   * @param mode 提示词模式
+   * @param variables 变量对象（可选，如果提供则填充后再添加）
+   * @returns Promise<void>
+   */
+  static async addPromptToWorldbook(
+    worldbookName: string,
+    mode: PromptMode,
+    variables?: PromptVariables,
+  ): Promise<void> {
+    const promptContent = this.getPrompt(mode, variables);
+    const modeName = this.getModeName(mode);
+
+    // 确保世界书存在
+    const worldbooks = getWorldbookNames();
+    if (!worldbooks.includes(worldbookName)) {
+      console.log(`📚 创建新世界书: ${worldbookName}`);
+      createWorldbook(worldbookName);
+    }
+
+    // 获取世界书内容
+    const worldbook = await getWorldbook(worldbookName);
+
+    // 检查条目是否已存在
+    const entryIndex = worldbook.findIndex(entry => entry.uid === this.PROMPT_UID);
+
+    const entry = {
+      name: `提示词框架（当前模式: ${modeName}）`,
+      content: promptContent,
+      uid: this.PROMPT_UID,
+      enabled: true,
+      strategy: {
+        type: 'constant' as const,
+        keys: [],
+        keys_secondary: {
+          logic: 'and_any' as const,
+          keys: [],
+        },
+        scan_depth: 'same_as_global' as const,
+      },
+      position: {
+        type: 'at_depth' as const,
+        role: 'system' as const,
+        depth: 0,
+        order: 200,
+      },
+      probability: 100,
+      recursion: {
+        prevent_incoming: true,
+        prevent_outgoing: true,
+        delay_until: null,
+      },
+      effect: {
+        sticky: null,
+        cooldown: null,
+        delay: null,
+      },
+      extra: {
+        entry_type: 'prompt_framework',
+        mode: mode,
+        current_mode: modeName,
+      },
+    };
+
+    if (entryIndex !== -1) {
+      // 更新现有条目
+      worldbook[entryIndex] = entry;
+      console.log(`🔄 更新提示词框架内容: ${modeName}`);
+    } else {
+      // 添加新条目
+      worldbook.push(entry);
+      console.log(`✨ 创建提示词框架条目: ${modeName}`);
+    }
+
+    replaceWorldbook(worldbookName, worldbook);
+  }
+
+  /**
+   * 初始化提示词框架到世界书（使用技能卡生成模式）
+   * @param worldbookName 世界书名称
+   * @returns Promise<void>
+   */
+  static async initializePromptToWorldbook(worldbookName: string): Promise<void> {
+    await this.addPromptToWorldbook(worldbookName, PromptMode.SKILL_CARD_GENERATION);
+    console.log(`🎉 提示词框架已初始化到世界书: ${worldbookName}`);
+  }
+
+  /**
+   * 从世界书中移除提示词框架
+   * @param worldbookName 世界书名称
+   * @returns Promise<void>
+   */
+  static async removePromptFromWorldbook(worldbookName: string): Promise<void> {
+    const worldbook = await getWorldbook(worldbookName);
+    const entryIndex = worldbook.findIndex(entry => entry.uid === this.PROMPT_UID);
+
+    if (entryIndex !== -1) {
+      worldbook.splice(entryIndex, 1);
+      replaceWorldbook(worldbookName, worldbook);
+      console.log('🗑️ 已从世界书移除提示词框架');
+    }
+  }
+
+  /**
+   * 检查提示词框架是否存在
+   * @param worldbookName 世界书名称
+   * @returns boolean
+   */
+  static async promptExistsInWorldbook(worldbookName: string): Promise<boolean> {
+    const worldbook = await getWorldbook(worldbookName);
+    return worldbook.some(entry => entry.uid === this.PROMPT_UID);
+  }
+}

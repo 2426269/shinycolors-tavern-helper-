@@ -1,0 +1,449 @@
+<template>
+  <div ref="spineContainer" class="spine-player-wrapper">
+    <canvas ref="canvasElement" class="spine-canvas"></canvas>
+  </div>
+</template>
+
+<script setup lang="ts">
+import * as PIXI from 'pixi.js';
+import { onMounted, onUnmounted, ref, watch } from 'vue';
+import { useSpineAnimationManager } from '../工具/spine-animation-manager';
+
+// Props
+const props = defineProps<{
+  idolId: string; // 改为 idolId 以匹配主页传递的 prop 名
+}>();
+
+// Refs
+const spineContainer = ref<HTMLDivElement | null>(null);
+const canvasElement = ref<HTMLCanvasElement | null>(null);
+
+// 状态
+let app: PIXI.Application | null = null;
+
+// 动画管理器
+const animationManager = useSpineAnimationManager();
+
+// 监听 idolId 变化
+watch(
+  () => props.idolId,
+  async newId => {
+    if (newId) {
+      await loadSpineAsset(newId);
+    }
+  },
+);
+
+// 组件挂载
+onMounted(async () => {
+  console.log('🎬 Spine 播放器组件挂载');
+
+  // 等待 v8-spine37.js 加载
+  await waitForSpine37();
+
+  // 初始化 PixiJS 应用
+  await initPixiApp();
+
+  // 加载初始 Spine 资源
+  if (props.idolId) {
+    await loadSpineAsset(props.idolId);
+  }
+});
+
+// 组件卸载
+onUnmounted(() => {
+  console.log('👋 Spine 播放器组件卸载');
+  if (app) {
+    app.destroy(true, { children: true, texture: true });
+  }
+});
+
+/**
+ * 等待 v8-spine37.js 加载完成
+ */
+async function waitForSpine37(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const checkInterval = setInterval(() => {
+      if ((window as any).PIXI?.Spine37) {
+        clearInterval(checkInterval);
+        console.log('✅ PIXI.Spine37 已加载');
+        resolve();
+      }
+    }, 100);
+
+    // 超时处理（5秒，因为脚本已直接打包）
+    setTimeout(() => {
+      clearInterval(checkInterval);
+      if (!(window as any).PIXI?.Spine37) {
+        console.error('❌ PIXI.Spine37 加载超时（5秒）');
+        console.error('window.PIXI:', (window as any).PIXI);
+        console.error('请检查 PixiJS 是否正确加载');
+        reject(new Error('PIXI.Spine37 加载超时'));
+      }
+    }, 5000);
+  });
+}
+
+/**
+ * 初始化 PixiJS 应用
+ */
+async function initPixiApp() {
+  if (!canvasElement.value) {
+    console.error('❌ Canvas 元素未找到');
+    return;
+  }
+
+  console.log('📦 初始化 PixiJS 应用...');
+
+  app = new PIXI.Application();
+  await app.init({
+    canvas: canvasElement.value,
+    width: canvasElement.value.clientWidth || 800,
+    height: canvasElement.value.clientHeight || 600,
+    backgroundColor: 0x000000,
+    backgroundAlpha: 0, // 透明背景
+  });
+
+  // 检查并注册 SpinePipe
+  const renderer = app.renderer as any;
+  console.log('📦 Renderer pipes:', Object.keys(renderer.renderPipes || {}));
+
+  if (!renderer.renderPipes?.spine) {
+    console.warn('⚠️ SpinePipe 未自动注册，尝试手动注册...');
+
+    // 从 PIXI.Spine37 获取 SpinePipe
+    const Spine37 = (window as any).PIXI.Spine37;
+    if (Spine37 && Spine37.SpinePipe) {
+      try {
+        // 手动实例化 SpinePipe
+        const spinePipe = new Spine37.SpinePipe(renderer);
+        renderer.renderPipes.spine = spinePipe;
+        console.log('✅ SpinePipe 手动注册成功');
+      } catch (error) {
+        console.error('❌ SpinePipe 手动注册失败:', error);
+      }
+    } else {
+      console.error('❌ PIXI.Spine37.SpinePipe 不存在');
+    }
+  } else {
+    console.log('✅ SpinePipe 已注册');
+  }
+
+  // 让 PixiJS 和 Spine 完全自动管理更新和渲染
+  let frameCount = 0;
+
+  app.ticker.add(() => {
+    // 每 60 帧打印一次调试信息
+    if (++frameCount % 60 === 0 && app) {
+      console.log('🎬 渲染帧:', frameCount, 'Stage children:', app.stage.children.length);
+    }
+  });
+
+  console.log('✅ PixiJS 应用初始化完成');
+}
+
+/**
+ * 加载 Spine 资源（手动加载，参考 ShinyColorsDB-SpineViewer 原项目）
+ */
+async function loadSpineAsset(idolId: string) {
+  if (!app) {
+    console.error('❌ PixiJS 应用未初始化');
+    return;
+  }
+
+  try {
+    console.log(`🎬 开始加载 Spine 资源: ${idolId}`);
+
+    // 解析 idolId
+    const [characterName, costumeName] = idolId.split('_');
+    // 使用 jsDelivr CDN + 最新 commit hash (0570c07 - 恢复原始 Spine 3.x 资源)
+    const baseUrl = `https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@0570c07/spine/${characterName}/${costumeName}`;
+
+    const skelUrl = `${baseUrl}/${costumeName}.json`;
+    const atlasUrl = `${baseUrl}/${costumeName}.atlas`;
+
+    console.log('📦 Skeleton URL:', skelUrl);
+    console.log('📦 Atlas URL:', atlasUrl);
+
+    // 手动加载 skeleton JSON 并注册到 Assets 系统
+    const skeletonResponse = await fetch(skelUrl);
+    const skeletonJson = await skeletonResponse.json();
+
+    // 使用 Assets.add() + cache.set() 的组合方式
+    PIXI.Assets.add({ alias: `skel_${idolId}`, src: `skel_${idolId}` });
+    PIXI.Assets.cache.set(`skel_${idolId}`, skeletonJson);
+    console.log('✅ Skeleton JSON 加载完成');
+
+    // 手动加载 atlas 文本并注册到 Assets 系统
+    const atlasResponse = await fetch(atlasUrl);
+    const atlasText = await atlasResponse.text();
+    console.log('✅ Atlas 文本加载完成');
+
+    // 创建 TextureAtlas（参考原项目 main.js createDropSpine 函数）
+    const Spine37 = (window as any).PIXI.Spine37;
+    const textureAtlas = new Spine37.TextureAtlas(atlasText);
+
+    // 使用 Assets.add() + cache.set() 的组合方式
+    PIXI.Assets.add({ alias: `atlas_${idolId}`, src: `atlas_${idolId}` });
+    PIXI.Assets.cache.set(`atlas_${idolId}`, textureAtlas);
+    console.log('✅ TextureAtlas 创建完成');
+
+    // 加载所有纹理页
+    const textureLoadingPromises = [];
+    for (const page of textureAtlas.pages) {
+      console.log(`📦 加载纹理: ${page.name}`);
+
+      const textureUrl = `${baseUrl}/${page.name}`;
+      const pixiPromise = PIXI.Assets.load({
+        alias: page.name,
+        src: textureUrl,
+        data: {
+          alphaMode: page.pma ? 'premultiplied-alpha' : 'premultiply-alpha-on-upload',
+        },
+      }).then(rawtexture => {
+        page.setTexture(Spine37.SpineTexture.from(rawtexture.source));
+        console.log(`✅ 纹理已设置: ${page.name}`);
+      });
+
+      textureLoadingPromises.push(pixiPromise);
+    }
+    await Promise.all(textureLoadingPromises);
+    console.log('✅ 所有纹理加载完成');
+
+    // 调试：检查缓存中的数据
+    const cachedSkel = PIXI.Assets.cache.get(`skel_${idolId}`);
+    console.log('🔍 缓存检查 - Assets.cache.get() Skeleton:', cachedSkel ? '✅' : '❌', cachedSkel);
+    console.log('🔍 缓存检查 - Skeleton.skeleton.spine:', cachedSkel?.skeleton?.spine);
+    console.log(
+      '🔍 缓存检查 - Skeleton.skins 类型:',
+      Array.isArray(cachedSkel?.skins) ? 'Array (Spine 4.x)' : 'Object (Spine 3.x)',
+    );
+
+    // 关键：检查 Assets.get() 是否能获取到数据（Spine.from() 内部使用的是这个）
+    const assetsGetSkel = PIXI.Assets.get(`skel_${idolId}`);
+    const assetsGetAtlas = PIXI.Assets.get(`atlas_${idolId}`);
+    console.log('🔍 关键检查 - Assets.get() Skeleton:', assetsGetSkel ? '✅' : '❌');
+    console.log('🔍 关键检查 - Assets.get() Atlas:', assetsGetAtlas ? '✅' : '❌');
+
+    console.log('🔧 尝试使用 Spine.from() 创建实例（参考项目方式）');
+
+    // 使用 Spine.from() - 这是参考项目使用的方式
+    let spine;
+    try {
+      spine = Spine37.Spine.from({
+        skeleton: `skel_${idolId}`,
+        atlas: `atlas_${idolId}`,
+      });
+      console.log('✅ Spine.from() 创建成功');
+    } catch (error) {
+      console.error('❌ Spine.from() 失败，回退到手动创建:', error);
+
+      // 回退：手动创建
+      const attachmentLoader = new Spine37.AtlasAttachmentLoader(assetsGetAtlas);
+      const parser = new Spine37.SkeletonJson(attachmentLoader);
+      parser.scale = 1;
+      const skeletonData = parser.readSkeletonData(assetsGetSkel);
+      spine = new Spine37.Spine({ skeletonData });
+      console.log('✅ 手动创建 Spine 成功（回退方式）');
+    }
+
+    console.log('✅ Spine 实例创建成功');
+    console.log('📦 Spine 渲染方法检查:', {
+      hasCollectRenderables: typeof spine.collectRenderables === 'function',
+      hasCollectRenderablesSimple: typeof spine.collectRenderablesSimple === 'function',
+      hasUpdate: typeof spine.update === 'function',
+    });
+
+    // 关键修复：从 Container 复制 collectRenderables，但修改以支持 Spine
+    if (!spine.collectRenderables) {
+      console.log('⚠️ Spine 缺少 collectRenderables 方法，从 Container 复制...');
+
+      const containerProto = (PIXI.Container as any).prototype;
+
+      // 从 Container 复制方法
+      spine.collectRenderables = containerProto.collectRenderables.bind(spine);
+      spine.collectRenderablesSimple = containerProto.collectRenderablesSimple.bind(spine);
+      spine.collectRenderablesWithEffects = containerProto.collectRenderablesWithEffects.bind(spine);
+
+      console.log('✅ 渲染方法已从 Container 复制');
+    }
+
+    console.log('📦 Spine 最终渲染方法状态:', {
+      hasCollectRenderables: typeof spine.collectRenderables === 'function',
+      hasCollectRenderablesSimple: typeof spine.collectRenderablesSimple === 'function',
+      hasUpdate: typeof spine.update === 'function',
+    });
+
+    console.log('📦 Spine 属性检查:', {
+      batched: spine.batched,
+      renderPipeId: spine.renderPipeId,
+      spineAttachmentsDirty: spine.spineAttachmentsDirty,
+      spineTexturesDirty: spine.spineTexturesDirty,
+      uid: spine.uid,
+    });
+
+    // 设置皮肤
+    try {
+      spine.skeleton.setSkinByName('normal');
+    } catch (e) {
+      spine.skeleton.setSkinByName('default');
+    }
+
+    // 初始化 Spine（参考 ShinyColorsDB-SpineViewer）
+    spine.skeleton.setToSetupPose();
+    console.log('✅ Spine 初始化完成（延迟调用 _validateAndTransformAttachments 到添加 stage 之后）');
+
+    // 获取动画列表
+    const animations = spine.skeleton.data.animations.map((anim: any) => anim.name);
+    console.log('🎬 可用动画列表:', animations);
+
+    // 播放默认动画
+    const defaultAnimation = 'wait';
+    if (animations.includes(defaultAnimation)) {
+      spine.state.setAnimation(0, defaultAnimation, true);
+      console.log(`▶️ 播放动画: ${defaultAnimation}`);
+    } else if (animations.length > 0) {
+      spine.state.setAnimation(0, animations[0], true);
+      console.log(`▶️ 播放动画: ${animations[0]}`);
+    }
+
+    // 再次 update 以应用动画
+    spine.update(0);
+
+    // 居中显示
+    renderToStage(spine);
+
+    // 绑定到动画管理器
+    animationManager.setSpine(spine);
+
+    console.log('✅ Spine 资源加载完成');
+  } catch (error) {
+    console.error('❌ Spine 加载失败:', error);
+  }
+}
+
+/**
+ * 渲染 Spine 到舞台（完全模拟参考项目 main.js line 530-560）
+ */
+function renderToStage(spine: any) {
+  if (!app) return;
+
+  const Spine37 = (window as any).PIXI.Spine37;
+
+  // 清空并重新添加
+  app.stage.removeChildren();
+
+  // 创建容器并添加 Spine（参考 main.js line 527-529）
+  const container = new PIXI.Container();
+  container.addChild(spine);
+
+  // 关键：在添加到 container 之后才调用 update(0)（参考 main.js line 541）
+  spine.update(0);
+
+  // 使用 createGraphics 获取准确的边界（参考 main.js line 543-545）
+  const graphics = new PIXI.Graphics();
+  graphics.alpha = 0;
+
+  const skeleton = spine.skeleton;
+  const slots = skeleton.slots;
+
+  for (let i = 0, len = slots.length; i < len; i++) {
+    const slot = slots[i];
+    if (!slot.bone.isActive) continue;
+
+    const attachment = slot.getAttachment();
+    if (attachment === null || !(attachment instanceof Spine37.MeshAttachment)) continue;
+
+    const meshAttachment = attachment;
+    const vertices = new Float32Array(meshAttachment.worldVerticesLength);
+    meshAttachment.computeWorldVertices(slot, 0, meshAttachment.worldVerticesLength, vertices, 0, 2);
+
+    // 绘制顶点路径以计算边界（PixiJS v8 方式）
+    // 将 Float32Array 转换为 {x, y} 坐标数组
+    const points: Array<{ x: number; y: number }> = [];
+    for (let j = 0; j < vertices.length; j += 2) {
+      points.push({ x: vertices[j], y: vertices[j + 1] });
+    }
+
+    graphics.poly(points);
+    graphics.fill({ color: 0x000000, alpha: 0 });
+  }
+
+  const gpBound = graphics.getLocalBounds();
+  console.log('📦 createGraphics bounds:', gpBound);
+
+  // 关键：设置 Spine 位置（参考 main.js line 546）
+  spine.position.set(-gpBound.x, -gpBound.y);
+
+  // 计算缩放（参考 main.js line 534-542）
+  const scale =
+    Math.min(
+      app.canvas.width / Math.max(skeleton.data.width, gpBound.width),
+      app.canvas.height / Math.max(skeleton.data.height, gpBound.height),
+    ) * 0.8;
+
+  container.scale.set(scale);
+
+  // 居中容器（参考 main.js line 556-558）
+  const contBounds = container.getLocalBounds();
+  container.pivot.set(contBounds.width / 2, contBounds.height / 2);
+  container.position.set(app.canvas.width / 2, app.canvas.height / 2);
+
+  // 添加容器到舞台
+  app.stage.addChild(container);
+
+  console.log('✅ Spine 已渲染到舞台');
+  console.log('📐 Canvas 尺寸:', { width: app.canvas.width, height: app.canvas.height });
+  console.log('📐 Graphics bounds:', gpBound);
+  console.log('📐 Container 缩放:', scale);
+  console.log('📐 Container 位置:', container.position);
+  console.log('📐 Spine 位置:', spine.position);
+  console.log('📐 Spine visible:', spine.visible, 'alpha:', spine.alpha);
+  console.log('📐 Container visible:', container.visible, 'alpha:', container.alpha);
+  console.log('📐 Spine children count:', spine.children ? spine.children.length : 'no children property');
+  console.log('📐 Container children count:', container.children.length);
+  console.log('📐 Container bounds:', container.getBounds());
+  console.log('📐 Stage children:', app.stage.children.length);
+
+  // 检查 SpinePipe 和渲染数据
+  const spinePipe = (app.renderer as any).renderPipes?.spine;
+  if (spinePipe) {
+    console.log('📦 SpinePipe 存在');
+    console.log('📦 Spine.uid:', spine.uid);
+    console.log('📦 Spine.renderPipeId:', spine.renderPipeId);
+    console.log('📦 Spine.batched:', spine.batched);
+
+    // 不手动调用 addRenderable，让 PixiJS 的渲染管线自动处理
+    console.log('📦 让 PixiJS 自动处理渲染...');
+
+    // 强制触发一次完整的渲染循环
+    app.renderer.render(app.stage);
+
+    // 检查渲染后的 GPU 数据
+    const gpuData = spinePipe.gpuSpineData?.[spine.uid];
+    console.log('📦 渲染后 GPU 数据:', gpuData);
+    if (gpuData) {
+      console.log('📦 slotBatches keys:', Object.keys(gpuData.slotBatches || {}));
+      console.log('📦 slotBatches count:', Object.keys(gpuData.slotBatches || {}).length);
+    }
+  } else {
+    console.log('❌ SpinePipe 不存在！');
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.spine-player-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.spine-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative; /* 改为 relative */
+}
+</style>

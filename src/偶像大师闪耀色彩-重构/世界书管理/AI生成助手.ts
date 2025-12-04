@@ -1,0 +1,594 @@
+/**
+ * AI生成助手
+ * 集成世界书服务和通信系统，提供完整的AI技能卡生成流程
+ */
+
+import { z } from 'zod';
+import type { ProducePlan, SkillCard, SkillCardRarity } from '../战斗/类型/技能卡类型';
+import { MessageService } from '../通信/消息服务';
+import { ChainOfThoughtManager } from './思维链区';
+import { PromptManager, type PromptVariables } from './提示词区';
+import { getFullMechanicExplanation, getProducePlanMechanicMarkdown } from './游戏机制数据库';
+import { ExampleCardSelector, type ExampleCardConfig } from './示例卡抽取区';
+
+/**
+ * 技能卡生成选项
+ */
+export interface SkillCardGenerationOptions {
+  /** 角色名称 */
+  characterName: string;
+  /** 卡牌稀有度 */
+  rarity: SkillCardRarity;
+  /** 培育计划 */
+  producePlan: ProducePlan;
+  /** 推荐打法（可选） */
+  recommendedStyle?: string;
+  /** 卡牌主题（可选） */
+  theme?: string;
+  /** 是否流式输出 */
+  streaming?: boolean;
+}
+
+/**
+ * 生成结果
+ */
+export interface GenerationResult {
+  /** 是否成功 */
+  success: boolean;
+  /** 生成的技能卡（如果成功） */
+  skillCard?: SkillCard;
+  /** 错误信息（如果失败） */
+  error?: string;
+  /** AI原始输出 */
+  rawOutput?: string;
+}
+
+/**
+ * 效果词条Schema（词条式格式）
+ */
+const EffectEntrySchema = z.object({
+  /** 图标URL */
+  icon: z.string(),
+  /** 效果描述（纯中文） */
+  effect: z.string(),
+  /** 是否为消耗型效果 */
+  isConsumption: z.boolean(),
+});
+
+/**
+ * 条件效果Schema（词条式格式）
+ */
+const ConditionalEffectEntrySchema = z.object({
+  /** 图标URL */
+  icon: z.string(),
+  /** 触发条件 */
+  condition: z.string(),
+  /** 效果描述（纯中文） */
+  effect: z.string(),
+  /** 是否为消耗型效果 */
+  isConsumption: z.boolean(),
+});
+
+/**
+ * 限制信息Schema
+ */
+const CardRestrictionsSchema = z.object({
+  /** 是否可重复获得 */
+  isDuplicatable: z.boolean(),
+  /** 演出中使用限制（1或null） */
+  usesPerBattle: z.union([z.literal(1), z.null()]),
+});
+
+/**
+ * 技能卡JSON Schema（Zod验证 - 词条式格式）
+ * ⚠️ 注意：这是AI生成的临时格式，需要转换为战斗系统的 SkillCard 格式
+ */
+const AIGeneratedSkillCardSchema = z.object({
+  id: z.string(),
+  nameJP: z.string(),
+  nameCN: z.string(),
+  type: z.enum(['主动', '精神', '陷阱']),
+  rarity: z.enum(['N', 'R', 'SR', 'SSR', 'UR']),
+  cost: z.string(),
+  producePlan: z.enum(['感性', '理性', '非凡', '自由']),
+
+  // 词条式效果（必须是非空数组）
+  effectEntries: z.array(EffectEntrySchema).min(1, '效果词条不能为空数组'),
+  effectEntriesEnhanced: z.array(EffectEntrySchema).min(1, '强化效果词条不能为空数组'),
+
+  // 条件效果（可选，但如果提供则必须是数组）
+  conditionalEffects: z.array(ConditionalEffectEntrySchema).optional().default([]),
+  conditionalEffectsEnhanced: z.array(ConditionalEffectEntrySchema).optional().default([]),
+
+  // 限制信息
+  restrictions: CardRestrictionsSchema,
+
+  // 风味文本（可选）
+  flavor: z.string().optional(),
+
+  // 专属标识
+  isExclusive: z.boolean().optional(),
+  exclusiveCharacter: z.string().optional(),
+});
+
+/**
+ * AI生成的临时技能卡类型
+ */
+type AIGeneratedSkillCard = z.infer<typeof AIGeneratedSkillCardSchema>;
+
+/**
+ * AI生成助手类
+ */
+export class AIGenerationAssistant {
+  private messageService: MessageService;
+
+  constructor() {
+    this.messageService = new MessageService();
+  }
+
+  /**
+   * 初始化助手
+   */
+  async initialize(): Promise<void> {
+    console.log('🤖 初始化AI生成助手...');
+    console.log('✅ AI生成助手初始化完成（使用内置数据库）！');
+  }
+
+  /**
+   * 组装完整的系统提示词
+   * @param options 生成选项
+   * @returns 完整的系统提示词
+   */
+  private assembleSystemPrompt(options: SkillCardGenerationOptions): string {
+    const { characterName, rarity, producePlan, recommendedStyle, theme } = options;
+
+    const promptParts: string[] = [];
+
+    // 1. 思维链（Chain of Thought）
+    const chainOfThought = ChainOfThoughtManager.getChain('skill_card_generation');
+    promptParts.push('# 技能卡生成思维链\n\n' + chainOfThought);
+
+    // 2. 提示词框架
+    const promptVariables: PromptVariables = {
+      characterName,
+      rarity,
+      producePlan,
+      recommendedStyle: recommendedStyle || this.getDefaultRecommendedStyle(producePlan),
+      theme: theme || this.getDefaultTheme(characterName, rarity),
+      producePlanMechanic: getProducePlanMechanicMarkdown(producePlan),
+    };
+    const promptFramework = PromptManager.getPrompt('skill_card_generation', promptVariables);
+    promptParts.push('\n\n# 技能卡生成要求\n\n' + promptFramework);
+
+    // 3. 完整的游戏机制说明（只包含当前培育计划的相关内容）
+    const fullMechanicExplanation = getFullMechanicExplanation(producePlan);
+    promptParts.push('\n\n# 游戏机制详细说明\n\n' + fullMechanicExplanation);
+
+    // 4. 示例卡片
+    const exampleConfig: ExampleCardConfig = {
+      targetRarity: rarity,
+      targetPlan: producePlan,
+    };
+    const exampleResult = ExampleCardSelector.selectExampleCards(exampleConfig);
+    const exampleMarkdown = ExampleCardSelector.formatAsMarkdown(exampleResult, rarity);
+    promptParts.push('\n\n# 示例技能卡参考\n\n' + exampleMarkdown);
+
+    return promptParts.join('\n');
+  }
+
+  /**
+   * 生成技能卡
+   * @param options 生成选项
+   * @returns Promise<GenerationResult>
+   */
+  async generateSkillCard(options: SkillCardGenerationOptions): Promise<GenerationResult> {
+    const { characterName, rarity, producePlan, streaming = true } = options;
+
+    console.log('🎨 开始生成技能卡...', { characterName, rarity, producePlan });
+
+    try {
+      // 1. 组装系统提示词
+      console.log('📚 组装系统提示词...');
+      const systemPrompt = this.assembleSystemPrompt(options);
+      console.log(`✅ 系统提示词已组装，长度: ${systemPrompt.length} 字符`);
+
+      // 2. 调用AI生成
+      console.log('🤖 调用AI生成...');
+      const aiOutput = await this.callAI(characterName, systemPrompt, streaming);
+
+      // 调试：保存原始输出
+      console.log('📝 AI原始输出（前500字符）:', aiOutput.substring(0, 500));
+      (window as any).__lastAIOutput = aiOutput; // 保存到全局变量供调试
+
+      // 3. 解析JSON
+      console.log('🔍 解析AI输出...');
+      const aiCard = this.parseSkillCardJSON(aiOutput);
+
+      if (!aiCard) {
+        return {
+          success: false,
+          error: 'AI输出格式不正确，无法解析为技能卡',
+          rawOutput: aiOutput,
+        };
+      }
+
+      // 调试日志：输出解析后的完整数据
+      console.log('📦 解析后的AI卡片数据（完整对象）:', aiCard);
+      console.log('📋 数据结构分析:', {
+        hasId: !!aiCard.id,
+        hasNameJP: !!aiCard.nameJP,
+        hasNameCN: !!aiCard.nameCN,
+        hasType: !!aiCard.type,
+        hasRarity: !!aiCard.rarity,
+        hasCost: !!aiCard.cost,
+        hasProducePlan: !!aiCard.producePlan,
+        effectEntriesType: Array.isArray(aiCard.effectEntries) ? 'array' : typeof aiCard.effectEntries,
+        effectEntriesLength: aiCard.effectEntries?.length,
+        effectEntriesEnhancedType: Array.isArray(aiCard.effectEntriesEnhanced)
+          ? 'array'
+          : typeof aiCard.effectEntriesEnhanced,
+        effectEntriesEnhancedLength: aiCard.effectEntriesEnhanced?.length,
+        hasConditionalEffects: !!aiCard.conditionalEffects,
+        hasRestrictions: !!aiCard.restrictions,
+        restrictionsType: typeof aiCard.restrictions,
+      });
+
+      if (aiCard.effectEntries && aiCard.effectEntries.length > 0) {
+        console.log('📋 第一个效果词条:', aiCard.effectEntries[0]);
+      } else {
+        console.warn('⚠️ effectEntries 为空或不存在！');
+      }
+
+      // 保存解析后的数据供调试
+      (window as any).__lastParsedCard = aiCard;
+
+      // 4. 验证AI生成的技能卡
+      console.log('✅ 验证技能卡格式...');
+      const validatedAICard = this.validateSkillCard(aiCard);
+
+      // 5. 转换为战斗系统的SkillCard格式
+      console.log('🔄 转换为战斗系统格式...');
+      const skillCard = this.convertToSkillCard(validatedAICard, characterName);
+
+      console.log('🎉 技能卡生成成功！', skillCard);
+
+      return {
+        success: true,
+        skillCard: skillCard,
+        rawOutput: aiOutput,
+      };
+    } catch (error) {
+      console.error('❌ 技能卡生成失败:', error);
+
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : String(error),
+      };
+    }
+  }
+
+  /**
+   * 调用AI生成
+   *
+   * ⚠️ 【重要】生卡系统使用独立Bot
+   *
+   * 本函数使用 `generateRaw()` 而不是 `generate()`，原因：
+   * 1. 技能卡生成需要严格遵循游戏规则和平衡性
+   * 2. 不应该受到用户外部预设（角色卡、人设、Jailbreak等）的影响
+   * 3. 不应该受到用户自行添加的世界书的影响
+   * 4. 确保每次生成都基于相同的提示词框架，保证质量一致性
+   *
+   * ✅ 其他系统（如通信系统、培育事件等）使用正常的 `generate()`
+   *    这些系统需要使用用户的预设和世界书来提供个性化体验
+   *
+   * @param characterName 角色名称
+   * @param systemPrompt 系统提示词（从内置数据库组装）
+   * @param streaming 是否流式输出
+   * @returns Promise<string> AI输出
+   */
+  private async callAI(characterName: string, systemPrompt: string, streaming: boolean): Promise<string> {
+    const userInput = `请为 ${characterName} 生成一张专属技能卡。`;
+
+    console.log('📤 发送请求到AI...');
+    console.log('  用户输入:', userInput);
+    console.log('  系统提示词长度:', systemPrompt.length, '字符');
+
+    // 使用 generateRaw 实现独立生成Bot，手动传递内置系统提示词
+    const response = await window.TavernHelper.generateRaw({
+      user_input: userInput,
+      should_stream: streaming,
+      // ✅ 手动传递内置的系统提示词（思维链、提示词框架、示例卡、游戏机制）
+      ordered_prompts: [
+        {
+          identifier: 'skill_card_generation_system',
+          role: 'system',
+          content: systemPrompt,
+          enabled: true,
+        },
+      ],
+      // 不使用聊天历史，确保每次生成都是独立的
+      max_chat_history: 0,
+    });
+
+    if (!response) {
+      throw new Error('AI未返回有效响应');
+    }
+
+    console.log('📥 AI响应长度:', response.length, '字符');
+
+    return response;
+  }
+
+  /**
+   * 解析技能卡JSON
+   * @param aiOutput AI输出
+   * @returns AIGeneratedSkillCard | null
+   */
+  private parseSkillCardJSON(aiOutput: string): AIGeneratedSkillCard | null {
+    try {
+      // 尝试提取JSON代码块
+      const jsonMatch = aiOutput.match(/```json\s*([\s\S]*?)\s*```/);
+      if (jsonMatch) {
+        const json = JSON.parse(jsonMatch[1]);
+        return json as AIGeneratedSkillCard;
+      }
+
+      // 尝试提取裸JSON（以 { 开头，} 结尾）
+      const bareJsonMatch = aiOutput.match(/\{[\s\S]*\}/);
+      if (bareJsonMatch) {
+        const json = JSON.parse(bareJsonMatch[0]);
+        return json as AIGeneratedSkillCard;
+      }
+
+      console.error('❌ 无法从AI输出中提取JSON');
+      return null;
+    } catch (error) {
+      console.error('❌ JSON解析失败:', error);
+      return null;
+    }
+  }
+
+  /**
+   * 验证技能卡（使用Zod）
+   * @param skillCard 技能卡对象
+   * @returns AIGeneratedSkillCard
+   */
+  private validateSkillCard(skillCard: any): AIGeneratedSkillCard {
+    try {
+      const validated = AIGeneratedSkillCardSchema.parse(skillCard);
+      console.log('✅ 技能卡验证通过');
+      return validated;
+    } catch (error) {
+      // 调试：输出完整的错误对象
+      console.error('❌ 技能卡验证失败（原始错误）:', error);
+      console.error('错误类型:', error?.constructor?.name);
+
+      if (error instanceof z.ZodError) {
+        console.error('❌ 技能卡验证失败（Zod错误）:', error.errors);
+
+        // 防御性编程：确保 error.errors 存在且是数组
+        const errors = Array.isArray(error.errors) ? error.errors : [];
+
+        if (errors.length === 0) {
+          console.error('⚠️ 警告：ZodError 但 errors 数组为空');
+        }
+
+        // 格式化错误信息
+        const errorMessages = errors
+          .map(err => {
+            const path = Array.isArray(err?.path) ? err.path.join('.') : 'unknown';
+            return `字段 "${path}": ${err?.message || '未知错误'}`;
+          })
+          .join('\n');
+
+        console.error('📋 格式化的错误信息:\n', errorMessages || '(无详细错误信息)');
+
+        // 检查是否缺少词条式格式字段
+        const hasOldFormat = skillCard.effect && skillCard.effectEnhanced;
+        const hasNewFormat = skillCard.effectEntries && skillCard.effectEntriesEnhanced;
+
+        let hint = '';
+        if (hasOldFormat && !hasNewFormat) {
+          hint =
+            '\n\n⚠️ 检测到旧格式输出！AI使用了 "effect" 和 "effectEnhanced" 字段，但新格式需要 "effectEntries" 和 "effectEntriesEnhanced" 数组。';
+        } else if (!hasNewFormat) {
+          hint = '\n\n⚠️ 缺少必需的词条式格式字段："effectEntries" 和 "effectEntriesEnhanced"。';
+        }
+
+        throw new Error(`技能卡格式验证失败:\n${errorMessages}${hint}`);
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * 将效果词条数组转换为纯文本（用于向后兼容）
+   * @param entries 效果词条数组
+   * @param conditionalEffects 条件效果数组（可选）
+   * @returns 效果文本
+   */
+  private convertEffectEntriesToText(
+    entries: z.infer<typeof EffectEntrySchema>[],
+    conditionalEffects?: z.infer<typeof ConditionalEffectEntrySchema>[],
+  ): string {
+    const parts: string[] = [];
+
+    // 转换基础效果（新词条式格式：直接使用effect字段）
+    if (entries && Array.isArray(entries)) {
+      entries.forEach(entry => {
+        if (entry && entry.effect) {
+          parts.push(entry.effect);
+        }
+      });
+    }
+
+    // 转换条件效果（新词条式格式）
+    if (conditionalEffects && Array.isArray(conditionalEffects)) {
+      conditionalEffects.forEach(ce => {
+        if (ce && ce.condition && ce.effect) {
+          parts.push(`${ce.condition} ${ce.effect}`);
+        }
+      });
+    }
+
+    return parts.join(' ');
+  }
+
+  /**
+   * 将AI生成的技能卡转换为战斗系统的SkillCard格式
+   * @param aiCard AI生成的技能卡
+   * @param characterName 角色名称
+   * @returns SkillCard
+   */
+  private convertToSkillCard(aiCard: AIGeneratedSkillCard, characterName: string): SkillCard {
+    // 类型映射
+    const cardType: SkillCard['cardType'] = aiCard.type === '主动' ? 'A' : aiCard.type === '精神' ? 'M' : 'T';
+
+    // 确保数组字段存在（防御性编程）
+    const effectEntries = Array.isArray(aiCard.effectEntries) ? aiCard.effectEntries : [];
+    const effectEntriesEnhanced = Array.isArray(aiCard.effectEntriesEnhanced) ? aiCard.effectEntriesEnhanced : [];
+    const conditionalEffects = Array.isArray(aiCard.conditionalEffects) ? aiCard.conditionalEffects : [];
+    const conditionalEffectsEnhanced = Array.isArray(aiCard.conditionalEffectsEnhanced)
+      ? aiCard.conditionalEffectsEnhanced
+      : [];
+
+    // 将词条式效果转换为文本（向后兼容）
+    const effect_before = this.convertEffectEntriesToText(effectEntries, conditionalEffects);
+    const effect_after = this.convertEffectEntriesToText(effectEntriesEnhanced, conditionalEffectsEnhanced);
+
+    // 添加限制信息到文本末尾
+    const restrictionText = [
+      !aiCard.restrictions?.isDuplicatable ? '不可重复' : '可重复获得',
+      aiCard.restrictions?.usesPerBattle === 1 ? '演出中限1次' : null,
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    return {
+      id: aiCard.id,
+      name: `${aiCard.nameJP} / ${aiCard.nameCN}`,
+      rarity: aiCard.rarity as SkillCardRarity,
+      plan: aiCard.producePlan as ProducePlan,
+      cardType,
+      cost: aiCard.cost,
+
+      // 旧格式（向后兼容）
+      effect_before: `${effect_before} ※${restrictionText}`,
+      effect_after: `${effect_after} ※${restrictionText}`,
+
+      // 新格式（词条式）
+      effectEntries,
+      effectEntriesEnhanced,
+      conditionalEffects,
+      conditionalEffectsEnhanced,
+      restrictions: aiCard.restrictions || { isDuplicatable: true, usesPerBattle: 0 },
+
+      // 其他字段
+      enhanced: false,
+      isExclusive: true,
+      bindingCardId: characterName, // 使用角色名作为绑定标识
+      flavor: aiCard.flavor,
+    };
+  }
+
+  /**
+   * 获取默认推荐打法
+   */
+  private getDefaultRecommendedStyle(plan: ProducePlan): string {
+    const styleMap: Record<ProducePlan, string> = {
+      感性: '得分型',
+      理性: '属性型',
+      非凡: '爆发型',
+      自由: '灵活型',
+    };
+    return styleMap[plan] || '均衡型';
+  }
+
+  /**
+   * 获取默认主题
+   */
+  private getDefaultTheme(characterName: string, rarity: SkillCardRarity): string {
+    const rarityThemes: Record<SkillCardRarity, string[]> = {
+      N: ['日常训练', '基础练习', '初次挑战'],
+      R: ['舞台练习', '技能提升', '团队合作'],
+      SR: ['正式演出', '突破极限', '全力以赴'],
+      SSR: ['梦想舞台', '闪耀时刻', '完美演绎'],
+      UR: ['传说时刻', '奇迹绽放', '超越极限'],
+    };
+
+    const themes = rarityThemes[rarity] || ['舞台表演'];
+    return themes[Math.floor(Math.random() * themes.length)];
+  }
+
+  /**
+   * 批量生成技能卡
+   * @param optionsList 生成选项列表
+   * @returns Promise<GenerationResult[]>
+   */
+  async batchGenerateSkillCards(optionsList: SkillCardGenerationOptions[]): Promise<GenerationResult[]> {
+    console.log(`🎨 开始批量生成 ${optionsList.length} 张技能卡...`);
+
+    const results: GenerationResult[] = [];
+
+    for (let i = 0; i < optionsList.length; i++) {
+      const options = optionsList[i];
+      console.log(`\n📝 生成第 ${i + 1}/${optionsList.length} 张卡...`);
+
+      const result = await this.generateSkillCard(options);
+      results.push(result);
+
+      // 每次生成后等待一段时间，避免请求过快
+      if (i < optionsList.length - 1) {
+        console.log('⏳ 等待2秒后继续...');
+        await new Promise(resolve => setTimeout(resolve, 2000));
+      }
+    }
+
+    const successCount = results.filter(r => r.success).length;
+    console.log(`\n✅ 批量生成完成！成功: ${successCount}/${optionsList.length}`);
+
+    return results;
+  }
+
+  /**
+   * 获取助手状态
+   */
+  getStatus(): {
+    messageService: boolean;
+  } {
+    return {
+      messageService: !!this.messageService,
+    };
+  }
+}
+
+/**
+ * 创建单例实例
+ */
+let assistantInstance: AIGenerationAssistant | null = null;
+
+/**
+ * 获取AI生成助手实例（单例模式）
+ */
+export function getAIAssistant(): AIGenerationAssistant {
+  if (!assistantInstance) {
+    assistantInstance = new AIGenerationAssistant();
+  }
+  return assistantInstance;
+}
+
+/**
+ * 快捷函数：生成技能卡
+ */
+export async function generateSkillCard(options: SkillCardGenerationOptions): Promise<GenerationResult> {
+  const assistant = getAIAssistant();
+  return await assistant.generateSkillCard(options);
+}
+
+/**
+ * 快捷函数：批量生成技能卡
+ */
+export async function batchGenerateSkillCards(optionsList: SkillCardGenerationOptions[]): Promise<GenerationResult[]> {
+  const assistant = getAIAssistant();
+  return await assistant.batchGenerateSkillCards(optionsList);
+}
