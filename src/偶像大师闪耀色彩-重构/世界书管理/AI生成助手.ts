@@ -12,11 +12,49 @@ import { getFullMechanicExplanation, getProducePlanMechanicMarkdown } from './�
 import { ExampleCardSelector, type ExampleCardConfig } from './示例卡抽取区';
 
 /**
+ * 从 URL 获取图片并转换为 Base64
+ * @param url 图片 URL
+ * @returns Promise<string> Base64 编码的图片数据（含 data URI 前缀）
+ */
+async function fetchImageAsBase64(url: string): Promise<string | null> {
+  try {
+    console.log('📷 正在获取图片:', url);
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.warn('⚠️ 图片获取失败:', response.status);
+      return null;
+    }
+
+    const blob = await response.blob();
+    const mimeType = blob.type || 'image/png';
+
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64 = reader.result as string;
+        console.log('✅ 图片转换成功，大小:', Math.round(base64.length / 1024), 'KB');
+        resolve(base64);
+      };
+      reader.onerror = () => {
+        console.warn('⚠️ 图片 Base64 转换失败');
+        reject(null);
+      };
+      reader.readAsDataURL(blob);
+    });
+  } catch (error) {
+    console.warn('⚠️ 获取图片出错:', error);
+    return null;
+  }
+}
+
+/**
  * 技能卡生成选项
  */
 export interface SkillCardGenerationOptions {
   /** 角色名称 */
   characterName: string;
+  /** 完整卡片名（含主题前缀，如【硝子少女】杜野凛世） */
+  fullCardName?: string;
   /** 卡牌稀有度 */
   rarity: SkillCardRarity;
   /** 培育计划 */
@@ -27,6 +65,10 @@ export interface SkillCardGenerationOptions {
   theme?: string;
   /** 是否流式输出 */
   streaming?: boolean;
+  /** 未觉醒卡面图片 URL（可选，多模态 AI 可用） */
+  cardImageUrl?: string;
+  /** 觉醒卡面图片 URL（可选，多模态 AI 可用） */
+  awakenedImageUrl?: string;
 }
 
 /**
@@ -182,9 +224,18 @@ export class AIGenerationAssistant {
    * @returns Promise<GenerationResult>
    */
   async generateSkillCard(options: SkillCardGenerationOptions): Promise<GenerationResult> {
-    const { characterName, rarity, producePlan, streaming = true } = options;
+    const {
+      characterName,
+      fullCardName,
+      rarity,
+      producePlan,
+      streaming = true,
+      cardImageUrl,
+      awakenedImageUrl,
+      recommendedStyle,
+    } = options;
 
-    console.log('🎨 开始生成技能卡...', { characterName, rarity, producePlan });
+    console.log('🎨 开始生成技能卡...', { characterName, fullCardName, rarity, producePlan, recommendedStyle });
 
     try {
       // 1. 组装系统提示词
@@ -192,9 +243,32 @@ export class AIGenerationAssistant {
       const systemPrompt = this.assembleSystemPrompt(options);
       console.log(`✅ 系统提示词已组装，长度: ${systemPrompt.length} 字符`);
 
-      // 2. 调用AI生成
+      // 2. 获取卡面图片 Base64（多模态 AI 可用）
+      const imageBase64List: string[] = [];
+      if (cardImageUrl) {
+        console.log('📷 获取未觉醒卡面图片...');
+        const base64 = await fetchImageAsBase64(cardImageUrl);
+        if (base64) imageBase64List.push(base64);
+      }
+      if (awakenedImageUrl) {
+        console.log('📷 获取觉醒卡面图片...');
+        const base64 = await fetchImageAsBase64(awakenedImageUrl);
+        if (base64) imageBase64List.push(base64);
+      }
+      if (imageBase64List.length > 0) {
+        console.log(`📷 成功获取 ${imageBase64List.length} 张卡面图片`);
+      }
+
+      // 3. 调用AI生成（传递完整卡名、Base64 图片和推荐流派）
       console.log('🤖 调用AI生成...');
-      const aiOutput = await this.callAI(characterName, systemPrompt, streaming);
+      const aiOutput = await this.callAI(
+        characterName,
+        fullCardName,
+        systemPrompt,
+        streaming,
+        imageBase64List,
+        recommendedStyle,
+      );
 
       // 调试：保存原始输出
       console.log('📝 AI原始输出（前500字符）:', aiOutput.substring(0, 500));
@@ -242,9 +316,13 @@ export class AIGenerationAssistant {
       // 保存解析后的数据供调试
       (window as any).__lastParsedCard = aiCard;
 
-      // 4. 验证AI生成的技能卡
+      // 4.5 标准化字段（将 AI 输出转换为期望格式）
+      console.log('🔧 标准化技能卡字段...');
+      const normalizedCard = this.normalizeSkillCard(aiCard, producePlan);
+
+      // 5. 验证AI生成的技能卡
       console.log('✅ 验证技能卡格式...');
-      const validatedAICard = this.validateSkillCard(aiCard);
+      const validatedAICard = this.validateSkillCard(normalizedCard);
 
       // 5. 转换为战斗系统的SkillCard格式
       console.log('🔄 转换为战斗系统格式...');
@@ -284,31 +362,73 @@ export class AIGenerationAssistant {
    * @param characterName 角色名称
    * @param systemPrompt 系统提示词（从内置数据库组装）
    * @param streaming 是否流式输出
+   * @param imageBase64List 卡面图片 Base64 列表（可选，多模态 AI 可用）
+   * @param recommendedStyle 推荐流派（可选）
    * @returns Promise<string> AI输出
    */
-  private async callAI(characterName: string, systemPrompt: string, streaming: boolean): Promise<string> {
-    const userInput = `请为 ${characterName} 生成一张专属技能卡。`;
+  private async callAI(
+    characterName: string,
+    fullCardName: string | undefined,
+    systemPrompt: string,
+    streaming: boolean,
+    imageBase64List?: string[],
+    recommendedStyle?: string,
+  ): Promise<string> {
+    // 使用完整卡名（如【硝子少女】杜野凛世）或仅角色名
+    const displayName = fullCardName || characterName;
+
+    // 构建用户输入（包含推荐流派和图片参考说明）
+    let userInput = `请为 ${displayName} 生成一张专属技能卡。`;
+    if (recommendedStyle) {
+      userInput += `\n\n🎯 推荐流派：${recommendedStyle}`;
+    }
+    if (imageBase64List && imageBase64List.length > 0) {
+      userInput += '\n\n📷 已附上角色卡面图片供参考，请结合卡面的视觉风格（服装、场景、氛围）设计技能卡。';
+    }
 
     console.log('📤 发送请求到AI...');
     console.log('  用户输入:', userInput);
     console.log('  系统提示词长度:', systemPrompt.length, '字符');
+    if (imageBase64List && imageBase64List.length > 0) {
+      console.log('  📷 附带图片数量:', imageBase64List.length);
+    }
 
-    // 使用 generateRaw 实现独立生成Bot，手动传递内置系统提示词
-    const response = await window.TavernHelper.generateRaw({
+    // 构建请求参数
+    // 根据文档：使用顶层 user_input 和 image 字段，配合 ordered_prompts 中的 'user_input' 内置提示词
+    const requestParams: any = {
       user_input: userInput,
       should_stream: streaming,
       // ✅ 手动传递内置的系统提示词（思维链、提示词框架、示例卡、游戏机制）
       ordered_prompts: [
         {
-          identifier: 'skill_card_generation_system',
           role: 'system',
           content: systemPrompt,
-          enabled: true,
         },
+        'user_input', // 使用内置的 user_input 提示词（会自动附带顶层的 user_input 和 image）
       ],
       // 不使用聊天历史，确保每次生成都是独立的
       max_chat_history: 0,
-    });
+    };
+
+    // ✅ 使用酒馆助手官方的顶层 image 字段
+    // 文档示例：const result = await generate({ user_input: '你好', image: 'https://example.com/image.jpg' });
+    if (imageBase64List && imageBase64List.length > 0) {
+      requestParams.image = imageBase64List;
+      console.log('📷 已添加图片到顶层 image 字段');
+      console.log('📷 图片数量:', imageBase64List.length);
+      console.log('📷 第一张图片格式:', imageBase64List[0].substring(0, 50));
+    }
+
+    // 调试：打印完整请求参数的 key 列表
+    console.log('📤 请求参数 keys:', Object.keys(requestParams));
+    console.log(
+      '📤 ordered_prompts:',
+      requestParams.ordered_prompts.map((p: any) => (typeof p === 'string' ? p : p.role)),
+    );
+    console.log('📤 包含 image?:', 'image' in requestParams);
+
+    // 使用 generateRaw 实现独立生成Bot
+    const response = await window.TavernHelper.generateRaw(requestParams);
 
     if (!response) {
       throw new Error('AI未返回有效响应');
@@ -346,6 +466,77 @@ export class AIGenerationAssistant {
       console.error('❌ JSON解析失败:', error);
       return null;
     }
+  }
+
+  /**
+   * 标准化技能卡字段（将 AI 输出转换为期望格式）
+   * @param skillCard AI 生成的原始卡片
+   * @param producePlan 培育计划（从选项传入）
+   * @returns 标准化后的卡片
+   */
+  private normalizeSkillCard(skillCard: any, producePlan: ProducePlan): any {
+    const normalized = { ...skillCard };
+
+    // 转换 type 字段
+    const typeMap: Record<string, string> = {
+      // 主动卡映射
+      技能: '主动',
+      P技能: '主动',
+      'P-Skill': '主动',
+      PSkill: '主动',
+      Active: '主动',
+      active: '主动',
+      Skill: '主动',
+      skill: '主动',
+      主动卡: '主动',
+      'Active Card': '主动',
+      'Produce Skill': '主动',
+      // 精神卡映射
+      Mental: '精神',
+      mental: '精神',
+      精神卡: '精神',
+      'Mental Card': '精神',
+      // 陷阱卡映射
+      Trap: '陷阱',
+      trap: '陷阱',
+      陷阱卡: '陷阱',
+      'Trap Card': '陷阱',
+      'Trouble Card': '陷阱',
+    };
+
+    if (normalized.type && typeMap[normalized.type]) {
+      console.log(`🔧 转换 type: "${normalized.type}" -> "${typeMap[normalized.type]}"`);
+      normalized.type = typeMap[normalized.type];
+    } else if (normalized.type && !['主动', '精神', '陷阱'].includes(normalized.type)) {
+      // 如果是未知类型，默认转换为主动
+      console.log(`🔧 未知 type: "${normalized.type}"，默认转换为 "主动"`);
+      normalized.type = '主动';
+    }
+
+    // 如果缺少 producePlan，从参数添加
+    if (!normalized.producePlan) {
+      console.log(`🔧 添加缺失的 producePlan: "${producePlan}"`);
+      normalized.producePlan = producePlan;
+    }
+
+    // 转换培育计划名称（如有需要）
+    const planMap: Record<string, string> = {
+      Sense: '感性',
+      sense: '感性',
+      Logic: '理性',
+      logic: '理性',
+      Anomaly: '非凡',
+      anomaly: '非凡',
+      Free: '自由',
+      free: '自由',
+    };
+
+    if (normalized.producePlan && planMap[normalized.producePlan]) {
+      console.log(`🔧 转换 producePlan: "${normalized.producePlan}" -> "${planMap[normalized.producePlan]}"`);
+      normalized.producePlan = planMap[normalized.producePlan];
+    }
+
+    return normalized;
   }
 
   /**

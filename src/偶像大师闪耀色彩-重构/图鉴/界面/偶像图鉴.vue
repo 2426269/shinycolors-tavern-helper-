@@ -989,14 +989,18 @@ async function handleGenerateSkill() {
       progressBar: true,
     });
 
-    // 调用 AI 生成助手
+    // 调用 AI 生成助手（传递完整卡名和图片让AI了解主题）
     const result = await generateSkillCard({
       characterName: card.characterName,
+      fullCardName: card.fullCardName, // 完整卡名如【硝子少女】杜野凛世
       rarity: card.rarity as SkillCardRarity,
       producePlan,
       recommendedStyle: card.attribute?.style,
       theme: card.theme,
       streaming: true, // 启用流式输出
+      // 多模态支持：发送卡面图片（未觉醒 + 觉醒）
+      cardImageUrl: card.fullImageUrl,
+      awakenedImageUrl: card.awakenedImageUrl,
     });
 
     // 保存原始输出（无论成功或失败）
@@ -1010,23 +1014,47 @@ async function handleGenerateSkill() {
 
       // 保存到 localStorage（完整的技能卡数据）
       const skillKey = `skill_${card.fullCardName}`;
-      localStorage.setItem(
-        skillKey,
-        JSON.stringify({
-          name: skillCard.name,
-          cost: skillCard.cost,
-          effect: skillCard.effect_before,
-          effectEnhanced: skillCard.effect_after,
-          description: '闪耀的偶像之力',
-          // 新增：词条式格式字段
-          effectEntries: skillCard.effectEntries || [],
-          effectEntriesEnhanced: skillCard.effectEntriesEnhanced || [],
-          conditionalEffects: skillCard.conditionalEffects || [],
-          conditionalEffectsEnhanced: skillCard.conditionalEffectsEnhanced || [],
-          restrictions: skillCard.restrictions || { isDuplicatable: true, usesPerBattle: null },
-          flavor: skillCard.flavor || '',
-        }),
-      );
+      const skillData = JSON.stringify({
+        name: skillCard.name,
+        cost: skillCard.cost,
+        effect: skillCard.effect_before,
+        effectEnhanced: skillCard.effect_after,
+        description: '闪耀的偶像之力',
+        // 新增：词条式格式字段
+        effectEntries: skillCard.effectEntries || [],
+        effectEntriesEnhanced: skillCard.effectEntriesEnhanced || [],
+        conditionalEffects: skillCard.conditionalEffects || [],
+        conditionalEffectsEnhanced: skillCard.conditionalEffectsEnhanced || [],
+        restrictions: skillCard.restrictions || { isDuplicatable: true, usesPerBattle: null },
+        flavor: skillCard.flavor || '',
+      });
+
+      try {
+        localStorage.setItem(skillKey, skillData);
+      } catch (storageError) {
+        // 如果配额满了，尝试清理一些旧数据
+        console.warn('⚠️ localStorage 配额不足，尝试清理旧数据...', storageError);
+
+        // 清理以 'messageDetails' 开头的条目（酒馆消息缓存）
+        const keysToRemove: string[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('messageDetails')) {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach(key => localStorage.removeItem(key));
+        console.log(`🗑️ 已清理 ${keysToRemove.length} 条消息缓存`);
+
+        // 再次尝试保存
+        try {
+          localStorage.setItem(skillKey, skillData);
+          console.log('✅ 清理后保存成功');
+        } catch (retryError) {
+          console.error('❌ 清理后仍无法保存，跳过持久化', retryError);
+          toastr.warning('存储空间不足，技能卡已生成但未持久化保存', '', { timeOut: 3000 });
+        }
+      }
 
       // 更新当前选中卡片的技能信息（完整对象）
       selectedCard.value.skill = {

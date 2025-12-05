@@ -135,8 +135,13 @@ export class SpineAnimationManager {
   private onAnimationComplete(animationName: string) {
     this.isPlaying = false;
 
+    // 如果 spine 已销毁，不处理
+    if (!this.spine || !this.spine.state) {
+      return;
+    }
+
     // 如果是循环动画，不处理队列
-    const currentTrack = this.spine?.state.getCurrent(0);
+    const currentTrack = this.spine.state.getCurrent(0);
     if (currentTrack && currentTrack.loop) {
       return;
     }

@@ -8,6 +8,25 @@ import type { ProducePlan, SkillCard, SkillCardRarity } from '../战斗/类型/�
 import type { AttributeType } from '../类型/卡牌属性类型';
 
 /**
+ * 获取所有技能卡
+ */
+function getAllSkillCards(): SkillCard[] {
+  const result: SkillCard[] = [];
+  const library = SKILL_CARD_LIBRARY as unknown as Record<string, Record<string, SkillCard[]>>;
+
+  // 遍历每个培育计划（感性、理性、非凡）
+  for (const planCards of Object.values(library)) {
+    // 遍历每个稀有度
+    for (const rarityCards of Object.values(planCards)) {
+      if (Array.isArray(rarityCards)) {
+        result.push(...rarityCards);
+      }
+    }
+  }
+  return result;
+}
+
+/**
  * 示例卡抽取配置
  */
 interface ExampleCardConfig {
@@ -122,13 +141,21 @@ export class ExampleCardSelector {
    * @param attribute 属性（可选）
    * @returns 过滤后的技能卡列表
    */
-  private static filterCards(rarity: SkillCardRarity, plan?: ProducePlan, attribute?: AttributeType): SkillCard[] {
+  private static filterCards(rarity: SkillCardRarity, plan?: ProducePlan, _attribute?: AttributeType): SkillCard[] {
     // 如果指定了培育计划，只从对应计划的卡库中获取
     let allCards: SkillCard[] = [];
 
     if (plan) {
-      // 只获取指定计划的卡牌（禁止包含自由/通用卡）
-      allCards = SKILL_CARD_LIBRARY[plan] || [];
+      // 获取指定计划的所有稀有度卡牌
+      const library = SKILL_CARD_LIBRARY as unknown as Record<string, Record<string, SkillCard[]>>;
+      const planData = library[plan];
+      if (planData) {
+        for (const rarityCards of Object.values(planData)) {
+          if (Array.isArray(rarityCards)) {
+            allCards.push(...rarityCards);
+          }
+        }
+      }
     } else {
       // 获取所有卡牌（但排除自由计划）
       allCards = getAllSkillCards().filter(card => card.plan !== '自由');

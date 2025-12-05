@@ -95,6 +95,7 @@
         <!-- Spine播放器 -->
         <SpinePlayer
           v-if="currentSpineId"
+          :key="currentSpineId + '_' + currentCostume"
           :idol-id="currentSpineId"
           :costume="currentCostume"
           :debug-offset-x="spineDebug.offsetX"
