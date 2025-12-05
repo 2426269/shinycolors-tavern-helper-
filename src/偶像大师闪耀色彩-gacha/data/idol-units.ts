@@ -131,5 +131,3 @@ export const UNIT_STATS = {
     memberCount: unit.members.length,
   })),
 };
-
-

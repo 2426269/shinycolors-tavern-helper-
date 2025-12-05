@@ -131,5 +131,3 @@ export interface DeckBuildSource {
   /** 培育过程获得 */
   acquiredDuringProduce: string[];
 }
-
-

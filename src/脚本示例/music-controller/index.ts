@@ -429,5 +429,3 @@ console.log('  window.__musicController.play("训练")');
 console.log('  window.__musicController.setVolume(0.5)');
 console.log('  window.__musicController.stop()');
 console.log('  window.__musicController.testDetection("今天要进行训练")');
-
-

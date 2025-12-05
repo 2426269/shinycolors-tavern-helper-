@@ -178,17 +178,3 @@ export interface CardBuilder {
   setImageUrl(url: string): CardBuilder;
   build(): SkillCard;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

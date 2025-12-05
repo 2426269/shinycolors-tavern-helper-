@@ -184,4 +184,3 @@ export function estimateSpeakingDuration(text: string): number {
   const duration = text.length * 0.3;
   return Math.max(duration, 1.0); // 最少1秒
 }
-

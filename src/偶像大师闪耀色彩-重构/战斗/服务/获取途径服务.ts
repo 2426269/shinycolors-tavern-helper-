@@ -162,11 +162,7 @@ export function getSupportCardSkills(supportCardId: string, phase: ProducePhase)
  * @param plan 培育计划
  * @returns 卡组来源信息
  */
-export function buildInitialDeck(
-  produceCardId: string,
-  supportCardIds: string[],
-  plan: ProducePlan,
-): DeckBuildSource {
+export function buildInitialDeck(produceCardId: string, supportCardIds: string[], plan: ProducePlan): DeckBuildSource {
   const deckSource: DeckBuildSource = {
     produceCardExclusive: [],
     supportCardsEarly: [],
@@ -202,10 +198,7 @@ export function buildInitialDeck(
  * @param supportCardIds 回忆卡ID列表
  * @returns 更新后的卡组来源
  */
-export function unlockMidtermSupportCardSkills(
-  deckSource: DeckBuildSource,
-  supportCardIds: string[],
-): DeckBuildSource {
+export function unlockMidtermSupportCardSkills(deckSource: DeckBuildSource, supportCardIds: string[]): DeckBuildSource {
   supportCardIds.forEach(supportCardId => {
     const skills = getSupportCardSkills(supportCardId, '期中后');
     deckSource.supportCardsLate.push(...skills.map(s => s.id));
@@ -271,5 +264,3 @@ export function getRecommendedRewardPool(
 
   return { skillCards, pDrinks };
 }
-
-

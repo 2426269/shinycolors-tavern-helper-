@@ -298,7 +298,3 @@ export const messageInterceptor = new MessageInterceptor();
 $(() => {
   messageInterceptor.initialize();
 });
-
-
-
-

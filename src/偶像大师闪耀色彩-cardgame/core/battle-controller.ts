@@ -436,11 +436,3 @@ export class BattleController {
     return this.state.history;
   }
 }
-
-
-
-
-
-
-
-

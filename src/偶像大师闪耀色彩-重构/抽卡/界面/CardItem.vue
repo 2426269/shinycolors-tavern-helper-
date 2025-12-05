@@ -1,19 +1,14 @@
 <template>
   <div class="card-item" :class="`rarity-${result.rarity}`">
     <div class="rarity-badge">{{ result.rarity }}</div>
-    
+
     <div class="card-image-wrapper">
-      <img 
-        :src="result.imageUrl" 
-        :alt="result.fullCardName"
-        class="card-image"
-        @error="handleImageError"
-      />
+      <img :src="result.imageUrl" :alt="result.fullCardName" class="card-image" @error="handleImageError" />
     </div>
-    
+
     <div class="card-info">
       <div class="card-name">{{ result.fullCardName }}</div>
-      
+
       <div v-if="result.isNew" class="new-badge">
         <span class="badge-text">NEW!</span>
       </div>
@@ -56,31 +51,33 @@ function handleImageError(e: Event) {
   overflow: hidden;
   background: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
   &:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
-  
+
   // 稀有度边框
   border: 3px solid;
-  
+
   &.rarity-UR {
     border-color: #ffd700;
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
   }
-  
+
   &.rarity-SSR {
     border-color: #ff1493;
     box-shadow: 0 4px 20px rgba(255, 20, 147, 0.4);
   }
-  
+
   &.rarity-SR {
     border-color: #9370db;
     box-shadow: 0 4px 20px rgba(147, 112, 219, 0.3);
   }
-  
+
   &.rarity-R {
     border-color: #ccc;
   }
@@ -96,22 +93,22 @@ function handleImageError(e: Event) {
   font-size: 14px;
   z-index: 10;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  
+
   .rarity-UR & {
     background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
     color: #333;
   }
-  
+
   .rarity-SSR & {
     background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
     color: white;
   }
-  
+
   .rarity-SR & {
     background: linear-gradient(135deg, #9370db 0%, #ba55d3 100%);
     color: white;
   }
-  
+
   .rarity-R & {
     background: linear-gradient(135deg, #999 0%, #bbb 100%);
     color: white;
@@ -122,14 +119,14 @@ function handleImageError(e: Event) {
   aspect-ratio: 2 / 3;
   overflow: hidden;
   background: #f5f5f5;
-  
+
   .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
-  
+
   .card-item:hover .card-image {
     transform: scale(1.05);
   }
@@ -138,7 +135,7 @@ function handleImageError(e: Event) {
 .card-info {
   padding: 12px;
   background: rgba(255, 255, 255, 0.95);
-  
+
   .card-name {
     font-size: 14px;
     font-weight: bold;
@@ -148,18 +145,18 @@ function handleImageError(e: Event) {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .rarity-UR & {
       color: #ffa500;
       text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
     }
-    
+
     .rarity-SSR & {
       background: linear-gradient(45deg, #ff1493, #ff69b4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
+
     .rarity-SR & {
       color: #9370db;
     }
@@ -195,7 +192,8 @@ function handleImageError(e: Event) {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -203,5 +201,3 @@ function handleImageError(e: Event) {
   }
 }
 </style>
-
-

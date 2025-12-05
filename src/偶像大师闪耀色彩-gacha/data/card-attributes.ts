@@ -20,16 +20,16 @@ export function getCardAttribute(fullCardName: string): CardAttribute | undefine
  * 统计信息
  */
 export const ATTRIBUTE_STATS = {
-  "total": 414,
-  "byAttribute": {
-    "理性": 136,
-    "感性": 139,
-    "非凡": 139
+  total: 414,
+  byAttribute: {
+    理性: 136,
+    感性: 139,
+    非凡: 139,
   },
-  "byRarity": {
-    "UR": 3,
-    "SSR": 283,
-    "SR": 85,
-    "R": 43
-  }
+  byRarity: {
+    UR: 3,
+    SSR: 283,
+    SR: 85,
+    R: 43,
+  },
 };

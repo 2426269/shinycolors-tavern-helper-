@@ -225,17 +225,3 @@ export class AttributeManager {
     return { ...this.state.attributes };
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

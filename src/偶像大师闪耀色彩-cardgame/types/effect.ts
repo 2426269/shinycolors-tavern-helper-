@@ -175,17 +175,3 @@ export interface ChainEffectMetadata {
   effects: SkillCardEffect[]; // 连锁效果列表
   delay?: number; // 延迟回合数（默认0，立即执行）
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

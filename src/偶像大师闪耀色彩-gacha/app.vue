@@ -217,7 +217,7 @@ const cardProbabilities = computed(() => {
   const urCards = availablePools.UR;
   const pickupCard = urCards.find(card => card.isPickup);
   const otherURCards = urCards.filter(card => !card.isPickup);
-  
+
   const urProbabilities = [
     ...(pickupCard
       ? [

@@ -487,4 +487,3 @@ export function getFullMechanicExplanation(plan: ProducePlan): string {
 
   return explanation;
 }
-

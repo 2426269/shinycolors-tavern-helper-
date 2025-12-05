@@ -8,13 +8,7 @@
 export * from './types';
 
 // ========== 核心管理器 ==========
-export {
-  AttributeManager,
-  ResourceManager,
-  BuffManager,
-  SkillCardExecutor,
-  BattleController,
-} from './core';
+export { AttributeManager, ResourceManager, BuffManager, SkillCardExecutor, BattleController } from './core';
 
 // ========== 预设库 ==========
 export { BuffPresets, createBuff } from './presets/buff-presets';

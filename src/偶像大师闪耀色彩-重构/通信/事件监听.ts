@@ -283,4 +283,3 @@ export function initializeEventListeners() {
 export function cleanupEventListeners() {
   EventListenerManager.cleanup();
 }
-

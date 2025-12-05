@@ -288,4 +288,3 @@ console.log(
 console.log(
   `  - 按稀有度: 普通=${P_DRINK_STATS.byRarity['普通']}, 高级=${P_DRINK_STATS.byRarity['高级']}, 特级=${P_DRINK_STATS.byRarity['特级']}`,
 );
-

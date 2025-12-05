@@ -482,11 +482,3 @@ function closeBuffDetail() {
   }
 }
 </style>
-
-
-
-
-
-
-
-

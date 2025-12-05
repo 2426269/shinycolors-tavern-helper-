@@ -298,12 +298,3 @@ export function getAnomalyStateDescription(state: AnomalyState, level: 1 | 2) {
     fullName: `${baseDesc.name}（${level === 1 ? '一阶段' : '二阶段'}）`,
   };
 }
-
-
-
-
-
-
-
-
-

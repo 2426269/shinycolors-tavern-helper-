@@ -669,11 +669,7 @@
     </div>
 
     <!-- 角色选择页面（培育） -->
-    <CharacterSelection
-      v-if="showCharacterSelection"
-      @close="closeCharacterSelection"
-      @select="onCharacterSelected"
-    />
+    <CharacterSelection v-if="showCharacterSelection" @close="closeCharacterSelection" @select="onCharacterSelected" />
 
     <!-- 资源显示层 - 顶部横向布局 -->
     <div class="resource-display-top">

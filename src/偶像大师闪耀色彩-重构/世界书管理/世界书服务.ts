@@ -80,10 +80,7 @@ export class WorldbookService {
    * @param exampleConfig 示例卡配置
    * @returns Promise<void>
    */
-  static async prepareSkillCardGeneration(
-    variables: PromptVariables,
-    exampleConfig: ExampleCardConfig,
-  ): Promise<void> {
+  static async prepareSkillCardGeneration(variables: PromptVariables, exampleConfig: ExampleCardConfig): Promise<void> {
     const { worldbookName } = this.config;
 
     console.log('📝 开始准备技能卡生成...');
@@ -189,5 +186,3 @@ export class WorldbookService {
 // 导出类型和枚举
 export { ChainOfThoughtMode, PromptMode };
 export type { PromptVariables, ExampleCardConfig };
-
-

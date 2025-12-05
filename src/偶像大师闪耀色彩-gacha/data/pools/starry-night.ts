@@ -1,14 +1,14 @@
 /**
  * "星月夜を歩いて" 限定卡池
- * 
+ *
  * UP角色：【絵空靴】杜野凛世
  * 总卡片数：171 张
- * 
+ *
  * 稀有度分布：
  * - UR: 3 张 (1 UP + 2 常驻)
  * - SSR: 124 张
  * - SR: 44 张
- * 
+ *
  * @generated 此文件由脚本自动生成 (2025-11-01T12:35:51.190Z)
  */
 
@@ -22,14 +22,14 @@ const POOL_IMAGE_BASE = `${CDN_BASE}/卡池缩略图`;
  * UP角色 (isPickup: true)
  */
 export const PICKUP_CARD: RealCard = {
-    fullName: '【絵空靴】杜野凛世',
-    theme: '絵空靴',
-    character: '杜野凛世',
-    baseImage: '絵空靴 杜野凛世.webp',
-    awakenedImage: '絵空靴 杜野凛世+.webp',
-    rarity: 'UR' as const,
+  fullName: '【絵空靴】杜野凛世',
+  theme: '絵空靴',
+  character: '杜野凛世',
+  baseImage: '絵空靴 杜野凛世.webp',
+  awakenedImage: '絵空靴 杜野凛世+.webp',
+  rarity: 'UR' as const,
   isPickup: true,
-  };
+};
 
 /**
  * 卡池内所有可抽取的卡片（不包括UP角色）
@@ -37,7 +37,7 @@ export const PICKUP_CARD: RealCard = {
  */
 export const POOL_CARDS: RealCard[] = [
   // ========== UR 卡 (2 张) ==========
-{
+  {
     fullName: '【誘爆ハートビート】黛冬優子',
     theme: '誘爆ハートビート',
     character: '黛冬優子',
@@ -55,7 +55,7 @@ export const POOL_CARDS: RealCard[] = [
   },
 
   // ========== SSR 卡 (124 张) ==========
-{
+  {
     fullName: '【ほわっとスマイル】櫻木真乃',
     theme: 'ほわっとスマイル',
     character: '櫻木真乃',
@@ -1049,7 +1049,7 @@ export const POOL_CARDS: RealCard[] = [
   },
 
   // ========== SR 卡 (44 张) ==========
-{
+  {
     fullName: '【ぐうぜんBOOKS】櫻木真乃',
     theme: 'ぐうぜんBOOKS',
     character: '櫻木真乃',

@@ -56,6 +56,3 @@ export async function preloadCommonSSRCards(limit: number = 10): Promise<void> {
     console.error('[后台预加载失败]:', error);
   }
 }
-
-
-

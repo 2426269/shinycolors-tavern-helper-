@@ -150,4 +150,3 @@ function handleClick(event: MouseEvent) {
   }
 }
 </style>
-
