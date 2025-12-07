@@ -1,18 +1,30 @@
 type VariableOptionNormal = {
-  /** 对聊天变量 (`'chat'`)、当前角色卡 (`'character'`)、当前预设 (`'preset'`) 或全局变量 (`'global'`) 进行操作 */
-  type: 'chat' | 'character' | 'preset' | 'global';
+  /** 对聊天变量 (`'chat'`)、当前预设 (`'preset'`) 或全局变量 (`'global'`) 进行操作 */
+  type: 'chat' | 'preset' | 'global';
+};
+type VariableOptionCharacter = {
+  /**
+   * 对当前角色卡 (`'character'`) 进行操作
+   *
+   * @throws 如果没有打开角色卡, 将会抛出错误
+   */
+  type: 'character';
 };
 type VariableOptionMessage = {
   /** 对消息楼层变量 (`message`) 进行操作 */
   type: 'message';
-  /** 指定要获取变量的消息楼层号, 如果为负数则为深度索引, 例如 `-1` 表示获取最新的消息楼层; 默认为 `'latest'` */
+  /**
+   * 指定要获取变量的消息楼层号, 如果为负数则为深度索引, 例如 `-1` 表示获取最新的消息楼层; 默认为 `'latest'`
+   *
+   * @throws 如果提供的消息楼层号 `message_id` 超出了范围 `[-chat.length, chat.length)`, 将会抛出错误
+   */
   message_id?: number | 'latest';
 };
 type VariableOptionScript = {
   /** 对脚本变量 (`'script'`) 进行操作 */
   type: 'script';
   /** 指定要操作变量的脚本 ID; 如果在脚本内调用, 则无须指定, 当然你也可以用 `getScriptId()` 获取该脚本 ID */
-  script_id: string;
+  script_id?: string;
 };
 type VariableOptionExtension = {
   /** 对扩展变量 (`'extension'`) 进行操作 */
@@ -20,7 +32,7 @@ type VariableOptionExtension = {
   /** 指定要操作变量的扩展 ID */
   extension_id: string;
 };
-type VariableOption = VariableOptionNormal | VariableOptionMessage | VariableOptionScript | VariableOptionExtension;
+type VariableOption = VariableOptionNormal | VariableOptionCharacter | VariableOptionMessage | VariableOptionScript | VariableOptionExtension;
 
 /**
  * 获取变量表
@@ -171,3 +183,24 @@ declare function deleteVariable(
   variable_path: string,
   option: VariableOption,
 ): { variables: Record<string, any>; delete_occurred: boolean };
+
+/**
+ * 为变量管理器注册一个变量结构. 注册后, 变量管理器上将会按变量结构对变量进行校验
+ *
+ * **这只是方便使用变量管理器这一 UI 查看和管理变量, 对于代码层面没有任何影响**
+ *
+ * @param schema zod 库表示的变量结构
+ * @param option 要注册变量结构的变量类型
+ *
+ * @example
+ * // 注册消息楼层变量的结构为 stat_data 内有一个 好感度 数值变量
+ * registerVariableSchema(z.object({
+ *   stat_data: z.object({
+ *     好感度: z.number(),
+ *   }),
+ * }), {type: 'message'});
+ */
+function registerVariableSchema(
+  schema: z.ZodType<any>,
+  option: { type: 'global' | 'preset' | 'character' | 'chat' | 'message' },
+): void;

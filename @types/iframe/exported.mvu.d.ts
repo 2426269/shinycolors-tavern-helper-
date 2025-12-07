@@ -49,7 +49,7 @@ declare namespace Mvu {
     reason: string;
   };
   type AddCommandInfo = {
-    type: 'remove';
+    type: 'add';
     full_match: string;
     args: [path: string, delta_or_toggle_literal: string];
     reason: string;
@@ -63,40 +63,66 @@ declare namespace Mvu {
  */
 declare const Mvu: {
   events: {
+    /** 新开聊天对变量初始化时触发的事件  */
+    VARIABLE_INITIALIZED: 'mag_variable_initiailized';
+
+    /** 即将对楼层进行更新时触发的事件  */
+    BEFORE_MESSAGE_UPDATE: 'mag_before_message_update';
+
     /** 某轮变量更新开始时触发的事件 */
     VARIABLE_UPDATE_STARTED: 'mag_variable_update_started';
 
-    /** 从文本解析到了命令时触发的事件 */
-    COMMAND_PARSED: 'mag_command_parsed';
-
     /**
-     * 某轮变量更新过程中, 某个变量更新时触发的事件
+     * 某轮变量更新过程中, 对文本成功解析了所有更新命令时触发的事件
      *
      * @example
-     * // 检测络络好感度突破 30
-     * eventOn(Mvu.events.SINGLE_VARIABLE_UPDATED, (stat_data, path, old_value, new_value) => {
-     *   // 如果被更新的变量不是 'stat_data.角色.络络.好感度', 则什么都不做直接返回 (return)
-     *   if (path === '角色.络络.好感度') {
-     *     return;
-     *   }
+     * // 修复 gemini 在中文间加入的 '-'', 如将 '角色.络-络' 修复为 '角色.络络'
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.forEach(command => {
+     *     command.args[0] = command.args[0].replace(/-/g, '');
+     *   });
+     * });
      *
-     *   // --被更新的变量是 'stat_data.角色.络络.好感度'---
-     *   if (old_value < 30 && new_value >= 30) {
-     *     toaster.success('络络好感度突破 30 了!');
-     *   }
+     * @example
+     * // 修复繁体字, 如将 '絡絡' 修复为 '络络'
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.forEach(command => {
+     *     command.args[0] = command.args[0].replaceAll('絡絡', '络络');
+     *   });
+     * });
+     *
+     * @example
+     * // 添加新的更新命令
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.push({
+     *     type: 'set',
+     *     full_match: `_.set('络络.好感度', 5)`,
+     *     args: ['络络.好感度', 5],
+     *     reason: '脚本强行更新',
+     *   });
      * });
      */
-    SINGLE_VARIABLE_UPDATED: 'mag_variable_updated';
+    COMMAND_PARSED: 'mag_command_parsed';
 
     /**
      * 某轮变量更新结束时触发的事件
      *
      * @example
      * // 保持好感度不低于 0
-     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, (variables) => {
+     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, variables => {
      *   if (_.get(variables, 'stat_data.角色.络络.好感度') < 0) {
      *     _.set(variables, 'stat_data.角色.络络.好感度', 0);
      *   }
+     * })
+     *
+     * @example
+     * // 保持好感度增幅不超过 3
+     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, (variables, variables_before_update) => {
+     *   const old_value = _.get(variables_before_update, 'stat_data.角色.络络.好感度');
+     *   const new_value = _.get(variables, 'stat_data.角色.络络.好感度');
+     *
+     *   // 新的好感度必须在 旧好感度-3 和 旧好感度+3 之间
+     *   _.set(variables, 'stat_data.角色.络络.好感度', _.clamp(new_value, old_value - 3, old_value + 3));
      * });
      */
     VARIABLE_UPDATE_ENDED: 'mag_variable_update_ended';
@@ -221,16 +247,13 @@ declare const Mvu: {
 };
 
 interface ListenerType {
+  [Mvu.events.VARIABLE_INITIALIZED]: (variables: Mvu.MvuData, swipe_id: number) => void;
+
+  [Mvu.events.BEFORE_MESSAGE_UPDATE]: (context: { variables: Mvu.MvuData; message_content: string }) => void;
+
   [Mvu.events.VARIABLE_UPDATE_STARTED]: (variables: Mvu.MvuData) => void;
 
-  [Mvu.events.COMMAND_PARSED]: (variables: Mvu.MvuData, commands: Mvu.CommandInfo[]) => void;
+  [Mvu.events.COMMAND_PARSED]: (variables: Mvu.MvuData, commands: Mvu.CommandInfo[], message_content: string) => void;
 
-  [Mvu.events.SINGLE_VARIABLE_UPDATED]: (
-    stat_data: Mvu.MvuData['stat_data'],
-    path: string,
-    old_value: any,
-    new_value: any,
-  ) => void;
-
-  [Mvu.events.VARIABLE_UPDATE_ENDED]: (variables: Mvu.MvuData) => void;
+  [Mvu.events.VARIABLE_UPDATE_ENDED]: (variables: Mvu.MvuData, variables_before_update: Mvu.MvuData) => void;
 }

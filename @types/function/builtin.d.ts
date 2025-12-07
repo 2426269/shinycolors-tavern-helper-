@@ -25,6 +25,7 @@ declare const builtin: {
   duringGenerating: () => boolean;
   getImageTokenCost: (data_url: string, quality: 'low' | 'auto' | 'high') => Promise<number>;
   getVideoTokenCost: (data_url: string) => Promise<number>;
+  parseRegexFromString: (regex: string) => RegExp | null;
   promptManager: {
     messages: Array<{
       collection: Array<{
@@ -67,9 +68,12 @@ declare const builtin: {
   reloadEditor: (file: string, load_if_not_selected?: boolean) => void;
   /** 刷新世界书编辑器的显示 (防抖) */
   reloadEditorDebounced: (file: string, load_if_not_selected?: boolean) => void;
+  /** 将 markdown 渲染成 html */
+  renderMarkdown: (string: string) => string;
   /** 刷新预设提示词列表 */
   renderPromptManager: (after_try_generate?: boolean) => void;
   /** 刷新预设提示词列表 (防抖) */
   renderPromptManagerDebounced: (after_try_generate?: boolean) => void;
   saveSettings: () => Promise<void>;
+  uuidv4: () => string;
 };
