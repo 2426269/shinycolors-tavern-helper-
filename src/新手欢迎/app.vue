@@ -805,5 +805,3 @@ function enterGame() {
   }
 }
 </style>
-
-

@@ -14,7 +14,7 @@ export async function loadUserData(): Promise<GachaUserData> {
   try {
     const data = await getGachaData();
     console.log('📦 从IndexedDB加载用户数据成功');
-    
+
     // 转换数据格式（兼容旧格式）
     return {
       stardust: data.stardust,

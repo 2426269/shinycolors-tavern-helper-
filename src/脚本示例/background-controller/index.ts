@@ -296,5 +296,3 @@ console.log('使用示例:');
 console.log('  window.__backgroundController.changeBackground("海滩")');
 console.log('  window.__backgroundController.testDetection("我们去海滩吧")');
 console.log('  window.__backgroundController.getAvailableBackgrounds()');
-
-

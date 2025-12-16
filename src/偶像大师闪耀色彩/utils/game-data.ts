@@ -1,6 +1,6 @@
 /**
  * IndexedDB 游戏数据管理系统
- * 
+ *
  * 功能：
  * - 统一管理所有游戏数据（资源、抽卡、设置等）
  * - 支持从localStorage自动迁移
@@ -13,16 +13,16 @@
 // ============================================================================
 
 export interface GameResources {
-  featherStones: number;  // 羽石
-  fans: number;           // 粉丝
-  producerLevel: number;  // 制作人等级
-  producerExp: number;    // 经验值
-  producerName?: string;  // 制作人名称
+  featherStones: number; // 羽石
+  fans: number; // 粉丝
+  producerLevel: number; // 制作人等级
+  producerExp: number; // 经验值
+  producerName?: string; // 制作人名称
 }
 
 export interface GachaData {
-  stardust: number;       // 星尘
-  ownedCards: Record<string, any>;  // 拥有的卡牌 {cardId: cardData}
+  stardust: number; // 星尘
+  ownedCards: Record<string, any>; // 拥有的卡牌 {cardId: cardData}
   pity: {
     totalPulls: number;
     ssrPity: number;
@@ -48,7 +48,7 @@ export interface GameSettings {
 }
 
 export interface AffectionData {
-  [idolId: string]: number;  // 偶像ID -> 好感度值
+  [idolId: string]: number; // 偶像ID -> 好感度值
 }
 
 // ============================================================================
@@ -63,7 +63,7 @@ const STORES = {
   GACHA: 'gacha',
   SETTINGS: 'settings',
   AFFECTION: 'affection',
-  METADATA: 'metadata',  // 存储迁移状态等元数据
+  METADATA: 'metadata', // 存储迁移状态等元数据
 } as const;
 
 // ============================================================================
@@ -138,10 +138,10 @@ async function getData<T>(storeName: string, key: string): Promise<T | null> {
 async function setData<T>(storeName: string, key: string, value: T): Promise<void> {
   try {
     const db = await openDatabase();
-    
+
     // 深拷贝去除Proxy（使用JSON序列化/反序列化）
     const cleanValue = JSON.parse(JSON.stringify(value));
-    
+
     return new Promise((resolve, reject) => {
       const transaction = db.transaction(storeName, 'readwrite');
       const store = transaction.objectStore(storeName);
@@ -290,12 +290,14 @@ export async function migrateFromLocalStorage(): Promise<void> {
 
 export async function getResources(): Promise<GameResources> {
   const data = await getData<GameResources>(STORES.RESOURCES, 'main');
-  return data || {
-    featherStones: 3000,
-    fans: 0,
-    producerLevel: 1,
-    producerExp: 0,
-  };
+  return (
+    data || {
+      featherStones: 3000,
+      fans: 0,
+      producerLevel: 1,
+      producerExp: 0,
+    }
+  );
 }
 
 export async function saveResources(resources: GameResources): Promise<void> {
@@ -317,16 +319,18 @@ export async function saveProducerName(name: string): Promise<void> {
 
 export async function getGachaData(): Promise<GachaData> {
   const data = await getData<GachaData>(STORES.GACHA, 'main');
-  return data || {
-    stardust: 0,
-    ownedCards: {},
-    pity: {
-      totalPulls: 0,
-      ssrPity: 0,
-      urPity: 0,
-    },
-    history: [],
-  };
+  return (
+    data || {
+      stardust: 0,
+      ownedCards: {},
+      pity: {
+        totalPulls: 0,
+        ssrPity: 0,
+        urPity: 0,
+      },
+      history: [],
+    }
+  );
 }
 
 export async function saveGachaData(gacha: GachaData): Promise<void> {
@@ -339,17 +343,19 @@ export async function saveGachaData(gacha: GachaData): Promise<void> {
 
 export async function getSettings(): Promise<GameSettings> {
   const data = await getData<GameSettings>(STORES.SETTINGS, 'main');
-  return data || {
-    fullscreenMode: 'button',
-    devMode: {
-      infiniteGems: false,
-      unlockAllCharacters: false,
-      maxLevel: false,
-    },
-    musicVolume: 0.7,
-    autoPlay: false,
-    playMode: 'sequential',
-  };
+  return (
+    data || {
+      fullscreenMode: 'button',
+      devMode: {
+        infiniteGems: false,
+        unlockAllCharacters: false,
+        maxLevel: false,
+      },
+      musicVolume: 0.7,
+      autoPlay: false,
+      playMode: 'sequential',
+    }
+  );
 }
 
 export async function saveSettings(settings: GameSettings): Promise<void> {
@@ -378,12 +384,12 @@ export async function saveAffection(affection: AffectionData): Promise<void> {
  */
 export async function clearAllGameData(): Promise<void> {
   console.log('🗑️ 清除所有游戏数据...');
-  
+
   await clearStore(STORES.RESOURCES);
   await clearStore(STORES.GACHA);
   await clearStore(STORES.SETTINGS);
   await clearStore(STORES.AFFECTION);
-  
+
   console.log('✅ 游戏数据已清除');
 }
 
@@ -392,10 +398,10 @@ export async function clearAllGameData(): Promise<void> {
  */
 export async function clearAllData(): Promise<void> {
   console.log('🗑️ 清除所有数据（包括元数据）...');
-  
+
   await clearAllGameData();
   await clearStore(STORES.METADATA);
-  
+
   console.log('✅ 所有数据已清除');
 }
 
@@ -411,7 +417,7 @@ export async function exportAllData(): Promise<string> {
     affection: await getAffection(),
     exportDate: new Date().toISOString(),
   };
-  
+
   return JSON.stringify(data, null, 2);
 }
 
@@ -421,13 +427,13 @@ export async function exportAllData(): Promise<string> {
 export async function importAllData(jsonStr: string): Promise<void> {
   try {
     const data = JSON.parse(jsonStr);
-    
+
     if (data.resources) await saveResources(data.resources);
     if (data.producerName) await saveProducerName(data.producerName);
     if (data.gacha) await saveGachaData(data.gacha);
     if (data.settings) await saveSettings(data.settings);
     if (data.affection) await saveAffection(data.affection);
-    
+
     console.log('✅ 数据导入成功');
   } catch (error) {
     console.error('❌ 数据导入失败:', error);
@@ -444,15 +450,12 @@ export async function importAllData(jsonStr: string): Promise<void> {
  */
 export async function initGameData(): Promise<void> {
   console.log('🎮 初始化游戏数据系统...');
-  
+
   // 打开数据库
   await openDatabase();
-  
+
   // 自动迁移localStorage数据
   await migrateFromLocalStorage();
-  
+
   console.log('✅ 游戏数据系统初始化完成');
 }
-
-
-

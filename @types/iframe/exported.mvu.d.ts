@@ -5,24 +5,6 @@ declare namespace Mvu {
 
     /** 实际的变量数据 */
     stat_data: Record<string, any>;
-
-    /**
-     * 显示数据: 变量变化的可视化表示, 方便在前端显示变量变化.
-     *
-     * 存储格式:
-     * - 如果变量从来没变化, 则存储值
-     * - 如果变量变化过, 则存储最新一次 `'旧值->新值 (原因)`
-     */
-    display_data: Record<string, any>;
-
-    /**
-     * 增量显示数据: 最新一次变量更新中变量变化的可视表示
-     *
-     * 存储格式:
-     * - 如果本次更新中变量没变化, 则没有对应表示
-     * - 如果本次更新中变量变化了, 则存储 `'旧值->新值 (原因)`
-     */
-    delta_data: Record<string, any>;
   };
 
   type CommandInfo = SetCommandInfo | InsertCommandInfo | DeleteCommandInfo | AddCommandInfo;
@@ -49,7 +31,7 @@ declare namespace Mvu {
     reason: string;
   };
   type AddCommandInfo = {
-    type: 'remove';
+    type: 'add';
     full_match: string;
     args: [path: string, delta_or_toggle_literal: string];
     reason: string;
@@ -63,43 +45,69 @@ declare namespace Mvu {
  */
 declare const Mvu: {
   events: {
+    /** 新开聊天对变量初始化时触发的事件  */
+    VARIABLE_INITIALIZED: 'mag_variable_initiailized';
+
     /** 某轮变量更新开始时触发的事件 */
     VARIABLE_UPDATE_STARTED: 'mag_variable_update_started';
 
-    /** 从文本解析到了命令时触发的事件 */
-    COMMAND_PARSED: 'mag_command_parsed';
-
     /**
-     * 某轮变量更新过程中, 某个变量更新时触发的事件
+     * 某轮变量更新过程中, 对文本成功解析了所有更新命令时触发的事件
      *
      * @example
-     * // 检测络络好感度突破 30
-     * eventOn(Mvu.events.SINGLE_VARIABLE_UPDATED, (stat_data, path, old_value, new_value) => {
-     *   // 如果被更新的变量不是 'stat_data.角色.络络.好感度', 则什么都不做直接返回 (return)
-     *   if (path === '角色.络络.好感度') {
-     *     return;
-     *   }
+     * // 修复 gemini 在中文间加入的 '-'', 如将 '角色.络-络' 修复为 '角色.络络'
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.forEach(command => {
+     *     command.args[0] = command.args[0].replace(/-/g, '');
+     *   });
+     * });
      *
-     *   // --被更新的变量是 'stat_data.角色.络络.好感度'---
-     *   if (old_value < 30 && new_value >= 30) {
-     *     toaster.success('络络好感度突破 30 了!');
-     *   }
+     * @example
+     * // 修复繁体字, 如将 '絡絡' 修复为 '络络'
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.forEach(command => {
+     *     command.args[0] = command.args[0].replaceAll('絡絡', '络络');
+     *   });
+     * });
+     *
+     * @example
+     * // 添加新的更新命令
+     * eventOn(Mvu.events.COMMAND_PARSED, commands => {
+     *   commands.push({
+     *     type: 'set',
+     *     full_match: `_.set('络络.好感度', 5)`,
+     *     args: ['络络.好感度', 5],
+     *     reason: '脚本强行更新',
+     *   });
      * });
      */
-    SINGLE_VARIABLE_UPDATED: 'mag_variable_updated';
+    COMMAND_PARSED: 'mag_command_parsed';
 
     /**
      * 某轮变量更新结束时触发的事件
      *
      * @example
      * // 保持好感度不低于 0
-     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, (variables) => {
+     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, variables => {
      *   if (_.get(variables, 'stat_data.角色.络络.好感度') < 0) {
      *     _.set(variables, 'stat_data.角色.络络.好感度', 0);
      *   }
+     * })
+     *
+     * @example
+     * // 保持好感度增幅不超过 3
+     * eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, (variables, variables_before_update) => {
+     *   const old_value = _.get(variables_before_update, 'stat_data.角色.络络.好感度');
+     *   const new_value = _.get(variables, 'stat_data.角色.络络.好感度');
+     *
+     *   // 新的好感度必须在 旧好感度-3 和 旧好感度+3 之间
+     *   _.set(variables, 'stat_data.角色.络络.好感度', _.clamp(new_value, old_value - 3, old_value + 3));
      * });
      */
     VARIABLE_UPDATE_ENDED: 'mag_variable_update_ended';
+
+    /** 即将用更新后的变量更新楼层时触发的事件  */
+    BEFORE_MESSAGE_UPDATE: 'mag_before_message_update';
   };
 
   /**
@@ -152,7 +160,7 @@ declare const Mvu: {
    * const new_data = await Mvu.parseMessage("_.set('角色.络络.好感度', 30); // 强制修改", old_data);
    * await Mvu.replaceMvuData(new_data, { type: 'message', message_id: 'latest' });
    */
-  parseMessage: (message: string, old_data: Mvu.MvuData) => Promise<Mvu.MvuData | undefined>;
+  parseMessage: (message: string, old_data: Mvu.MvuData) => Promise<Mvu.MvuData>;
 
   /**
    * 重新加载初始变量数据
@@ -162,75 +170,16 @@ declare const Mvu: {
    * @returns 是否加载成功
    */
   reloadInitVar: (mvu_data: Mvu.MvuData) => Promise<boolean>;
-
-  /**
-   * 对 MvuData 数据表设置单个变量的值
-   *
-   * @param mvu_data 要更新的 MvuData 数据表
-   * @param path 变量路径, 支持嵌套路径如 `'player.health'` 或数组索引 `'items[0]'`
-   * @param new_value 新值
-   * @param option 可选参数
-   *   - `reason?:string`: 更新原因, 会显示在 `display_data` 中
-   *   - `is_recursive?:boolean`: 是否触发 `Mvu.events.SINGLE_VARIABLE_UPDATED` 事件, 默认为 `false`
-   *
-   * @returns 更新是否成功
-   *
-   * @example
-   * // 简单更新
-   * await Mvu.setMvuVariable(data, '角色.络络.好感度', 30);
-   *
-   * // 带原因的更新
-   * await Mvu.setMvuVariable(data, '角色.络络.好感度', 30, { reason: '强制更新' });
-   *
-   * // 触发 mvu 事件 `Mvu.events.SINGLE_VARIABLE_UPDATED` 的更新
-   * await Mvu.setMvuVariable(data, '角色.络络.好感度', 30, { reason: '强制更新', is_recursive: true });
-   */
-  setMvuVariable: (
-    mvu_data: Mvu.MvuData,
-    path: string,
-    new_value: any,
-    { reason, is_recursive }?: { reason?: string; is_recursive?: boolean },
-  ) => Promise<boolean>;
-
-  /**
-   * 获取变量的值
-   *
-   * @param mvu_data MvuData 数据表
-   * @param path 变量路径, 支持嵌套路径如 `'player.health'` 或数组索引 `'items[0]'`
-   * @param option 可选参数
-   *   - `category?:'stat' | 'display' | 'delta'`: 要获取的变量数据类型, 默认为 `'stat'`
-   *   - `default_value?:any`: 如果变量不存在, 则返回该默认值
-   *
-   * @returns 变量值。如果是 ValueWithDescription 类型，返回第一个元素（实际值）
-   *
-   * @example
-   * // 获取 stat_data 中的值
-   * const health = Mvu.getMvuVariable(data, 'player.health');
-   *
-   * // 获取 display_data 中的显示值
-   * const healthDisplay = Mvu.getMvuVariable(data, 'player.health', { category: 'display' });
-   *
-   * // 获取 display_data 中的显示值, 如果没能获取到则默认为 0
-   * const score = Mvu.getMvuVariable(data, 'player.score', { default_value: 0 });
-   */
-  getMvuVariable: (
-    mvu_data: Mvu.MvuData,
-    path: string,
-    { category, default_value }?: { category?: 'stat' | 'display' | 'delta'; default_value?: any },
-  ) => any;
 };
 
 interface ListenerType {
+  [Mvu.events.VARIABLE_INITIALIZED]: (variables: Mvu.MvuData, swipe_id: number) => void;
+
+  [Mvu.events.BEFORE_MESSAGE_UPDATE]: (context: { variables: Mvu.MvuData; message_content: string }) => void;
+
   [Mvu.events.VARIABLE_UPDATE_STARTED]: (variables: Mvu.MvuData) => void;
 
-  [Mvu.events.COMMAND_PARSED]: (variables: Mvu.MvuData, commands: Mvu.CommandInfo[]) => void;
+  [Mvu.events.COMMAND_PARSED]: (variables: Mvu.MvuData, commands: Mvu.CommandInfo[], message_content: string) => void;
 
-  [Mvu.events.SINGLE_VARIABLE_UPDATED]: (
-    stat_data: Mvu.MvuData['stat_data'],
-    path: string,
-    old_value: any,
-    new_value: any,
-  ) => void;
-
-  [Mvu.events.VARIABLE_UPDATE_ENDED]: (variables: Mvu.MvuData) => void;
+  [Mvu.events.VARIABLE_UPDATE_ENDED]: (variables: Mvu.MvuData, variables_before_update: Mvu.MvuData) => void;
 }

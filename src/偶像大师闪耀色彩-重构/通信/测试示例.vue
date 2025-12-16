@@ -455,4 +455,3 @@ const testBackgroundMessage = () => {
   }
 }
 </style>
-

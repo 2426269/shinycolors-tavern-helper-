@@ -103,7 +103,3 @@ export interface HistoryLoadOptions {
   filterRole?: MessageRole; // 按角色过滤
   limit?: number; // 限制数量
 }
-
-
-
-

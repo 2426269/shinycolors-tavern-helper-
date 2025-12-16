@@ -218,4 +218,3 @@ export function useMessageChat(options: UseMessageChatOptions = {}) {
     getMessageCount,
   };
 }
-

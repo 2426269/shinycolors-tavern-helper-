@@ -398,4 +398,3 @@ if (typeof window !== 'undefined') {
   (window as any).pDrinkExamples = pDrinkExamples;
   console.log('💡 P饮料测试示例已加载。在控制台输入 pDrinkExamples.runAll() 来运行所有示例。');
 }
-

@@ -5,9 +5,8 @@
 export type AttributeType = '理性' | '感性' | '非凡';
 
 export type RecommendedStyle =
-  | '强气'
-  | '全力'
-  | '温存' // 非凡
+  | '坚决'
+  | '全力' // 非凡
   | '好印象'
   | '干劲' // 理性
   | '好调'
@@ -46,8 +45,7 @@ export function getStyleIcon(style: RecommendedStyle): string {
     好印象: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png',
     干劲: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png',
     全力: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力.png',
-    强气: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png',
-    温存: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png',
+    坚决: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/坚决.png',
   };
   return iconMap[style];
 }

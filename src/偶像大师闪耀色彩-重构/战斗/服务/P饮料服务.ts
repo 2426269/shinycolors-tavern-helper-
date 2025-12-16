@@ -210,4 +210,3 @@ export function categorizePDrinksByEffect(): {
     special: all.filter(d => d.effect.includes('转化') || d.effect.includes('回合数追加')),
   };
 }
-

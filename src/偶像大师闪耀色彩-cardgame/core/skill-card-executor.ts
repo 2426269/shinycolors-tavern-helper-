@@ -580,11 +580,3 @@ export class SkillCardExecutor {
     }
   }
 }
-
-
-
-
-
-
-
-

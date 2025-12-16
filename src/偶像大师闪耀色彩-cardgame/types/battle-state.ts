@@ -286,17 +286,3 @@ export interface BattleSnapshot {
   timestamp: number;
   version: string;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

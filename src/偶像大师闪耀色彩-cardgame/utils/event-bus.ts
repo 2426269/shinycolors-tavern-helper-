@@ -118,10 +118,3 @@ export const GameEvents = {
   POINTER_LOCKED: 'pointer_locked',
   POINTER_UNLOCKED: 'pointer_unlocked',
 } as const;
-
-
-
-
-
-
-

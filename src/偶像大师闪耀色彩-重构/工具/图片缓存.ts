@@ -196,6 +196,3 @@ export async function getCacheStats(): Promise<{ count: number; size: number }> 
  * 清空所有缓存（别名）
  */
 export const clearAllCache = clearImageCache;
-
-
-

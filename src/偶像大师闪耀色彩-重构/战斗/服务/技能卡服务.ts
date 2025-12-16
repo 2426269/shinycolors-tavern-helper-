@@ -231,4 +231,3 @@ export function canUseSkillCard(
   // 默认优先消耗元气
   return currentResources.energy >= cost || currentResources.stamina >= cost;
 }
-

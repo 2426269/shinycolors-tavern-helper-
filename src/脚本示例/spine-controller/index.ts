@@ -285,4 +285,3 @@ console.log('🔧 调试工具已挂载到 window.__spineController');
 console.log('使用示例:');
 console.log('  window.__spineController.playEmotion("Emotion_Happy")');
 console.log('  window.__spineController.testEmotion("今天真开心！")');
-

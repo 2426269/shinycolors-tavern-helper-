@@ -29,7 +29,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 5px;
-  
+
   &:hover {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   }
@@ -42,7 +42,7 @@ button {
 
 // 图片加载动画
 img {
-  &[src=""] {
+  &[src=''] {
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: loading 1.5s infinite;

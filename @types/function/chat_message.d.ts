@@ -39,6 +39,8 @@ type GetChatMessagesOption = {
  *
  * @returns 一个 `ChatMessage` 数组, 依据 message_id 从低到高排序
  *
+ * @throws 如果提供的范围 `range` 无效, 将会抛出错误
+ *
  * @example
  * // 仅获取第 10 楼被 AI 使用的消息页
  * const chat_messages = getChatMessages(10);
@@ -131,6 +133,10 @@ type SetChatMessagesOption = {
  * @example
  * // 切换为开局 3
  * await setChatMessages([{message_id: 0, swipe_id: 2}]);
+ *
+ * @example
+ * // 重新渲染第 4 楼的前端界面 (利用 `{render: 'affected'}`)
+ * await setChatMessages([{message_id: 4}]);
  *
  * @example
  * // 补充倒数第二楼的楼层变量

@@ -66,10 +66,3 @@ export function testDatabaseLoad() {
 if (typeof window === 'undefined') {
   testDatabaseLoad();
 }
-
-
-
-
-
-
-

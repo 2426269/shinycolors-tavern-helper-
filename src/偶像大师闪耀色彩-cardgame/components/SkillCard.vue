@@ -355,11 +355,3 @@ function handleImageError(event: Event) {
   }
 }
 </style>
-
-
-
-
-
-
-
-

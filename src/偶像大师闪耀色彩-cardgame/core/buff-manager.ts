@@ -300,11 +300,3 @@ export class BuffManager {
     return Array.from(state.buffs.values()).map(buff => ({ ...buff }));
   }
 }
-
-
-
-
-
-
-
-
