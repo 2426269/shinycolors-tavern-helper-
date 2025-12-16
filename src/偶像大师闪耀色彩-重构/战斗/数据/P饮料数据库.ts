@@ -192,7 +192,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '姜汁汽水',
     type: '非凡专属',
     rarity: '普通',
-    effect: '坚决转化，全力值+1',
+    effect: '强气转化，全力值+1',
     exclusivePlan: '非凡',
   },
   {
@@ -219,7 +219,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '初星超级苏打水',
     type: '非凡专属',
     rarity: '特级',
-    effect: '指针转化为坚决二阶段，"体力消耗减少"层数+1',
+    effect: '指针转化为强气二阶段，"体力消耗减少"层数+1',
     exclusivePlan: '非凡',
   },
   {
@@ -288,4 +288,3 @@ console.log(
 console.log(
   `  - 按稀有度: 普通=${P_DRINK_STATS.byRarity['普通']}, 高级=${P_DRINK_STATS.byRarity['高级']}, 特级=${P_DRINK_STATS.byRarity['特级']}`,
 );
-

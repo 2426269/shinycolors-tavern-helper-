@@ -3,7 +3,7 @@
  * 直接从CDN加载音频文件，无需API搜索
  */
 
-import type { Song } from './songs';
+import type { Song } from './歌曲数据';
 
 // ===================== 全局类型扩展 =====================
 declare global {
@@ -64,6 +64,34 @@ if (!window.globalVolume) {
 
 // ===================== 音频加载 =====================
 /**
+ * 从MP3文件中提取封面
+ */
+function extractCover(url: string): Promise<string | null> {
+  return new Promise(resolve => {
+    (jsmediatags as any).read(url, {
+      onSuccess: (tag: any) => {
+        const picture = tag.tags.picture;
+        if (picture) {
+          const { data, format } = picture;
+          let base64String = '';
+          for (let i = 0; i < data.length; i++) {
+            base64String += String.fromCharCode(data[i]);
+          }
+          const base64 = window.btoa(base64String);
+          resolve(`data:${format};base64,${base64}`);
+        } else {
+          resolve(null);
+        }
+      },
+      onError: (error: any) => {
+        console.warn('封面提取失败:', error);
+        resolve(null);
+      },
+    });
+  });
+}
+
+/**
  * 加载并播放指定歌曲
  */
 async function loadAndPlaySong(song: Song): Promise<boolean> {
@@ -84,12 +112,33 @@ async function loadAndPlaySong(song: Song): Promise<boolean> {
     // 设置新音频源
     STATE.audio.src = song.audioUrl;
     STATE.nowPlaying.name = song.title;
-    STATE.nowPlaying.coverUrl = song.albumCover || null;
 
-    // 清空歌词
+    // 处理封面：如果有预设封面则使用，否则尝试从MP3提取
+    if (song.albumCover) {
+      STATE.nowPlaying.coverUrl = song.albumCover;
+    } else {
+      STATE.nowPlaying.coverUrl = null; // 先置空
+      // 尝试提取封面
+      extractCover(song.audioUrl).then(cover => {
+        if (cover) {
+          STATE.nowPlaying.coverUrl = cover;
+          // 这里可以添加更新UI的逻辑，如果UI是响应式的，它会自动更新
+        }
+      });
+    }
+
+    // 清空歌词并加载新歌词
     STATE.lyrics.current = [];
     STATE.lyrics.translated = [];
     STATE.lyrics.activeIndex = -1;
+
+    // 异步加载歌词（不阻塞播放）
+    // 使用歌曲数据中的lyricsUrl字段（已预先匹配好）
+    if (song.lyricsUrl) {
+      loadLyrics(song.lyricsUrl).catch((err: any) => {
+        console.warn('⚠️ 歌词加载失败:', err.message);
+      });
+    }
 
     // 通知其他实例停止播放
     audioChannel.postMessage({
@@ -113,6 +162,12 @@ async function loadAndPlaySong(song: Song): Promise<boolean> {
     console.log('✅ 播放成功:', song.title);
     return true;
   } catch (error: any) {
+    // AbortError是正常情况（用户快速切换歌曲），静默处理
+    if (error.name === 'AbortError') {
+      console.log('⚠️ 播放被中断（正常切换）');
+      return false;
+    }
+
     console.error('❌ 播放失败:', error);
     console.error('错误详情:', {
       name: error.name,
@@ -140,6 +195,8 @@ async function loadAndPlaySong(song: Song): Promise<boolean> {
 function togglePlay(): void {
   if (STATE.audio.paused) {
     STATE.audio.play().catch(err => {
+      // AbortError静默处理
+      if (err.name === 'AbortError') return;
       console.error('播放失败:', err);
       toastr.error('播放失败', '错误');
     });
@@ -197,6 +254,123 @@ function toggleTranslation(): void {
 }
 
 // ===================== 歌词相关 =====================
+// 双语歌词行类型
+interface BilingualLyricLine {
+  time: number;
+  japanese: string;
+  chinese: string;
+}
+
+/**
+ * 解析LRC歌词格式（支持双语）
+ * 文件格式：每个时间点有两行，第一行日语，第二行中文（相同时间戳）
+ */
+function parseLRC(lrcText: string): BilingualLyricLine[] {
+  const lines = lrcText.split(/\r?\n/);
+  const tempLyrics: { time: number; content: string }[] = [];
+
+  // LRC时间标签正则: [mm:ss.xx] 或 [mm:ss]
+  const timeRegex = /\[(\d{2}):(\d{2})(?:\.(\d{2,3}))?\]/g;
+
+  for (const line of lines) {
+    // 跳过元数据行（如 [ti:标题]）
+    if (line.match(/^\[[a-z]+:/i)) continue;
+
+    // 提取所有时间标签
+    const times: number[] = [];
+    let match;
+    while ((match = timeRegex.exec(line)) !== null) {
+      const minutes = parseInt(match[1], 10);
+      const seconds = parseInt(match[2], 10);
+      const ms = match[3] ? parseInt(match[3].padEnd(3, '0'), 10) : 0;
+      times.push(minutes * 60 + seconds + ms / 1000);
+    }
+
+    // 提取歌词内容（移除时间标签）
+    const content = line.replace(/\[\d{2}:\d{2}(?:\.\d{2,3})?\]/g, '').trim();
+
+    // 跳过空内容
+    if (!content || times.length === 0) continue;
+
+    // 为每个时间标签创建歌词行
+    for (const time of times) {
+      tempLyrics.push({ time, content });
+    }
+  }
+
+  // 按时间排序
+  tempLyrics.sort((a, b) => a.time - b.time);
+
+  // 合并相同时间戳的歌词（第一行日语，第二行中文）
+  const result: BilingualLyricLine[] = [];
+  let i = 0;
+  while (i < tempLyrics.length) {
+    const current = tempLyrics[i];
+    const next = tempLyrics[i + 1];
+
+    // 检测是否是中文（包含中文字符）
+    const isChinese = (text: string) => /[\u4e00-\u9fa5]/.test(text) && !/[\u3040-\u30ff]/.test(text);
+    const isJapanese = (text: string) => /[\u3040-\u30ff]/.test(text);
+
+    if (next && Math.abs(next.time - current.time) < 0.01) {
+      // 相同时间戳：判断哪个是日语哪个是中文
+      if (isJapanese(current.content) || !isChinese(current.content)) {
+        result.push({
+          time: current.time,
+          japanese: current.content,
+          chinese: next.content,
+        });
+      } else {
+        result.push({
+          time: current.time,
+          japanese: next.content,
+          chinese: current.content,
+        });
+      }
+      i += 2;
+    } else {
+      // 单行歌词：根据内容判断语言
+      result.push({
+        time: current.time,
+        japanese: isJapanese(current.content) ? current.content : '',
+        chinese: isChinese(current.content) ? current.content : isJapanese(current.content) ? '' : current.content,
+      });
+      i += 1;
+    }
+  }
+
+  return result;
+}
+
+// 存储双语歌词
+let bilingualLyrics: BilingualLyricLine[] = [];
+
+/**
+ * 加载歌词文件
+ */
+async function loadLyrics(url: string): Promise<void> {
+  try {
+    console.log('📝 加载歌词:', url);
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const lrcText = await response.text();
+    bilingualLyrics = parseLRC(lrcText);
+    // 转换为旧格式以保持兼容性
+    STATE.lyrics.current = bilingualLyrics.map(l => ({ time: l.time, content: l.japanese || l.chinese }));
+    STATE.lyrics.translated = bilingualLyrics.map(l => ({ time: l.time, content: l.chinese }));
+    console.log(`✅ 歌词加载成功: ${bilingualLyrics.length} 行`);
+  } catch (error: any) {
+    console.warn('⚠️ 歌词加载失败:', error.message);
+    STATE.lyrics.current = [];
+    STATE.lyrics.translated = [];
+    bilingualLyrics = [];
+  }
+}
+
 /**
  * 根据当前播放时间查找歌词索引
  */

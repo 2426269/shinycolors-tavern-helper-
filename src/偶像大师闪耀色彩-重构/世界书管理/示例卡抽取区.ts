@@ -4,6 +4,7 @@
  */
 
 import SKILL_CARD_LIBRARY from '../战斗/数据/技能卡库.json';
+import CHARACTER_SKILL_CARDS from '../战斗/数据/角色专属技能卡库.json';
 import type { ProducePlan, SkillCard, SkillCardRarity } from '../战斗/类型/技能卡类型';
 import type { AttributeType } from '../类型/卡牌属性类型';
 
@@ -135,18 +136,42 @@ export class ExampleCardSelector {
   }
 
   /**
-   * 过滤技能卡
+   * 过滤技能卡 - 优先从角色专属技能卡库抽取
    * @param rarity 稀有度
    * @param plan 培育计划（可选）
    * @param attribute 属性（可选）
    * @returns 过滤后的技能卡列表
    */
   private static filterCards(rarity: SkillCardRarity, plan?: ProducePlan, _attribute?: AttributeType): SkillCard[] {
-    // 如果指定了培育计划，只从对应计划的卡库中获取
+    // 优先从角色专属技能卡库抽取
+    const characterCardsLib = CHARACTER_SKILL_CARDS as unknown as Record<string, Record<string, SkillCard[]>>;
+    let characterCards: SkillCard[] = [];
+
+    if (plan) {
+      // 获取指定计划的角色专属卡
+      const planData = characterCardsLib[plan];
+      if (planData && planData[rarity]) {
+        characterCards = [...planData[rarity]];
+      }
+    } else {
+      // 获取所有计划的角色专属卡
+      for (const planCards of Object.values(characterCardsLib)) {
+        if (planCards[rarity]) {
+          characterCards.push(...planCards[rarity]);
+        }
+      }
+    }
+
+    // 如果角色专属卡足够，直接返回
+    if (characterCards.length >= 6) {
+      console.log(`📊 从角色专属卡库抽取 ${characterCards.length} 张 ${rarity} 卡`);
+      return characterCards;
+    }
+
+    // 否则从全卡库补充
     let allCards: SkillCard[] = [];
 
     if (plan) {
-      // 获取指定计划的所有稀有度卡牌
       const library = SKILL_CARD_LIBRARY as unknown as Record<string, Record<string, SkillCard[]>>;
       const planData = library[plan];
       if (planData) {
@@ -157,22 +182,21 @@ export class ExampleCardSelector {
         }
       }
     } else {
-      // 获取所有卡牌（但排除自由计划）
       allCards = getAllSkillCards().filter(card => card.plan !== '自由');
     }
 
-    return allCards.filter(card => {
-      // 稀有度匹配
+    const filteredCards = allCards.filter(card => {
       if (card.rarity !== rarity) return false;
-
-      // 排除自由（通用）计划的卡牌
       if (card.plan === '自由') return false;
-
-      // 属性匹配（如果指定）- 这里需要从效果文本中推断，暂时跳过
-      // 未来可以在技能卡类型中添加 attribute 字段
-
       return true;
     });
+
+    // 合并：角色专属卡 + 部分全库卡（去重）
+    const existingNames = new Set(characterCards.map(c => c.name));
+    const supplementCards = filteredCards.filter(c => !existingNames.has(c.name));
+
+    console.log(`📊 角色专属卡 ${characterCards.length} 张 + 补充 ${supplementCards.length} 张 ${rarity} 卡`);
+    return [...characterCards, ...supplementCards];
   }
 
   /**
@@ -272,8 +296,6 @@ export class ExampleCardSelector {
     markdown += `以下示例卡均使用词条式格式（effectEntries数组），请严格参考这种格式输出：\n\n`;
 
     cards.forEach((card, index) => {
-      const cardTypeText = card.cardType === 'A' ? '主动' : card.cardType === 'M' ? '精神' : '陷阱';
-
       markdown += `**示例 ${index + 1}：${card.name}** (${card.rarity} - ${card.plan})\n`;
       markdown += `\`\`\`json\n`;
 
@@ -282,12 +304,11 @@ export class ExampleCardSelector {
       const nameJP = nameParts[0] || card.name;
       const nameCN = nameParts[1] || nameJP;
 
-      // 输出完整的技能卡JSON，包含词条式格式
-      const cardForDisplay = {
+      // 输出完整的技能卡JSON，包含词条式格式（不包含type字段，避免默认陷阱问题）
+      const cardForDisplay: Record<string, unknown> = {
         id: card.id,
         nameJP: nameJP,
         nameCN: nameCN,
-        type: cardTypeText,
         rarity: card.rarity,
         cost: card.cost,
         producePlan: card.plan,
@@ -298,6 +319,12 @@ export class ExampleCardSelector {
         restrictions: card.restrictions || { isDuplicatable: true, usesPerBattle: null },
         flavor: card.flavor || '',
       };
+
+      // 只有当cardType有值时才添加type字段
+      if (card.cardType) {
+        const cardTypeText = card.cardType === 'A' ? '主动' : card.cardType === 'M' ? '精神' : '陷阱';
+        cardForDisplay.type = cardTypeText;
+      }
 
       markdown += JSON.stringify(cardForDisplay, null, 2);
       markdown += `\n\`\`\`\n\n`;

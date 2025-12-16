@@ -86,6 +86,8 @@ export class PromptManager {
 }
 \`\`\`
 
+**🚨 type字段必须是"主动"或"精神"，不得使用其他任何值！**
+
 ---
 
 ## 🎯 图标URL速查
@@ -100,92 +102,106 @@ export class PromptManager {
 | 好调 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png\` |
 | 绝好调 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png\` |
 | 强气 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png\` |
+| 热意 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png\` |
 | 温存 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png\` |
+| 悠闲 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/悠闲.png\` |
 | 消费体力减少 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png\` |
 | 技能卡使用次数+1 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/技能卡使用次数加一.png\` |
+| 回合数追加 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/回合数追加.png\` |
+| 低下状态无效 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/低下状态无效.png\` |
+| 数值提升 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值提升.png\` |
+| 成长 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/成长.png\` |
 | 手牌 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/手牌.png\` |
-| 数值/条件等 | \`""\`（空字符串，数值无专用图标） |
+| 数值 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png\` |
+| 好印象增加量增加 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象增加量增加.png\` |
+| 好印象强化 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象强化.png\` |
+| 条件效果 | \`""\`（空字符串） |
+
+---
+
+## 🎮 当前培育计划机制（{{producePlan}}）
+
+{{producePlanMechanic}}
+
+**当前推荐流派：{{recommendedStyle}}**
+
+⚠️ 技能卡效果必须围绕推荐流派的核心资源设计，避免混用其他流派资源。
 
 ---
 
 ## ⚠️ 核心规则
 
-### 1. 命名与简介规则（🔥 最重要！避免常见错误）
-- ✅ **卡牌名称和flavor简介只与角色人设、主题有关**
-- ❌ **禁止根据培育计划属性命名**（如理性→演算、非凡→挑战、感性→感动）
-- ❌ **错误示例**："终点越えの演算"（因为"演算"是从"理性"属性联想的）
-- ✅ **正确做法**：
-  - 命名灵感来源：角色性格、卡牌主题、角色台词、角色故事背景
-  - 例如某角色的卡牌主题是"舞台表演"，就用舞台相关词汇命名
-  - flavor文本描述角色在该场景的心情、动作、想法，不要提到"理性计划"这类属性词
-- ⚠️ 属性只影响技能效果内容，不影响命名和简介
+### 1. 命名禁忌（🔥 最重要！）
+- ✅ 命名灵感来源：角色性格、卡牌主题、角色台词、故事背景
+- ❌ **禁止**：从培育计划属性联想（理性→演算、非凡→挑战、感性→感动）
+- ❌ **错误示例**："终点越えの演算"（"演算"从"理性"联想）
 
-### 2. 词条格式（技术要求）
-- ✅ effectEntries/effectEntriesEnhanced **必须是非空数组**
-- ✅ 每个词条包含：icon（图标URL或""）、effect（纯中文描述）、isConsumption（布尔值）
-- ✅ effect示例："数值+10"、"元气+3"、"变更为强气2段"、"抽取1张技能卡"
-- ⚠️ **数值效果的icon使用空字符串""**（数值没有专用图标）
-- ⚠️ **技能卡使用次数+1有专用图标**，请使用对应URL
-- ❌ 禁止日文：パラメータ→数值、元気→元气、やる気→干劲、レッスン→演出
+### 2. 词条格式
+- ✅ effectEntries/effectEntriesEnhanced **必须非空**
+- ✅ 每个词条：icon（URL或""）、effect（纯中文）、isConsumption（布尔）
+- ❌ 禁止日文：パラメータ→数值、元気→元气、やる気→干劲
 
-### 3. 卡牌类型
-- **主动卡(A)**：必须包含"数值+X"词条
-- **精神卡(M)**：不包含数值，仅资源/状态效果
+### 3. 卡牌类型（必须选择其一）
+
+**主动卡（type填"主动"）**：
+- 核心特征：**必须包含"数值+X"词条**
+- 作用：直接提供分数，是得分的主要来源
+- 典型效果：数值+10、元气+5、数值+8（全力值×200%）等
+- 示例：所有包含直接得分的卡牌
+
+**精神卡（type填"精神"）**：
+- 核心特征：**不包含数值提升**，仅操作资源和状态
+- 作用：调整游戏状态、积累资源、buff管理
+- 典型效果：
+  - 状态切换（切换至强气、全力、温存）
+  - 资源获取（元气+X、全力值+X、好印象+X）
+  - buff操作（好调+2回合、消费体力减少+3回合）
+  - 特殊效果（技能卡使用数+1、回合数+1）
+- **关键区别**：精神卡的"元气+X"、"全力值+X"等是**资源积累**，不是**最终得分**
+
+**判断标准**：
+- ✅ 有"数值+X" → 主动卡
+- ✅ 无"数值+X"，只有资源/状态/buff → 精神卡
+
+⚠️ **type字段只能是"主动"或"精神"，不要填写其他任何值！**
 
 ### 4. 限制信息
-- isDuplicatable：false=不可重复获得，true=可重复获得
-- usesPerBattle：1=演出中限1次，null=无限制
-- ⚠️ 不要所有卡都设为演出中限1次
+- isDuplicatable：false=不可重复，true=可重复
+- usesPerBattle：1=演出限1次，null=无限制
 
-### 5. 推荐流派系统（🔥 重要！）
+### 5. 强度设计
+- 参考示例卡的数值范围
+- 明显强于低稀有度，不超过高稀有度
+- UR需全面超越SSR（数值+30-50%）
 
-**每个属性有两条流派路线，必须专注其中一条，否则会严重限制卡牌强度！**
+### 6. 🔥 复杂机制设计（重要！避免过于简单）
 
-当前推荐流派：**{{recommendedStyle}}**
+**SSR/UR级卡牌应具备复杂机制，不要只是简单的"数值+X"或"资源+X"！**
 
-#### 理性计划
-- **干劲流派**：核心资源是**元气**和**干劲**，围绕积累干劲并转换为元气最终打出大量得分
-- **好印象流派**：核心资源是**好印象**，围绕积累和消费好印象来获得强力效果
+**常见的高级机制类型**：
+1. **条件触发**：好调状态时额外数值+10、好印象6层以上时数值+15
+2. **延时效果**：随后三回合内每回合结束时增加元气60%的数值
+3. **持续效果**：此后每使用一张技能卡时干劲+1
+4. **成长效果**：通过直接效果切换至强气状态时，数值+4（最多4次）
+5. **状态联动**：切换至温存后全力值+1、切换至强气后使用M类卡数值+7
+6. **使用条件**：仅处于好调状态可使用、仅好印象≥6可使用
+7. **多阶段效果**：切换至强气→数值+10→下回合切换至温存
 
-#### 非凡计划
-- **强气流派**：核心资源是**强气**和**温存**，通过强气和温存的相互切换获得**热意值**来提高数值
-- **全力流派**：核心资源是**全力值**，围绕尽可能多地获得全力值并进入**全力状态**（分数倍增200%）
+**精神卡设计参考**（不直接提分但具有战略价值）：
+- 好印象增加量增加100%（3回合）
+- 好印象+3，此后每使用一张技能卡干劲+1
+- 温存状态下直接增加全力值后全力值+1
+- 使用后5回合内回合开始时若不处于强气则切换至强气
 
-#### 感性计划（特殊：双流派配合）
-- **好调流派**：核心资源是**好调/绝好调**
-  - **好调**：固定提高数值50%（无论好调回合数）
-  - **绝好调**：在好调的基础上，根据现有好调回合数额外增加（好调回合数×10%）
-  - 示例：好调3回合+绝好调 = 50% + (3×10%) = 80%提升
-- **集中流派**：核心资源是**集中**，提高基础数值（如集中+3 = 基础数值+3）
-- ⚠️ **特殊机制**：感性计划的好调和集中相互配合，"左脚踩右脚"
-  - 整体构筑需要两种流派都用（一主一副）才能打出高分
-  - **但单张卡牌设计必须以其中一个流派为主效果**
-  - 根据推荐流派决定这张卡主要提供好调还是集中
+**⚠️ 简单卡设计示例（避免）**：
+- ❌ 仅"数值+20"
+- ❌ 仅"好印象+5"
+- ❌ 仅"切换至强气+元气+5"
 
-#### 通用（无属性）
-- 通用卡可以在任何培育计划中使用，但不属于专属技能卡的设计范畴
-
-⚠️ **设计规则**：
-1. 技能卡效果必须围绕推荐流派的核心资源设计
-2. **全力流派**：核心是获得全力值并进入全力状态，不应主要提供元气
-3. **强气流派**：核心是强气和温存的切换+热意值，不应混入全力值
-4. **好印象流派**：核心是好印象资源，不应主要提供元气
-5. **干劲流派**：核心是元气转化为干劲，这才应该提供元气
-6. **感性计划（特殊）**：
-   - 推荐流派是"好调"→卡牌以好调/绝好调效果为主（可附带少量集中）
-   - 推荐流派是"集中"→卡牌以集中效果为主（可附带少量好调）
-   - 单张卡不能平均提供两种效果，必须有明确的主次
-7. 对于理性/非凡计划：虽然同属性可以互用资源，但两条路都走会导致强度不足
-8. 专属技能卡应该是该流派的核心爆发/终极技能
-
-### 5. 培育计划特色（{{producePlan}}）
-{{producePlanMechanic}}
-
-### 6. 强度设计
-参考示例卡的效果强度，确保：
-- 明显强于低稀有度示例
-- 不超过高稀有度示例太多
-- UR需全面超越SSR（数值提升30-50%）
+**✅ 复杂卡设计示例（推荐）**：
+- ✅ 数值+15，好调状态时额外+10并好调+2回合
+- ✅ 好印象+4，好印象≥6时数值+15
+- ✅ 切换至强气+数值+10+成长效果
 
 ---
 
@@ -195,16 +211,13 @@ export class PromptManager {
 
 ---
 
-## ✅ 最终检查清单
+## ✅ 最终检查
 
-1. ⚠️ effectEntries/effectEntriesEnhanced 是否非空？
-2. ⚠️ 所有effect字段是否纯中文？
-3. ⚠️ icon字段是否正确填写（URL或""）？
-4. ⚠️ isConsumption是否正确标记？
-5. ⚠️ 是否符合{{producePlan}}计划特色？
-6. ⚠️ 是否仅输出JSON（无解释文字）？
-
-**再次强调**：effectEntries和effectEntriesEnhanced数组绝对不能为空！
+1. effectEntries/effectEntriesEnhanced 非空？
+2. effect字段纯中文？
+3. icon URL正确或""？
+4. 符合{{producePlan}}计划特色？
+5. 仅输出JSON？
 `;
   }
 
@@ -230,32 +243,25 @@ export class PromptManager {
   }
 
   /**
-   * 获取指定模式的提示词（优先使用自定义格式）
+   * 获取指定模式的提示词（直接替换变量）
    * @param mode 提示词模式
-   * @returns Promise<string> 提示词内容
+   * @param variables 变量对象
+   * @returns 替换后的提示词
    */
-  static async getPrompt(mode: PromptMode): Promise<string> {
-    // 尝试读取用户自定义提示词
-    try {
-      const globalVars = getVariables({ type: 'global' });
-      const customPromptKey = `prompt_${mode}`;
-
-      if (typeof globalVars[customPromptKey] === 'string' && globalVars[customPromptKey].trim()) {
-        console.log(`✅ 使用自定义提示词格式: ${mode}`);
-        return globalVars[customPromptKey];
-      }
-    } catch (error) {
-      console.warn('⚠️ 读取自定义提示词格式失败，使用默认格式:', error);
-    }
-
-    // 如果没有自定义格式，使用默认格式
+  static getPrompt(mode: PromptMode, variables: PromptVariables): string {
+    // 获取模板
+    let template = '';
     switch (mode) {
       case PromptMode.SKILL_CARD_GENERATION:
-        return this.getSkillCardGenerationPrompt();
+        template = this.getSkillCardGenerationPrompt();
+        break;
       default:
         console.error(`❌ 未知的提示词模式: ${mode}`);
         return '';
     }
+
+    // 替换变量
+    return this.replaceVariables(template, variables);
   }
 
   /**

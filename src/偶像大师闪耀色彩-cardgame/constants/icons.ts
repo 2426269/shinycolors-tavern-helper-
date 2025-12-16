@@ -46,7 +46,9 @@ export const BUFF_ICONS = {
 
   // 非凡系统
   全力状态: `${CDN_BASE}/全力.png`, // 全力状态（得分×3或×4）
-  坚决状态: `${CDN_BASE}/坚决.png`, // 坚决状态（使用卡牌+全力值）
+  强气状态: `${CDN_BASE}/强气.png`, // 强气状态（使用卡牌+全力值）
+  温存状态: `${CDN_BASE}/温存.png`, // 温存状态
+  悠闲状态: `${CDN_BASE}/悠闲.png`, // 悠闲状态
   // 温存状态暂无图标
 } as const;
 
@@ -96,10 +98,3 @@ export type ResourceIcon = keyof typeof RESOURCE_ICONS;
 export type PlanIcon = keyof typeof PLAN_ICONS;
 export type BuffIcon = keyof typeof BUFF_ICONS;
 export type GameIcon = keyof typeof GAME_ICONS;
-
-
-
-
-
-
-

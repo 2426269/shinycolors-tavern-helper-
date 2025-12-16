@@ -1,4027 +1,1317 @@
 {
-  "【loading...】市川雛菜": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 65,
-      "visual": 70
-    }
-  },
-  "【ちいさな巣立ち】福丸小糸": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【アルマ】浅倉透": {
+  "【ナチュラルモード】櫻木真乃": {
+    "enzaId": "1030010010",
+    "characterId": "mano",
     "attributeType": "非凡",
-    "stamina": 33,
+    "stamina": 26,
     "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 60,
-      "visual": 80
-    }
-  },
-  "【モラトリアム・レポート】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【longing】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【お散歩サンライト】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【すれちがいシアター】大崎甘奈": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
     "stats": {
       "vocal": 90,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【ないしょのスイーツ】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【ふたつの雨】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【ゆらゆらアクアリウム】大崎甘奈": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【スタンバイオッケー】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【似合うかな？】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【叶えて☆ゴールドフィッシュ】大崎甘奈": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【憧憬リキュール】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 60,
       "dance": 60,
-      "visual": 65
-    }
-  },
-  "【挑戦アトラクティブ】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【甜花ちゃんといっしょ☆】大崎甘奈": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
       "visual": 95
-    }
-  },
-  "【竜宮城へ ご招待☆】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【約束ペタル】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【聞いてマイハート】大崎甘奈": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【見つけたい、だけど……】大崎甘奈": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 55,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【輝いてアンドロメダ】大崎甘奈": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【BON・BON・DAY！】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【Eve】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【Feel Like Flower】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【I♡DOLL】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【LADY♡e-DOL】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【U♥DOLL】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【お日様染めのマリーナ】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【きみは相棒】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【シンメトリー・プールサイド】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【ストライク狙って】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【バス・タイムの気分で】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【事務所。静寂。大輪の華】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【四夜一夜物語】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【好きなものはなんですか？】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 70,
-      "dance": 65,
-      "visual": 75
-    }
-  },
-  "【氷上バンビーナ】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【甜der Dream Show】大崎甜花": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【甜ing Room】大崎甜花": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 65
-    }
-  },
-  "【秘密のだらだらタイム】大崎甜花": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【つよがりのためのララバイ】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【はるかぜまち、1番地】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【ひとひらで紡ぐ世界】桑山千雪": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【やわらかくうけとめて】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【よそゆき顔のセレナーデ】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【サマーハニー・シーズン】桑山千雪": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【シークレット・ヒロイン】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【ネームレス・ヘヴンに憧れて】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【ハッピー・アイ・スクリーム】桑山千雪": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【マイフェイバリット】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【マイ・ピュア・ロマンス】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【ワン・モア・フラワリング】桑山千雪": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【一夏一刻物語】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【切り拓いて・茨】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【剥がされて、虚ろ】桑山千雪": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【夏、イエー】桑山千雪": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【秋空と紅葉】桑山千雪": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【Blind Driver】斑鳩ルカ": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【BLUES】斑鳩ルカ": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 90
-    }
-  },
-  "【broken shout】斑鳩ルカ": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【Could Be】斑鳩ルカ": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 55
-    }
-  },
-  "【new or ...】斑鳩ルカ": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【Noisy Rush】斑鳩ルカ": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【SMASH】斑鳩ルカ": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【Hopeland】郁田はるき": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 90,
-      "visual": 70
-    }
-  },
-  "【song for you】郁田はるき": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【桜花拾】郁田はるき": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【流星パレット】郁田はるき": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【漂白花火】郁田はるき": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【連綿と、桜】郁田はるき": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【Eyes On You】鈴木羽那": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【From You】鈴木羽那": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【Marry You？】鈴木羽那": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 55
-    }
-  },
-  "【Scene With You】鈴木羽那": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 90,
-      "visual": 90
-    }
-  },
-  "【優You】鈴木羽那": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【純白の君へ】鈴木羽那": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【GLIMMER】緋田美琴": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【Kn☆cking. Kn☆cking.】園田智代子": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【T☆ Queen】園田智代子": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【あそ→と♥ちよこれいと】園田智代子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【うつくしいあした】園田智代子": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【かきまぜたら＊ミルク】園田智代子": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【ちょこ色×きらきらロマン】園田智代子": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【はじめましてラストダンス】園田智代子": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【よろしく♡めしませっ】園田智代子": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 55,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【チョコ for Y♡U】園田智代子": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 55,
-      "dance": 65,
-      "visual": 75
-    }
-  },
-  "【トコハレ☀コメディ】園田智代子": {
-    "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 55,
-      "dance": 60,
-      "visual": 70
-    }
-  },
-  "【フロイラインに心酔】園田智代子": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【プリティ・スイート】園田智代子": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【砂糖づけ・ビターエンド】園田智代子": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【純真チョコレート】園田智代子": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【錯覚・Darling】園田智代子": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【きみだけ！】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【ななひゃくさんじゅう　えん】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【アイドルじゃなくなったら】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【エクストリーム・ブレイク！】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【カラーズキャッチ！】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【キャッチ・ザ・フォール！】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【ギア・アップ！ゴー・オン！】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 65,
-      "visual": 70
-    }
-  },
-  "【スノードーム・シンドローム】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【ソー・ディフィカルト！】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【デコって！ハッピークッキー】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【フルスロットルエイジ！】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 31,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 65
-    }
-  },
-  "【マメ丸と一緒！】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【両手に兄！】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 95,
-      "visual": 85
-    }
-  },
-  "【新装備・バブルバスター！】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【日刊ウィズ・ユー！】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 34,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 55
-    }
-  },
-  "【潮騒のシーショア】小宮果穂": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【窓辺・サイレントタイム】小宮果穂": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【第2形態アーマードタイプ】小宮果穂": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 90,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【Birdy BUddy】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【cheer+】有栖川夏葉": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【Fall】有栖川夏葉": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【Ring a bell】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【TOTTを誓って】有栖川夏葉": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 70,
-      "visual": 50
-    }
-  },
-  "【♡AKQJ10】有栖川夏葉": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 90,
-      "visual": 80
-    }
-  },
-  "【アルティメットマーメイド】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【カトレアの花言葉】有栖川夏葉": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 55
-    }
-  },
-  "【ストイックトレーニング】有栖川夏葉": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【ビューティフル】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【マイバレンタイン】有栖川夏葉": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【メイドインナツハ】有栖川夏葉": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【ユアバレンタイン】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 80
-    }
-  },
-  "【夏は来ぬ】有栖川夏葉": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 65,
-      "visual": 80
-    }
-  },
-  "【風がかけていくように】有栖川夏葉": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 95
-    }
-  },
-  "【鳥籠をひらいて】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 60
-    }
-  },
-  "【さよならごつこ】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 50,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【ふらここのうた】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【われにかへれ】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【ラヴ・レター】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【ロー・ポジション】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【凛世花伝】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【凜凛、凛世】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【十二月短篇】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【微熱風鈴】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 55,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【想ひいろは】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【春告窓】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 60
-    }
-  },
-  "【晩秋ろまんす】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 55,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【杜野凛世の印象派】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【染光満月】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【水色感情】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【片恋はあと】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 65,
-      "visual": 70
-    }
-  },
-  "【硝子少女】杜野凛世": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【花は】杜野凛世": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【階段式純情昇降機】杜野凛世": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【# 3738 Custom Order】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【Clashmade】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 55,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【I・OWE・U】西城樹里": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【sparkle,,,】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 70,
-      "visual": 55
-    }
-  },
-  "【STARTRAIN】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【あなた色アンダンテ】西城樹里": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【きらり、足跡】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【とびっきりジンジャー】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【オフデーゲーム】西城樹里": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【バッドガールの羽ばたき】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【ラムネ色の覚悟】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【夏服にWIND YOU！】西城樹里": {
-    "attributeType": "非凡",
-    "stamina": 31,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【曲がり角のランウェイ】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【秋陽のスケッチ】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【花染む街で、君と】西城樹里": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【誰が為シンパシー】西城樹里": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【陽の光、透かせば】西城樹里": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【きゅん ♡コメ】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 55,
-      "visual": 60
-    }
-  },
-  "【こころレイヤリング】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【ずっと・グッド・ラック】八宮めぐる": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【そらあいスウィング】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【たそ かれスワッグ】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【たまゆらフレーミング】八宮めぐる": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【ふたり色　クレオール】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【アイの誓い】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【キネマ・リリックで夢見て】八宮めぐる": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【シュカのまにまに】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【セツナn】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【チエルアルコは流星の】八宮めぐる": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 90
-    }
-  },
-  "【ハロー・ワールド】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【夏に恋するピチカート！】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【小さな夜のトロイメライ】八宮めぐる": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 55,
-      "dance": 65,
-      "visual": 75
-    }
-  },
-  "【日々を紡ぐインヴェルノ】八宮めぐる": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【金色の元気いっぱいガール】八宮めぐる": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 90,
-      "dance": 90,
-      "visual": 65
-    }
-  },
-  "【interStellar-Stella】櫻木真乃": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【あなたと、いただきます】櫻木真乃": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【きみと巡り行く】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
     }
   },
   "【ぐうぜんBOOKS】櫻木真乃": {
+    "enzaId": "1030010020",
+    "characterId": "mano",
     "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
+    "stamina": 27,
+    "recommendedStyle": "好调",
     "stats": {
-      "vocal": 60,
-      "dance": 65,
-      "visual": 60
+      "vocal": 65,
+      "dance": 60,
+      "visual": 85
     }
   },
   "【しじまに華ひととき】櫻木真乃": {
-    "attributeType": "非凡",
+    "enzaId": "1030010030",
+    "characterId": "mano",
+    "attributeType": "感性",
     "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【はじけてスマイル】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【はるかなる】櫻木真乃": {
-    "attributeType": "感性",
-    "stamina": 29,
     "recommendedStyle": "好调",
     "stats": {
-      "vocal": 80,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【ひとつ、 はたたく】櫻木真乃": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
       "vocal": 70,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【ほわっとスマイル】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【ソラを跳ね】櫻木真乃": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【ナチュラルモード】櫻木真乃": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 60
-    }
-  },
-  "【ハ♡トフェルトゥギフト】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 95
-    }
-  },
-  "【ピックアップ・ スプリング】櫻木真乃": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【一番星の魔法】櫻木真乃": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【深染め、いろみぐさ】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【私のハルモニア】櫻木真乃": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
+      "dance": 50,
       "visual": 75
     }
   },
   "【花結びゆくゆく】櫻木真乃": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
+    "enzaId": "1030010040",
+    "characterId": "mano",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
     "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
+      "vocal": 85,
+      "dance": 55,
+      "visual": 80
     }
   },
-  "【花風Smiley】櫻木真乃": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "干劲",
+  "【一番星の魔法】櫻木真乃": {
+    "enzaId": "1030010050",
+    "characterId": "mano",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
     "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 70
+      "vocal": 75,
+      "dance": 60,
+      "visual": 90
     }
   },
-  "【The thing is】風野灯織": {
+  "【ピックアップ・ スプリング】櫻木真乃": {
+    "enzaId": "1030010060",
+    "characterId": "mano",
     "attributeType": "感性",
     "stamina": 29,
     "recommendedStyle": "好调",
     "stats": {
       "vocal": 80,
-      "dance": 75,
-      "visual": 70
+      "dance": 55,
+      "visual": 65
     }
   },
-  "【ひとりじゃない夜のこと】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【インビジブルタイム】風野灯織": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【エバー・リメンバー・ネバー】風野灯織": {
+  "【ほわっとスマイル】櫻木真乃": {
+    "enzaId": "1040010010",
+    "characterId": "mano",
     "attributeType": "感性",
-    "stamina": 28,
+    "stamina": 25,
     "recommendedStyle": "集中",
     "stats": {
-      "vocal": 90,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【キミと今旅立つ】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
+      "vocal": 70,
+      "dance": 65,
       "visual": 95
     }
   },
-  "【ベター・ザン・ベスト】風野灯織": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
+  "【ハ♡トフェルトゥギフト】櫻木真乃": {
+    "enzaId": "1040010020",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "温存",
     "stats": {
-      "vocal": 65,
+      "vocal": 70,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【はじけてスマイル】櫻木真乃": {
+    "enzaId": "1040010030",
+    "characterId": "mano",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
       "dance": 75,
       "visual": 85
     }
   },
-  "【マフラー直して、心は解けて】風野灯織": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
+  "【深染め、いろみぐさ】櫻木真乃": {
+    "enzaId": "1040010040",
+    "characterId": "mano",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
     "stats": {
       "vocal": 65,
+      "dance": 60,
+      "visual": 75
+    }
+  },
+  "【ソラを跳ね】櫻木真乃": {
+    "enzaId": "1040010050",
+    "characterId": "mano",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 75,
+      "visual": 105
+    }
+  },
+  "【花風Smiley】櫻木真乃": {
+    "enzaId": "1040010060",
+    "characterId": "mano",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【ひとつ、はたたく】櫻木真乃": {
+    "enzaId": "1040010070",
+    "characterId": "mano",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 100
+    }
+  },
+  "【interStellar-Stella】櫻木真乃": {
+    "enzaId": "1040010080",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【きみと巡り行く】櫻木真乃": {
+    "enzaId": "1040010090",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【私のハルモニア】櫻木真乃": {
+    "enzaId": "1040010100",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 95,
+      "dance": 65,
+      "visual": 95
+    }
+  },
+  "【あなたと、いただきます】櫻木真乃": {
+    "enzaId": "1040010110",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【はるかなる】櫻木真乃": {
+    "enzaId": "1040010120",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 120
+    }
+  },
+  "【アイドルロード】櫻木真乃": {
+    "enzaId": "1940010010",
+    "characterId": "mano",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
       "dance": 65,
       "visual": 80
     }
   },
   "【手作りの心遣い】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【洸】風野灯織": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 75
-    }
-  },
-  "【涼】風野灯織": {
+    "enzaId": "1030020010",
+    "characterId": "hiori",
     "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【清閑に息をひそめて】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【耿耿】風野灯織": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【落下予測地点】風野灯織": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【足りない隙間】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 90,
-      "visual": 80
-    }
-  },
-  "【黒百合前で待ち合わせ】風野灯織": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 60
-    }
-  },
-  "【Good-bye ラブレター】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【Hakoni□a】三峰結華": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【kaleidoscope-pinball】三峰結華": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【NOT≠EQUAL】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【♡コメディ】三峰結華": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【お試し／みつゴコロ】三峰結華": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【お願い、ただの少女がいい】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【く　ら　く　ら】三峰結華": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【それなら目をつぶりましょう】三峰結華": {
-    "attributeType": "理性",
     "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【カラフルメタモルフォーゼ】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 95,
-      "visual": 85
-    }
-  },
-  "【ノー・ライフ】三峰結華": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【待ちぼうけ次回予告】三峰結華": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 65
-    }
-  },
-  "【眩いステージ】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 30,
     "recommendedStyle": "好调",
     "stats": {
       "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【鏡界フィクションレイン】三峰結華": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【雨に祝福】三峰結華": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 90
-    }
-  },
-  "【雨色、上機嫌】三峰結華": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 95,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【かぜかんむりのこどもたち】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 34,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 55,
       "dance": 60,
-      "visual": 70
+      "visual": 55
     }
   },
-  "【伝・伝・心・音】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【包・帯・組・曲】幽谷霧子": {
+  "【マフラー直して、心は解けて】風野灯織": {
+    "enzaId": "1030020020",
+    "characterId": "hiori",
     "attributeType": "感性",
-    "stamina": 27,
+    "stamina": 26,
     "recommendedStyle": "集中",
     "stats": {
-      "vocal": 90,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【唯・唯・寧・詠】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 60
-    }
-  },
-  "【夕・音・鳴・鳴】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 95,
-      "visual": 85
-    }
-  },
-  "【天・天・白・布】幽谷霧子": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【海へと還る街】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
       "vocal": 75,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【琴・禽・空・華】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【白・架・祝・幻】幽谷霧子": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【白・白・白・祈】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【空・風・明・鳴】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 90,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【窓・送・巡・歌】幽谷霧子": {
-    "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 55,
       "dance": 60,
-      "visual": 70
-    }
-  },
-  "【縷・縷・屡・来】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【菜・菜・輪・舞】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 95
-    }
-  },
-  "【雨・雨・電・電】幽谷霧子": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【霧・音・燦・燦】幽谷霧子": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【鱗・鱗・謹・賀】幽谷霧子": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 85,
-      "visual": 90
-    }
-  },
-  "【hurray for...】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【あなたと、メモリアル】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【あなたと、月の満ちる頃】月岡恋鐘": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【いつか帰りたか場所】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【うちのリボンは恋結び】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【は～と♡に火をつけて】月岡恋鐘": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 65
-    }
-  },
-  "【ばってん長崎恋岬】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 55,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【ばりうまかブルース】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 95
-    }
-  },
-  "【ふりそそぐもの】月岡恋鐘": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
       "visual": 50
     }
   },
-  "【よか匂いのする陽気やけん】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【ビ～♡バップ海岸】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【心の鐘が鳴っとるけん】月岡恋鐘": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【月の浜辺で待っとって】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【猫道カントリー】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【純雪エモーショナル】月岡恋鐘": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【雪、えとせとら】月岡恋鐘": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【風吹く丘にはよ来んね】月岡恋鐘": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【FANCY 24g】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 34,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 50,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【Find M Trick】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【Have a bad day♥】田中摩美々": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 90,
-      "visual": 65
-    }
-  },
-  "【irodori-corridor】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【PURPLE M】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【そのまみみ無気力につき】田中摩美々": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【まといてホワイトフル】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【まみみスイッチ】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【アバウト-ナイト-ライト】田中摩美々": {
-    "attributeType": "非凡",
-    "stamina": 28,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【トリッキーナイト】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【パープル・ミラージュ】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【フィドル・ファドル】田中摩美々": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【リバーシブル・トースト】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【夕つ方まみみチック】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【摩的・アンチテーゼ】田中摩美々": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【真・TRAVELER】田中摩美々": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【裏腹あまのじゃく】田中摩美々": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【1／60・NaturalHeart】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 60,
-      "visual": 65
-    }
-  },
-  "【いつかのアルファルドへ】白瀬咲耶": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 90,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【はらりひらり結ぶ】白瀬咲耶": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【ふれあい、おもいあい】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【乙女と交わすTrick】白瀬咲耶": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 90,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【夜が来ても】白瀬咲耶": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【幸福のリズム】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 55,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【海と太陽のプロメッサ】白瀬咲耶": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【渦と淵】白瀬咲耶": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【真紅一輪】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【私をときめかせて】白瀬咲耶": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【秘めやかファンサービス】白瀬咲耶": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【紺碧のボーダーライン】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【落ちる音がする】白瀬咲耶": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【記憶が降る街】白瀬咲耶": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【雪染めロマンティカ】白瀬咲耶": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 55,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【change___】市川雛菜": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【d!scovery】市川雛菜": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【HAPPY-!NG】市川雛菜": {
-    "attributeType": "非凡",
-    "stamina": 31,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 60,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【Keep→it up♡】市川雛菜": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【Makeup♡Box】市川雛菜": {
-    "attributeType": "感性",
-    "stamina": 34,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 60,
-      "visual": 60
-    }
-  },
-  "【TRICK☆☆☆】市川雛菜": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【UNCHARTED】市川雛菜": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【♡LOG】市川雛菜": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 70
-    }
-  },
-  "【♯SS】市川雛菜": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【アマテラス】樋口円香": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 90,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【カラカラカラ】樋口円香": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【キン・コン】樋口円香": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【ギンコ・ビローバ】樋口円香": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【ジャンク・ション】樋口円香": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【バグ・ル】樋口円香": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【ピトス・エルピス】樋口円香": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【フリークス・アリー】樋口円香": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【10個、光】浅倉透": {
-    "attributeType": "非凡",
-    "stamina": 30,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【あてもなく、風】浅倉透": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【おかえり、 ギター】浅倉透": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【まわるものについて】浅倉透": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【テープエンドの行き先】浅倉透": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【ヘブンリーブルーをつかまえて】浅倉透": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 55
-    }
-  },
-  "【国道沿いに、憶光年】浅倉透": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
-    }
-  },
-  "【夜はなにいろ】浅倉透": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【聞こえててよ、babe】浅倉透": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 95
-    }
-  },
-  "【雪あたりの季節】浅倉透": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【あなた様へ紡ぐ】福丸小糸": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【おみくじ結びますか】福丸小糸": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【なつ やすみ学校】福丸小糸": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【はれのひ喫茶店】福丸小糸": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【セピア色の孤独】福丸小糸": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【ポシェットの中には】福丸小糸": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【福はうち】福丸小糸": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【窓をあけて】福丸小糸": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 90,
-      "visual": 70
-    }
-  },
-  "【羽をやすめて】福丸小糸": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 75,
-      "visual": 85
-    }
-  },
-  "【雲のかなたまで】福丸小糸": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 80
-    }
-  },
-  "【NoNoNoBunny】斑鳩ルカ": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 95,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【↓ろウTea】七草にちか": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 70
-    }
-  },
-  "【♡まっクろはムウサぎ♡】七草にちか": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 60,
-      "visual": 75
-    }
-  },
-  "【とキどき間氷期】七草にちか": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【ふラiとぅTHE】七草にちか": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【ヴぇりべりいかシたサマー】七草にちか": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【一億回めくらいの、その夏】七草にちか": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 95,
-      "visual": 85
-    }
-  },
-  "【伝えテ niiid U】七草にちか": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【受けトル sun Q】七草にちか": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【夜よこノ窓は塗らないデ】七草にちか": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【日々、想】七草にちか": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【泣けよ洗濯機】七草にちか": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【CHILLY】緋田美琴": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 85,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【CONTRAIL】緋田美琴": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【DIVA】緋田美琴": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【MANNEQUIN】緋田美琴": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 55
-    }
-  },
-  "【POLARIS】緋田美琴": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 55
-    }
-  },
-  "【ROUNDLY】緋田美琴": {
-    "attributeType": "理性",
-    "stamina": 30,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 85
-    }
-  },
-  "【SEASON】緋田美琴": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【SUGARLESS】緋田美琴": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【This way】緋田美琴": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【YOU＆I】緋田美琴": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 65,
-      "visual": 70
-    }
-  },
-  "【あたし・マスト】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 31,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【あたし流・かっこいい】和泉愛依": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【うちと幸せ】和泉愛依": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【ちょっとあげる～】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 60,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【ちょー早い！】和泉愛依": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 55,
-      "dance": 80,
-      "visual": 80
-    }
-  },
-  "【てへっ♪】和泉愛依": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【シャッターチャンス！？】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 95
-    }
-  },
-  "【メイ・ビー】和泉愛依": {
-    "attributeType": "理性",
-    "stamina": 27,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【今、できることを全て】和泉愛依": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【今のうちは走らない】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 90,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【何度転んだって】和泉愛依": {
-    "attributeType": "理性",
-    "stamina": 28,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 80
-    }
-  },
-  "【気になる！？染めちゃう！？】和泉愛依": {
-    "attributeType": "感性",
-    "stamina": 29,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【見つかっちゃった♪】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 65
-    }
-  },
-  "【Boiling Sky】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【Housekeeping!】芹沢あさひ": {
-    "attributeType": "感性",
-    "stamina": 28,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【Howling】芹沢あさひ": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 65,
-      "dance": 90,
-      "visual": 90
-    }
-  },
-  "【かしゃーんとがらがら】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 85,
-      "dance": 80,
-      "visual": 60
-    }
-  },
-  "【さよならカイト】芹沢あさひ": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 65,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【ちぐはぐ姫】芹沢あさひ": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 80,
-      "visual": 95
-    }
-  },
-  "【はり・はり】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【ジャンプ！スタッグ！！！】芹沢あさひ": {
-    "attributeType": "感性",
-    "stamina": 27,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 90,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【ムーンライト・ガーデン】芹沢あさひ": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 80,
-      "dance": 75,
-      "visual": 90
-    }
-  },
-  "【不機嫌なテーマパーク】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 80
-    }
-  },
-  "【何故、ベルは鳴る】芹沢あさひ": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 75,
-      "dance": 85,
-      "visual": 85
-    }
-  },
-  "【光は光へ】芹沢あさひ": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 80,
-      "dance": 85,
-      "visual": 70
-    }
-  },
-  "【空と青とアイツ】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 29,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 65,
-      "dance": 85,
-      "visual": 75
-    }
-  },
-  "【黄葉の冠】芹沢あさひ": {
-    "attributeType": "感性",
-    "stamina": 32,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 55,
-      "dance": 80,
-      "visual": 70
-    }
-  },
-  "【ONSTAGE？】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 55
-    }
-  },
-  "【starring F】黛冬優子": {
-    "attributeType": "理性",
-    "stamina": 34,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 55
-    }
-  },
-  "【はるさき可憐花】黛冬優子": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 90
-    }
-  },
-  "【アンコンシャス35→80】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 65,
-      "dance": 65,
-      "visual": 80
-    }
-  },
-  "【アンシーン・ダブルキャスト】黛冬優子": {
-    "attributeType": "理性",
-    "stamina": 32,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 80,
-      "dance": 65,
-      "visual": 65
-    }
-  },
-  "【ア・冬優子イズム】黛冬優子": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 95,
-      "dance": 75,
-      "visual": 75
-    }
-  },
-  "【オ♡フ♡レ♡コ】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【ノンセンス・プロンプ】黛冬優子": {
-    "attributeType": "理性",
-    "stamina": 33,
-    "recommendedStyle": "好印象",
-    "stats": {
-      "vocal": 55,
-      "dance": 65,
-      "visual": 75
-    }
-  },
-  "【三文ノワール】黛冬優子": {
-    "attributeType": "感性",
-    "stamina": 30,
-    "recommendedStyle": "集中",
-    "stats": {
-      "vocal": 80,
-      "dance": 80,
-      "visual": 65
-    }
-  },
-  "【名モナキ夜ノ標ニ】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
-    "stats": {
-      "vocal": 60,
-      "dance": 85,
-      "visual": 80
-    }
-  },
-  "【幕間、沸々と高温】黛冬優子": {
-    "attributeType": "理性",
-    "stamina": 31,
-    "recommendedStyle": "干劲",
-    "stats": {
-      "vocal": 60,
-      "dance": 80,
-      "visual": 75
-    }
-  },
-  "【水×天カイヤナイト】黛冬優子": {
-    "attributeType": "感性",
-    "stamina": 26,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 90,
-      "visual": 85
-    }
-  },
-  "【紅茶夢現】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 33,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 75,
-      "visual": 60
-    }
-  },
-  "【誘爆ハートビート】黛冬優子": {
-    "attributeType": "非凡",
-    "stamina": 26,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 85,
-      "dance": 90,
-      "visual": 70
-    }
-  },
-  "【summer break】有栖川夏葉": {
-    "attributeType": "感性",
-    "stamina": 31,
-    "recommendedStyle": "好调",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 75
-    }
-  },
-  "【心安らげる場所】和泉愛依": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "全力",
-    "stats": {
-      "vocal": 70,
-      "dance": 70,
-      "visual": 85
-    }
-  },
-  "【絵空靴】杜野凛世": {
+  "【落下予測地点】風野灯織": {
+    "enzaId": "1030020030",
+    "characterId": "hiori",
     "attributeType": "感性",
     "stamina": 25,
     "recommendedStyle": "集中",
     "stats": {
       "vocal": 95,
-      "dance": 80,
+      "dance": 60,
+      "visual": 50
+    }
+  },
+  "【インビジブルタイム】風野灯織": {
+    "enzaId": "1030020040",
+    "characterId": "hiori",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 70
+    }
+  },
+  "【足りない隙間】風野灯織": {
+    "enzaId": "1030020050",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 70,
+      "visual": 60
+    }
+  },
+  "【柔らかな微笑み】風野灯織": {
+    "enzaId": "1040020010",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 115,
+      "dance": 110,
       "visual": 75
     }
   },
-  "【つづく、】浅倉透": {
+  "【淡雪の戯れ】風野灯織": {
+    "enzaId": "1040020020",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【伸ばす手に乗せるのは】風野灯織": {
+    "enzaId": "1040020030",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 24,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 95,
+      "dance": 75,
+      "visual": 70
+    }
+  },
+  "【清閑に息をひそめて】風野灯織": {
+    "enzaId": "1040020040",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【黒百合前で待ち合わせ】風野灯織": {
+    "enzaId": "1040020050",
+    "characterId": "hiori",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【涼】風野灯織": {
+    "enzaId": "1040020060",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 100,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【洸】風野灯織": {
+    "enzaId": "1040020070",
+    "characterId": "hiori",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 85,
+      "dance": 75,
+      "visual": 55
+    }
+  },
+  "【ひとりじゃない夜のこと】風野灯織": {
+    "enzaId": "1040020080",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 100,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【耿耿】風野灯織": {
+    "enzaId": "1040020090",
+    "characterId": "hiori",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 90,
+      "dance": 55,
+      "visual": 50
+    }
+  },
+  "【エバー・リメンバー・ネバー】風野灯織": {
+    "enzaId": "1040020100",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 55
+    }
+  },
+  "【ベター・ザン・ベスト】風野灯織": {
+    "enzaId": "1040020110",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 23,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【The thing is】風野灯織": {
+    "enzaId": "1040020120",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 70,
+      "visual": 65
+    }
+  },
+  "【キミと今旅立つ】風野灯織": {
+    "enzaId": "1040020130",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 95,
+      "dance": 75,
+      "visual": 70
+    }
+  },
+  "【お弁当と未来】風野灯織": {
+    "enzaId": "1040020140",
+    "characterId": "hiori",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【アイドルロード】風野灯織": {
+    "enzaId": "1940020010",
+    "characterId": "hiori",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 90,
+      "dance": 75,
+      "visual": 60
+    }
+  },
+  "【キネマ・リリックで夢見て】八宮めぐる": {
+    "enzaId": "1030030010",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 95,
+      "visual": 70
+    }
+  },
+  "【小さな夜のトロイメライ】八宮めぐる": {
+    "enzaId": "1030030020",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 55,
+      "dance": 90,
+      "visual": 50
+    }
+  },
+  "【チエルアルコは流星の】八宮めぐる": {
+    "enzaId": "1030030030",
+    "characterId": "meguru",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 55,
+      "dance": 95,
+      "visual": 50
+    }
+  },
+  "【ハロー・ワールド】八宮めぐる": {
+    "enzaId": "1030030040",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 60
+    }
+  },
+  "【セツナn】八宮めぐる": {
+    "enzaId": "1030030050",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 45
+    }
+  },
+  "【金色の元気いっぱいガール】八宮めぐる": {
+    "enzaId": "1040030010",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 60,
+      "dance": 70,
+      "visual": 50
+    }
+  },
+  "【夏に恋するピチカート！】八宮めぐる": {
+    "enzaId": "1040030020",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 60
+    }
+  },
+  "【シュカのまにまに】八宮めぐる": {
+    "enzaId": "1040030030",
+    "characterId": "meguru",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 105,
+      "visual": 80
+    }
+  },
+  "【日々を紡ぐインヴェルノ】八宮めぐる": {
+    "enzaId": "1040030040",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 65
+    }
+  },
+  "【アイの誓い】八宮めぐる": {
+    "enzaId": "1040030050",
+    "characterId": "meguru",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 95,
+      "visual": 55
+    }
+  },
+  "【たまゆらフレーミング】八宮めぐる": {
+    "enzaId": "1040030060",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 90,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【きゅん ♡コメ】八宮めぐる": {
+    "enzaId": "1040030070",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 50
+    }
+  },
+  "【たそかれスワッグ】八宮めぐる": {
+    "enzaId": "1040030080",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 70,
+      "dance": 90,
+      "visual": 65
+    }
+  },
+  "【ずっと・グッド・ラック】八宮めぐる": {
+    "enzaId": "1040030090",
+    "characterId": "meguru",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【こころレイヤリング】八宮めぐる": {
+    "enzaId": "1040030100",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 70
+    }
+  },
+  "【ふたり色　クレオール】八宮めぐる": {
+    "enzaId": "1040030110",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 105,
+      "dance": 100,
+      "visual": 75
+    }
+  },
+  "【そらあいスウィング】八宮めぐる": {
+    "enzaId": "1040030120",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 55,
+      "dance": 80,
+      "visual": 50
+    }
+  },
+  "【晴れ空オーシニ】八宮めぐる": {
+    "enzaId": "1040030130",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 65
+    }
+  },
+  "【アイドルロード】八宮めぐる": {
+    "enzaId": "1940030010",
+    "characterId": "meguru",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 115,
+      "visual": 70
+    }
+  },
+  "【ばってん長崎恋岬】月岡恋鐘": {
+    "enzaId": "1030040010",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 60,
+      "visual": 65
+    }
+  },
+  "【ビ～♡バップ海岸】月岡恋鐘": {
+    "enzaId": "1030040020",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 50,
+      "visual": 75
+    }
+  },
+  "【は～と♡に火をつけて】月岡恋鐘": {
+    "enzaId": "1030040030",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【猫道カントリー】月岡恋鐘": {
+    "enzaId": "1030040040",
+    "characterId": "kogane",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 60,
+      "visual": 65
+    }
+  },
+  "【雪、えとせとら】月岡恋鐘": {
+    "enzaId": "1030040050",
+    "characterId": "kogane",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 95,
+      "dance": 50,
+      "visual": 65
+    }
+  },
+  "【ばりうまかブルース】月岡恋鐘": {
+    "enzaId": "1040040010",
+    "characterId": "kogane",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 110,
+      "dance": 80,
+      "visual": 110
+    }
+  },
+  "【月の浜辺で待っとって】月岡恋鐘": {
+    "enzaId": "1040040020",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 36,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 95,
+      "dance": 55,
+      "visual": 65
+    }
+  },
+  "【風吹く丘にはよ来んね】月岡恋鐘": {
+    "enzaId": "1040040030",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 110
+    }
+  },
+  "【うちのリボンは恋結び】月岡恋鐘": {
+    "enzaId": "1040040040",
+    "characterId": "kogane",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 90,
+      "dance": 60,
+      "visual": 75
+    }
+  },
+  "【心の鐘が鳴っとるけん】月岡恋鐘": {
+    "enzaId": "1040040050",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 110,
+      "dance": 60,
+      "visual": 75
+    }
+  },
+  "【秋空ばくちずさんで】月岡恋鐘": {
+    "enzaId": "1040040060",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 100,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【あなたと、月の満ちる頃】月岡恋鐘": {
+    "enzaId": "1040040070",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 90,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【よか匂いのする陽気やけん】月岡恋鐘": {
+    "enzaId": "1040040080",
+    "characterId": "kogane",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 85,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【ふりそそぐもの】月岡恋鐘": {
+    "enzaId": "1040040090",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 120,
+      "dance": 70,
+      "visual": 80
+    }
+  },
+  "【hurray for...】月岡恋鐘": {
+    "enzaId": "1040040100",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 115,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【いつか帰りたか場所】月岡恋鐘": {
+    "enzaId": "1040040110",
+    "characterId": "kogane",
+    "attributeType": "理性",
+    "stamina": 37,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 110,
+      "dance": 85,
+      "visual": 90
+    }
+  },
+  "【純雪エモーショナル】月岡恋鐘": {
+    "enzaId": "1040040120",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 115,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【あなたと、メモリアル】月岡恋鐘": {
+    "enzaId": "1040040130",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 60,
+      "visual": 65
+    }
+  },
+  "【アイドルロード】月岡恋鐘": {
+    "enzaId": "1940040010",
+    "characterId": "kogane",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 100,
+      "dance": 85,
+      "visual": 90
+    }
+  },
+  "【裏腹あまのじゃく】田中摩美々": {
+    "enzaId": "1030050010",
+    "characterId": "mamimi",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 50,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【夕つ方まみみチック】田中摩美々": {
+    "enzaId": "1030050020",
+    "characterId": "mamimi",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【そのまみみ無気力につき】田中摩美々": {
+    "enzaId": "1030050030",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 50,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【FANCY 24g】田中摩美々": {
+    "enzaId": "1030050040",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 55,
+      "dance": 60,
+      "visual": 75
+    }
+  },
+  "【irodori-corridor】田中摩美々": {
+    "enzaId": "1030050050",
+    "characterId": "mamimi",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 85,
+      "visual": 100
+    }
+  },
+  "【トリッキーナイト】田中摩美々": {
+    "enzaId": "1040050010",
+    "characterId": "mamimi",
     "attributeType": "感性",
     "stamina": 27,
     "recommendedStyle": "集中",
     "stats": {
       "vocal": 70,
       "dance": 75,
-      "visual": 90
+      "visual": 95
     }
   },
-  "【てのひらの答え】福丸小糸": {
+  "【摩的・アンチテーゼ】田中摩美々": {
+    "enzaId": "1040050020",
+    "characterId": "mamimi",
     "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
+    "stamina": 28,
+    "recommendedStyle": "温存",
     "stats": {
       "vocal": 65,
-      "dance": 75,
+      "dance": 70,
+      "visual": 105
+    }
+  },
+  "【パープル・ミラージュ】田中摩美々": {
+    "enzaId": "1040050030",
+    "characterId": "mamimi",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 60,
+      "dance": 95,
+      "visual": 110
+    }
+  },
+  "【フィドル・ファドル】田中摩美々": {
+    "enzaId": "1040050040",
+    "characterId": "mamimi",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 95,
+      "dance": 100,
+      "visual": 115
+    }
+  },
+  "【真・TRAVELER】田中摩美々": {
+    "enzaId": "1040050050",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 75,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【アバウト-ナイト-ライト】田中摩美々": {
+    "enzaId": "1040050060",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【Have a bad day♥︎】田中摩美々": {
+    "enzaId": "1040050070",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 55,
+      "dance": 80,
+      "visual": 80
+    }
+  },
+  "【リバーシブル・トースト】田中摩美々": {
+    "enzaId": "1040050080",
+    "characterId": "mamimi",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
+      "visual": 120
+    }
+  },
+  "【PURPLE M】田中摩美々": {
+    "enzaId": "1040050090",
+    "characterId": "mamimi",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 60,
+      "dance": 65,
       "visual": 85
     }
   },
-  "【淡雪の戯れ】風野灯織": {
+  "【まみみスイッチ】田中摩美々": {
+    "enzaId": "1040050100",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 90,
+      "visual": 110
+    }
+  },
+  "【Find M Trick】田中摩美々": {
+    "enzaId": "1040050110",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 85
+    }
+  },
+  "【まといてホワイトフル】田中摩美々": {
+    "enzaId": "1040050120",
+    "characterId": "mamimi",
     "attributeType": "理性",
-    "stamina": 26,
+    "stamina": 31,
     "recommendedStyle": "干劲",
     "stats": {
-      "vocal": 95,
-      "dance": 85,
+      "vocal": 75,
+      "dance": 105,
+      "visual": 110
+    }
+  },
+  "【モラトリアム・レポート】田中摩美々": {
+    "enzaId": "1040050130",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 95,
+      "visual": 85
+    }
+  },
+  "【アイドルロード】田中摩美々": {
+    "enzaId": "1940050010",
+    "characterId": "mamimi",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【秘めやかファンサービス】白瀬咲耶": {
+    "enzaId": "1030060010",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 34,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 90,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【ふれあい、おもいあい】白瀬咲耶": {
+    "enzaId": "1030060020",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
       "visual": 65
     }
   },
-  "【柔らかな微笑み】風野灯織": {
-    "attributeType": "感性",
-    "stamina": 33,
-    "recommendedStyle": "好调",
+  "【雪染めロマンティカ】白瀬咲耶": {
+    "enzaId": "1030060030",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
     "stats": {
-      "vocal": 75,
-      "dance": 70,
-      "visual": 50
+      "vocal": 85,
+      "dance": 95,
+      "visual": 85
     }
   },
-  "【伸ばす手に乗せるのは】風野灯織": {
-    "attributeType": "非凡",
-    "stamina": 29,
-    "recommendedStyle": "坚决",
+  "【真紅一輪】白瀬咲耶": {
+    "enzaId": "1030060040",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 34,
+    "recommendedStyle": "好印象",
     "stats": {
-      "vocal": 60,
+      "vocal": 80,
+      "dance": 85,
+      "visual": 70
+    }
+  },
+  "【紺碧のボーダーライン】白瀬咲耶": {
+    "enzaId": "1040060010",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 100,
+      "visual": 105
+    }
+  },
+  "【1／60・NaturalHeart】白瀬咲耶": {
+    "enzaId": "1040060020",
+    "characterId": "sakuya",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 90
+    }
+  },
+  "【幸福のリズム】白瀬咲耶": {
+    "enzaId": "1040060030",
+    "characterId": "sakuya",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 115,
+      "dance": 105,
+      "visual": 100
+    }
+  },
+  "【海と太陽のプロメッサ】白瀬咲耶": {
+    "enzaId": "1040060040",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 80
+    }
+  },
+  "【乙女と交わすTrick】白瀬咲耶": {
+    "enzaId": "1040060050",
+    "characterId": "sakuya",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 95,
+      "visual": 110
+    }
+  },
+  "【渦と淵】白瀬咲耶": {
+    "enzaId": "1040060060",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 37,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 75
+    }
+  },
+  "【はらりひらり結ぶ】白瀬咲耶": {
+    "enzaId": "1040060070",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 80
+    }
+  },
+  "【私をときめかせて】白瀬咲耶": {
+    "enzaId": "1040060080",
+    "characterId": "sakuya",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【落ちる音がする】白瀬咲耶": {
+    "enzaId": "1040060090",
+    "characterId": "sakuya",
+    "attributeType": "非凡",
+    "stamina": 35,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
       "dance": 85,
       "visual": 80
     }
   },
-  "【途方もない午後】浅倉透": {
+  "【夜が来ても】白瀬咲耶": {
+    "enzaId": "1040060100",
+    "characterId": "sakuya",
     "attributeType": "理性",
-    "stamina": 26,
+    "stamina": 29,
     "recommendedStyle": "干劲",
     "stats": {
       "vocal": 70,
@@ -4029,29 +1319,839 @@
       "visual": 85
     }
   },
-  "【オイサラバエル】樋口円香": {
+  "【記憶が降る街】白瀬咲耶": {
+    "enzaId": "1040060110",
+    "characterId": "sakuya",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 95,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【いつかのアルファルドへ】白瀬咲耶": {
+    "enzaId": "1040060120",
+    "characterId": "sakuya",
+    "attributeType": "非凡",
+    "stamina": 34,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 95,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【アイドルロード】白瀬咲耶": {
+    "enzaId": "1940060010",
+    "characterId": "sakuya",
+    "attributeType": "理性",
+    "stamina": 35,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 100,
+      "visual": 95
+    }
+  },
+  "【カラフルメタモルフォーゼ】三峰結華": {
+    "enzaId": "1030070010",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【雨色、上機嫌】三峰結華": {
+    "enzaId": "1030070020",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 50,
+      "visual": 80
+    }
+  },
+  "【お願い、ただの少女がいい】三峰結華": {
+    "enzaId": "1030070030",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 45,
+      "visual": 95
+    }
+  },
+  "【Hakoni□a】三峰結華": {
+    "enzaId": "1030070040",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【お試し／みつゴコロ】三峰結華": {
+    "enzaId": "1040070010",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 60,
+      "visual": 85
+    }
+  },
+  "【それなら目をつぶりましょう】三峰結華": {
+    "enzaId": "1040070020",
+    "characterId": "yuika",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 55,
+      "visual": 90
+    }
+  },
+  "【NOT≠EQUAL】三峰結華": {
+    "enzaId": "1040070030",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 75,
+      "visual": 100
+    }
+  },
+  "【く　ら　く　ら】三峰結華": {
+    "enzaId": "1040070040",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 85,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【雨に祝福】三峰結華": {
+    "enzaId": "1040070050",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
+      "dance": 65,
+      "visual": 110
+    }
+  },
+  "【♡コメディ】三峰結華": {
+    "enzaId": "1040070060",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【kaleidoscope-pinball】三峰結華": {
+    "enzaId": "1040070070",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 100
+    }
+  },
+  "【ノー・ライフ】三峰結華": {
+    "enzaId": "1040070080",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【鏡界フィクションレイン】三峰結華": {
+    "enzaId": "1040070090",
+    "characterId": "yuika",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 70,
+      "visual": 85
+    }
+  },
+  "【Good-bye ラブレター】三峰結華": {
+    "enzaId": "1040070100",
+    "characterId": "yuika",
+    "attributeType": "理性",
+    "stamina": 24,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 105,
+      "dance": 90,
+      "visual": 110
+    }
+  },
+  "【待ちぼうけ次回予告】三峰結華": {
+    "enzaId": "1040070110",
+    "characterId": "yuika",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 70,
+      "dance": 65,
+      "visual": 75
+    }
+  },
+  "【眩いステージ】三峰結華": {
+    "enzaId": "1040070120",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 90,
+      "dance": 70,
+      "visual": 80
+    }
+  },
+  "【映す光】三峰結華": {
+    "enzaId": "1040070130",
+    "characterId": "yuika",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 80,
+      "visual": 95
+    }
+  },
+  "【アイドルロード】三峰結華": {
+    "enzaId": "1940070010",
+    "characterId": "yuika",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 125
+    }
+  },
+  "【包・帯・組・曲】幽谷霧子": {
+    "enzaId": "1030080010",
+    "characterId": "kiriko",
     "attributeType": "感性",
     "stamina": 29,
     "recommendedStyle": "好调",
     "stats": {
-      "vocal": 75,
-      "dance": 80,
-      "visual": 70
+      "vocal": 60,
+      "dance": 55,
+      "visual": 80
     }
   },
-  "【Merry】樋口円香": {
-    "attributeType": "非凡",
-    "stamina": 32,
-    "recommendedStyle": "全力",
+  "【伝・伝・心・音】幽谷霧子": {
+    "enzaId": "1030080020",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 50,
+      "dance": 45,
+      "visual": 80
+    }
+  },
+  "【白・白・白・祈】幽谷霧子": {
+    "enzaId": "1030080030",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 60,
+      "visual": 75
+    }
+  },
+  "【天・天・白・布】幽谷霧子": {
+    "enzaId": "1030080040",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
     "stats": {
       "vocal": 70,
+      "dance": 60,
+      "visual": 80
+    }
+  },
+  "【雨・雨・電・電】幽谷霧子": {
+    "enzaId": "1030080050",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 45,
+      "visual": 75
+    }
+  },
+  "【霧・音・燦・燦】幽谷霧子": {
+    "enzaId": "1040080010",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 50,
+      "visual": 90
+    }
+  },
+  "【夕・音・鳴・鳴】幽谷霧子": {
+    "enzaId": "1040080020",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 110
+    }
+  },
+  "【菜・菜・輪・舞】幽谷霧子": {
+    "enzaId": "1040080030",
+    "characterId": "kiriko",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【鱗・鱗・謹・賀】幽谷霧子": {
+    "enzaId": "1040080040",
+    "characterId": "kiriko",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
       "dance": 70,
+      "visual": 80
+    }
+  },
+  "【琴・禽・空・華】幽谷霧子": {
+    "enzaId": "1040080050",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 60,
+      "visual": 100
+    }
+  },
+  "【かぜかんむりのこどもたち】幽谷霧子": {
+    "enzaId": "1040080060",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 60,
+      "visual": 90
+    }
+  },
+  "【縷・縷・屡・来】幽谷霧子": {
+    "enzaId": "1040080070",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 60,
+      "visual": 90
+    }
+  },
+  "【空・風・明・鳴】幽谷霧子": {
+    "enzaId": "1040080080",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 50,
+      "visual": 95
+    }
+  },
+  "【窓・送・巡・歌】幽谷霧子": {
+    "enzaId": "1040080090",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 55,
+      "dance": 50,
+      "visual": 100
+    }
+  },
+  "【唯・唯・寧・詠】幽谷霧子": {
+    "enzaId": "1040080100",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 80,
+      "dance": 60,
+      "visual": 100
+    }
+  },
+  "【白・架・祝・幻】幽谷霧子": {
+    "enzaId": "1040080110",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【海へと還る街】幽谷霧子": {
+    "enzaId": "1040080120",
+    "characterId": "kiriko",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 80,
+      "dance": 70,
+      "visual": 105
+    }
+  },
+  "【援・心・熱・行】幽谷霧子": {
+    "enzaId": "1040080130",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 95
+    }
+  },
+  "【アイドルロード】幽谷霧子": {
+    "enzaId": "1940080010",
+    "characterId": "kiriko",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【マメ丸と一緒！】小宮果穂": {
+    "enzaId": "1030090010",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 50
+    }
+  },
+  "【デコって！ハッピークッキー】小宮果穂": {
+    "enzaId": "1030090020",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 35,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 80,
+      "visual": 60
+    }
+  },
+  "【キャッチ・ザ・フォール！】小宮果穂": {
+    "enzaId": "1030090030",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 34,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 60
+    }
+  },
+  "【窓辺・サイレントタイム】小宮果穂": {
+    "enzaId": "1030090040",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 35,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 55,
+      "dance": 80,
+      "visual": 50
+    }
+  },
+  "【ソー・ディフィカルト！】小宮果穂": {
+    "enzaId": "1030090050",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 34,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 50
+    }
+  },
+  "【第2形態アーマードタイプ】小宮果穂": {
+    "enzaId": "1040090010",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【新装備・バブルバスター！】小宮果穂": {
+    "enzaId": "1040090020",
+    "characterId": "kaho",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 65
+    }
+  },
+  "【潮騒のシーショア】小宮果穂": {
+    "enzaId": "1040090030",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 95,
+      "visual": 75
+    }
+  },
+  "【エクストリーム・ブレイク！】小宮果穂": {
+    "enzaId": "1040090040",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【日刊ウィズ・ユー！】小宮果穂": {
+    "enzaId": "1040090050",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【フルスロットルエイジ！】小宮果穂": {
+    "enzaId": "1040090060",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 36,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 95,
+      "dance": 95,
+      "visual": 85
+    }
+  },
+  "【ギア・アップ！ゴー・オン！】小宮果穂": {
+    "enzaId": "1040090070",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【スノードーム・シンドローム】小宮果穂": {
+    "enzaId": "1040090080",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 37,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 120,
+      "visual": 80
+    }
+  },
+  "【両手に兄！】小宮果穂": {
+    "enzaId": "1040090090",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 90,
+      "dance": 100,
+      "visual": 85
+    }
+  },
+  "【カラーズキャッチ！】小宮果穂": {
+    "enzaId": "1040090100",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 110,
+      "visual": 60
+    }
+  },
+  "【きみだけ！】小宮果穂": {
+    "enzaId": "1040090110",
+    "characterId": "kaho",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
+      "visual": 65
+    }
+  },
+  "【ななひゃくさんじゅう　えん】小宮果穂": {
+    "enzaId": "1040090120",
+    "characterId": "kaho",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 100,
+      "visual": 85
+    }
+  },
+  "【アイドルじゃなくなったら】小宮果穂": {
+    "enzaId": "1040090130",
+    "characterId": "kaho",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 85,
+      "visual": 65
+    }
+  },
+  "【ねぇねぇ先生、質問です！】小宮果穂": {
+    "enzaId": "1040090140",
+    "characterId": "kaho",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 90,
+      "dance": 85,
+      "visual": 55
+    }
+  },
+  "【アイドルロード】小宮果穂": {
+    "enzaId": "1940090010",
+    "characterId": "kaho",
+    "attributeType": "非凡",
+    "stamina": 35,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
       "visual": 70
     }
   },
-  "【ダウト】樋口円香": {
+  "【純真チョコレート】園田智代子": {
+    "enzaId": "1030100010",
+    "characterId": "chiyoko",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 55,
+      "dance": 55,
+      "visual": 80
+    }
+  },
+  "【よろしく♡めしませっ】園田智代子": {
+    "enzaId": "1030100020",
+    "characterId": "chiyoko",
     "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【錯覚・Darling】園田智代子": {
+    "enzaId": "1030100030",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 60,
+      "visual": 85
+    }
+  },
+  "【フロイラインに心酔】園田智代子": {
+    "enzaId": "1030100040",
+    "characterId": "chiyoko",
+    "attributeType": "非凡",
     "stamina": 30,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 65,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【チョコ色×きらきらロマン】園田智代子": {
+    "enzaId": "1040100010",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 105,
+      "dance": 100,
+      "visual": 100
+    }
+  },
+  "【あそ→と♥ちよこれいと】園田智代子": {
+    "enzaId": "1040100020",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 85
+    }
+  },
+  "【かきまぜたら＊ミルク】園田智代子": {
+    "enzaId": "1040100030",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【You’re My Dream】園田智代子": {
+    "enzaId": "1040100040",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【プリティ・スイート】園田智代子": {
+    "enzaId": "1040100050",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 90,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【砂糖づけ・ビターエンド】園田智代子": {
+    "enzaId": "1040100060",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 31,
     "recommendedStyle": "好印象",
     "stats": {
       "vocal": 75,
@@ -4059,84 +2159,3268 @@
       "visual": 75
     }
   },
-  "【カラメル】樋口円香": {
+  "【トコハレ☀コメディ】園田智代子": {
+    "enzaId": "1040100070",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 85,
+      "visual": 85
+    }
+  },
+  "【うつくしいあした】園田智代子": {
+    "enzaId": "1040100080",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【チョコ for Y♡U】園田智代子": {
+    "enzaId": "1040100090",
+    "characterId": "chiyoko",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【Kn☆cking. Kn☆cking.】園田智代子": {
+    "enzaId": "1040100100",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【はじめましてラストダンス】園田智代子": {
+    "enzaId": "1040100110",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 90
+    }
+  },
+  "【T☆ Queen】園田智代子": {
+    "enzaId": "1040100120",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【アイドルロード】園田智代子": {
+    "enzaId": "1940100010",
+    "characterId": "chiyoko",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【バッドガールの羽ばたき】西城樹里": {
+    "enzaId": "1030110010",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 60
+    }
+  },
+  "【オフデーゲーム】西城樹里": {
+    "enzaId": "1030110020",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 65
+    }
+  },
+  "【STARTRAIN】西城樹里": {
+    "enzaId": "1030110030",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 50,
+      "dance": 90,
+      "visual": 45
+    }
+  },
+  "【夏服にWIND YOU！】西城樹里": {
+    "enzaId": "1030110040",
+    "characterId": "juri",
     "attributeType": "感性",
     "stamina": 33,
     "recommendedStyle": "集中",
     "stats": {
+      "vocal": 50,
+      "dance": 90,
+      "visual": 45
+    }
+  },
+  "【No.3738 Custom Order】西城樹里": {
+    "enzaId": "1030110050",
+    "characterId": "juri",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "好印象",
+    "stats": {
       "vocal": 70,
+      "dance": 90,
+      "visual": 50
+    }
+  },
+  "【ラムネ色の覚悟】西城樹里": {
+    "enzaId": "1040110010",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 95,
+      "visual": 80
+    }
+  },
+  "【とびっきりジンジャー】西城樹里": {
+    "enzaId": "1040110020",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 125,
+      "visual": 70
+    }
+  },
+  "【曲がり角のランウェイ】西城樹里": {
+    "enzaId": "1040110030",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 35,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 85,
+      "visual": 50
+    }
+  },
+  "【誰が為シンパシー】西城樹里": {
+    "enzaId": "1040110040",
+    "characterId": "juri",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 55
+    }
+  },
+  "【秋陽のスケッチ】西城樹里": {
+    "enzaId": "1040110050",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 110,
+      "visual": 70
+    }
+  },
+  "【I・OWE・U】西城樹里": {
+    "enzaId": "1040110060",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 34,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 70,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【花染む街で、君と】西城樹里": {
+    "enzaId": "1040110070",
+    "characterId": "juri",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 95,
+      "visual": 75
+    }
+  },
+  "【sparkle,,,】西城樹里": {
+    "enzaId": "1040110080",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 55
+    }
+  },
+  "【陽の光、透かせば】西城樹里": {
+    "enzaId": "1040110090",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 115,
+      "visual": 70
+    }
+  },
+  "【Clashmade】西城樹里": {
+    "enzaId": "1040110100",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 60
+    }
+  },
+  "【あなた色アンダンテ】西城樹里": {
+    "enzaId": "1040110110",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 60
+    }
+  },
+  "【きらり、足跡】西城樹里": {
+    "enzaId": "1040110120",
+    "characterId": "juri",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 65
+    }
+  },
+  "【アイドルロード】西城樹里": {
+    "enzaId": "1940110010",
+    "characterId": "juri",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【想ひいろは】杜野凛世": {
+    "enzaId": "1030120010",
+    "characterId": "rinze",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 85,
       "dance": 65,
       "visual": 70
     }
   },
-  "【S!GNATURE】市川雛菜": {
-    "attributeType": "非凡",
-    "stamina": 27,
-    "recommendedStyle": "坚决",
+  "【凛凛、凛世】杜野凛世": {
+    "enzaId": "1030120020",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "干劲",
     "stats": {
-      "vocal": 85,
-      "dance": 75,
+      "vocal": 100,
+      "dance": 55,
+      "visual": 70
+    }
+  },
+  "【微熱風鈴】杜野凛世": {
+    "enzaId": "1030120030",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 60,
       "visual": 75
     }
   },
-  "【DE-S!GN】市川雛菜": {
+  "【ふらここのうた】杜野凛世": {
+    "enzaId": "1030120040",
+    "characterId": "rinze",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 70,
+      "dance": 55,
+      "visual": 75
+    }
+  },
+  "【階段式純情昇降機】杜野凛世": {
+    "enzaId": "1030120050",
+    "characterId": "rinze",
     "attributeType": "理性",
-    "stamina": 26,
+    "stamina": 23,
     "recommendedStyle": "干劲",
     "stats": {
       "vocal": 75,
-      "dance": 80,
+      "dance": 65,
+      "visual": 75
+    }
+  },
+  "【春告窓】杜野凛世": {
+    "enzaId": "1030120060",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 100,
+      "dance": 45,
+      "visual": 70
+    }
+  },
+  "【杜野凛世の印象派】杜野凛世": {
+    "enzaId": "1040120010",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 105,
+      "dance": 65,
       "visual": 90
     }
   },
-  "【multi-angle】黛冬優子": {
+  "【凛世花伝】杜野凛世": {
+    "enzaId": "1040120020",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 110,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【水色感情】杜野凛世": {
+    "enzaId": "1040120030",
+    "characterId": "rinze",
     "attributeType": "感性",
-    "stamina": 33,
+    "stamina": 25,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 95,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【十二月短篇】杜野凛世": {
+    "enzaId": "1040120040",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 85,
+      "dance": 60,
+      "visual": 65
+    }
+  },
+  "【われにかへれ】杜野凛世": {
+    "enzaId": "1040120050",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 95,
+      "dance": 50,
+      "visual": 70
+    }
+  },
+  "【ロー・ポジション】杜野凛世": {
+    "enzaId": "1040120060",
+    "characterId": "rinze",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 90,
+      "dance": 55,
+      "visual": 60
+    }
+  },
+  "【さよならごつこ】杜野凛世": {
+    "enzaId": "1040120070",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 115,
+      "dance": 90,
+      "visual": 100
+    }
+  },
+  "【晩秋ろまんす】杜野凛世": {
+    "enzaId": "1040120080",
+    "characterId": "rinze",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 105,
+      "dance": 55,
+      "visual": 85
+    }
+  },
+  "【花は】杜野凛世": {
+    "enzaId": "1040120090",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 25,
     "recommendedStyle": "集中",
     "stats": {
-      "vocal": 60,
+      "vocal": 90,
+      "dance": 55,
+      "visual": 80
+    }
+  },
+  "【染光満月】杜野凛世": {
+    "enzaId": "1040120100",
+    "characterId": "rinze",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 100,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【硝子少女】杜野凛世": {
+    "enzaId": "1040120110",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
       "dance": 70,
       "visual": 75
     }
   },
-  "【秋空ばくちずさんで】月岡恋鐘": {
-    "attributeType": "非凡",
+  "【ラヴ・レター】杜野凛世": {
+    "enzaId": "1040120120",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 110,
+      "dance": 50,
+      "visual": 85
+    }
+  },
+  "【片恋はあと】杜野凛世": {
+    "enzaId": "1040120130",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 110,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【絵空靴】杜野凛世": {
+    "enzaId": "1050120010",
+    "characterId": "rinze",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 105,
+      "dance": 85,
+      "visual": 100
+    }
+  },
+  "【アイドルロード】杜野凛世": {
+    "enzaId": "1940120010",
+    "characterId": "rinze",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【ストイックトレーニング】有栖川夏葉": {
+    "enzaId": "1030130010",
+    "characterId": "natsuha",
+    "attributeType": "感性",
     "stamina": 27,
-    "recommendedStyle": "坚决",
+    "recommendedStyle": "集中",
     "stats": {
       "vocal": 60,
       "dance": 85,
       "visual": 90
     }
   },
-  "【Anti-Gravity】芹沢あさひ": {
-    "attributeType": "理性",
-    "stamina": 26,
-    "recommendedStyle": "干劲",
+  "【カトレアの花言葉】有栖川夏葉": {
+    "enzaId": "1030130020",
+    "characterId": "natsuha",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
     "stats": {
-      "vocal": 95,
-      "dance": 85,
-      "visual": 65
+      "vocal": 45,
+      "dance": 70,
+      "visual": 95
     }
   },
-  "【雪空 セパレート】大崎甘奈": {
+  "【鳥籠をひらいて】有栖川夏葉": {
+    "enzaId": "1030130030",
+    "characterId": "natsuha",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 50,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【風がかけていくように】有栖川夏葉": {
+    "enzaId": "1030130040",
+    "characterId": "natsuha",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 85,
+      "visual": 80
+    }
+  },
+  "【アルティメットマーメイド】有栖川夏葉": {
+    "enzaId": "1040130010",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 85,
+      "dance": 105,
+      "visual": 90
+    }
+  },
+  "【メイドインナツハ】有栖川夏葉": {
+    "enzaId": "1040130020",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 35,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 80
+    }
+  },
+  "【Ring a bell】有栖川夏葉": {
+    "enzaId": "1040130030",
+    "characterId": "natsuha",
+    "attributeType": "感性",
+    "stamina": 35,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 70,
+      "dance": 110,
+      "visual": 100
+    }
+  },
+  "【♡AKQJ10】有栖川夏葉": {
+    "enzaId": "1040130040",
+    "characterId": "natsuha",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 90,
+      "visual": 95
+    }
+  },
+  "【cheer+】有栖川夏葉": {
+    "enzaId": "1040130050",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 34,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【夏は来ぬ】有栖川夏葉": {
+    "enzaId": "1040130060",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 75
+    }
+  },
+  "【マイバレンタイン】有栖川夏葉": {
+    "enzaId": "1040130070",
+    "characterId": "natsuha",
     "attributeType": "感性",
     "stamina": 33,
     "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【Fall】有栖川夏葉": {
+    "enzaId": "1040130080",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
+      "dance": 90,
+      "visual": 85
+    }
+  },
+  "【Birdy BUddy】有栖川夏葉": {
+    "enzaId": "1040130090",
+    "characterId": "natsuha",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 95,
+      "visual": 105
+    }
+  },
+  "【ビューティフル】有栖川夏葉": {
+    "enzaId": "1040130100",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
+      "dance": 80,
+      "visual": 105
+    }
+  },
+  "【TOTTを誓って】有栖川夏葉": {
+    "enzaId": "1040130110",
+    "characterId": "natsuha",
+    "attributeType": "理性",
+    "stamina": 35,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【ユアバレンタイン】有栖川夏葉": {
+    "enzaId": "1040130120",
+    "characterId": "natsuha",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 90
+    }
+  },
+  "【summer break】有栖川夏葉": {
+    "enzaId": "1040130130",
+    "characterId": "natsuha",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 100,
+      "visual": 85
+    }
+  },
+  "【アイドルロード】有栖川夏葉": {
+    "enzaId": "1940130010",
+    "characterId": "natsuha",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 85
+    }
+  },
+  "【似合うかな？】大崎甘奈": {
+    "enzaId": "1030140010",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 90
+    }
+  },
+  "【甜花ちゃんといっしょ☆】大崎甘奈": {
+    "enzaId": "1030140020",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 60,
+      "visual": 100
+    }
+  },
+  "【ふたつの雨】大崎甘奈": {
+    "enzaId": "1030140030",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 50,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【見つけたい、だけど……】大崎甘奈": {
+    "enzaId": "1030140040",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【竜宮城へ ご招待☆】大崎甘奈": {
+    "enzaId": "1030140050",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "强气",
     "stats": {
       "vocal": 55,
       "dance": 70,
       "visual": 80
     }
   },
+  "【スタンバイオッケー】大崎甘奈": {
+    "enzaId": "1040140010",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 105,
+      "visual": 115
+    }
+  },
+  "【ゆらゆらアクアリウム】大崎甘奈": {
+    "enzaId": "1040140020",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【ないしょのスイーツ】大崎甘奈": {
+    "enzaId": "1040140030",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 60,
+      "dance": 70,
+      "visual": 100
+    }
+  },
+  "【お散歩サンライト】大崎甘奈": {
+    "enzaId": "1040140040",
+    "characterId": "amana",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 95,
+      "visual": 85
+    }
+  },
+  "【叶えて☆ゴールドフィッシュ】大崎甘奈": {
+    "enzaId": "1040140050",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 100
+    }
+  },
+  "【約束ペタル】大崎甘奈": {
+    "enzaId": "1040140060",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 105,
+      "visual": 115
+    }
+  },
+  "【雪空セパレート】大崎甘奈": {
+    "enzaId": "1040140070",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 65,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【longing】大崎甘奈": {
+    "enzaId": "1040140080",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【聞いてマイハート】大崎甘奈": {
+    "enzaId": "1040140090",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 60,
+      "visual": 95
+    }
+  },
+  "【すれちがいシアター】大崎甘奈": {
+    "enzaId": "1040140100",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 60,
+      "dance": 75,
+      "visual": 105
+    }
+  },
+  "【憧憬リキュール】大崎甘奈": {
+    "enzaId": "1040140110",
+    "characterId": "amana",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【輝いてアンドロメダ】大崎甘奈": {
+    "enzaId": "1040140120",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
+      "visual": 125
+    }
+  },
+  "【挑戦アトラクティブ】大崎甘奈": {
+    "enzaId": "1040140130",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 24,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【アイドルロード】大崎甘奈": {
+    "enzaId": "1940140010",
+    "characterId": "amana",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 100
+    }
+  },
+  "【秘密のだらだらタイム】大崎甜花": {
+    "enzaId": "1030150010",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 90,
+      "visual": 70
+    }
+  },
+  "【シンメトリー・プールサイド】大崎甜花": {
+    "enzaId": "1030150020",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 45,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【氷上バンビーナ】大崎甜花": {
+    "enzaId": "1030150030",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 65,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【お日様染めのマリーナ】大崎甜花": {
+    "enzaId": "1030150040",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 60,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【ストライク狙って】大崎甜花": {
+    "enzaId": "1030150050",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 80
+    }
+  },
+  "【U♥DOLL】大崎甜花": {
+    "enzaId": "1030150060",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 23,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 90
+    }
+  },
+  "【事務所。静寂。大輪の華】大崎甜花": {
+    "enzaId": "1040150010",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【好きなものはなんですか？】大崎甜花": {
+    "enzaId": "1040150020",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 70
+    }
+  },
+  "【I♡DOLL】大崎甜花": {
+    "enzaId": "1040150030",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 70,
+      "visual": 80
+    }
+  },
+  "【四夜一夜物語】大崎甜花": {
+    "enzaId": "1040150040",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 105,
+      "visual": 90
+    }
+  },
+  "【BON・BON・DAY！】大崎甜花": {
+    "enzaId": "1040150050",
+    "characterId": "tenka",
+    "attributeType": "非凡",
+    "stamina": 23,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 65,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【バス・タイムの気分で】大崎甜花": {
+    "enzaId": "1040150060",
+    "characterId": "tenka",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 95
+    }
+  },
+  "【Feel Like Flower】大崎甜花": {
+    "enzaId": "1040150070",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 90
+    }
+  },
+  "【甜ing Room】大崎甜花": {
+    "enzaId": "1040150080",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 80
+    }
+  },
+  "【Eve】大崎甜花": {
+    "enzaId": "1040150090",
+    "characterId": "tenka",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 65,
+      "dance": 75,
+      "visual": 75
+    }
+  },
+  "【きみは相棒】大崎甜花": {
+    "enzaId": "1040150100",
+    "characterId": "tenka",
+    "attributeType": "理性",
+    "stamina": 24,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【甜der Dream Show】大崎甜花": {
+    "enzaId": "1040150110",
+    "characterId": "tenka",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【LADY♡e-DOL】大崎甜花": {
+    "enzaId": "1040150120",
+    "characterId": "tenka",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【アイドルロード】大崎甜花": {
+    "enzaId": "1940150010",
+    "characterId": "tenka",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 60,
+      "dance": 90,
+      "visual": 70
+    }
+  },
+  "【マイフェイバリット】桑山千雪": {
+    "enzaId": "1030160010",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 85,
+      "dance": 45,
+      "visual": 80
+    }
+  },
+  "【一夏一刻物語】桑山千雪": {
+    "enzaId": "1030160020",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 65,
+      "dance": 55,
+      "visual": 90
+    }
+  },
+  "【よそゆき顔のセレナーデ】桑山千雪": {
+    "enzaId": "1030160030",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 50,
+      "visual": 100
+    }
+  },
+  "【ワン・モア・フラワリング】桑山千雪": {
+    "enzaId": "1030160040",
+    "characterId": "chiyuki",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 55,
+      "visual": 80
+    }
+  },
+  "【夏、イエー】桑山千雪": {
+    "enzaId": "1030160050",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【マイ・ピュア・ロマンス】桑山千雪": {
+    "enzaId": "1040160010",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【シークレット・ヒロイン】桑山千雪": {
+    "enzaId": "1040160020",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 105
+    }
+  },
+  "【サマーハニー・シーズン】桑山千雪": {
+    "enzaId": "1040160030",
+    "characterId": "chiyuki",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【はるかぜまち、1番地】桑山千雪": {
+    "enzaId": "1040160040",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 60,
+      "visual": 105
+    }
+  },
+  "【秋空と紅葉】桑山千雪": {
+    "enzaId": "1040160050",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 90
+    }
+  },
+  "【ハッピー・アイ・スクリーム】桑山千雪": {
+    "enzaId": "1040160060",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 65,
+      "dance": 60,
+      "visual": 95
+    }
+  },
+  "【つよがりのためのララバイ】桑山千雪": {
+    "enzaId": "1040160070",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【ひとひらで紡ぐ世界】桑山千雪": {
+    "enzaId": "1040160080",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【ネームレス・ヘヴンに憧れて】桑山千雪": {
+    "enzaId": "1040160090",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 70,
+      "dance": 55,
+      "visual": 80
+    }
+  },
+  "【剥がされて、虚ろ】桑山千雪": {
+    "enzaId": "1040160100",
+    "characterId": "chiyuki",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【やわらかくうけとめて】桑山千雪": {
+    "enzaId": "1040160110",
+    "characterId": "chiyuki",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【切り拓いて・茨】桑山千雪": {
+    "enzaId": "1040160120",
+    "characterId": "chiyuki",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 80,
+      "visual": 105
+    }
+  },
+  "【末永く、ふたり】桑山千雪": {
+    "enzaId": "1040160130",
+    "characterId": "chiyuki",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 105,
+      "dance": 95,
+      "visual": 115
+    }
+  },
+  "【アイドルロード】桑山千雪": {
+    "enzaId": "1940160010",
+    "characterId": "chiyuki",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 105,
+      "dance": 85,
+      "visual": 115
+    }
+  },
   "【さかさま世界】芹沢あさひ": {
+    "enzaId": "1030170010",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 85,
+      "dance": 100,
+      "visual": 55
+    }
+  },
+  "【かしゃーんとがらがら】芹沢あさひ": {
+    "enzaId": "1030170020",
+    "characterId": "asahi",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 110,
+      "visual": 50
+    }
+  },
+  "【はり・はり】芹沢あさひ": {
+    "enzaId": "1030170030",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 105,
+      "visual": 60
+    }
+  },
+  "【黄葉の冠】芹沢あさひ": {
+    "enzaId": "1030170040",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 70,
+      "dance": 80,
+      "visual": 45
+    }
+  },
+  "【ちぐはぐ姫】芹沢あさひ": {
+    "enzaId": "1030170050",
+    "characterId": "asahi",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 60,
+      "dance": 90,
+      "visual": 50
+    }
+  },
+  "【ジャンプ！スタッグ！！！】芹沢あさひ": {
+    "enzaId": "1040170010",
+    "characterId": "asahi",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 85,
+      "dance": 95,
+      "visual": 55
+    }
+  },
+  "【空と青とアイツ】芹沢あさひ": {
+    "enzaId": "1040170020",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 75,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【不機嫌なテーマパーク】芹沢あさひ": {
+    "enzaId": "1040170030",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【Housekeeping!】芹沢あさひ": {
+    "enzaId": "1040170040",
+    "characterId": "asahi",
+    "attributeType": "感性",
+    "stamina": 25,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 100,
+      "visual": 75
+    }
+  },
+  "【Howling】芹沢あさひ": {
+    "enzaId": "1040170050",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 70,
+      "dance": 110,
+      "visual": 55
+    }
+  },
+  "【光は光へ】芹沢あさひ": {
+    "enzaId": "1040170060",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 55,
+      "dance": 110,
+      "visual": 50
+    }
+  },
+  "【Boiling Sky】芹沢あさひ": {
+    "enzaId": "1040170070",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 105,
+      "visual": 55
+    }
+  },
+  "【Anti-Gravity】芹沢あさひ": {
+    "enzaId": "1040170080",
+    "characterId": "asahi",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 55
+    }
+  },
+  "【ムーンライト・ガーデン】芹沢あさひ": {
+    "enzaId": "1040170090",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 55
+    }
+  },
+  "【さよならカイト】芹沢あさひ": {
+    "enzaId": "1040170100",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 105,
+      "visual": 55
+    }
+  },
+  "【何故、ベルは鳴る】芹沢あさひ": {
+    "enzaId": "1040170110",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 75,
+      "dance": 105,
+      "visual": 70
+    }
+  },
+  "【センパイレッスン】芹沢あさひ": {
+    "enzaId": "1040170120",
+    "characterId": "asahi",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 110,
+      "dance": 125,
+      "visual": 80
+    }
+  },
+  "【アイドルロード】芹沢あさひ": {
+    "enzaId": "1940170010",
+    "characterId": "asahi",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 90,
+      "visual": 65
+    }
+  },
+  "【ザ・冬優子イズム】黛冬優子": {
+    "enzaId": "1030180010",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 55,
+      "visual": 90
+    }
+  },
+  "【水×天カイヤナイト】黛冬優子": {
+    "enzaId": "1030180020",
+    "characterId": "fuyuko",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 50,
+      "visual": 100
+    }
+  },
+  "【はるさき可憐花】黛冬優子": {
+    "enzaId": "1030180030",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 55,
+      "visual": 75
+    }
+  },
+  "【アンコンシャス35→80】黛冬優子": {
+    "enzaId": "1030180040",
+    "characterId": "fuyuko",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 45,
+      "visual": 100
+    }
+  },
+  "【オ♡フ♡レ♡コ】黛冬優子": {
+    "enzaId": "1040180010",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【アンシーン・ダブルキャスト】黛冬優子": {
+    "enzaId": "1040180020",
+    "characterId": "fuyuko",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 70,
+      "dance": 55,
+      "visual": 110
+    }
+  },
+  "【starring F】黛冬優子": {
+    "enzaId": "1040180030",
+    "characterId": "fuyuko",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 90,
+      "visual": 125
+    }
+  },
+  "【ONSTAGE？】黛冬優子": {
+    "enzaId": "1040180040",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 100
+    }
+  },
+  "【multi-angle】黛冬優子": {
+    "enzaId": "1040180050",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 100
+    }
+  },
+  "【幕間、沸々と高温】黛冬優子": {
+    "enzaId": "1040180060",
+    "characterId": "fuyuko",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 60,
+      "visual": 90
+    }
+  },
+  "【名モナキ夜ノ標ニ】黛冬優子": {
+    "enzaId": "1040180070",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 90,
+      "dance": 60,
+      "visual": 100
+    }
+  },
+  "【三文ノワール】黛冬優子": {
+    "enzaId": "1040180080",
+    "characterId": "fuyuko",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 115
+    }
+  },
+  "【ノンセンス・プロンプ】黛冬優子": {
+    "enzaId": "1040180090",
+    "characterId": "fuyuko",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【紅茶夢現】黛冬優子": {
+    "enzaId": "1040180100",
+    "characterId": "fuyuko",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 75,
+      "dance": 70,
+      "visual": 85
+    }
+  },
+  "【ア・冬優子イズム】黛冬優子": {
+    "enzaId": "1040180110",
+    "characterId": "fuyuko",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【誘爆ハートビート】黛冬優子": {
+    "enzaId": "1050180010",
+    "characterId": "fuyuko",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【アイドルロード】黛冬優子": {
+    "enzaId": "1940180010",
+    "characterId": "fuyuko",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 85,
+      "dance": 60,
+      "visual": 105
+    }
+  },
+  "【気になる！？染めちゃう！？】和泉愛依": {
+    "enzaId": "1030190010",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 60,
+      "dance": 100,
+      "visual": 65
+    }
+  },
+  "【てへっ♪】和泉愛依": {
+    "enzaId": "1030190020",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 70,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【ご褒美、いるよね♪】和泉愛依": {
+    "enzaId": "1030190030",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【見つかっちゃった♪】和泉愛依": {
+    "enzaId": "1030190040",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【ちょっとあげる～】和泉愛依": {
+    "enzaId": "1040190010",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【メイ・ビー】和泉愛依": {
+    "enzaId": "1040190020",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 90,
+      "visual": 85
+    }
+  },
+  "【シャッターチャンス！？】和泉愛依": {
+    "enzaId": "1040190030",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 90
+    }
+  },
+  "【今のうちは走らない】和泉愛依": {
+    "enzaId": "1040190040",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 55,
+      "dance": 95,
+      "visual": 80
+    }
+  },
+  "【ちょー早い！】和泉愛依": {
+    "enzaId": "1040190050",
+    "characterId": "mei",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 95
+    }
+  },
+  "【あたし流・かっこいい】和泉愛依": {
+    "enzaId": "1040190060",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 95,
+      "visual": 65
+    }
+  },
+  "【うちと幸せ】和泉愛依": {
+    "enzaId": "1040190070",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 34,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 80,
+      "dance": 105,
+      "visual": 90
+    }
+  },
+  "【何度転んだって】和泉愛依": {
+    "enzaId": "1040190080",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 90,
+      "dance": 100,
+      "visual": 95
+    }
+  },
+  "【あたし・マスト】和泉愛依": {
+    "enzaId": "1040190090",
+    "characterId": "mei",
+    "attributeType": "非凡",
+    "stamina": 31,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 85,
+      "dance": 120,
+      "visual": 90
+    }
+  },
+  "【今、できることを全て】和泉愛依": {
+    "enzaId": "1040190100",
+    "characterId": "mei",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 100,
+      "visual": 70
+    }
+  },
+  "【心安らげる場所】和泉愛依": {
+    "enzaId": "1040190110",
+    "characterId": "mei",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 60,
+      "dance": 105,
+      "visual": 65
+    }
+  },
+  "【アイドルロード】和泉愛依": {
+    "enzaId": "1940190010",
+    "characterId": "mei",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 85,
+      "dance": 100,
+      "visual": 90
+    }
+  },
+  "【まわるものについて】浅倉透": {
+    "enzaId": "1030200010",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 45,
+      "dance": 50,
+      "visual": 80
+    }
+  },
+  "【おかえり、ギター】浅倉透": {
+    "enzaId": "1030200020",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 55,
+      "dance": 65,
+      "visual": 85
+    }
+  },
+  "【聞こえててよ、babe】浅倉透": {
+    "enzaId": "1030200030",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 50,
+      "dance": 55,
+      "visual": 85
+    }
+  },
+  "【10個、光】浅倉透": {
+    "enzaId": "1040200010",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【途方もない午後】浅倉透": {
+    "enzaId": "1040200020",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 55,
+      "dance": 75,
+      "visual": 100
+    }
+  },
+  "【つづく、】浅倉透": {
+    "enzaId": "1040200030",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【国道沿いに、憶光年】浅倉透": {
+    "enzaId": "1040200040",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 32,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 65,
+      "visual": 100
+    }
+  },
+  "【夜はなにいろ】浅倉透": {
+    "enzaId": "1040200050",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 70,
+      "visual": 85
+    }
+  },
+  "【あてもなく、風】浅倉透": {
+    "enzaId": "1040200060",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 75,
+      "visual": 105
+    }
+  },
+  "【雪あたりの季節】浅倉透": {
+    "enzaId": "1040200070",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 90,
+      "visual": 110
+    }
+  },
+  "【ヘブンリーブルーをつかまえて】浅倉透": {
+    "enzaId": "1040200080",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 65,
+      "dance": 95,
+      "visual": 100
+    }
+  },
+  "【テープエンドの行き先】浅倉透": {
+    "enzaId": "1040200090",
+    "characterId": "toru",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 70,
+      "dance": 95,
+      "visual": 95
+    }
+  },
+  "【アルマ】浅倉透": {
+    "enzaId": "1040200100",
+    "characterId": "toru",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【アイドルロード】浅倉透": {
+    "enzaId": "1940200010",
+    "characterId": "toru",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【ダウト】樋口円香": {
+    "enzaId": "1030210010",
+    "characterId": "madoka",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 80,
+      "dance": 50,
+      "visual": 70
+    }
+  },
+  "【カラメル】樋口円香": {
+    "enzaId": "1030210020",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 50,
+      "visual": 80
+    }
+  },
+  "【カラカラカラ】樋口円香": {
+    "enzaId": "1040210010",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 95,
+      "dance": 70,
+      "visual": 80
+    }
+  },
+  "【ギンコ・ビローバ】樋口円香": {
+    "enzaId": "1040210020",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 115,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【ピトス・エルピス】樋口円香": {
+    "enzaId": "1040210030",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 105,
+      "dance": 70,
+      "visual": 75
+    }
+  },
+  "【オイサラバエル】樋口円香": {
+    "enzaId": "1040210040",
+    "characterId": "madoka",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 110,
+      "dance": 75,
+      "visual": 80
+    }
+  },
+  "【Merry】樋口円香": {
+    "enzaId": "1040210050",
+    "characterId": "madoka",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 100,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【バグ・ル】樋口円香": {
+    "enzaId": "1040210060",
+    "characterId": "madoka",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 55,
+      "visual": 75
+    }
+  },
+  "【キン・コン】樋口円香": {
+    "enzaId": "1040210070",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 100,
+      "dance": 65,
+      "visual": 95
+    }
+  },
+  "【フリークス・アリー】樋口円香": {
+    "enzaId": "1040210080",
+    "characterId": "madoka",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【ジャンク・ション】樋口円香": {
+    "enzaId": "1040210090",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 110,
+      "dance": 85,
+      "visual": 105
+    }
+  },
+  "【アマテラス】樋口円香": {
+    "enzaId": "1050210010",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 105,
+      "dance": 75,
+      "visual": 80
+    }
+  },
+  "【アイドルロード】樋口円香": {
+    "enzaId": "1940210010",
+    "characterId": "madoka",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 105,
+      "dance": 70,
+      "visual": 85
+    }
+  },
+  "【はれのひ喫茶店】福丸小糸": {
+    "enzaId": "1030220010",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 75,
+      "dance": 65,
+      "visual": 70
+    }
+  },
+  "【福はうち】福丸小糸": {
+    "enzaId": "1030220020",
+    "characterId": "koito",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 70,
+      "dance": 50,
+      "visual": 85
+    }
+  },
+  "【ポシェットの中には】福丸小糸": {
+    "enzaId": "1040220010",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 85,
+      "visual": 95
+    }
+  },
+  "【おみくじ結びますか】福丸小糸": {
+    "enzaId": "1040220020",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 23,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 80,
+      "dance": 55,
+      "visual": 80
+    }
+  },
+  "【てのひらの答え】福丸小糸": {
+    "enzaId": "1040220030",
+    "characterId": "koito",
+    "attributeType": "感性",
+    "stamina": 23,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 90,
+      "dance": 75,
+      "visual": 100
+    }
+  },
+  "【なつやすみ学校】福丸小糸": {
+    "enzaId": "1040220040",
+    "characterId": "koito",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 100,
+      "dance": 70,
+      "visual": 90
+    }
+  },
+  "【セピア色の孤独】福丸小糸": {
+    "enzaId": "1040220050",
+    "characterId": "koito",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 80,
+      "visual": 100
+    }
+  },
+  "【雲のかなたまで】福丸小糸": {
+    "enzaId": "1040220060",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 90,
+      "dance": 70,
+      "visual": 80
+    }
+  },
+  "【あなた様へ紡ぐ】福丸小糸": {
+    "enzaId": "1040220070",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 85,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【窓をあけて】福丸小糸": {
+    "enzaId": "1040220080",
+    "characterId": "koito",
+    "attributeType": "理性",
+    "stamina": 26,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 85,
+      "dance": 80,
+      "visual": 90
+    }
+  },
+  "【羽をやすめて】福丸小糸": {
+    "enzaId": "1040220090",
+    "characterId": "koito",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 90,
+      "dance": 65,
+      "visual": 80
+    }
+  },
+  "【ちいさな巣立ち】福丸小糸": {
+    "enzaId": "1040220100",
+    "characterId": "koito",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 95,
+      "dance": 75,
+      "visual": 90
+    }
+  },
+  "【アイドルロード】福丸小糸": {
+    "enzaId": "1940220010",
+    "characterId": "koito",
+    "attributeType": "理性",
+    "stamina": 23,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 115,
+      "dance": 90,
+      "visual": 105
+    }
+  },
+  "【♯SS】市川雛菜": {
+    "enzaId": "1030230010",
+    "characterId": "hinana",
+    "attributeType": "非凡",
+    "stamina": 30,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 65
+    }
+  },
+  "【Makeup♡Box】市川雛菜": {
+    "enzaId": "1030230020",
+    "characterId": "hinana",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 55,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【HAPPY-!NG】市川雛菜": {
+    "enzaId": "1040230010",
+    "characterId": "hinana",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 65,
+      "dance": 110,
+      "visual": 70
+    }
+  },
+  "【♡LOG】市川雛菜": {
+    "enzaId": "1040230020",
+    "characterId": "hinana",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 80,
+      "dance": 115,
+      "visual": 85
+    }
+  },
+  "【TRICK☆☆☆】市川雛菜": {
+    "enzaId": "1040230030",
+    "characterId": "hinana",
+    "attributeType": "非凡",
+    "stamina": 33,
+    "recommendedStyle": "强气",
+    "stats": {
+      "vocal": 60,
+      "dance": 90,
+      "visual": 85
+    }
+  },
+  "【S!GNATURE】市川雛菜": {
+    "enzaId": "1040230040",
+    "characterId": "hinana",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 90,
+      "visual": 80
+    }
+  },
+  "【DE-S!GN】市川雛菜": {
+    "enzaId": "1040230050",
+    "characterId": "hinana",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 110,
+      "visual": 80
+    }
+  },
+  "【UNCHARTED】市川雛菜": {
+    "enzaId": "1040230060",
+    "characterId": "hinana",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 55,
+      "dance": 100,
+      "visual": 85
+    }
+  },
+  "【Keep→it up♡】市川雛菜": {
+    "enzaId": "1040230070",
+    "characterId": "hinana",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 110,
+      "visual": 65
+    }
+  },
+  "【change___】市川雛菜": {
+    "enzaId": "1040230080",
+    "characterId": "hinana",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 55,
+      "dance": 100,
+      "visual": 60
+    }
+  },
+  "【d!scovery】市川雛菜": {
+    "enzaId": "1040230090",
+    "characterId": "hinana",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 80,
+      "dance": 105,
+      "visual": 90
+    }
+  },
+  "【loading...】市川雛菜": {
+    "enzaId": "1040230100",
+    "characterId": "hinana",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 65,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【アイドルロード】市川雛菜": {
+    "enzaId": "1940230010",
+    "characterId": "hinana",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 60,
+      "dance": 95,
+      "visual": 65
+    }
+  },
+  "【一億回めくらいの、その夏】七草にちか": {
+    "enzaId": "1030240010",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 75,
+      "dance": 55,
+      "visual": 50
+    }
+  },
+  "【泣けよ洗濯機】七草にちか": {
+    "enzaId": "1030240020",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 85,
+      "visual": 50
+    }
+  },
+  "【♡まっクろはムウサぎ♡】七草にちか": {
+    "enzaId": "1040240010",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 30,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 95,
+      "dance": 65,
+      "visual": 60
+    }
+  },
+  "【ヴぇりべりいかシたサマー】七草にちか": {
+    "enzaId": "1040240020",
+    "characterId": "nichika",
     "attributeType": "非凡",
     "stamina": 32,
     "recommendedStyle": "全力",
     "stats": {
-      "vocal": 60,
+      "vocal": 80,
+      "dance": 70,
+      "visual": 65
+    }
+  },
+  "【夜よこノ窓は塗らないデ】七草にちか": {
+    "enzaId": "1040240030",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 85,
+      "dance": 80,
+      "visual": 70
+    }
+  },
+  "【↓ろウTea】七草にちか": {
+    "enzaId": "1040240040",
+    "characterId": "nichika",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 105,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【ふラiとぅTHE】七草にちか": {
+    "enzaId": "1040240050",
+    "characterId": "nichika",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 70
+    }
+  },
+  "【とキどき間氷期】七草にちか": {
+    "enzaId": "1040240060",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 105,
+      "dance": 80,
+      "visual": 70
+    }
+  },
+  "【伝えテ niiid U】七草にちか": {
+    "enzaId": "1040240070",
+    "characterId": "nichika",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 105,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【日々、想】七草にちか": {
+    "enzaId": "1040240080",
+    "characterId": "nichika",
+    "attributeType": "非凡",
+    "stamina": 28,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 105,
+      "dance": 55,
+      "visual": 50
+    }
+  },
+  "【受けトル sun Q】七草にちか": {
+    "enzaId": "1040240090",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 105,
+      "dance": 90,
+      "visual": 85
+    }
+  },
+  "【アイドルロード】七草にちか": {
+    "enzaId": "1940240010",
+    "characterId": "nichika",
+    "attributeType": "感性",
+    "stamina": 26,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 110,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【SEASON】緋田美琴": {
+    "enzaId": "1030250010",
+    "characterId": "mikoto",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 70,
+      "dance": 90,
+      "visual": 45
+    }
+  },
+  "【MANNEQUIN】緋田美琴": {
+    "enzaId": "1030250020",
+    "characterId": "mikoto",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 85,
+      "dance": 100,
+      "visual": 75
+    }
+  },
+  "【ROUNDLY】緋田美琴": {
+    "enzaId": "1040250010",
+    "characterId": "mikoto",
+    "attributeType": "感性",
+    "stamina": 33,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 75,
+      "dance": 95,
+      "visual": 70
+    }
+  },
+  "【CHILLY】緋田美琴": {
+    "enzaId": "1040250020",
+    "characterId": "mikoto",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
+      "visual": 75
+    }
+  },
+  "【CONTRAIL】緋田美琴": {
+    "enzaId": "1040250030",
+    "characterId": "mikoto",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 115,
+      "dance": 95,
+      "visual": 80
+    }
+  },
+  "【DIVA】緋田美琴": {
+    "enzaId": "1040250040",
+    "characterId": "mikoto",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 105,
+      "visual": 75
+    }
+  },
+  "【YOU＆I】緋田美琴": {
+    "enzaId": "1040250050",
+    "characterId": "mikoto",
+    "attributeType": "非凡",
+    "stamina": 32,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 55
+    }
+  },
+  "【This way】緋田美琴": {
+    "enzaId": "1040250060",
+    "characterId": "mikoto",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 100,
+      "dance": 95,
+      "visual": 70
+    }
+  },
+  "【SUGARLESS】緋田美琴": {
+    "enzaId": "1040250070",
+    "characterId": "mikoto",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 85,
+      "visual": 65
+    }
+  },
+  "【POLARIS】緋田美琴": {
+    "enzaId": "1040250080",
+    "characterId": "mikoto",
+    "attributeType": "感性",
+    "stamina": 32,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 85,
+      "dance": 110,
+      "visual": 75
+    }
+  },
+  "【GLIMMER】緋田美琴": {
+    "enzaId": "1040250090",
+    "characterId": "mikoto",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 105,
+      "visual": 65
+    }
+  },
+  "【アイドルロード】緋田美琴": {
+    "enzaId": "1940250010",
+    "characterId": "mikoto",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 85,
+      "visual": 75
+    }
+  },
+  "【Blind Driver】斑鳩ルカ": {
+    "enzaId": "1030260010",
+    "characterId": "luca",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 105,
+      "dance": 55,
+      "visual": 60
+    }
+  },
+  "【broken shout】斑鳩ルカ": {
+    "enzaId": "1040260010",
+    "characterId": "luca",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 110,
+      "dance": 80,
+      "visual": 85
+    }
+  },
+  "【Noisy Rush】斑鳩ルカ": {
+    "enzaId": "1040260020",
+    "characterId": "luca",
+    "attributeType": "理性",
+    "stamina": 25,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
       "dance": 70,
       "visual": 75
+    }
+  },
+  "【BLUES】斑鳩ルカ": {
+    "enzaId": "1040260030",
+    "characterId": "luca",
+    "attributeType": "感性",
+    "stamina": 24,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 105,
+      "dance": 65,
+      "visual": 90
+    }
+  },
+  "【SMASH】斑鳩ルカ": {
+    "enzaId": "1040260040",
+    "characterId": "luca",
+    "attributeType": "理性",
+    "stamina": 28,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 100,
+      "dance": 75,
+      "visual": 85
+    }
+  },
+  "【Could Be】斑鳩ルカ": {
+    "enzaId": "1040260050",
+    "characterId": "luca",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 130,
+      "dance": 85,
+      "visual": 105
+    }
+  },
+  "【new or ...】斑鳩ルカ": {
+    "enzaId": "1040260060",
+    "characterId": "luca",
+    "attributeType": "感性",
+    "stamina": 28,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 80,
+      "dance": 60,
+      "visual": 65
+    }
+  },
+  "【NoNoNoBunny】斑鳩ルカ": {
+    "enzaId": "1040260070",
+    "characterId": "luca",
+    "attributeType": "感性",
+    "stamina": 29,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 100,
+      "dance": 45,
+      "visual": 60
+    }
+  },
+  "【アイドルロード】斑鳩ルカ": {
+    "enzaId": "1940260010",
+    "characterId": "luca",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 85,
+      "dance": 50,
+      "visual": 75
+    }
+  },
+  "【優You】鈴木羽那": {
+    "enzaId": "1030270010",
+    "characterId": "hana",
+    "attributeType": "理性",
+    "stamina": 31,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 80,
+      "visual": 75
+    }
+  },
+  "【Eyes On You】鈴木羽那": {
+    "enzaId": "1040270010",
+    "characterId": "hana",
+    "attributeType": "理性",
+    "stamina": 33,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 60,
+      "dance": 65,
+      "visual": 95
+    }
+  },
+  "【Marry You？】鈴木羽那": {
+    "enzaId": "1040270020",
+    "characterId": "hana",
+    "attributeType": "理性",
+    "stamina": 29,
+    "recommendedStyle": "好印象",
+    "stats": {
+      "vocal": 75,
+      "dance": 80,
+      "visual": 95
+    }
+  },
+  "【Scene With You】鈴木羽那": {
+    "enzaId": "1040270030",
+    "characterId": "hana",
+    "attributeType": "感性",
+    "stamina": 27,
+    "recommendedStyle": "好调",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 95
+    }
+  },
+  "【From You】鈴木羽那": {
+    "enzaId": "1040270040",
+    "characterId": "hana",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 70,
+      "dance": 75,
+      "visual": 100
+    }
+  },
+  "【純白の君へ】鈴木羽那": {
+    "enzaId": "1040270050",
+    "characterId": "hana",
+    "attributeType": "非凡",
+    "stamina": 25,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 75,
+      "dance": 85,
+      "visual": 80
+    }
+  },
+  "【アイドルロード】鈴木羽那": {
+    "enzaId": "1940270010",
+    "characterId": "hana",
+    "attributeType": "理性",
+    "stamina": 27,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 80,
+      "dance": 110,
+      "visual": 120
+    }
+  },
+  "【漂白花火】郁田はるき": {
+    "enzaId": "1030280010",
+    "characterId": "haruki",
+    "attributeType": "非凡",
+    "stamina": 27,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 75,
+      "dance": 75,
+      "visual": 60
+    }
+  },
+  "【Hopeland】郁田はるき": {
+    "enzaId": "1040280010",
+    "characterId": "haruki",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 65,
+      "dance": 85,
+      "visual": 70
+    }
+  },
+  "【連綿と、桜】郁田はるき": {
+    "enzaId": "1040280020",
+    "characterId": "haruki",
+    "attributeType": "非凡",
+    "stamina": 29,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 85,
+      "dance": 90,
+      "visual": 80
+    }
+  },
+  "【桜花拾】郁田はるき": {
+    "enzaId": "1040280030",
+    "characterId": "haruki",
+    "attributeType": "理性",
+    "stamina": 30,
+    "recommendedStyle": "干劲",
+    "stats": {
+      "vocal": 90,
+      "dance": 85,
+      "visual": 80
+    }
+  },
+  "【流星パレット】郁田はるき": {
+    "enzaId": "1040280040",
+    "characterId": "haruki",
+    "attributeType": "感性",
+    "stamina": 31,
+    "recommendedStyle": "集中",
+    "stats": {
+      "vocal": 95,
+      "dance": 85,
+      "visual": 70
+    }
+  },
+  "【song for you】郁田はるき": {
+    "enzaId": "1040280050",
+    "characterId": "haruki",
+    "attributeType": "非凡",
+    "stamina": 24,
+    "recommendedStyle": "温存",
+    "stats": {
+      "vocal": 60,
+      "dance": 90,
+      "visual": 90
+    }
+  },
+  "【アイドルロード】郁田はるき": {
+    "enzaId": "1940280010",
+    "characterId": "haruki",
+    "attributeType": "非凡",
+    "stamina": 26,
+    "recommendedStyle": "全力",
+    "stats": {
+      "vocal": 100,
+      "dance": 95,
+      "visual": 80
     }
   }
 }

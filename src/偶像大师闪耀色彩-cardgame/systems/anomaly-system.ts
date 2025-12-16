@@ -4,10 +4,10 @@
  * 管理非凡系统的四态切换、全力值、热意值等机制
  */
 
-import type { BattleState, AnomalyState } from '../types';
 import { AttributeManager } from '../core/attribute-manager';
 import { BuffManager } from '../core/buff-manager';
 import { BuffPresets } from '../presets/buff-presets';
+import type { AnomalyState, BattleState } from '../types';
 import { EventBus, GameEvents } from '../utils/event-bus';
 
 /**
@@ -89,8 +89,8 @@ export class AnomalySystem {
         break;
 
       case 'resolute':
-        // 坚决状态：添加坚决状态Buff
-        BuffManager.addBuff(this.state, BuffPresets.坚决状态(level));
+        // 强气状态：添加强气状态Buff
+        BuffManager.addBuff(this.state, BuffPresets.强气状态(level));
         break;
 
       case 'relaxed':
@@ -272,7 +272,7 @@ export const AnomalyStateDescriptions = {
     color: '#00BCD4',
   },
   resolute: {
-    name: '坚决状态（強気）',
+    name: '强气状态（強気）',
     description: '使用卡牌时获得全力值',
     icon: '⚡',
     color: '#FF5722',
@@ -298,12 +298,3 @@ export function getAnomalyStateDescription(state: AnomalyState, level: 1 | 2) {
     fullName: `${baseDesc.name}（${level === 1 ? '一阶段' : '二阶段'}）`,
   };
 }
-
-
-
-
-
-
-
-
-

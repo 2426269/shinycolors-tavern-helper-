@@ -5,8 +5,8 @@
  */
 
 import $ from 'jquery';
-import * as PIXI from 'pixi.js';
 import { createPinia } from 'pinia';
+import * as PIXI from 'pixi.js';
 import { createApp } from 'vue';
 import './样式/全局样式.scss';
 import MainPage from './页面/主页.vue';

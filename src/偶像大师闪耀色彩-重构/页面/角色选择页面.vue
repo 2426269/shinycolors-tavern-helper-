@@ -15,7 +15,7 @@
           @click="selectCharacter(character)"
         >
           <div class="char-avatar" :style="{ borderColor: getCharacterColor(character.id) }">
-            <i class="fas fa-user"></i>
+            <img :src="getAvatarUrl(character.chineseName)" :alt="character.chineseName" class="avatar-img" />
           </div>
           <div class="char-info">
             <span class="char-name">{{ character.chineseName }}</span>
@@ -29,16 +29,20 @@
       <div v-if="selectedCharacter && selectedCharacter.cards.length > 1" class="card-select">
         <div class="section-title"><i class="fas fa-id-card"></i> 选择卡面</div>
         <div class="card-list">
-          <div
-            v-for="(card, index) in selectedCharacter.cards"
-            :key="index"
-            class="card-item"
-            :class="{ active: selectedCardIndex === index }"
-            @click="selectCard(index)"
-          >
-            <span class="card-name">{{ card.displayName }}</span>
-            <i v-if="selectedCardIndex === index" class="fas fa-check"></i>
-          </div>
+          <template v-for="(cards, dressType) in groupedCards" :key="dressType">
+            <div class="dress-type-header">{{ dressType }}</div>
+            <div
+              v-for="cardInfo in cards"
+              :key="cardInfo.index"
+              class="card-item"
+              :class="{ active: selectedCardIndex === cardInfo.index, locked: cardInfo.locked }"
+              @click="!cardInfo.locked && selectCard(cardInfo.index)"
+            >
+              <i v-if="cardInfo.locked" class="fas fa-lock lock-icon"></i>
+              <span class="card-name">{{ cardInfo.card.displayName }}</span>
+              <i v-if="selectedCardIndex === cardInfo.index && !cardInfo.locked" class="fas fa-check"></i>
+            </div>
+          </template>
         </div>
       </div>
     </div>
@@ -52,6 +56,7 @@
           <button
             class="costume-btn"
             :class="{ active: previewCostume === 'normal' }"
+            :disabled="!currentCardHasNormalCostume"
             @click="previewCostume = 'normal'"
           >
             <i class="fas fa-tshirt"></i> 常服
@@ -65,6 +70,14 @@
             <i class="fas fa-star"></i> 偶像服
           </button>
         </div>
+
+        <!-- 动画选择器 -->
+        <div v-if="availableAnimations.length > 0" class="animation-selector">
+          <label><i class="fas fa-play"></i> 动作：</label>
+          <select v-model="selectedAnimation" class="animation-select">
+            <option v-for="anim in availableAnimations" :key="anim" :value="anim">{{ anim }}</option>
+          </select>
+        </div>
       </div>
 
       <!-- Spine 预览区域 -->
@@ -74,7 +87,9 @@
           :key="previewSpineId + previewCostume"
           :idol-id="previewSpineId"
           :costume="previewCostume"
+          :selected-animation="selectedAnimation"
           class="spine-preview"
+          @animations-loaded="updateAnimations"
         />
         <div v-else class="no-preview">
           <i class="fas fa-user-circle"></i>
@@ -94,10 +109,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
+import { loadUserData } from '../工具/存储';
 import SpinePlayer from '../组件/Spine播放器.vue';
-import { getSpineId, SPINE_CHARACTERS, type CharacterSpineData } from '../角色管理/spine资源映射';
+import { getOwnedEnzaIds, isSpineCardUnlocked } from '../角色管理/spine解锁检查';
+import { getSpineId, SPINE_CHARACTERS, type CharacterSpineData, type SpineCard } from '../角色管理/spine资源映射';
 import { IDOLS } from '../角色管理/角色数据';
+
+// CDN头像路径
+const CDN_BASE = 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main';
 
 // Props
 const props = defineProps<{
@@ -134,6 +154,10 @@ const currentCardDisplayName = computed(() => {
   return `${selectedCharacter.value.chineseName} - ${currentCard.value.displayName}`;
 });
 
+const currentCardHasNormalCostume = computed(() => {
+  return currentCard.value?.hasNormalCostume ?? true;
+});
+
 const currentCardHasIdolCostume = computed(() => {
   return currentCard.value?.hasIdolCostume ?? false;
 });
@@ -142,6 +166,48 @@ const previewSpineId = computed(() => {
   if (!selectedCharacter.value || !currentCard.value) return '';
   return getSpineId(selectedCharacter.value.japaneseName, currentCard.value.name);
 });
+
+// 已拥有卡牌的enzaId集合（从图鉴数据加载）
+const ownedEnzaIds = ref<Set<string>>(new Set());
+
+// 组件挂载时加载用户已拥有的卡牌数据
+onMounted(async () => {
+  try {
+    const userData = await loadUserData();
+    ownedEnzaIds.value = getOwnedEnzaIds(userData.ownedCards);
+    console.log('📦 已加载拥有的卡牌数量:', ownedEnzaIds.value.size);
+  } catch (error) {
+    console.error('❌ 加载用户数据失败:', error);
+  }
+});
+
+// 按dressType分组卡面（包含锁定状态）
+const groupedCards = computed(() => {
+  if (!selectedCharacter.value) return {};
+  const groups: Record<string, { card: SpineCard; index: number; locked: boolean }[]> = {};
+  selectedCharacter.value.cards.forEach((card, index) => {
+    const type = card.dressType || 'Other';
+    if (!groups[type]) {
+      groups[type] = [];
+    }
+    // 检查是否锁定
+    const locked = !isSpineCardUnlocked(card, ownedEnzaIds.value);
+    groups[type].push({ card, index, locked });
+  });
+  return groups;
+});
+
+// 动作选择
+const availableAnimations = ref<string[]>([]);
+const selectedAnimation = ref('wait');
+
+// 更新可用动画列表（由SpinePlayer组件调用）
+function updateAnimations(animations: string[]) {
+  availableAnimations.value = animations;
+  if (!animations.includes(selectedAnimation.value)) {
+    selectedAnimation.value = animations.includes('wait') ? 'wait' : animations[0] || 'wait';
+  }
+}
 
 // 获取角色颜色
 function getCharacterColor(id: string): string {
@@ -155,18 +221,38 @@ function getCharacterUnit(id: string): string {
   return idol?.unit || '';
 }
 
+// 获取角色头像URL
+function getAvatarUrl(chineseName: string): string {
+  return `${CDN_BASE}/角色头像/${chineseName}.webp`;
+}
+
 // 选择角色
 function selectCharacter(character: CharacterSpineData) {
   selectedCharacterId.value = character.id;
   selectedCardIndex.value = 0;
-  // 重置为常服
-  previewCostume.value = 'normal';
+  // 选择第一个可用的服装类型
+  const firstCard = character.cards[0];
+  if (firstCard?.hasNormalCostume) {
+    previewCostume.value = 'normal';
+  } else if (firstCard?.hasIdolCostume) {
+    previewCostume.value = 'idol';
+  } else {
+    previewCostume.value = 'normal';
+  }
 }
 
 // 选择卡面
 function selectCard(index: number) {
   selectedCardIndex.value = index;
-  previewCostume.value = 'normal';
+  const card = selectedCharacter.value?.cards[index];
+  // 选择第一个可用的服装类型
+  if (card?.hasNormalCostume) {
+    previewCostume.value = 'normal';
+  } else if (card?.hasIdolCostume) {
+    previewCostume.value = 'idol';
+  } else {
+    previewCostume.value = 'normal';
+  }
 }
 
 // 取消
@@ -307,10 +393,12 @@ watch(
   justify-content: center;
   border: 2px solid;
   flex-shrink: 0;
+  overflow: hidden;
 
-  i {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.7);
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -342,6 +430,24 @@ watch(
   padding: 15px;
   background: rgba(0, 0, 0, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+
+  /* 自定义滚动条 */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.5);
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 126, 234, 0.7);
+  }
 }
 
 .section-title {
@@ -360,7 +466,61 @@ watch(
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+}
+
+.dress-type-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #667eea;
+  padding: 8px 5px 4px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+.animation-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+
+  label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    i {
+      color: #667eea;
+    }
+  }
+
+  .animation-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    min-width: 120px;
+
+    &:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    option {
+      background: #1a1a2e;
+      color: white;
+    }
+  }
 }
 
 .card-item {
@@ -380,6 +540,26 @@ watch(
   &.active {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
     border: 1px solid rgba(102, 126, 234, 0.5);
+  }
+
+  &.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(100, 100, 100, 0.2);
+
+    &:hover {
+      background: rgba(100, 100, 100, 0.2);
+    }
+
+    .card-name {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .lock-icon {
+    color: #888;
+    font-size: 0.8rem;
+    margin-right: 8px;
   }
 
   .card-name {

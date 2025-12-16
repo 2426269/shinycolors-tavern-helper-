@@ -85,7 +85,7 @@ export const PRODUCE_PLAN_MECHANICS: Record<ProducePlan, ProducePlanMechanic> = 
     name: '非凡',
     nameJP: 'アノマリー',
     nameEN: 'Anomaly',
-    coreMechanic: '通过灵活切换三种指针状态（全力、坚决、温存），适应不同的战术需求',
+    coreMechanic: '通过灵活切换三种指针状态（全力、强气、温存），适应不同的战术需求',
     keyEffects: [
       {
         name: '全力',
@@ -94,7 +94,7 @@ export const PRODUCE_PLAN_MECHANICS: Record<ProducePlan, ProducePlanMechanic> = 
           '积累全力值（最大10点），全力值满后可转化为全力状态。全力状态下：分数提升量增加200%，技能卡使用次数+1',
       },
       {
-        name: '坚决',
+        name: '强气',
         nameJP: '強気',
         description:
           '第一阶段：分数提升量和体力消耗均增加100%；第二阶段：分数提升量增加150%，体力消耗增加100%，且每使用一张技能卡额外消耗1点体力',
@@ -112,7 +112,21 @@ export const PRODUCE_PLAN_MECHANICS: Record<ProducePlan, ProducePlanMechanic> = 
       },
     ],
     playstyle: '灵活型策略流，根据局势切换状态，兼具爆发、稳健、蓄力',
-    vocabulary: ['全力', '強気', '温存', '熱意', '爆発', '覚醒', '限界', '突破', '奇跡', '異常', '特異', '超越'],
+    vocabulary: [
+      '全力',
+      '強気',
+      '温存',
+      '熱意',
+      '爆発',
+      '覚醒',
+      '限界',
+      '突破',
+      '奇跡',
+      '異常',
+      '特異',
+      '超越',
+      '悠闲',
+    ],
   },
 
   自由: {
@@ -176,6 +190,20 @@ export const ALL_EFFECTS: EffectData[] = [
     type: '正面',
   },
   {
+    name: '好印象增加量增加',
+    nameJP: '好印象増加量アップ',
+    description: 'N回合内，获得好印象时，好印象获得量增加N%',
+    belongTo: '理性',
+    type: '正面',
+  },
+  {
+    name: '好印象强化',
+    nameJP: '好印象効果アップ',
+    description: 'N回合内，好印象提供的得分增加N%',
+    belongTo: '理性',
+    type: '正面',
+  },
+  {
     name: '有干劲',
     nameJP: 'やる気',
     description: 'N层时，打出提供元气的技能卡时，额外获得N点元气',
@@ -229,6 +257,30 @@ export const ALL_EFFECTS: EffectData[] = [
     nameJP: '熱意',
     description: '每点热意在回合结束时分数+1（仅当前回合有效）',
     belongTo: '非凡',
+    type: '正面',
+  },
+  {
+    name: '温存状态',
+    nameJP: '温存',
+    description:
+      '降低分数上升量和体力消耗。如果当前「指针」已为「温存」，可最多叠加至二阶段。▼一阶段：分数上升量和体力消耗降低50%，解除时热忱+5、技能卡使用次数+1。▼二阶段：分数上升量和体力消耗降低75%，解除时热忱+8、元气+5、技能卡使用次数+1。温存不会与「强气」「全力」同时存在。',
+    belongTo: '非凡',
+    type: '正面',
+  },
+  {
+    name: '悠闲状态',
+    nameJP: 'のんびり',
+    description:
+      '分数上升量和消费体力减少100%。当该状态被解除时，元气+5，技能卡使用次数+1。变更为「强气」或被解除时，热意+10。变更为「全力」时，所有技能卡数值+10。悠闲无法切换为「温存」，温存切换为悠闲时不会触发温存切换效果。',
+    belongTo: '非凡',
+    type: '正面',
+  },
+  {
+    name: '数值提升',
+    nameJP: 'パラメータ上昇',
+    description:
+      'N层时，技能卡数值最终提升N%。此效果在所有其他数值增幅效果（好调、集中等）之后生效，是最终的百分比提升，而不是对某一buff的单独提升。',
+    belongTo: '通用',
     type: '正面',
   },
 
@@ -316,7 +368,7 @@ export const ALL_EFFECTS: EffectData[] = [
     name: '指针固定',
     nameJP: '指針固定',
     description:
-      '非凡角色的指针无法更改至"坚决"、"温存"，全力值达10点时也无法进入"全力"状态（但不阻止"全力"状态的结束）',
+      '非凡角色的指针无法更改至"强气"、"温存"，全力值达10点时也无法进入"全力"状态（但不阻止"全力"状态的结束）',
     belongTo: '非凡',
     type: '负面',
   },
@@ -352,7 +404,7 @@ export const EFFECT_CATEGORIES = {
   },
   状态切换: {
     description: '非凡专属：切换指针状态',
-    examples: ['切换至全力状态', '切换至温存状态', '切换至坚决状态'],
+    examples: ['切换至全力状态', '切换至温存状态', '切换至强气状态'],
   },
 };
 
@@ -388,8 +440,8 @@ export function getProducePlanMechanicMarkdown(plan: ProducePlan): string {
   mechanic.keyEffects.forEach(effect => {
     markdown += `- **${effect.name}**（${effect.nameJP}）: ${effect.description}\n`;
   });
-  markdown += `\n**玩法特点**: ${mechanic.playstyle}\n\n`;
-  markdown += `**典型词汇**: ${mechanic.vocabulary.join('、')}\n`;
+  markdown += `\n**玩法特点**: ${mechanic.playstyle}\n`;
+  // 不输出vocabulary，避免限制AI的命名思路
 
   return markdown;
 }
@@ -487,4 +539,3 @@ export function getFullMechanicExplanation(plan: ProducePlan): string {
 
   return explanation;
 }
-

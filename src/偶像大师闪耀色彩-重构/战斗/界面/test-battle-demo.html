@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>战斗Demo测试</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #1a1a2e;
+        color: #fff;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #ffd700;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .log {
+        background: #000;
+        padding: 15px;
+        border-radius: 8px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn-primary {
+        background: #3b82f6;
+        color: #fff;
+      }
+      .btn-secondary {
+        background: #4b5563;
+        color: #fff;
+      }
+      .hand {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+      .card {
+        padding: 10px;
+        background: #2d2d44;
+        border-radius: 8px;
+        border: 2px solid #666;
+        cursor: pointer;
+        width: 120px;
+      }
+      .card:hover {
+        border-color: #ffd700;
+      }
+      .card.R {
+        border-color: #9ca3af;
+      }
+      .card.SR {
+        border-color: #fbbf24;
+      }
+      .card.SSR {
+        border-color: #a78bfa;
+      }
+      .stats {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .stat {
+        padding: 10px;
+        background: #374151;
+        border-radius: 8px;
+      }
+      .stat-label {
+        font-size: 12px;
+        color: #aaa;
+      }
+      .stat-value {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎮 战斗Demo测试</h1>
+
+      <div class="stats" id="stats">加载中...</div>
+
+      <div>
+        <h3>手牌</h3>
+        <div class="hand" id="hand"></div>
+      </div>
+
+      <div>
+        <button class="btn-secondary" onclick="skipTurn()">跳过 (+2体力)</button>
+        <button class="btn-primary" onclick="endTurn()">结束回合</button>
+        <button class="btn-secondary" onclick="startBattle()">重新开始</button>
+      </div>
+
+      <h3>战斗日志</h3>
+      <div class="log" id="log"></div>
+    </div>
+
+    <script type="module">
+      // 由于这是独立HTML，我们需要导入编译后的模块
+      // 请在浏览器控制台运行以下测试代码：
+
+      const logEl = document.getElementById('log');
+      const handEl = document.getElementById('hand');
+      const statsEl = document.getElementById('stats');
+
+      // 覆盖 console.log 来显示日志
+      const originalLog = console.log;
+      console.log = (...args) => {
+        originalLog(...args);
+        logEl.textContent += args.join(' ') + '\n';
+        logEl.scrollTop = logEl.scrollHeight;
+      };
+
+      // 模拟战斗状态
+      let state = {
+        turn: 1,
+        maxTurns: 12,
+        score: 0,
+        targetScore: 100,
+        genki: 0,
+        stamina: 50,
+        maxStamina: 50,
+        concentration: 0,
+        goodImpression: 0,
+        cardsUsedThisTurn: 0,
+        maxCardsPerTurn: 1,
+        hand: [],
+      };
+
+      // 测试卡牌
+      const demoCards = [
+        { id: 1, name: '表現の基本', rarity: 'R', cost: -2, effect: '得分+8' },
+        { id: 2, name: '気持ちの準備', rarity: 'R', cost: -3, effect: '集中+3' },
+        { id: 3, name: 'ポジティブシンキング', rarity: 'SR', cost: -4, effect: '好调+3回合' },
+        { id: 4, name: '深呼吸', rarity: 'R', cost: -2, effect: '元气+5' },
+        { id: 5, name: '幸せな時間', rarity: 'SR', cost: -5, effect: '好印象+6' },
+      ];
+
+      function renderStats() {
+        statsEl.innerHTML = `
+        <div class="stat">
+          <div class="stat-label">回合</div>
+          <div class="stat-value">${state.turn}/${state.maxTurns}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">得分</div>
+          <div class="stat-value" style="color: #ffd700">${state.score}/${state.targetScore}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">元气</div>
+          <div class="stat-value" style="color: #4ade80">${state.genki}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">体力</div>
+          <div class="stat-value" style="color: #f87171">${state.stamina}/${state.maxStamina}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">集中</div>
+          <div class="stat-value" style="color: #c4b5fd">${state.concentration}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">好印象</div>
+          <div class="stat-value" style="color: #fbbf24">${state.goodImpression}</div>
+        </div>
+      `;
+      }
+
+      function renderHand() {
+        handEl.innerHTML = state.hand
+          .map(
+            (card, i) => `
+        <div class="card ${card.rarity}" onclick="useCard(${i})">
+          <div style="font-size: 10px; color: #888">${card.rarity}</div>
+          <div style="font-weight: bold">${card.name}</div>
+          <div style="font-size: 11px; color: #4ade80">Cost: ${card.cost}</div>
+          <div style="font-size: 10px; color: #aaa">${card.effect}</div>
+        </div>
+      `,
+          )
+          .join('');
+      }
+
+      function drawCards(count) {
+        for (let i = 0; i < count && state.hand.length < 5; i++) {
+          const card = demoCards[Math.floor(Math.random() * demoCards.length)];
+          state.hand.push({ ...card });
+        }
+        console.log(`[抽牌] +${count}张`);
+      }
+
+      window.useCard = function (index) {
+        if (state.cardsUsedThisTurn >= state.maxCardsPerTurn) {
+          console.log('[错误] 本回合已无法使用更多卡牌');
+          return;
+        }
+
+        const card = state.hand[index];
+        const cost = Math.abs(card.cost);
+
+        // 消耗资源
+        if (state.genki >= cost) {
+          state.genki -= cost;
+          console.log(`[消耗] 元气 -${cost}`);
+        } else {
+          const remaining = cost - state.genki;
+          state.genki = 0;
+          state.stamina -= remaining;
+          console.log(`[消耗] 元气清空, 体力 -${remaining}`);
+        }
+
+        console.log(`[使用] ${card.name}`);
+
+        // 执行效果
+        if (card.effect.includes('得分')) {
+          const match = card.effect.match(/\d+/);
+          const score = match ? parseInt(match[0]) : 0;
+          state.score += score;
+          console.log(`  得分 +${score} → ${state.score}`);
+        }
+        if (card.effect.includes('集中')) {
+          const match = card.effect.match(/\d+/);
+          const value = match ? parseInt(match[0]) : 0;
+          state.concentration += value;
+          console.log(`  集中 +${value} → ${state.concentration}`);
+        }
+        if (card.effect.includes('元气')) {
+          const match = card.effect.match(/\d+/);
+          const value = match ? parseInt(match[0]) : 0;
+          state.genki = Math.min(100, state.genki + value);
+          console.log(`  元气 +${value} → ${state.genki}`);
+        }
+        if (card.effect.includes('好印象')) {
+          const match = card.effect.match(/\d+/);
+          const value = match ? parseInt(match[0]) : 0;
+          state.goodImpression += value;
+          console.log(`  好印象 +${value} → ${state.goodImpression}`);
+        }
+
+        state.hand.splice(index, 1);
+        state.cardsUsedThisTurn++;
+
+        renderStats();
+        renderHand();
+      };
+
+      window.skipTurn = function () {
+        state.stamina = Math.min(state.maxStamina, state.stamina + 2);
+        console.log(`[跳过] 体力 +2 → ${state.stamina}`);
+        endTurn();
+      };
+
+      window.endTurn = function () {
+        console.log(`\n--- 回合 ${state.turn} 结束 ---`);
+
+        // 好印象结算
+        if (state.goodImpression > 0) {
+          const bonus = state.goodImpression * 10;
+          state.score += bonus;
+          state.goodImpression = Math.max(0, state.goodImpression - 1);
+          console.log(`[好印象结算] +${bonus}分`);
+        }
+
+        state.turn++;
+        state.cardsUsedThisTurn = 0;
+        state.hand = [];
+
+        if (state.turn > state.maxTurns) {
+          console.log(`\n=== 战斗结束 ===`);
+          console.log(`最终得分: ${state.score}/${state.targetScore}`);
+          console.log(state.score >= state.targetScore ? '✅ CLEAR!' : '❌ FAIL...');
+          return;
+        }
+
+        console.log(`\n=== 回合 ${state.turn} ===`);
+        drawCards(3);
+        renderStats();
+        renderHand();
+      };
+
+      window.startBattle = function () {
+        state = {
+          turn: 1,
+          maxTurns: 12,
+          score: 0,
+          targetScore: 100,
+          genki: 0,
+          stamina: 50,
+          maxStamina: 50,
+          concentration: 0,
+          goodImpression: 0,
+          cardsUsedThisTurn: 0,
+          maxCardsPerTurn: 1,
+          hand: [],
+        };
+        logEl.textContent = '';
+        console.log('=== 战斗开始 ===');
+        console.log(`目标分数: ${state.targetScore}`);
+        drawCards(3);
+        renderStats();
+        renderHand();
+      };
+
+      // 初始化
+      startBattle();
+    </script>
+  </body>
+</html>

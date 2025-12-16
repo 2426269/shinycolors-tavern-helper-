@@ -43,7 +43,7 @@
       <div class="content-layer">
         <!-- 角色信息和立绘 -->
         <div class="character-display">
-          <!-- 角色名和主题 -->
+          <!-- 角色名和主题 (右侧) -->
           <div class="character-header">
             <div class="card-theme-badge">【{{ currentCard.theme }}】</div>
             <div class="character-name">{{ currentCard.characterName }}</div>
@@ -53,13 +53,13 @@
             </div>
           </div>
 
-          <!-- 右侧属性面板 -->
-          <div class="attributes-panel">
-            <!-- 亲爱度 -->
+          <!-- 属性面板 (左侧) -->
+          <div class="attributes-panel-left">
+            <!-- 亲密度 -->
             <div class="affection-display">
-              <div class="affection-label">親愛度</div>
+              <div class="affection-label">亲密度</div>
               <div class="affection-value">
-                <span class="current">{{ currentAffection }}</span>
+                <span class="current">0</span>
                 <span class="separator">/</span>
                 <span class="max">10</span>
               </div>
@@ -84,7 +84,7 @@
                 <div class="stat-bottom">
                   <img
                     src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Vocal.png"
-                    alt="Vocal"
+                    alt="Vo"
                     class="dimension-icon"
                   />
                   <span class="stat-value">{{ currentCard.attribute?.stats.vocal || 0 }}</span>
@@ -98,7 +98,7 @@
                 <div class="stat-bottom">
                   <img
                     src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Dance.png"
-                    alt="Dance"
+                    alt="Da"
                     class="dimension-icon"
                   />
                   <span class="stat-value">{{ currentCard.attribute?.stats.dance || 0 }}</span>
@@ -112,7 +112,7 @@
                 <div class="stat-bottom">
                   <img
                     src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Visual.png"
-                    alt="Visual"
+                    alt="Vi"
                     class="dimension-icon"
                   />
                   <span class="stat-value">{{ currentCard.attribute?.stats.visual || 0 }}</span>
@@ -130,7 +130,81 @@
 
         <!-- 底部角色列表 -->
         <div class="idol-list-section">
-          <div class="section-label">Pアイドル一覧</div>
+          <!-- 工具栏: 筛选/排序/搜索 -->
+          <div class="toolbar">
+            <div class="section-label">Pアイドル一覧 ({{ filteredCardsList.length }})</div>
+            <div class="toolbar-actions">
+              <!-- 搜索框 -->
+              <div class="search-box" :class="{ expanded: isSearchExpanded }">
+                <button class="icon-btn" @click="toggleSearch">
+                  <i class="fas fa-search"></i>
+                </button>
+                <input
+                  v-show="isSearchExpanded"
+                  ref="searchInputRef"
+                  v-model="searchQuery"
+                  type="text"
+                  placeholder="検索..."
+                  @blur="onSearchBlur"
+                />
+              </div>
+              <!-- 筛选按钮 -->
+              <button class="icon-btn" :class="{ active: hasActiveFilter }" @click="showFilterPanel = !showFilterPanel">
+                <i class="fas fa-filter"></i>
+              </button>
+              <!-- 排序按钮 -->
+              <button class="icon-btn" @click="cycleSortMode">
+                <i :class="sortIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 筛选面板 -->
+          <div v-if="showFilterPanel" class="filter-panel">
+            <div class="filter-section">
+              <div class="filter-label">ユニット</div>
+              <div class="filter-tags">
+                <button
+                  v-for="unit in unitList"
+                  :key="unit"
+                  class="filter-tag"
+                  :class="{ active: filterState.units.includes(unit) }"
+                  @click="toggleUnitFilter(unit)"
+                >
+                  {{ unit }}
+                </button>
+              </div>
+            </div>
+            <div class="filter-section">
+              <div class="filter-label">レアリティ</div>
+              <div class="filter-tags">
+                <button
+                  v-for="rarity in rarityList"
+                  :key="rarity"
+                  class="filter-tag"
+                  :class="{ active: filterState.rarities.includes(rarity) }"
+                  @click="toggleRarityFilter(rarity)"
+                >
+                  {{ rarity }}
+                </button>
+              </div>
+            </div>
+            <div class="filter-section">
+              <div class="filter-label">属性</div>
+              <div class="filter-tags">
+                <button
+                  v-for="attr in attributeList"
+                  :key="attr"
+                  class="filter-tag"
+                  :class="{ active: filterState.attributes.includes(attr) }"
+                  @click="toggleAttributeFilter(attr)"
+                >
+                  {{ attr }}
+                </button>
+              </div>
+            </div>
+            <button class="clear-filter-btn" @click="clearFilters"><i class="fas fa-times"></i> クリア</button>
+          </div>
           <div class="idol-carousel">
             <button class="scroll-btn left" :disabled="!canScrollLeft" @click="scrollLeft">
               <i class="fas fa-chevron-left"></i>
@@ -138,11 +212,11 @@
 
             <div ref="carouselRef" class="idol-cards-wrapper" @scroll="checkScroll">
               <div
-                v-for="(card, index) in ownedCardsList"
+                v-for="(card, index) in filteredCardsList"
                 :key="card.id"
                 class="idol-card"
-                :class="{ active: currentIndex === index, 'has-plan': card.rarity === 'UR' }"
-                @click="selectIndex(index)"
+                :class="{ active: selectedCardId === card.id, 'has-plan': card.rarity === 'UR' }"
+                @click="selectCard(card, index)"
               >
                 <img :src="card.imageUrl" :alt="card.fullName" class="idol-thumbnail" @error="onImageError" />
                 <div v-if="card.rarity === 'UR'" class="plan-icon">
@@ -192,21 +266,41 @@ import { ALL_CARDS } from '../卡牌管理/全部卡牌数据';
 import { getCardAttribute } from '../卡牌管理/卡牌属性';
 import { buildUrlFromFileName } from '../工具/卡牌工具';
 import { getAttributeIcon } from '../类型/卡牌属性类型';
+import { getAllUnits, IDOLS } from '../角色管理/角色数据';
 
 const emit = defineEmits<{
   close: [];
   select: [card: any];
+  next: [card: any]; // 进入支援卡选择
 }>();
 
 // 数据状态
 const loading = ref(true);
 const ownedCardsList = ref<any[]>([]);
 const currentIndex = ref(0);
+const selectedCardId = ref<string | null>(null);
 const carouselRef = ref<HTMLElement | null>(null);
 const canScrollLeft = ref(false);
 const canScrollRight = ref(false);
 const affectionMap = ref<Map<string, number>>(new Map());
 const imagePreloadMap = new Map<string, HTMLImageElement>();
+
+// 搜索/筛选/排序状态
+const searchQuery = ref('');
+const isSearchExpanded = ref(false);
+const searchInputRef = ref<HTMLInputElement | null>(null);
+const showFilterPanel = ref(false);
+const filterState = ref({
+  units: [] as string[],
+  rarities: [] as string[],
+  attributes: [] as string[],
+});
+const sortMode = ref<'default' | 'time-desc' | 'time-asc' | 'rarity-desc' | 'rarity-asc'>('default');
+
+// 筛选选项列表
+const unitList = getAllUnits();
+const rarityList = ['UR', 'SSR', 'SR', 'R'];
+const attributeList = ['理性', '感性', '非凡'];
 
 // 获取已拥有的卡片列表
 onMounted(async () => {
@@ -226,6 +320,7 @@ onMounted(async () => {
           characterName: card.character,
           theme: card.theme,
           rarity: card.rarity,
+          enzaId: card.enzaId || '',
           imageUrl: buildUrlFromFileName(card.baseImage, false),
           obtainedAt: ownedCards[cardId].obtainedAt,
           attribute,
@@ -301,17 +396,188 @@ const currentAffection = computed(() => {
   return Math.floor(affection / 10);
 });
 
+// 获取角色所属组合
+const getCharacterUnit = (characterName: string): string => {
+  const idol = IDOLS.find(i => i.name === characterName);
+  return idol?.unit || '';
+};
+
+// 筛选和排序后的卡片列表
+const filteredCardsList = computed(() => {
+  let cards = [...ownedCardsList.value];
+
+  // 搜索过滤
+  if (searchQuery.value.trim()) {
+    const query = searchQuery.value.toLowerCase();
+    cards = cards.filter(
+      card =>
+        card.characterName.toLowerCase().includes(query) ||
+        card.theme.toLowerCase().includes(query) ||
+        card.fullName.toLowerCase().includes(query),
+    );
+  }
+
+  // 组合过滤
+  if (filterState.value.units.length > 0) {
+    cards = cards.filter(card => {
+      const unit = getCharacterUnit(card.characterName);
+      return filterState.value.units.includes(unit);
+    });
+  }
+
+  // 品阶过滤
+  if (filterState.value.rarities.length > 0) {
+    cards = cards.filter(card => filterState.value.rarities.includes(card.rarity));
+  }
+
+  // 属性过滤
+  if (filterState.value.attributes.length > 0) {
+    cards = cards.filter(card => {
+      const attrType = card.attribute?.type || card.attribute?.attributeType;
+      return filterState.value.attributes.includes(attrType);
+    });
+  }
+
+  // 排序
+  const rarityOrder: Record<string, number> = { UR: 4, SSR: 3, SR: 2, R: 1 };
+  cards.sort((a, b) => {
+    switch (sortMode.value) {
+      case 'default':
+        return (a.enzaId || '').localeCompare(b.enzaId || '');
+      case 'time-desc':
+        return new Date(b.obtainedAt).getTime() - new Date(a.obtainedAt).getTime();
+      case 'time-asc':
+        return new Date(a.obtainedAt).getTime() - new Date(b.obtainedAt).getTime();
+      case 'rarity-desc':
+        return (rarityOrder[b.rarity] || 0) - (rarityOrder[a.rarity] || 0);
+      case 'rarity-asc':
+        return (rarityOrder[a.rarity] || 0) - (rarityOrder[b.rarity] || 0);
+      default:
+        return 0;
+    }
+  });
+
+  return cards;
+});
+
+// 是否有激活的筛选条件
+const hasActiveFilter = computed(() => {
+  return (
+    filterState.value.units.length > 0 ||
+    filterState.value.rarities.length > 0 ||
+    filterState.value.attributes.length > 0
+  );
+});
+
+// 排序图标
+const sortIcon = computed(() => {
+  switch (sortMode.value) {
+    case 'default':
+      return 'fas fa-sort-numeric-down';
+    case 'time-desc':
+      return 'fas fa-clock';
+    case 'time-asc':
+      return 'fas fa-history';
+    case 'rarity-desc':
+      return 'fas fa-star';
+    case 'rarity-asc':
+      return 'far fa-star';
+    default:
+      return 'fas fa-sort';
+  }
+});
+
+// 切换搜索框展开
+const toggleSearch = () => {
+  isSearchExpanded.value = !isSearchExpanded.value;
+  if (isSearchExpanded.value) {
+    nextTick(() => {
+      searchInputRef.value?.focus();
+    });
+  }
+};
+
+// 搜索框失焦
+const onSearchBlur = () => {
+  if (!searchQuery.value.trim()) {
+    isSearchExpanded.value = false;
+  }
+};
+
+// 切换组合筛选
+const toggleUnitFilter = (unit: string) => {
+  const idx = filterState.value.units.indexOf(unit);
+  if (idx >= 0) {
+    filterState.value.units.splice(idx, 1);
+  } else {
+    filterState.value.units.push(unit);
+  }
+};
+
+// 切换品阶筛选
+const toggleRarityFilter = (rarity: string) => {
+  const idx = filterState.value.rarities.indexOf(rarity);
+  if (idx >= 0) {
+    filterState.value.rarities.splice(idx, 1);
+  } else {
+    filterState.value.rarities.push(rarity);
+  }
+};
+
+// 切换属性筛选
+const toggleAttributeFilter = (attr: string) => {
+  const idx = filterState.value.attributes.indexOf(attr);
+  if (idx >= 0) {
+    filterState.value.attributes.splice(idx, 1);
+  } else {
+    filterState.value.attributes.push(attr);
+  }
+};
+
+// 清空筛选
+const clearFilters = () => {
+  filterState.value.units = [];
+  filterState.value.rarities = [];
+  filterState.value.attributes = [];
+  searchQuery.value = '';
+};
+
+// 切换排序模式
+const cycleSortMode = () => {
+  const modes: Array<'default' | 'time-desc' | 'time-asc' | 'rarity-desc' | 'rarity-asc'> = [
+    'default',
+    'time-desc',
+    'time-asc',
+    'rarity-desc',
+    'rarity-asc',
+  ];
+  const currentIdx = modes.indexOf(sortMode.value);
+  sortMode.value = modes[(currentIdx + 1) % modes.length];
+};
+
+// 选择卡片
+const selectCard = (card: any, index: number) => {
+  selectedCardId.value = card.id;
+  currentIndex.value = ownedCardsList.value.findIndex(c => c.id === card.id);
+  scrollToCard(index);
+};
+
 // TrueEnd是否达成（从变量中读取）
 const isTrueEndAchieved = ref(false);
 
-// 根据数值获取等级
+// 根据数值获取等级 (学マス规格)
 const getGrade = (value: number): string => {
-  if (value >= 90) return 'S';
-  if (value >= 80) return 'A';
-  if (value >= 70) return 'B';
-  if (value >= 60) return 'C';
-  if (value >= 50) return 'D';
-  if (value >= 40) return 'E';
+  if (value >= 2000) return 'SS';
+  if (value >= 1800) return 'S+';
+  if (value >= 1500) return 'S';
+  if (value >= 1200) return 'A+';
+  if (value >= 1000) return 'A';
+  if (value >= 800) return 'B+';
+  if (value >= 600) return 'B';
+  if (value >= 450) return 'C+';
+  if (value >= 300) return 'C';
+  if (value >= 200) return 'D';
+  if (value >= 100) return 'E';
   return 'F';
 };
 
@@ -361,10 +627,10 @@ const scrollRight = () => {
   carouselRef.value.scrollBy({ left: 300, behavior: 'smooth' });
 };
 
-// 确认选择
+// 确认选择 - 进入支援卡选择
 const confirmSelection = () => {
   if (currentCard.value) {
-    emit('select', currentCard.value);
+    emit('next', currentCard.value);
   }
 };
 
@@ -655,11 +921,11 @@ onMounted(() => {
   justify-content: flex-end;
 }
 
-/* 右侧属性面板 */
-.attributes-panel {
+/* 左侧属性面板 */
+.attributes-panel-left {
   position: absolute;
   top: 120px;
-  right: 30px;
+  left: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -834,8 +1100,149 @@ onMounted(() => {
   padding: 0;
 }
 
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .section-label {
-  display: none; /* 隐藏标签 */
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  transition: all 0.3s;
+
+  input {
+    width: 0;
+    padding: 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    border-radius: 18px;
+    outline: none;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &.expanded input {
+    width: 120px;
+    padding: 8px 12px;
+    margin-left: 8px;
+  }
+}
+
+/* 筛选面板 */
+.filter-panel {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  padding: 15px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-tag {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    border-color: transparent;
+  }
+}
+
+.clear-filter-btn {
+  background: rgba(255, 59, 48, 0.8);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+
+  &:hover {
+    background: rgba(255, 59, 48, 1);
+  }
 }
 
 .idol-carousel {

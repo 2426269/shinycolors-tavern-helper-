@@ -229,11 +229,11 @@ export const BuffPresets = {
   }),
 
   /**
-   * 坚决状态（強気）
+   * 强气状态（強気）
    */
-  坚决状态: (level: 1 | 2 = 1): Buff => ({
+  强气状态: (level: 1 | 2 = 1): Buff => ({
     id: `resolute_state_${level}`,
-    name: `坚决状态（${level === 1 ? '一阶段' : '二阶段'}）`,
+    name: `强气状态（${level === 1 ? '一阶段' : '二阶段'}）`,
     type: level === 1 ? 'resolute_state' : 'resolute_state_2',
     category: 'positive',
     stacks: level,
@@ -248,7 +248,7 @@ export const BuffPresets = {
         },
       },
     ],
-    iconUrl: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/坚决.png',
+    iconUrl: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png',
     color: '#FF5722',
   }),
 

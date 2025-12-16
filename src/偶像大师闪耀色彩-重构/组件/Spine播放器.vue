@@ -7,15 +7,22 @@
 <script setup lang="ts">
 import * as PIXI from 'pixi.js';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
+import { SPINE_CDN_BASE } from '../工具/constants';
 import { useSpineAnimationManager } from '../工具/spine-animation-manager';
 
 // Props
 const props = defineProps<{
   idolId: string; // 改为 idolId 以匹配主页传递的 prop 名
   costume?: 'normal' | 'idol'; // 服装类型，默认为 normal
+  selectedAnimation?: string; // 当前选择的动画
   debugOffsetX?: number; // 开发者调试：X偏移
   debugOffsetY?: number; // 开发者调试：Y偏移
   debugScale?: number; // 开发者调试：缩放系数
+}>();
+
+// Emits
+const emit = defineEmits<{
+  (e: 'animations-loaded', animations: string[]): void;
 }>();
 
 // Refs
@@ -44,6 +51,20 @@ watch(
   async newCostume => {
     if (props.idolId && newCostume) {
       await loadSpineAsset(props.idolId, newCostume);
+    }
+  },
+);
+
+// 监听 selectedAnimation 变化，切换动画
+watch(
+  () => props.selectedAnimation,
+  newAnimation => {
+    if (currentSpine && newAnimation) {
+      const animations = currentSpine.skeleton.data.animations.map((anim: any) => anim.name);
+      if (animations.includes(newAnimation)) {
+        currentSpine.state.setAnimation(0, newAnimation, true);
+        console.log(`🎭 切换到动画: ${newAnimation}`);
+      }
     }
   },
 );
@@ -208,8 +229,8 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
     // 根据服装类型修改文件夹名（如果是偶像服，添加 " 偶像服" 后缀，注意有空格）
     const costumeName = costumeType === 'idol' ? `${baseCostumeName} 偶像服` : baseCostumeName;
 
-    // 使用 jsDelivr CDN + 最新 commit hash
-    const baseUrl = `https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@7a93a34/spine/${characterName}/${costumeName}`;
+    // 使用 Cloudflare R2 CDN
+    const baseUrl = `${SPINE_CDN_BASE}/${characterName}/${costumeName}`;
 
     // 创建唯一标签以支持服装切换
     const label = `${idolId}_${costumeType}`;
@@ -269,20 +290,18 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
     console.log('✅ Atlas 文本已解析，页面数量:', textureAtlas.pages.length);
 
     // 3. 为每个 page 加载纹理
-    const textureLoadingPromises = textureAtlas.pages.map(async (page: any) => {
-      // page.name 可能是完整的文件名或只是文件名（不含路径）
-      let imgUrl = `${baseUrl}/${page.name}`;
+    const textureLoadingPromises = textureAtlas.pages.map(async (page: any, index: number) => {
+      // 🔑 修复：忽略 page.name（可能是data.png），使用我们知道的正确文件名
+      // 我们上传的PNG文件名与文件夹名相同：${costumeName}.png
+      const imgUrl = `${baseUrl}/${costumeName}.png`;
+      // 🔑 使用唯一的alias避免不同卡牌间的缓存冲突
+      const uniqueAlias = `${label}_texture_${index}`;
 
-      // 如果 page.name 已经包含了路径，就不需要添加 baseUrl
-      if (page.name.startsWith('http')) {
-        imgUrl = page.name;
-      }
-
-      console.log('📦 加载纹理:', imgUrl, '(page.name:', page.name, ')');
+      console.log('📦 加载纹理:', imgUrl, '(别名:', uniqueAlias, ')');
 
       // 使用 PIXI.Assets.load 加载图片
       const rawtexture = await PIXI.Assets.load({
-        alias: page.name,
+        alias: uniqueAlias,
         src: imgUrl,
         data: {
           alphaMode: page.pma ? 'premultiplied-alpha' : 'premultiply-alpha-on-upload',
@@ -385,11 +404,17 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
     const animations = spine.skeleton.data.animations.map((anim: any) => anim.name);
     console.log('🎬 可用动画列表:', animations);
 
-    // 播放默认动画
-    const defaultAnimation = 'wait';
+    // 发射动画列表给父组件
+    emit('animations-loaded', animations);
+
+    // 播放动画（优先使用selectedAnimation prop）
+    const defaultAnimation = props.selectedAnimation || 'wait';
     if (animations.includes(defaultAnimation)) {
       spine.state.setAnimation(0, defaultAnimation, true);
       console.log(`▶️ 播放动画: ${defaultAnimation}`);
+    } else if (animations.includes('wait')) {
+      spine.state.setAnimation(0, 'wait', true);
+      console.log(`▶️ 播放动画: wait`);
     } else if (animations.length > 0) {
       spine.state.setAnimation(0, animations[0], true);
       console.log(`▶️ 播放动画: ${animations[0]}`);

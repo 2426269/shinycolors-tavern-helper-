@@ -54,6 +54,16 @@ export const AUDIO_BASE_ALL = 'https://github.com/2426269/shinycolors-assets/rel
 /** 保留 AUDIO_BASE 用于向后兼容（默认指向个人曲） */
 export const AUDIO_BASE = AUDIO_BASE_PERSONAL;
 
+/** 歌曲和歌词统一 Release 路径（新版，包含所有歌曲和LRC歌词） */
+export const AUDIO_RELEASE_BASE =
+  'https://github.com/2426269/shinycolors-assets-cdn/releases/download/%E6%AD%8C%E6%9B%B2%E5%92%8C%E6%AD%8C%E8%AF%8D';
+
+/** 歌词文件CDN路径（使用jsDelivr支持CORS） */
+export const LYRICS_CDN_BASE = `${CDN_BASE}/歌词`;
+
+/** Spine动画资源CDN路径（使用Cloudflare R2） */
+export const SPINE_CDN_BASE = 'https://pub-9f6f9a2797c442e4aa54a0530f17aed9.r2.dev/spine';
+
 // ============================================================================
 // 概率配置
 // ============================================================================

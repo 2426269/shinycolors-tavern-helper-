@@ -1,7 +1,7 @@
 /**
  * 角色卡属性数据库
- * 自动生成于 2025-11-01T21:41:06.446Z
- * 总计: 414 张卡片
+ * 自动生成于 2025-12-16
+ * 总计: 452 张卡片 (SR/SSR/UR)
  */
 
 import type { CardAttribute } from './card-attributes-types';
@@ -20,16 +20,15 @@ export function getCardAttribute(fullCardName: string): CardAttribute | undefine
  * 统计信息
  */
 export const ATTRIBUTE_STATS = {
-  "total": 414,
-  "byAttribute": {
-    "理性": 136,
-    "感性": 139,
-    "非凡": 139
+  total: 452,
+  byAttribute: {
+    理性: 151,
+    感性: 151,
+    非凡: 150,
   },
-  "byRarity": {
-    "UR": 3,
-    "SSR": 283,
-    "SR": 85,
-    "R": 43
-  }
+  byRarity: {
+    UR: 3,
+    SSR: 340,
+    SR: 109,
+  },
 };

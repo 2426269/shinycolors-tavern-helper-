@@ -464,10 +464,20 @@
 
           <!-- 歌词显示 -->
           <div class="lyrics-display">
-            <div class="lyrics-main">{{ currentLyric.main }}</div>
-            <div v-if="showTranslation && currentLyric.translation" class="lyrics-trans">
-              {{ currentLyric.translation }}
-            </div>
+            <!-- 仅中文模式 -->
+            <template v-if="lyricsMode === 'zh'">
+              <div v-if="currentLyric.translation" class="lyrics-main">{{ currentLyric.translation }}</div>
+              <div v-else class="lyrics-main">{{ currentLyric.main }}</div>
+            </template>
+            <!-- 仅日文模式 -->
+            <template v-else-if="lyricsMode === 'ja'">
+              <div class="lyrics-main">{{ currentLyric.main }}</div>
+            </template>
+            <!-- 双语模式 -->
+            <template v-else>
+              <div class="lyrics-main">{{ currentLyric.main }}</div>
+              <div v-if="currentLyric.translation" class="lyrics-trans">{{ currentLyric.translation }}</div>
+            </template>
           </div>
 
           <!-- 进度条 -->
@@ -500,9 +510,9 @@
           <div class="extra-controls">
             <button
               class="extra-btn"
-              :class="{ active: showTranslation }"
-              title="切换翻译"
-              @click="toggleLyricsTranslation"
+              :class="{ active: lyricsMode !== 'ja' }"
+              :title="lyricsMode === 'both' ? '双语模式' : lyricsMode === 'zh' ? '中文模式' : '日文模式'"
+              @click="toggleLyricsMode"
             >
               <i class="fas fa-language"></i>
             </button>
@@ -550,6 +560,9 @@
             </button>
             <button class="filter-btn" :class="{ active: songFilter === '全体曲' }" @click="songFilter = '全体曲'">
               全体曲 ({{ songsByType['全体曲'].length }})
+            </button>
+            <button class="filter-btn" :class="{ active: songFilter === '团体曲' }" @click="songFilter = '团体曲'">
+              团体曲 ({{ songsByType['团体曲'].length }})
             </button>
           </div>
 
@@ -652,7 +665,33 @@
     </div>
 
     <!-- 角色选择页面（培育） -->
-    <CharacterSelection v-if="showCharacterSelection" @close="closeCharacterSelection" @select="onCharacterSelected" />
+    <CharacterSelection v-if="showCharacterSelection" @close="closeCharacterSelection" @next="onCharacterSelected" />
+
+    <!-- 支援卡选择页面（培育） -->
+    <SupportCardSelection
+      v-if="showSupportCardSelection"
+      :selected-idol="selectedProduceIdol"
+      @close="closeSupportCardSelection"
+      @confirm="onSupportCardConfirmed"
+      @back="goBackToCharacterSelection"
+    />
+
+    <!-- 回忆卡选择页面（培育） -->
+    <MemoryCardSelection
+      v-if="showMemoryCardSelection"
+      :selected-idol="selectedProduceIdol"
+      @close="closeMemoryCardSelection"
+      @confirm="onMemoryCardConfirmed"
+      @back="goBackToSupportCardSelection"
+    />
+
+    <!-- 副本选择页面（培育） -->
+    <ProduceSelection
+      v-if="showProduceSelection"
+      :selected-idol="selectedProduceIdol"
+      @back="goBackToMemoryCardSelection"
+      @start="onProduceStart"
+    />
 
     <!-- 资源显示层 - 顶部横向布局 -->
     <div class="resource-display-top">
@@ -960,6 +999,9 @@ import {
   type GameResources,
 } from '../../偶像大师闪耀色彩/utils/game-data';
 import IdolCollectionApp from '../图鉴/界面/偶像图鉴.vue';
+import ProduceSelection from '../培育/界面/副本选择.vue';
+import MemoryCardSelection from '../培育/界面/回忆卡选择.vue';
+import SupportCardSelection from '../培育/界面/支援卡选择.vue';
 import { CDN_BASE, RESOURCE_ICONS, TOAST_SUCCESS_DURATION_MS } from '../工具/constants';
 import GachaApp from '../抽卡/界面/抽卡主界面.vue';
 import SpinePlayer from '../组件/Spine播放器.vue';
@@ -1473,11 +1515,25 @@ const currentCharacter = computed(() => characters.value[currentCharacterIndex.v
 
 // Spine动画相关状态
 // idolId格式: "偶像名_【卡片名】偶像名"
-// 尝试使用另一个角色的资源进行测试
-const currentSpineId = ref('櫻木真乃_【花風Smiley】櫻木真乃'); // 默认使用樱木真乃的初始卡
+// 从localStorage读取保存的Spine设置
+const savedSpineSettings = JSON.parse(localStorage.getItem('spineSettings') || '{}');
+const currentSpineId = ref(savedSpineSettings.spineId || '櫻木真乃_【花風Smiley】櫻木真乃'); // 默认使用樱木真乃的初始卡
 
 // 服装状态
-const currentCostume = ref<'normal' | 'idol'>('normal');
+const currentCostume = ref<'normal' | 'idol'>(savedSpineSettings.costume || 'normal');
+
+// 自动保存Spine设置到localStorage
+watch(
+  [currentSpineId, currentCostume],
+  () => {
+    const settings = {
+      spineId: currentSpineId.value,
+      costume: currentCostume.value,
+    };
+    localStorage.setItem('spineSettings', JSON.stringify(settings));
+  },
+  { deep: true },
+);
 
 // 资源数据 - 从IndexedDB读取
 const resources = reactive<GameResources>({
@@ -1988,7 +2044,9 @@ const isCardAwakened = ref(false); // 卡牌是否觉醒状态
 
 // 音乐页面控制
 const showMusicPage = ref(false); // 是否显示音乐页面
-const currentSongIndex = ref(0); // 当前选中的歌曲索引
+// 从localStorage读取保存的设置
+const savedMusicSettings = JSON.parse(localStorage.getItem('musicSettings') || '{}');
+const currentSongIndex = ref(savedMusicSettings.currentSongIndex ?? 0); // 当前选中的歌曲索引
 const isPlaying = ref(false); // 是否正在播放
 const currentProgress = ref(0); // 当前播放进度 (0-1)
 
@@ -1997,11 +2055,27 @@ const showGachaPage = ref(false); // 是否显示抽卡页面
 
 const currentLyric = ref({ main: '♪', translation: '' }); // 当前歌词
 const showTranslation = ref(false); // 是否显示翻译
-const playbackMode = ref<'single' | 'sequence' | 'random'>('single'); // 播放模式
-const volume = ref(0.3); // 音量 (0-1)
+const playbackMode = ref<'single' | 'sequence' | 'random'>(savedMusicSettings.playbackMode ?? 'single'); // 播放模式
+const volume = ref(savedMusicSettings.volume ?? 0.3); // 音量 (0-1)
 const currentCoverUrl = ref<string | null>(null); // 当前封面URL
-const songFilter = ref<'all' | '个人曲' | '组合曲' | '全体曲'>('all'); // 歌曲过滤类型
+const songFilter = ref<'all' | '个人曲' | '组合曲' | '全体曲' | '团体曲'>(savedMusicSettings.songFilter ?? 'all'); // 歌曲过滤类型
+const lyricsMode = ref<'zh' | 'ja' | 'both'>(savedMusicSettings.lyricsMode ?? 'both'); // 歌词显示模式：中文/日文/双语
 const lastScrollPosition = ref(0); // 记住上次滚动位置
+
+// 自动保存音乐设置到localStorage
+const saveMusicSettings = () => {
+  const settings = {
+    currentSongIndex: currentSongIndex.value,
+    playbackMode: playbackMode.value,
+    volume: volume.value,
+    songFilter: songFilter.value,
+    lyricsMode: lyricsMode.value,
+  };
+  localStorage.setItem('musicSettings', JSON.stringify(settings));
+};
+
+// 监听设置变化并自动保存
+watch([currentSongIndex, playbackMode, volume, songFilter, lyricsMode], saveMusicSettings, { deep: true });
 
 // 歌曲列表拖动控制
 const songListRef = ref<HTMLElement | null>(null); // 歌曲列表容器引用
@@ -2015,6 +2089,7 @@ const songsByType = computed(() => {
     个人曲: songs.filter(s => s.type === '个人曲'),
     组合曲: songs.filter(s => s.type === '组合曲'),
     全体曲: songs.filter(s => s.type === '全体曲'),
+    团体曲: songs.filter(s => s.type === '团体曲'),
   };
 });
 
@@ -2199,6 +2274,22 @@ const closeIdolCollection = () => {
 
 // 角色选择页面控制（培育）
 const showCharacterSelection = ref(false);
+const showSupportCardSelection = ref(false);
+const selectedProduceIdol = ref<
+  | {
+      id: string;
+      characterName: string;
+      theme: string;
+      imageUrl: string;
+      stamina?: number;
+      stats?: {
+        vocal: number;
+        dance: number;
+        visual: number;
+      };
+    }
+  | undefined
+>(undefined);
 
 const closeCharacterSelection = () => {
   showCharacterSelection.value = false;
@@ -2207,9 +2298,66 @@ const closeCharacterSelection = () => {
 
 const onCharacterSelected = (card: any) => {
   console.log('选择了角色进行培育:', card);
+  selectedProduceIdol.value = {
+    id: card.id,
+    characterName: card.characterName,
+    theme: card.theme,
+    imageUrl: card.imageUrl,
+    stamina: card.attribute?.stamina || 30,
+    stats: card.attribute?.stats || { vocal: 0, dance: 0, visual: 0 },
+  };
   showCharacterSelection.value = false;
-  toastr.success(`准备培育：${card.characterName}`, '', { timeOut: 2000 });
-  // TODO: 跳转到培育界面
+  showSupportCardSelection.value = true; // 进入支援卡选择
+};
+
+const closeSupportCardSelection = () => {
+  showSupportCardSelection.value = false;
+  console.log('关闭支援卡选择');
+};
+
+const goBackToCharacterSelection = () => {
+  showSupportCardSelection.value = false;
+  showCharacterSelection.value = true;
+};
+
+const onSupportCardConfirmed = (formation: any) => {
+  console.log('支援卡编成完成:', formation);
+  showSupportCardSelection.value = false;
+  showMemoryCardSelection.value = true; // 进入回忆卡选择
+};
+
+// 回忆卡选择相关
+const showMemoryCardSelection = ref(false);
+
+const closeMemoryCardSelection = () => {
+  showMemoryCardSelection.value = false;
+  console.log('关闭回忆卡选择');
+};
+
+const goBackToSupportCardSelection = () => {
+  showMemoryCardSelection.value = false;
+  showSupportCardSelection.value = true;
+};
+
+const onMemoryCardConfirmed = (formation: any) => {
+  console.log('回忆卡编成完成:', formation);
+  showMemoryCardSelection.value = false;
+  showProduceSelection.value = true; // 进入副本选择
+};
+
+// 副本选择相关
+const showProduceSelection = ref(false);
+
+const goBackToMemoryCardSelection = () => {
+  showProduceSelection.value = false;
+  showMemoryCardSelection.value = true;
+};
+
+const onProduceStart = (scenarioId: string) => {
+  console.log('开始培育:', scenarioId, selectedProduceIdol.value?.characterName);
+  showProduceSelection.value = false;
+  toastr.success(`开始培育：${selectedProduceIdol.value?.characterName} - ${scenarioId}`, '', { timeOut: 2000 });
+  // TODO: 进入培育主界面
 };
 
 // 加载并播放歌曲
@@ -2389,10 +2537,15 @@ const handleProgressClick = (event: MouseEvent) => {
   MusicPlayer.seek(percent);
 };
 
-// 切换翻译
-const toggleLyricsTranslation = () => {
-  MusicPlayer.toggleTranslation();
-  // showTranslation 会在 updatePlayerState 中自动更新
+// 切换歌词模式（日文 → 双语 → 中文 → 日文）
+const toggleLyricsMode = () => {
+  if (lyricsMode.value === 'ja') {
+    lyricsMode.value = 'both';
+  } else if (lyricsMode.value === 'both') {
+    lyricsMode.value = 'zh';
+  } else {
+    lyricsMode.value = 'ja';
+  }
 };
 
 // 切换播放模式（单曲循环 → 顺序播放 → 随机播放 → 单曲循环）
