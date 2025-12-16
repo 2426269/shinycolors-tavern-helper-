@@ -6,7 +6,7 @@
       disabled: disabled,
       ssr: rarity === 'SSR',
       sr: rarity === 'SR',
-      r: rarity === 'R'
+      r: rarity === 'R',
     }"
     @click="handleClick"
   >
@@ -27,7 +27,7 @@
     <!-- 突破星星 -->
     <div class="card-stars">
       <span v-for="i in uncap" :key="'f' + i" class="star filled">★</span>
-      <span v-for="i in (maxUncap - uncap)" :key="'e' + i" class="star empty">☆</span>
+      <span v-for="i in maxUncap - uncap" :key="'e' + i" class="star empty">☆</span>
     </div>
 
     <!-- 角色名 -->
