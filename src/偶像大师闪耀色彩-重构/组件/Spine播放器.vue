@@ -223,27 +223,47 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
   try {
     console.log(`🎬 开始加载 Spine 资源: ${idolId} (${costumeType})`);
 
-    // 解析 idolId (格式: 角色名_卡片名)
-    const [characterName, baseCostumeName] = idolId.split('_');
+    // 解析 idolId (格式: 角色名_卡片主题 或 角色名_【主题】角色名)
+    const [characterName, theme] = idolId.split('_');
 
-    // 根据服装类型修改文件夹名（如果是偶像服，添加 " 偶像服" 后缀，注意有空格）
-    const costumeName = costumeType === 'idol' ? `${baseCostumeName} 偶像服` : baseCostumeName;
+    if (!characterName || !theme) {
+      console.error('❌ idolId 格式错误，期望格式: 角色名_卡片主题');
+      return;
+    }
+
+    // R2结构: /spine/偶像名/【主题】偶像名/【主题】偶像名.json
+    // 例如: /spine/七草にちか/【FAN感謝祭】七草にちか/【FAN感謝祭】七草にちか.json
+
+    // 检测theme是否已经是完整的文件夹名格式（包含【】）
+    // 主页面传入: "【風吹く丘にはよ来んね】月岡恋鐘" (已经是完整格式)
+    // 副本页面传入: "Kn☆cking. Kn☆cking." (只是主题名)
+    let folderName: string;
+    if (theme.startsWith('【')) {
+      // 已经是完整的文件夹名格式
+      folderName = theme;
+    } else {
+      // 只是主题名，需要构建完整格式
+      folderName = `【${theme}】${characterName}`;
+    }
+
+    // 如果是偶像服，添加" 偶像服"后缀
+    const finalFolderName = costumeType === 'idol' ? `${folderName} 偶像服` : folderName;
 
     // 使用 Cloudflare R2 CDN
-    const baseUrl = `${SPINE_CDN_BASE}/${characterName}/${costumeName}`;
+    const baseUrl = `${SPINE_CDN_BASE}/${characterName}/${finalFolderName}`;
 
     // 创建唯一标签以支持服装切换
     const label = `${idolId}_${costumeType}`;
 
-    console.log('📦 Skeleton URL:', `${baseUrl}/${costumeName}.json`);
-    console.log('📦 Atlas URL:', `${baseUrl}/${costumeName}.atlas`);
+    console.log('📦 Skeleton URL:', `${baseUrl}/${finalFolderName}.json`);
+    console.log('📦 Atlas URL:', `${baseUrl}/${finalFolderName}.atlas`);
 
     // 🔑 手动加载并缓存（参考 ShinyColorsDB-SpineViewer）
     const Spine37 = (window as any).PIXI.Spine37;
 
     // 1. 加载 JSON (skeleton)
     // CDN 上的文件名与文件夹名相同
-    const jsonUrl = `${baseUrl}/${costumeName}.json`;
+    const jsonUrl = `${baseUrl}/${finalFolderName}.json`;
     console.log('📦 加载 Skeleton:', jsonUrl);
 
     let rawJSON = null;
@@ -269,7 +289,7 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
     console.log('✅ Skeleton 数据已缓存，包含属性:', Object.keys(rawJSON));
 
     // 2. 加载 Atlas 文本
-    const atlasUrl = `${baseUrl}/${costumeName}.atlas`;
+    const atlasUrl = `${baseUrl}/${finalFolderName}.atlas`;
     console.log('📦 加载 Atlas:', atlasUrl);
 
     let rawAtlas = null;
@@ -292,8 +312,8 @@ async function loadSpineAsset(idolId: string, costumeType: 'normal' | 'idol' = '
     // 3. 为每个 page 加载纹理
     const textureLoadingPromises = textureAtlas.pages.map(async (page: any, index: number) => {
       // 🔑 修复：忽略 page.name（可能是data.png），使用我们知道的正确文件名
-      // 我们上传的PNG文件名与文件夹名相同：${costumeName}.png
-      const imgUrl = `${baseUrl}/${costumeName}.png`;
+      // 我们上传的PNG文件名与文件夹名相同：${finalFolderName}.png
+      const imgUrl = `${baseUrl}/${finalFolderName}.png`;
       // 🔑 使用唯一的alias避免不同卡牌间的缓存冲突
       const uniqueAlias = `${label}_texture_${index}`;
 

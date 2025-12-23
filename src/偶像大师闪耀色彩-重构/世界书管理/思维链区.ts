@@ -9,10 +9,24 @@
 export enum ChainOfThoughtMode {
   /** 技能卡生成模式 */
   SKILL_CARD_GENERATION = 'skill_card_generation',
-  // 未来可扩展其他模式：
-  // PRODUCE_EVENT = 'produce_event',
-  // STORY_GENERATION = 'story_generation',
-  // etc.
+  /** Chain 回复模式（偶像回复玩家消息） */
+  CHAIN_REPLY = 'chain_reply',
+  /** Chain 主动模式（偶像主动发消息） */
+  CHAIN_PROACTIVE = 'chain_proactive',
+  /** Chain 群组回复模式（多偶像群聊回复玩家） */
+  CHAIN_GROUP_REPLY = 'chain_group_reply',
+  /** Chain 群组主动模式（群内偶像主动发起话题） */
+  CHAIN_GROUP_INITIATIVE = 'chain_group_initiative',
+
+  // Twesta 模式
+  /** Twesta 发推模式（偶像发推文） */
+  TWESTA_POST = 'twesta_post',
+  /** Twesta 评论模式（生成推文评论） */
+  TWESTA_COMMENT = 'twesta_comment',
+  /** Twesta 看图说话模式 */
+  TWESTA_IMAGE_POST = 'twesta_image_post',
+  /** Twesta 节奏事件模式 */
+  TWESTA_DRAMA_EVENT = 'twesta_drama_event',
 }
 
 /**
@@ -61,6 +75,143 @@ export class ChainOfThoughtManager {
   }
 
   /**
+   * Chain 回复模式思维链（偶像回复玩家消息）
+   */
+  static getChainReplyChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 识别对话偶像
+- 当前对话的偶像是谁？
+- 这位偶像在闪耀色彩中的性格和特点？
+- 她的说话方式和口癖是什么？
+- 她对制作人的称呼是什么？（如：プロデューサー、制作人さん等）
+
+## 2. 理解对话内容
+- 玩家刚才说了什么？
+- 对话的情绪基调是什么（高兴/日常/担心/调侃）？
+- 偶像应该如何自然回应？
+
+## 3. 当前时间考量
+- 现在是几点？
+- 这个时间段偶像可能在做什么？
+- 问候语是否需要根据时间调整？
+
+## 4. 消息风格确认
+- 短信要简短自然（1-3条，每条1-2句）
+- 是否需要使用表情或贴纸？
+- 语气是否符合偶像性格？
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
+   * Chain 群组回复模式思维链（多偶像群聊）
+   */
+  static getChainGroupReplyChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 识别群组成员
+- 当前群组有哪些偶像？
+- 每位偶像的性格特点？
+- 她们之间的关系如何？
+- 每位偶像对制作人的称呼是什么？
+
+## 2. 理解对话内容
+- 玩家刚才说了什么？
+- 这条消息的话题是否与某些成员更相关？
+- 最近群里的对话氛围如何？
+
+## 3. 谁会回复？
+- 考虑到话题和性格，哪些偶像可能会回复？
+- 哪些偶像可能会潜水不说话？
+- 回复的顺序应该是怎样的？
+
+## 4. 消息风格
+- 每个人的回复要符合自己的说话风格
+- 群聊消息要更加随意、自然
+- 可以有互相评论、接话的情况
+
+## 5. 真实感
+- 不是每个人都会回复，模拟真实群聊
+- 有几个人不回复是正常的，不强求所有人回复
+- 如果话题与某人无关，她可以不发言
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
+   * Chain 主动模式思维链（偶像主动发消息）
+   */
+  static getChainProactiveChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 识别对话偶像
+- 当前需要发消息的偶像是谁？
+- 这位偶像的性格和说话风格？
+
+## 2. 主动发消息的理由
+- 偶像为什么要主动联系玩家？
+- 可能的话题：日常分享、工作汇报、想聊天、询问事情
+
+## 3. 当前时间考量
+- 现在是几点？
+- 这个时间发消息合理吗？
+- 消息内容是否与时间相符？
+
+## 4. 消息设计
+- 开场白是什么？
+- 主要想表达/询问什么？
+- 结尾是否需要等待回复？
+
+## 5. 贴纸选择
+- 是否需要附带贴纸增加可爱感？
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
+   * Chain 群组主动模式思维链（群内偶像主动发起话题）
+   */
+  static getChainGroupInitiativeChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 识别群组和成员
+- 当前群组有哪些偶像？
+- 每位偶像的性格特点和说话风格？
+- 她们之间的关系如何（同组/好友/一般）？
+
+## 2. 确定发起者
+- 哪位偶像适合发起这次对话？
+- 她通常会主动发起什么类型的话题？
+- 发起的理由是什么（分享日常/询问大家/闲聊）？
+
+## 3. 当前时间考量
+- 现在是几点？这个时间发消息合理吗？
+- 如果是深夜/清晨，消息内容是否合理？
+
+## 4. 话题设计
+- 发起者想聊什么话题？
+- 这个话题能引发其他成员讨论吗？
+- 其他成员会如何反应（回复/潜水）？
+
+## 5. 群聊互动
+- 哪些偶像可能会回复？
+- 她们会怎么接话或评论？
+- 模拟真实群聊的节奏和氛围
+
+## 6. 真实感
+- 不是每个人都会回复
+- 有几个人不跟帖是正常的，不强求所有人回复
+- 对话风格要符合各自性格
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
    * 获取指定模式的思维链（优先使用自定义格式）
    */
   static getChain(mode: ChainOfThoughtMode): string {
@@ -80,6 +231,23 @@ export class ChainOfThoughtManager {
     switch (mode) {
       case ChainOfThoughtMode.SKILL_CARD_GENERATION:
         return this.getSkillCardGenerationChain();
+      case ChainOfThoughtMode.CHAIN_REPLY:
+        return this.getChainReplyChain();
+      case ChainOfThoughtMode.CHAIN_PROACTIVE:
+        return this.getChainProactiveChain();
+      case ChainOfThoughtMode.CHAIN_GROUP_REPLY:
+        return this.getChainGroupReplyChain();
+      case ChainOfThoughtMode.CHAIN_GROUP_INITIATIVE:
+        return this.getChainGroupInitiativeChain();
+      // Twesta 模式 - 内联思维链
+      case ChainOfThoughtMode.TWESTA_POST:
+        return `[Chain of thought]\n<think>\n营业模式: 公开推文，不透露与P的私密关系\n话题: 日常/工作/感谢/心情\n同时生成评论\n</think>\n[/Chain of thought]`;
+      case ChainOfThoughtMode.TWESTA_COMMENT:
+        return `[Chain of thought]\n<think>\n制作人互动: 偶像必定回复\n公开场合要得体\n</think>\n[/Chain of thought]`;
+      case ChainOfThoughtMode.TWESTA_IMAGE_POST:
+        return `[Chain of thought]\n<think>\n看图说话: 以偶像视角自然描述\n营业模式配文\n</think>\n[/Chain of thought]`;
+      case ChainOfThoughtMode.TWESTA_DRAMA_EVENT:
+        return `[Chain of thought]\n<think>\n节奏事件: 剧情发展与用户行动\n保持平衡性\n</think>\n[/Chain of thought]`;
       default:
         console.error(`❌ 未知的思维链模式: ${mode}`);
         return '';
@@ -93,6 +261,14 @@ export class ChainOfThoughtManager {
     switch (mode) {
       case ChainOfThoughtMode.SKILL_CARD_GENERATION:
         return this.getSkillCardGenerationChain();
+      case ChainOfThoughtMode.CHAIN_REPLY:
+        return this.getChainReplyChain();
+      case ChainOfThoughtMode.CHAIN_PROACTIVE:
+        return this.getChainProactiveChain();
+      case ChainOfThoughtMode.CHAIN_GROUP_REPLY:
+        return this.getChainGroupReplyChain();
+      case ChainOfThoughtMode.CHAIN_GROUP_INITIATIVE:
+        return this.getChainGroupInitiativeChain();
       default:
         return '';
     }
@@ -104,6 +280,15 @@ export class ChainOfThoughtManager {
   private static getModeName(mode: ChainOfThoughtMode): string {
     const modeNames: Record<ChainOfThoughtMode, string> = {
       [ChainOfThoughtMode.SKILL_CARD_GENERATION]: '技能卡生成思维链',
+      [ChainOfThoughtMode.CHAIN_REPLY]: 'Chain回复思维链',
+      [ChainOfThoughtMode.CHAIN_PROACTIVE]: 'Chain主动思维链',
+      [ChainOfThoughtMode.CHAIN_GROUP_REPLY]: 'Chain群组回复思维链',
+      [ChainOfThoughtMode.CHAIN_GROUP_INITIATIVE]: 'Chain群组主动思维链',
+      // Twesta
+      [ChainOfThoughtMode.TWESTA_POST]: 'Twesta发推思维链',
+      [ChainOfThoughtMode.TWESTA_COMMENT]: 'Twesta评论思维链',
+      [ChainOfThoughtMode.TWESTA_IMAGE_POST]: 'Twesta看图说话思维链',
+      [ChainOfThoughtMode.TWESTA_DRAMA_EVENT]: 'Twesta节奏事件思维链',
     };
     return modeNames[mode] || '未知模式思维链';
   }

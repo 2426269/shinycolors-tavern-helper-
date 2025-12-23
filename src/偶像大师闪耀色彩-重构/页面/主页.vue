@@ -120,6 +120,12 @@
         <i class="fas fa-home"></i>
         <span>主页</span>
       </button>
+      <!-- 手机按钮（左侧较大） -->
+      <button class="phone-button" @click="showPhoneApp = true">
+        <i class="fas fa-mobile-alt"></i>
+        <span>手机</span>
+        <span v-if="phoneUnreadCount > 0" class="phone-badge">{{ phoneUnreadCount }}</span>
+      </button>
     </div>
 
     <!-- 角色选择全屏页面 -->
@@ -693,16 +699,54 @@
       @start="onProduceStart"
     />
 
+    <!-- 副本主页面 -->
+    <ProduceMainPage
+      v-if="showProduceMainPage"
+      :idol="produceIdolData"
+      :current-date="gameTime.currentDate"
+      :current-week="gameTime.totalWeeksPassed + 1"
+      :weeks-until-competition="12 - gameTime.totalWeeksPassed"
+      :target-label="produceTargetLabel"
+      :scenario-name="currentScenarioId"
+      :stats="produceStats"
+      :stamina="produceStamina"
+      :max-stamina="produceMaxStamina"
+      :genki="produceGenki"
+      :drinks="produceDrinks"
+      @go-back="showProduceMainPage = false"
+      @activity="handleProduceActivity"
+      @use-drink="handleProduceUseDrink"
+      @open-deck="handleProduceOpenDeck"
+      @open-phone="handleProduceOpenPhone"
+      @open-diary="handleProduceOpenDiary"
+    />
+
     <!-- 资源显示层 - 顶部横向布局 -->
     <div class="resource-display-top">
-      <div class="resource-item feather-stone">
-        <img :src="RESOURCE_ICONS.FEATHER_JEWEL" alt="羽石" class="resource-icon" />
-        <span class="resource-value">{{ resources.featherStones.toLocaleString() }}</span>
+      <!-- 羽石 -->
+      <div class="top-bar-pill feather-stone">
+        <div class="pill-icon-wrapper">
+          <img :src="RESOURCE_ICONS.FEATHER_JEWEL" alt="羽石" width="24" height="24" />
+        </div>
+        <span class="pill-value">{{ resources.featherStones.toLocaleString() }}</span>
       </div>
 
-      <div class="resource-item fans">
-        <i class="fas fa-users"></i>
-        <span class="resource-value">{{ resources.fans.toLocaleString() }}</span>
+      <!-- 粉丝数 -->
+      <div class="top-bar-pill fans">
+        <div class="pill-icon-wrapper">
+          <i class="fas fa-users"></i>
+        </div>
+        <span class="pill-value">{{ resources.fans.toLocaleString() }}</span>
+      </div>
+
+      <!-- 日期显示 (统一风格) -->
+      <div class="top-bar-pill date-pill" @click="showCalendarPopup = true">
+        <i class="fas fa-calendar-alt date-icon"></i>
+        <div class="date-text-full">
+          <span class="year-part">{{ currentYear }}</span>
+          <span class="separator">/</span>
+          <span class="month-day-part">{{ currentMonth }}/{{ currentDay }}</span>
+        </div>
       </div>
     </div>
 
@@ -980,6 +1024,13 @@
         </div>
       </div>
     </div>
+
+    <!-- 手机应用 -->
+    <PhoneContainer
+      v-model="showPhoneApp"
+      :unreads="{ chain: phoneUnreadCount, phone: 0 }"
+      @unread-update="handlePhoneUnreadUpdate"
+    />
   </div>
 </template>
 
@@ -999,19 +1050,77 @@ import {
   type GameResources,
 } from '../../偶像大师闪耀色彩/utils/game-data';
 import IdolCollectionApp from '../图鉴/界面/偶像图鉴.vue';
+import ProduceMainPage from '../培育/界面/ProduceMainPage.vue';
 import ProduceSelection from '../培育/界面/副本选择.vue';
 import MemoryCardSelection from '../培育/界面/回忆卡选择.vue';
 import SupportCardSelection from '../培育/界面/支援卡选择.vue';
 import { CDN_BASE, RESOURCE_ICONS, TOAST_SUCCESS_DURATION_MS } from '../工具/constants';
+import { startProactiveScheduler } from '../手机/composables/useProactiveScheduler';
+import { startTwestaScheduler } from '../手机/composables/useTwestaScheduler';
+import PhoneContainer from '../手机/组件/PhoneContainer.vue';
 import GachaApp from '../抽卡/界面/抽卡主界面.vue';
 import SpinePlayer from '../组件/Spine播放器.vue';
 import CharacterSelection from '../组件/角色选择.vue';
+import { getSpineDataByJapaneseName, getSpineId } from '../角色管理/spine资源映射';
 import { songs } from '../音乐/歌曲数据';
 import { MusicPlayer } from '../音乐/音乐播放器';
 import CharacterSelectPage from './角色选择页面.vue';
 
 // 背景图片URL - 使用 jsDelivr CDN
 const backgroundImageUrl = ref(`${CDN_BASE}/背景图/Sc_bk_283pro.webp`);
+
+// ====== 时间系统（内联实现，避免路径问题）======
+interface GameTime {
+  producerJoinDate: string;
+  currentDate: string;
+  totalWeeksPassed: number;
+}
+
+const DEFAULT_START_DATE = '2018-04-24';
+
+function createInitialGameTime(): GameTime {
+  return {
+    producerJoinDate: DEFAULT_START_DATE,
+    currentDate: DEFAULT_START_DATE,
+    totalWeeksPassed: 0,
+  };
+}
+
+function formatDateChinese(dateStr: string): string {
+  const [year, month, day] = dateStr.split('-');
+  return `${year}年${parseInt(month)}月${parseInt(day)}日`;
+}
+
+const gameTime = reactive<GameTime>(createInitialGameTime());
+const showCalendarPopup = ref(false);
+
+// 手机应用状态
+const showPhoneApp = ref(false);
+const phoneUnreadCount = ref(0); // 改为0，由调度器动态更新
+
+// 启动全局偶像主动消息调度器（不依赖 ChainApp 是否打开）
+startProactiveScheduler((unreadCount: number) => {
+  phoneUnreadCount.value = unreadCount;
+  console.log(`[主页] 收到未读更新: ${unreadCount}`);
+});
+
+// 处理来自 PhoneContainer 的实时未读更新
+function handlePhoneUnreadUpdate(count: number) {
+  phoneUnreadCount.value = count;
+  console.log(`[主页] 手机未读实时更新: ${count}`);
+}
+
+// 启动 Twesta 调度器 (偶像主动发推)
+startTwestaScheduler();
+console.log('[主页] Twesta 调度器已启动');
+
+// 格式化的游戏日期显示
+const formattedGameDate = computed(() => formatDateChinese(gameTime.currentDate));
+
+// 日期各部分（用于精美UI显示）
+const currentYear = computed(() => gameTime.currentDate.split('-')[0]);
+const currentMonth = computed(() => parseInt(gameTime.currentDate.split('-')[1]));
+const currentDay = computed(() => parseInt(gameTime.currentDate.split('-')[2]));
 
 // 角色数据列表（使用 GitHub 图片资源）
 const characters = ref([
@@ -2348,6 +2457,94 @@ const onMemoryCardConfirmed = (formation: any) => {
 // 副本选择相关
 const showProduceSelection = ref(false);
 
+// ====== 副本主页面相关 ======
+const showProduceMainPage = ref(false);
+const currentScenarioId = ref('');
+
+// 副本培育数据
+const produceStats = reactive({ vocal: 0, dance: 0, visual: 0 });
+const produceStamina = ref(30);
+const produceMaxStamina = ref(30);
+const produceGenki = ref(0);
+const produceDrinks = ref<Array<{ id: string; name: string; iconUrl: string } | null>>([null, null, null]);
+
+// 目标标签（根据周数变化）
+const produceTargetLabel = computed(() => {
+  const week = gameTime.totalWeeksPassed + 1;
+  if (week <= 4) return '中間';
+  if (week <= 8) return '準決勝';
+  return '決勝';
+});
+
+// 副本角色数据（传给ProduceMainPage）
+const produceIdolData = computed(() => {
+  if (!selectedProduceIdol.value) return undefined;
+
+  const characterName = selectedProduceIdol.value.characterName;
+  const cardId = selectedProduceIdol.value.id; // 如 '【Kn☆cking. Kn☆cking.】園田智代子'
+
+  // 尝试从spine资源映射中查找正确的CDN文件夹名
+  // 因为卡牌数据的id/theme可能与R2文件夹名有细微差异（如空格）
+  const spineData = getSpineDataByJapaneseName(characterName);
+  let spineId = '';
+
+  if (spineData) {
+    // 尝试在spine资源映射中找到匹配的卡片
+    // 通过displayName或模糊匹配theme
+    const theme = selectedProduceIdol.value.theme;
+    const matchingCard = spineData.cards.find(
+      c =>
+        c.displayName === theme ||
+        c.name.includes(theme.replace(/\s/g, '')) || // 去掉空格比较
+        c.name.includes(theme),
+    );
+
+    if (matchingCard) {
+      // 使用spine资源映射中的正确名称（与R2完全匹配）
+      spineId = getSpineId(spineData.japaneseName, matchingCard.name);
+    }
+  }
+
+  // Fallback: 如果没找到匹配，使用原始cardId
+  if (!spineId) {
+    spineId = `${characterName}_${cardId}`;
+  }
+
+  return {
+    id: selectedProduceIdol.value.id,
+    characterName: characterName,
+    spineUrl: spineId,
+    cardImageUrl: selectedProduceIdol.value.imageUrl,
+    avatarUrl: selectedProduceIdol.value.imageUrl,
+  };
+});
+
+// 副本事件处理
+const handleProduceActivity = (index: number) => {
+  console.log('选择活动:', index);
+  // TODO: 打开活动选择界面
+};
+
+const handleProduceUseDrink = (index: number) => {
+  console.log('使用饮料:', index);
+  // TODO: 使用饮料逻辑
+};
+
+const handleProduceOpenDeck = () => {
+  console.log('打开牌组');
+  // TODO: 打开牌组界面
+};
+
+const handleProduceOpenPhone = () => {
+  console.log('打开电话');
+  // TODO: 打开电话界面
+};
+
+const handleProduceOpenDiary = () => {
+  console.log('打开日记');
+  // TODO: 打开日记界面
+};
+
 const goBackToMemoryCardSelection = () => {
   showProduceSelection.value = false;
   showMemoryCardSelection.value = true;
@@ -2355,9 +2552,22 @@ const goBackToMemoryCardSelection = () => {
 
 const onProduceStart = (scenarioId: string) => {
   console.log('开始培育:', scenarioId, selectedProduceIdol.value?.characterName);
+  currentScenarioId.value = scenarioId;
   showProduceSelection.value = false;
+
+  // 初始化副本状态
+  produceStats.vocal = selectedProduceIdol.value?.stats?.vocal || 100;
+  produceStats.dance = selectedProduceIdol.value?.stats?.dance || 100;
+  produceStats.visual = selectedProduceIdol.value?.stats?.visual || 100;
+  // 体力从角色数据读取，默认30
+  const idolStamina = selectedProduceIdol.value?.stamina || 30;
+  produceStamina.value = idolStamina;
+  produceMaxStamina.value = idolStamina;
+  produceGenki.value = 0;
+
+  // 显示副本主页面
+  showProduceMainPage.value = true;
   toastr.success(`开始培育：${selectedProduceIdol.value?.characterName} - ${scenarioId}`, '', { timeOut: 2000 });
-  // TODO: 进入培育主界面
 };
 
 // 加载并播放歌曲
@@ -3191,9 +3401,12 @@ onUnmounted(() => {
 /* ===== 主页按钮（左下角） ===== */
 .home-button-container {
   position: absolute;
-  bottom: clamp(15px, 2.5vw, 30px);
-  left: clamp(15px, 2.5vw, 30px);
-  z-index: 4;
+  bottom: 30px;
+  left: 30px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column-reverse; /* 让主页按钮在最下方，手机按钮在上方 */
+  align-items: center;
 }
 
 .home-button {
@@ -4132,6 +4345,79 @@ onUnmounted(() => {
     &:hover {
       box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5);
     }
+  }
+}
+
+/* 手机按钮样式 */
+.phone-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 255, 0.9) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  margin-bottom: 16px; /* 与主页按钮的间距 */
+
+  &:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    background: white;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  i {
+    font-size: 28px;
+    color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+  }
+}
+
+.phone-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff3b30;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
 
@@ -5511,6 +5797,131 @@ onUnmounted(() => {
 
   .song-list-section {
     width: 100%;
+  }
+}
+
+/* ===== 日期显示 - 精美玻璃效果 ===== */
+/* ===== 日期显示 - 宽屏高级玻璃效果 ===== */
+/* ===== 顶部资源栏容器 ===== */
+.resource-display-top {
+  position: absolute;
+  top: 20px;
+  right: 80px; /* 给右侧设置按钮留出空间 */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 增加间距，防止拥挤 */
+  z-index: 10;
+}
+
+/* ===== 通用顶部胶囊样式 (模仿原作UI) ===== */
+.top-bar-pill {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5); /* 深色半透明背景 */
+  border-radius: 18px; /* 完整的圆角胶囊 */
+  padding: 0 16px 0 4px; /* 左侧留给图标，右侧文字padding */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  color: white;
+  font-family: 'Hiragino Sans', 'Microsoft YaHei', sans-serif;
+  min-width: 120px; /* 保证最小宽度 */
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.65);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+}
+
+/* 资源图标容器 */
+.pill-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+
+  img,
+  i {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
+
+/* 资源数值 */
+.pill-value {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  flex-grow: 1;
+  text-align: right; /* 数字靠右对齐 */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 特殊资源颜色 */
+.feather-stone .pill-icon-wrapper i {
+  color: #e0aaff;
+}
+.fans .pill-icon-wrapper i {
+  color: #4ade80;
+}
+
+/* ===== 日期显示 (胶囊风格) ===== */
+.date-pill {
+  cursor: pointer;
+  padding: 0 20px; /* 日期不需要左侧图标的大padding */
+  gap: 10px;
+  min-width: auto; /* 日期宽度自适应 */
+
+  .date-icon {
+    color: #ffd700;
+    font-size: 16px;
+  }
+
+  .date-text-full {
+    font-size: 18px; /* 统一大字体 */
+    font-weight: bold;
+    font-family: 'DIN Alternate', 'Roboto', sans-serif; /* 数字字体 */
+    letter-spacing: 1px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+
+    .year-part {
+      font-size: 18px; /* 年份和其他一样大 */
+    }
+
+    .separator {
+      opacity: 0.6;
+      font-size: 16px;
+    }
+  }
+}
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes calendar-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
 }
 </style>
