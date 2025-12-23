@@ -25,12 +25,10 @@ export const TEST_CARD_BASIC_SCORE: SkillCardV2 = {
     card_type: 'ACTIVE',
     logic_chain: [
       {
-        do: [
-          { action: 'GAIN_SCORE', value: 15 }
-        ]
-      }
-    ]
-  }
+        do: [{ action: 'GAIN_SCORE', value: 15 }],
+      },
+    ],
+  },
 };
 
 /**
@@ -57,16 +55,13 @@ export const TEST_CARD_GENKI_SCALING: SkillCardV2 = {
           {
             action: 'GAIN_SCORE',
             value_expression: {
-              '+': [
-                10,
-                { '*': [{ 'var': 'player.genki' }, 1.5] }
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  }
+              '+': [10, { '*': [{ var: 'player.genki' }, 1.5] }],
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 
 /**
@@ -91,11 +86,11 @@ export const TEST_CARD_BUFF: SkillCardV2 = {
       {
         do: [
           { action: 'ADD_BUFF', buff_id: 'GoodCondition', turns: 3 },
-          { action: 'ADD_BUFF', buff_id: 'Concentration', value: 5 }
-        ]
-      }
-    ]
-  }
+          { action: 'ADD_BUFF', buff_id: 'Concentration', value: 5 },
+        ],
+      },
+    ],
+  },
 };
 
 /**
@@ -120,7 +115,7 @@ export const TEST_CARD_MIDNIGHT: SkillCardV2 = {
     color: '#7A5CFF',
     isDebuff: true,
     shortName: '焦虑',
-    description: '一种负面情绪标记，可被其他技能引用。'
+    description: '一种负面情绪标记，可被其他技能引用。',
   },
   engine_data: {
     cost: { genki: 5 },
@@ -132,26 +127,23 @@ export const TEST_CARD_MIDNIGHT: SkillCardV2 = {
             action: 'GAIN_SCORE',
             value: 30,
             multiplier_expression: {
-              'if': [
+              if: [
                 {
-                  'or': [
-                    { '<': [{ 'var': 'player.genki_percent' }, 30] },
-                    { 'in': ['Anxiety', { 'var': 'player.tags' }] }
-                  ]
+                  or: [{ '<': [{ var: 'player.genki_percent' }, 30] }, { in: ['Anxiety', { var: 'player.tags' }] }],
                 },
                 3.0,
-                1.0
-              ]
+                1.0,
+              ],
             },
-            tags: ['emo_style', 'burst']
+            tags: ['emo_style', 'burst'],
           },
           {
             action: 'ADD_TAG',
             tag: 'Anxiety',
-            turns: 2
-          }
-        ]
-      }
+            turns: 2,
+          },
+        ],
+      },
     ],
     logic_chain_enhanced: [
       {
@@ -160,35 +152,32 @@ export const TEST_CARD_MIDNIGHT: SkillCardV2 = {
             action: 'GAIN_SCORE',
             value: 40,
             multiplier_expression: {
-              'if': [
+              if: [
                 {
-                  'or': [
-                    { '<': [{ 'var': 'player.genki_percent' }, 35] },
-                    { 'in': ['Anxiety', { 'var': 'player.tags' }] }
-                  ]
+                  or: [{ '<': [{ var: 'player.genki_percent' }, 35] }, { in: ['Anxiety', { var: 'player.tags' }] }],
                 },
                 3.5,
-                1.0
-              ]
+                1.0,
+              ],
             },
-            tags: ['emo_style', 'burst']
+            tags: ['emo_style', 'burst'],
           },
           {
             action: 'ADD_TAG',
             tag: 'Anxiety',
-            turns: 3
-          }
-        ]
-      }
-    ]
+            turns: 3,
+          },
+        ],
+      },
+    ],
   },
   restrictions: {
     isDuplicatable: true,
-    usesPerBattle: undefined
+    usesPerBattle: undefined,
   },
   flowRefs: ['emo_style'],
   mechanicRefs: ['Anxiety'],
-  isAIGenerated: true
+  isAIGenerated: true,
 };
 
 /**
@@ -213,7 +202,7 @@ export const TEST_CARD_TIME_REWIND: SkillCardV2 = {
     color: '#4ED6FF',
     isDebuff: false,
     shortName: '时光倒流',
-    description: '打出卡牌后有概率触发额外抽牌。'
+    description: '打出卡牌后有概率触发额外抽牌。',
   },
   engine_data: {
     cost: { genki: 3 },
@@ -229,27 +218,25 @@ export const TEST_CARD_TIME_REWIND: SkillCardV2 = {
               trigger: 'ON_AFTER_CARD_PLAY',
               duration_turns: 3,
               condition: {
-                '<': [{ 'var': 'rng' }, 0.5]
+                '<': [{ var: 'rng' }, 0.5],
               },
-              do: [
-                { action: 'DRAW_CARD', count: 1 }
-              ]
-            }
+              do: [{ action: 'DRAW_CARD', count: 1 }],
+            },
           },
           {
             action: 'ADD_TAG',
             tag: 'TimeRewind',
-            turns: 3
-          }
-        ]
-      }
-    ]
+            turns: 3,
+          },
+        ],
+      },
+    ],
   },
   restrictions: {
     isDuplicatable: false,
-    usesPerBattle: 1
+    usesPerBattle: 1,
   },
-  isAIGenerated: true
+  isAIGenerated: true,
 };
 
 /**

@@ -4088,5 +4088,5 @@ export const ALL_CARDS: RealCard[] = [
     awakenedImage: '連綿と、桜 郁田はるき+.webp',
     rarity: 'SSR' as const,
     enzaId: '1040280020',
-  }
+  },
 ];
