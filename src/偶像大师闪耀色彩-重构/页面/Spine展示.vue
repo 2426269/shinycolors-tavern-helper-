@@ -60,8 +60,8 @@
             <button
               v-for="anim in testAnimations"
               :key="anim.name"
-              @click="playTestAnimation(anim.animation)"
               class="anim-btn"
+              @click="playTestAnimation(anim.animation)"
             >
               {{ anim.name }}
             </button>
@@ -86,13 +86,13 @@
 
     <!-- 快捷按钮 -->
     <div class="quick-actions">
-      <button @click="showControlPanel = !showControlPanel" title="控制面板">
+      <button title="控制面板" @click="showControlPanel = !showControlPanel">
         <i class="fas fa-cog"></i>
       </button>
-      <button @click="showDebugPanel = !showDebugPanel" title="调试信息">
+      <button title="调试信息" @click="showDebugPanel = !showDebugPanel">
         <i class="fas fa-bug"></i>
       </button>
-      <button @click="toggleFullscreen" title="全屏">
+      <button title="全屏" @click="toggleFullscreen">
         <i class="fas fa-expand"></i>
       </button>
     </div>
@@ -116,7 +116,7 @@ import Spine播放器 from '../组件/Spine播放器.vue';
 
 const spinePlayerRef = ref<InstanceType<typeof Spine播放器> | null>(null);
 const currentIdolId = ref('mano');
-const currentBackground = ref('https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/default.jpg');
+const currentBackground = ref('https://283pro.site/shinycolors/background/default.jpg');
 const showControlPanel = ref(false);
 const showDebugPanel = ref(false);
 const statusMessage = ref('');
@@ -129,23 +129,23 @@ const detectionResult = ref<any>(null);
 const backgrounds = [
   {
     name: '默认',
-    url: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/default.jpg',
+    url: 'https://283pro.site/shinycolors/background/default.jpg',
   },
   {
     name: '海滩',
-    url: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/beach.jpg',
+    url: 'https://283pro.site/shinycolors/background/beach.jpg',
   },
   {
     name: '图书馆',
-    url: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/library.jpg',
+    url: 'https://283pro.site/shinycolors/background/library.jpg',
   },
   {
     name: '咖啡厅',
-    url: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/cafe.jpg',
+    url: 'https://283pro.site/shinycolors/background/cafe.jpg',
   },
   {
     name: '录音室',
-    url: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/背景/studio.jpg',
+    url: 'https://283pro.site/shinycolors/background/studio.jpg',
   },
 ];
 

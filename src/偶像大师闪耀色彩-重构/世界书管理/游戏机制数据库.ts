@@ -38,10 +38,10 @@ export const PRODUCE_PLAN_MECHANICS: Record<ProducePlan, ProducePlanMechanic> = 
     name: '感性',
     nameJP: 'センス',
     nameEN: 'Sense',
-    coreMechanic: '通过堆叠"状态良好"和"集中"层数，爆发式地提高得分',
+    coreMechanic: '通过堆叠"好调"和"集中"层数，爆发式地提高得分',
     keyEffects: [
       {
-        name: '好调（状态良好）',
+        name: '好调',
         nameJP: '好調',
         description: '技能卡的得分量增加50%，层数在每回合开始时-1',
       },
@@ -51,9 +51,9 @@ export const PRODUCE_PLAN_MECHANICS: Record<ProducePlan, ProducePlanMechanic> = 
         description: '每层集中增加N点技能卡得分',
       },
       {
-        name: '绝好调（状态绝佳）',
+        name: '绝好调',
         nameJP: '絶好調',
-        description: '使"状态良好"的得分增加倍率额外提升（N×10）%',
+        description: '使"好调"的得分增加倍率额外提升（N×10）%',
       },
     ],
     playstyle: '爆发型得分流，通过堆叠Buff在关键回合打出高分',
@@ -162,7 +162,7 @@ export interface EffectData {
 export const ALL_EFFECTS: EffectData[] = [
   // === 正面效果 ===
   {
-    name: '好调（状态良好）',
+    name: '好调',
     nameJP: '好調',
     description: '技能卡得分量增加50%，每回合-1层',
     belongTo: '感性',
@@ -176,9 +176,9 @@ export const ALL_EFFECTS: EffectData[] = [
     type: '正面',
   },
   {
-    name: '绝好调（状态绝佳）',
+    name: '绝好调',
     nameJP: '絶好調',
-    description: '使"状态良好"的倍率额外增加（N×10）%，每回合-1层',
+    description: '使"好调"的倍率额外增加（N×10）%，每回合-1层',
     belongTo: '感性',
     type: '正面',
   },
@@ -384,11 +384,11 @@ export const EFFECT_CATEGORIES = {
   },
   Buff获得: {
     description: '获得持续性状态效果',
-    examples: ['状态良好+2回合', '好调+3回合', '集中+2层', '好印象+4层'],
+    examples: ['好调+2回合', '好调+3回合', '集中+2层', '好印象+4层'],
   },
   Buff消耗: {
     description: '消耗Buff以触发更强效果',
-    examples: ['消耗状态良好1回合，下一张卡效果发动2次', '消耗好印象2层，回合数+1'],
+    examples: ['消耗好调1回合，下一张卡效果发动2次', '消耗好印象2层，回合数+1'],
   },
   数值增幅: {
     description: '提升训练/比赛的得分效率',
@@ -418,7 +418,7 @@ export const IMPORTANT_RULES = {
     '❌ 禁止超出稀有度对应的成本/效果范围',
   ],
   必须遵守: [
-    '✅ 技能卡的效果主要包括：**属性操作**（元气、干劲、专注等）、**Buff效果**（状态良好、好调等）、**特殊效果**（使用数+1、数值增幅等）',
+    '✅ 技能卡的效果主要包括：**属性操作**（元气、干劲、专注等）、**Buff效果**（好调、集中等）、**特殊效果**（使用数+1、数值增幅等）',
     '✅ Vocal/Dance/Visual三维的作用：设置**审查基准**、提供**分数乘区**',
     '✅ effect和effectEnhanced字段必须使用纯中文（禁止日文）',
     '✅ 强化前后都有完整的效果描述',

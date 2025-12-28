@@ -44,7 +44,7 @@
           <!-- 体力 -->
           <div class="stamina-row">
             <img
-              src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png"
+              src="https://283pro.site/shinycolors/游戏图标/体力.png"
               alt="体力"
               class="stat-icon"
             />
@@ -60,7 +60,7 @@
             </div>
             <div class="stat-info">
               <img
-                src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Vocal.png"
+                src="https://283pro.site/shinycolors/游戏图标/Vocal.png"
                 alt="Vo"
                 class="dim-icon"
               />
@@ -73,7 +73,7 @@
             </div>
             <div class="stat-info">
               <img
-                src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Dance.png"
+                src="https://283pro.site/shinycolors/游戏图标/Dance.png"
                 alt="Da"
                 class="dim-icon"
               />
@@ -86,7 +86,7 @@
             </div>
             <div class="stat-info">
               <img
-                src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Visual.png"
+                src="https://283pro.site/shinycolors/游戏图标/Visual.png"
                 alt="Vi"
                 class="dim-icon"
               />

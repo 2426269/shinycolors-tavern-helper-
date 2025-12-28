@@ -37,7 +37,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Arittake.no.Kagayaki.de.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%82%E3%82%8A%E3%81%A3%E3%81%9F%E3%81%91%E3%81%AE%E8%BC%9D%E3%81%8D%E3%81%A7%20-%20%E9%96%A2%E6%A0%B9%E7%9E%B3.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%82%E3%82%8A%E3%81%A3%E3%81%9F%E3%81%91%E3%81%AE%E8%BC%9D%E3%81%8D%E3%81%A7%20-%20%E9%96%A2%E6%A0%B9%E7%9E%B3.lrc',
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Hoshi.wo.Mezashite.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%98%9F%E3%82%92%E3%82%81%E3%81%96%E3%81%97%E3%81%A6%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%98%9F%E3%82%92%E3%82%81%E3%81%96%E3%81%97%E3%81%A6%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80.lrc',
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Yumemi.Dori.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%A4%A2%E8%A6%8B%E9%B3%A5%20-%20%E5%9C%9F%E5%B1%8B%E6%9D%8E%E5%A4%AE.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%A4%A2%E8%A6%8B%E9%B3%A5%20-%20%E5%9C%9F%E5%B1%8B%E6%9D%8E%E5%A4%AE.lrc',
   },
   {
     id: 4,
@@ -85,7 +85,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Appointment.Signal.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%20-%20%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%20-%20%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C.lrc',
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Choco.Date.Sunday.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%87%E3%83%BC%E3%83%88%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%87%E3%83%BC%20-%20%E7%99%BD%E7%9F%B3%E6%99%B4%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%87%E3%83%BC%E3%83%88%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%87%E3%83%BC%20-%20%E7%99%BD%E7%9F%B3%E6%99%B4%E9%A6%99.lrc',
   },
   {
     id: 6,
@@ -117,7 +117,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Sweet.Memories.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Sweet%20Memories%20-%20%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/Sweet%20Memories%20-%20%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99.lrc',
   },
   {
     id: 7,
@@ -133,7 +133,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Hanamaru.Badge.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Stella-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%8F%E3%83%8A%E3%83%9E%E3%83%AB%E3%83%90%E3%83%83%E3%82%B8%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%8F%E3%83%8A%E3%83%9E%E3%83%AB%E3%83%90%E3%83%83%E3%82%B8%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A.lrc',
   },
   {
     id: 8,
@@ -149,7 +149,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Tasogare.Identity.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%AA%B0%E3%82%BD%E5%BD%BC%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%20-%20%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%AA%B0%E3%82%BD%E5%BD%BC%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%20-%20%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97.lrc',
   },
   {
     id: 9,
@@ -165,7 +165,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Watashi.no.Shujinkou.wa.Watashi.dakara.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%B8%BB%E4%BA%BA%E5%85%AC%E3%81%AF%E3%82%8F%E3%81%9F%E3%81%97%E3%81%A0%E3%81%8B%E3%82%89%EF%BC%81%20-%20%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%B8%BB%E4%BA%BA%E5%85%AC%E3%81%AF%E3%82%8F%E3%81%9F%E3%81%97%E3%81%A0%E3%81%8B%E3%82%89%EF%BC%81%20-%20%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD.lrc',
   },
   {
     id: 10,
@@ -181,7 +181,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Mata.Ashita.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%BE%E3%81%9F%E6%98%8E%E6%97%A5%20-%20%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%BE%E3%81%9F%E6%98%8E%E6%97%A5%20-%20%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90.lrc',
   },
   {
     id: 11,
@@ -197,7 +197,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Tokosaki.no.Niwa.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%B8%B8%E5%92%B2%E3%81%AE%E5%BA%AD%20-%20%E4%B8%B8%E5%B2%A1%E5%92%8C%E4%BD%B3%E5%A5%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%B8%B8%E5%92%B2%E3%81%AE%E5%BA%AD%20-%20%E4%B8%B8%E5%B2%A1%E5%92%8C%E4%BD%B3%E5%A5%88.lrc',
   },
   {
     id: 12,
@@ -213,7 +213,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Plastic.Umbrella.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%96%E3%83%AC%E3%83%A9%20(2022%20Ver.)%20-%20%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%96%E3%83%AC%E3%83%A9%20(2022%20Ver.)%20-%20%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A.lrc',
   },
   {
     id: 13,
@@ -229,7 +229,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Going.my.way.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Going%20my%20way%20-%20%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/Going%20my%20way%20-%20%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
   },
   {
     id: 14,
@@ -245,7 +245,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Yuki.Tsuki.Kaze.Hana.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Luna-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E9%9B%AA%E3%83%BB%E6%9C%88%E3%83%BB%E9%A2%A8%E3%83%BB%E8%8A%B1%20-%20%E7%B5%90%E5%90%8D%E7%BE%8E%E6%9C%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E9%9B%AA%E3%83%BB%E6%9C%88%E3%83%BB%E9%A2%A8%E3%83%BB%E8%8A%B1%20-%20%E7%B5%90%E5%90%8D%E7%BE%8E%E6%9C%88.lrc',
   },
   {
     id: 15,
@@ -261,7 +261,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Slow.Motion.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E8%BF%91%E8%97%A4%E7%8E%B2%E5%A5%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E8%BF%91%E8%97%A4%E7%8E%B2%E5%A5%88.lrc',
   },
   {
     id: 16,
@@ -277,7 +277,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Senya.Aria.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%8D%83%E5%A4%9C%E3%82%A2%E3%83%AA%E3%82%A2%20-%20%E5%85%AB%E5%B7%BB%E3%82%A2%E3%83%B3%E3%83%8A.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%8D%83%E5%A4%9C%E3%82%A2%E3%83%AA%E3%82%A2%20-%20%E5%85%AB%E5%B7%BB%E3%82%A2%E3%83%B3%E3%83%8A.lrc',
   },
   {
     id: 17,
@@ -293,7 +293,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Damascus.Cocktail.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Damascus%20Cocktail%20-%20%E6%B6%BC%E6%9C%AC%E3%81%82%E3%81%8D%E3%81%BB.lrc',
+      'https://283pro.site/shinycolors/歌词/Damascus%20Cocktail%20-%20%E6%B6%BC%E6%9C%AC%E3%81%82%E3%81%8D%E3%81%BB.lrc',
   },
   {
     id: 18,
@@ -309,7 +309,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Darling.you.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Darling%20you!%20-%20%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/Darling%20you!%20-%20%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
   },
   {
     id: 19,
@@ -325,7 +325,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Aozora.Cider.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%82%E3%81%8A%E3%81%9E%E3%82%89%E3%82%B5%E3%82%A4%E3%83%80%E3%83%BC%20-%20%E5%B2%A1%E5%92%B2%E7%BE%8E%E4%BF%9D.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%82%E3%81%8A%E3%81%9E%E3%82%89%E3%82%B5%E3%82%A4%E3%83%80%E3%83%BC%20-%20%E5%B2%A1%E5%92%B2%E7%BE%8E%E4%BF%9D.lrc',
   },
   {
     id: 20,
@@ -341,7 +341,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/SOS.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/SOS%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86.lrc',
+      'https://283pro.site/shinycolors/歌词/SOS%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86.lrc',
   },
   {
     id: 21,
@@ -357,7 +357,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Kajunsei.Bleach.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E9%81%8E%E7%B4%94%E6%80%A7%E3%83%96%E3%83%AA%E3%83%BC%E3%83%81%20-%20%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/%E9%81%8E%E7%B4%94%E6%80%A7%E3%83%96%E3%83%AA%E3%83%BC%E3%83%81%20-%20%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90.lrc',
   },
   {
     id: 22,
@@ -373,7 +373,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/HAREBARE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/HAREBARE!!%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA.lrc',
+      'https://283pro.site/shinycolors/歌词/HAREBARE!!%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA.lrc',
   },
   {
     id: 23,
@@ -389,7 +389,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/statice.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/statice%20-%20%E5%92%8C%E4%B9%85%E4%BA%95%E5%84%AA.lrc',
+      'https://283pro.site/shinycolors/歌词/statice%20-%20%E5%92%8C%E4%B9%85%E4%BA%95%E5%84%AA.lrc',
   },
   {
     id: 24,
@@ -405,7 +405,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Fairy.Girl.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-SHHis-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%95%E3%82%A7%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%AC%E3%83%BC%E3%83%AB%20-%20%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%95%E3%82%A7%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%AC%E3%83%BC%E3%83%AB%20-%20%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9.lrc',
   },
   {
     id: 25,
@@ -421,7 +421,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Look.up.to.the.sky.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-SHHis-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Look%20up%20to%20the%20sky%20-%20%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Look%20up%20to%20the%20sky%20-%20%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
   },
   {
     id: 26,
@@ -437,7 +437,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Debi.Taro.no.Uta.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Debi.Taro.VS.Justice.V.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%87%E3%83%93%E5%A4%AA%E9%83%8E%E3%81%AE%E3%81%86%E3%81%9F%20-%20%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%87%E3%83%93%E5%A4%AA%E9%83%8E%E3%81%AE%E3%81%86%E3%81%9F%20-%20%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90.lrc',
   },
   {
     id: 27,
@@ -453,7 +453,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Zettai.Seigi.EVERY.DAY.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Debi.Taro.VS.Justice.V.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%B5%B6%E5%AF%BE%E6%AD%A3%E7%BE%A9%20EVERY%20DAY%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%B5%B6%E5%AF%BE%E6%AD%A3%E7%BE%A9%20EVERY%20DAY%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A.lrc',
   },
   {
     id: 28,
@@ -469,7 +469,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Kamisama.wa.Shinda.tte.2024.Remastering.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-CoMETIK-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%A5%9E%E6%A7%98%E3%81%AF%E6%AD%BB%E3%82%93%E3%81%A0%E3%80%81%E3%81%A3%E3%81%A6%20-%20%E5%B7%9D%E5%8F%A3%E8%8E%89%E5%A5%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%A5%9E%E6%A7%98%E3%81%AF%E6%AD%BB%E3%82%93%E3%81%A0%E3%80%81%E3%81%A3%E3%81%A6%20-%20%E5%B7%9D%E5%8F%A3%E8%8E%89%E5%A5%88.lrc',
   },
   {
     id: 29,
@@ -485,7 +485,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Muku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-CoMETIK-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%84%A1%E5%9E%A2%20-%20%E4%B8%89%E5%B7%9D%E8%8F%AF%E6%9C%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%84%A1%E5%9E%A2%20-%20%E4%B8%89%E5%B7%9D%E8%8F%AF%E6%9C%88.lrc',
   },
   {
     id: 30,
@@ -501,7 +501,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE}/Yumemoyou.Canvas.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-CoMETIK-.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%A4%A2%E6%A8%A1%E6%A7%98%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%20-%20%E5%B0%8F%E6%BE%A4%E9%BA%97%E9%82%A3.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%A4%A2%E6%A8%A1%E6%A7%98%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%20-%20%E5%B0%8F%E6%BE%A4%E9%BA%97%E9%82%A3.lrc',
   },
 
   // ==================== 组合曲 (141首) ====================
@@ -517,7 +517,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hikari.no.destination.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%92%E3%82%AB%E3%83%AA%E3%81%AEdestination%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%92%E3%82%AB%E3%83%AA%E3%81%AEdestination%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 32,
@@ -531,7 +531,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.ni.Nare.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AB%E3%81%AA%E3%82%8C%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AB%E3%81%AA%E3%82%8C%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 33,
@@ -545,7 +545,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Spread.the.Wings.Illumination.STARS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 34,
@@ -559,7 +559,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/We.can.go.now.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/We%20can%20go%20now!%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/We%20can%20go%20now!%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 35,
@@ -573,7 +573,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Triangle.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AB%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AB%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 36,
@@ -587,7 +587,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ambitious.Eve.Illumination.STARS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 37,
@@ -601,7 +601,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Twinkle.way.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Twinkle%20way%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Twinkle%20way%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 38,
@@ -615,7 +615,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Happy.Funny.Lucky.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Happy%20Funny%20Lucky%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Happy%20Funny%20Lucky%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 39,
@@ -629,7 +629,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.Illumination.STARS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 40,
@@ -643,7 +643,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/PRISISM.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/PRISISM%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/PRISISM%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 41,
@@ -657,7 +657,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Smile.Symphonia.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%82%A2%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%82%A2%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 42,
@@ -671,7 +671,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.Illumination.STARS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 43,
@@ -685,7 +685,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/FELICE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/FELICE%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/FELICE%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 44,
@@ -699,7 +699,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Illuminate.Concert.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%82%A4%E3%83%88%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%82%A4%E3%83%88%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 45,
@@ -713,7 +713,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.Illumination.STARS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 46,
@@ -727,7 +727,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Forward.March.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Forward%20March%EF%BC%81%EF%BC%81%EF%BC%81%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Forward%20March%EF%BC%81%EF%BC%81%EF%BC%81%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 47,
@@ -741,7 +741,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hoshi.ga.Nagarete.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%98%9F%E3%81%8C%E6%B5%81%E3%82%8C%E3%81%A6%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%98%9F%E3%81%8C%E6%B5%81%E3%82%8C%E3%81%A6%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 48,
@@ -755,7 +755,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/BRIGHTEST.WHITE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/BRIGHTEST%20WHITE%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/BRIGHTEST%20WHITE%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 49,
@@ -769,7 +769,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Makuragi.no.Uta.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Makuragi.no.Uta.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%9E%95%E6%9C%A8%E3%81%AE%E6%AD%8C%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%9E%95%E6%9C%A8%E3%81%AE%E6%AD%8C%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 50,
@@ -783,7 +783,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Babel.City.Grace.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 51,
@@ -797,7 +797,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Genwaku.SILHOUETTE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%B9%BB%E6%83%91SILHOUETTE%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%B9%BB%E6%83%91SILHOUETTE%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 52,
@@ -811,7 +811,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Spread.the.Wings.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 53,
@@ -825,7 +825,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/NEO.THEORY.FANTASY.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/NEO%20THEORY%20FANTASY%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/NEO%20THEORY%20FANTASY%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 54,
@@ -839,7 +839,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Labyrinth.Resistance.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%A9%E3%83%93%E3%83%AA%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%A9%E3%83%93%E3%83%AA%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 55,
@@ -853,7 +853,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ambitious.Eve.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 56,
@@ -867,7 +867,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Black.Reverie.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Black%20Reverie%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/Black%20Reverie%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 57,
@@ -881,7 +881,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Junpaku.Traumerei.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%B4%94%E7%99%BD%E3%83%88%E3%83%AD%E3%82%A4%E3%83%A1%E3%83%A9%E3%82%A4%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%B4%94%E7%99%BD%E3%83%88%E3%83%AD%E3%82%A4%E3%83%A1%E3%83%A9%E3%82%A4%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 58,
@@ -895,7 +895,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 59,
@@ -909,7 +909,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/abyss.of.conflict.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/abyss%20of%20conflict%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/abyss%20of%20conflict%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 60,
@@ -923,7 +923,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Kakumei.Shinkaron.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E9%9D%A9%E5%91%BD%E9%80%B2%E5%8C%96%E8%AB%96%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E9%9D%A9%E5%91%BD%E9%80%B2%E5%8C%96%E8%AB%96%20(2023%20Ver.)%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 61,
@@ -937,7 +937,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 62,
@@ -951,7 +951,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Fudousei.Innocence.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%B5%AE%E5%8B%95%E6%80%A7%E3%82%A4%E3%83%8E%E3%82%BB%E3%83%B3%E3%82%B9%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%B5%AE%E5%8B%95%E6%80%A7%E3%82%A4%E3%83%8E%E3%82%BB%E3%83%B3%E3%82%B9%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 63,
@@ -965,7 +965,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Gusha.no.Dokuhaku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%84%9A%E8%80%85%E3%81%AE%E7%8B%AC%E7%99%BD%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%84%9A%E8%80%85%E3%81%AE%E7%8B%AC%E7%99%BD%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 64,
@@ -979,7 +979,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 65,
@@ -993,7 +993,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Toaru.Eiyuu.tachi.no.Monogatari.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%A8%E3%81%82%E3%82%8B%E8%8B%B1%E9%9B%84%E3%81%9F%E3%81%A1%E3%81%AE%E7%89%A9%E8%AA%9E%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%A8%E3%81%82%E3%82%8B%E8%8B%B1%E9%9B%84%E3%81%9F%E3%81%A1%E3%81%AE%E7%89%A9%E8%AA%9E%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 66,
@@ -1007,7 +1007,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Unsung.Heroes.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Unsung%20Heroes%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/Unsung%20Heroes%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 67,
@@ -1021,7 +1021,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Yuusaishoku.Eureka.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%9C%89%E5%BD%A9%E8%89%B2%E3%83%A6%E3%83%AA%E3%82%A4%E3%82%AB%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%9C%89%E5%BD%A9%E8%89%B2%E3%83%A6%E3%83%AA%E3%82%A4%E3%82%AB%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 68,
@@ -1035,7 +1035,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Bunmei.Kaika.Rinbu.City.Hallelujah.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%96%87%E6%98%8E%E9%96%8B%E8%8A%B1%E8%BC%AA%E8%88%9E%20-%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BB%E3%83%8F%E3%83%AC%E3%83%AB%E3%83%A4-%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%96%87%E6%98%8E%E9%96%8B%E8%8A%B1%E8%BC%AA%E8%88%9E%20-%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BB%E3%83%8F%E3%83%AC%E3%83%AB%E3%83%A4-%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 69,
@@ -1049,7 +1049,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Aki.no.Owari.Boku.no.Kioku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%A7%8B%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A%E3%80%81%E5%83%95%E3%81%AE%E8%A8%98%E6%86%B6%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%A7%8B%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A%E3%80%81%E5%83%95%E3%81%AE%E8%A8%98%E6%86%B6%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 70,
@@ -1063,7 +1063,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.LAntica.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.02.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 71,
@@ -1077,7 +1077,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/JigenShiki.Kyousou.Wonderland.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/JigenShiki.Kyousou.Wonderland.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%99%82%E9%99%90%E5%BC%8F%E7%8B%82%E9%A8%92%E3%83%AF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%99%82%E9%99%90%E5%BC%8F%E7%8B%82%E9%A8%92%E3%83%AF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB.lrc',
   },
   {
     id: 72,
@@ -1091,7 +1091,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Yumesaki.After.school.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%A4%A2%E5%92%B2%E3%81%8DAfter%20school%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%A4%A2%E5%92%B2%E3%81%8DAfter%20school%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 73,
@@ -1105,7 +1105,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Taiyou.Kiss.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%A4%AA%E9%99%BD%E3%82%AD%E3%83%83%E3%82%B9%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%A4%AA%E9%99%BD%E3%82%AD%E3%83%83%E3%82%B9%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 74,
@@ -1119,7 +1119,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Spread.the.Wings.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 75,
@@ -1133,7 +1133,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Beach.Braver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%93%E3%83%BC%E3%83%81%E3%83%96%E3%83%AC%E3%82%A4%E3%83%90%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%93%E3%83%BC%E3%83%81%E3%83%96%E3%83%AC%E3%82%A4%E3%83%90%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 76,
@@ -1147,7 +1147,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Yorimichi.Sunset.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%88%E3%82%8A%E3%81%BF%E3%81%A1%E3%82%B5%E3%83%B3%E3%82%BB%E3%83%83%E3%83%88%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%88%E3%82%8A%E3%81%BF%E3%81%A1%E3%82%B5%E3%83%B3%E3%82%BB%E3%83%83%E3%83%88%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 77,
@@ -1161,7 +1161,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ambitious.Eve.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 78,
@@ -1175,7 +1175,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Itsutsuza.Ryuuseigun.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E4%BA%94%E3%83%84%E5%BA%A7%E6%B5%81%E6%98%9F%E7%BE%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E4%BA%94%E3%83%84%E5%BA%A7%E6%B5%81%E6%98%9F%E7%BE%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 79,
@@ -1189,7 +1189,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Gakusai.Kakumei.Yoake.Mae.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%AD%A6%E7%A5%AD%E9%9D%A9%E5%91%BD%E5%A4%9C%E6%98%8E%E3%81%91%E5%89%8D%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%AD%A6%E7%A5%AD%E9%9D%A9%E5%91%BD%E5%A4%9C%E6%98%8E%E3%81%91%E5%89%8D%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 80,
@@ -1203,7 +1203,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 81,
@@ -1217,7 +1217,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Climax.Island.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 82,
@@ -1231,7 +1231,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Haikei.Time.Capsule.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%8B%9D%E5%95%93%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%8B%9D%E5%95%93%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 83,
@@ -1245,7 +1245,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 84,
@@ -1259,7 +1259,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Issen.wa.Kimi.ga.Michibiku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E4%B8%80%E9%96%83%E3%81%AF%E5%90%9B%E3%81%8C%E5%B0%8E%E3%81%8F%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E4%B8%80%E9%96%83%E3%81%AF%E5%90%9B%E3%81%8C%E5%B0%8E%E3%81%8F%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 85,
@@ -1273,7 +1273,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Cat.Squad.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%AD%E3%83%A3%E3%83%83%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AF%E3%83%83%E3%83%89%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%AD%E3%83%A3%E3%83%83%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AF%E3%83%83%E3%83%89%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 86,
@@ -1287,7 +1287,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 87,
@@ -1301,7 +1301,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hanasaka.Saisai.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%8F%E3%83%8A%E3%82%B5%E3%82%AB%E3%82%B5%E3%82%A4%E3%82%B5%E3%82%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%8F%E3%83%8A%E3%82%B5%E3%82%AB%E3%82%B5%E3%82%A4%E3%82%B5%E3%82%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 88,
@@ -1315,7 +1315,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Zenryoku.Answer.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%85%A8%E5%8A%9B%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%85%A8%E5%8A%9B%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 89,
@@ -1329,7 +1329,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Himekuri.Mosaic.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%B2%E3%82%81%E3%81%8F%E3%82%8A%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%B2%E3%82%81%E3%81%8F%E3%82%8A%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 90,
@@ -1343,7 +1343,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hadashi.ja.Irarenai.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Hadashi.ja.Irarenai.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%A3%B8%E8%B6%B3%E3%81%98%E3%82%83%E3%82%A4%E3%83%A9%E3%83%AC%E3%83%8A%E3%82%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%A3%B8%E8%B6%B3%E3%81%98%E3%82%83%E3%82%A4%E3%83%A9%E3%83%AC%E3%83%8A%E3%82%A4%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 91,
@@ -1357,7 +1357,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Houkago.Magia.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%83%9E%E3%82%AE%E3%82%A2%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%83%9E%E3%82%AE%E3%82%A2%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 92,
@@ -1371,7 +1371,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Party.Magic.Designer.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 93,
@@ -1385,7 +1385,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.Houkago.CLIMAX.GIRLS.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.03.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 94,
@@ -1399,7 +1399,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Alstroemeria.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 95,
@@ -1413,7 +1413,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hapiriri.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%8F%E3%83%94%E3%83%AA%E3%83%AA%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%8F%E3%83%94%E3%83%AA%E3%83%AA%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 96,
@@ -1427,7 +1427,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Spread.the.Wings.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 97,
@@ -1441,7 +1441,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Bloomy.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Bloomy!%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/Bloomy!%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 98,
@@ -1455,7 +1455,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Love.Addiction.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Love%20Addiction%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/Love%20Addiction%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 99,
@@ -1469,7 +1469,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ambitious.Eve.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 100,
@@ -1483,7 +1483,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Double.Effect.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%80%E3%83%96%E3%83%AB%E3%83%BB%E3%82%A4%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%80%E3%83%96%E3%83%AB%E3%83%BB%E3%82%A4%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 101,
@@ -1497,7 +1497,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Anniversary.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Anniversary%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/Anniversary%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 102,
@@ -1511,7 +1511,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 103,
@@ -1525,7 +1525,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Pastel.Color.Pasukara.Color.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%91%E3%82%B9%E3%83%86%E3%83%AB%E3%82%AB%E3%83%A9%E3%83%BC%20%E3%83%91%E3%82%B9%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9%E3%83%BC%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%91%E3%82%B9%E3%83%86%E3%83%AB%E3%82%AB%E3%83%A9%E3%83%BC%20%E3%83%91%E3%82%B9%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9%E3%83%BC%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 104,
@@ -1539,7 +1539,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Love.Buon.Appetito.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%A9%E3%83%96%E3%83%BB%E3%83%9C%E3%83%8A%E3%83%9A%E3%83%86%E3%82%A3%E3%83%BC%E3%83%88%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%A9%E3%83%96%E3%83%BB%E3%83%9C%E3%83%8A%E3%83%9A%E3%83%86%E3%82%A3%E3%83%BC%E3%83%88%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 105,
@@ -1553,7 +1553,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 106,
@@ -1567,7 +1567,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/VERY.BERRY.LOVE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/VERY%20BERRY%20LOVE%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/VERY%20BERRY%20LOVE%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 107,
@@ -1581,7 +1581,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Give.me.some.more.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Give%20me%20some%20more...%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/Give%20me%20some%20more...%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 108,
@@ -1595,7 +1595,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 109,
@@ -1609,7 +1609,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Message.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 110,
@@ -1623,7 +1623,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Love.Letter.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Love%20Letter%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/Love%20Letter%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 111,
@@ -1637,7 +1637,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Gradation.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B0%E3%83%A9%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B0%E3%83%A9%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 112,
@@ -1651,7 +1651,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ashita.mo.Beautiful.Day.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Ashita.mo.Beautiful.Day.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%98%8E%E6%97%A5%E3%82%82Beautiful%20Day%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%98%8E%E6%97%A5%E3%82%82Beautiful%20Day%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 113,
@@ -1665,7 +1665,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Astalavvista.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%A2%E3%82%B9%E3%82%BF%E3%83%A9%E3%83%96%E3%83%93%E3%82%B9%E3%82%BF%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%A2%E3%82%B9%E3%82%BF%E3%83%A9%E3%83%96%E3%83%93%E3%82%B9%E3%82%BF%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 114,
@@ -1679,7 +1679,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/DAYDREAM.LOVE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/DAYDREAM%20LOVE%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/DAYDREAM%20LOVE%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 115,
@@ -1693,7 +1693,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.Alstroemeria.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.04.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 116,
@@ -1707,7 +1707,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/mellow.mellow.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/mellow.mellow.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/mellow%20mellow%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
+      'https://283pro.site/shinycolors/歌词/mellow%20mellow%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2.lrc',
   },
   {
     id: 117,
@@ -1721,7 +1721,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Wandering.Dream.Chaser.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Wandering%20Dream%20Chaser%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Wandering%20Dream%20Chaser%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 118,
@@ -1735,7 +1735,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Transcending.The.World.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Transcending%20The%20World%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Transcending%20The%20World%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 119,
@@ -1749,7 +1749,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ambitious.Eve.Straylight.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 120,
@@ -1763,7 +1763,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hide.and.Attack.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Hide%20%26%20Attack%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Hide%20%26%20Attack%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 121,
@@ -1777,7 +1777,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Destined.Rival.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Destined%20Rival%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Destined%20Rival%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 122,
@@ -1791,7 +1791,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.Straylight.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 123,
@@ -1805,7 +1805,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Another.Rampage.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Another%20Rampage%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Another%20Rampage%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 124,
@@ -1819,7 +1819,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Timeless.Shooting.Star.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Timeless%20Shooting%20Star%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Timeless%20Shooting%20Star%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 125,
@@ -1845,7 +1845,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Tracing.Defender.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Tracing%20Defender%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Tracing%20Defender%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 127,
@@ -1859,7 +1859,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Overdrive.Emotion.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Overdrive%20Emotion%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Overdrive%20Emotion%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 128,
@@ -1873,7 +1873,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.Straylight.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 129,
@@ -1887,7 +1887,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Imitation.Ghost.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Imitation%20Ghost%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Imitation%20Ghost%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 130,
@@ -1913,7 +1913,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Start.up.Stand.up.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Start%20up%20Stand%20up%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Start%20up%20Stand%20up%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 132,
@@ -1927,7 +1927,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/LINKs.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/LINKs.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/LINKs%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/LINKs%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 133,
@@ -1941,7 +1941,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Cyber.Parkour.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Cyber%20Parkour%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Cyber%20Parkour%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 134,
@@ -1955,7 +1955,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/LIVE.LIVE.LIVE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/LIVE%20LIVE%20LIVE!%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/LIVE%20LIVE%20LIVE!%20-%20%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 135,
@@ -1969,7 +1969,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.Straylight.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.05.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 136,
@@ -1983,7 +1983,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Itsudatte.Bokura.wa.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%84%E3%81%A4%E3%81%A0%E3%81%A3%E3%81%A6%E5%83%95%E3%82%89%E3%81%AF%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%84%E3%81%A4%E3%81%A0%E3%81%A3%E3%81%A6%E5%83%95%E3%82%89%E3%81%AF%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 137,
@@ -1997,7 +1997,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ano.Hana.no.You.ni.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%82%E3%81%AE%E8%8A%B1%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%82%E3%81%AE%E8%8A%B1%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 138,
@@ -2011,7 +2011,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Shainography.noctchill.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 139,
@@ -2025,7 +2025,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Bokura.dake.no.Mirai.no.Sora.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%83%95%E3%82%89%E3%81%A0%E3%81%91%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%81%AE%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%83%95%E3%82%89%E3%81%A0%E3%81%91%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%81%AE%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 140,
@@ -2039,7 +2039,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ima.shika.nai.Shunkan.wo.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E4%BB%8A%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84%E7%9E%AC%E9%96%93%E3%82%92%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E4%BB%8A%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84%E7%9E%AC%E9%96%93%E3%82%92%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 141,
@@ -2053,7 +2053,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.noctchill.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 142,
@@ -2067,7 +2067,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Catch.the.Breeze.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Catch%20the%20Breeze%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/Catch%20the%20Breeze%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 143,
@@ -2081,7 +2081,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Asphalt.wo.Narashite.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%A2%E3%82%B9%E3%83%95%E3%82%A1%E3%83%AB%E3%83%88%E3%82%92%E9%B3%B4%E3%82%89%E3%81%97%E3%81%A6%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%A2%E3%82%B9%E3%83%95%E3%82%A1%E3%83%AB%E3%83%88%E3%82%92%E9%B3%B4%E3%82%89%E3%81%97%E3%81%A6%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 144,
@@ -2095,7 +2095,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.noctchill.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 145,
@@ -2109,7 +2109,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Reflection.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Reflection%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/Reflection%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 146,
@@ -2123,7 +2123,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Yume.ga.Yume.janaku.naru.Sono.Hi.made.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%A4%A2%E3%81%8C%E5%A4%A2%E3%81%98%E3%82%83%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E3%81%9D%E3%81%AE%E6%97%A5%E3%81%BE%E3%81%A7%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%A4%A2%E3%81%8C%E5%A4%A2%E3%81%98%E3%82%83%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E3%81%9D%E3%81%AE%E6%97%A5%E3%81%BE%E3%81%A7%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 147,
@@ -2137,7 +2137,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Ao.to.Orange.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E9%9D%92%E3%81%A8%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E9%9D%92%E3%81%A8%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 148,
@@ -2151,7 +2151,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Aozora.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Aozora.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E9%9D%92%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E9%9D%92%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 149,
@@ -2165,7 +2165,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Itsuka.no.Kimi.e.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%84%E3%81%A4%E3%81%8B%E3%81%AE%E3%82%AD%E3%83%9F%E3%81%B8%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%84%E3%81%A4%E3%81%8B%E3%81%AE%E3%82%AD%E3%83%9F%E3%81%B8%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 150,
@@ -2179,7 +2179,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/365nichi.no.Story.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/365%E6%97%A5%E3%81%AE%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/365%E6%97%A5%E3%81%AE%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 151,
@@ -2193,7 +2193,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.noctchill.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.06.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 152,
@@ -2207,7 +2207,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Goodbye.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Goodbye.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B0%E3%83%83%E3%83%90%E3%82%A4%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B0%E3%83%83%E3%83%90%E3%82%A4%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 153,
@@ -2221,7 +2221,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/OH.MY.GOD.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/OH%20MY%20GOD%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/OH%20MY%20GOD%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 154,
@@ -2235,7 +2235,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Fly.and.Fly.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Fly%20and%20Fly%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Fly%20and%20Fly%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 155,
@@ -2249,7 +2249,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Resonance.Plus.SHHis.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 156,
@@ -2263,7 +2263,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Fashionable.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Fashionable%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Fashionable%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 157,
@@ -2277,7 +2277,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Bouncy.Girl.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Bouncy%20Girl%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Bouncy%20Girl%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 158,
@@ -2291,7 +2291,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Niji.no.Yukue.SHHis.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 159,
@@ -2305,7 +2305,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Forbidden.Paradise.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Forbidden%20Paradise%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Forbidden%20Paradise%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 160,
@@ -2319,7 +2319,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/SWEETEST.BITE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/SWEETEST%20BITE%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/SWEETEST%20BITE%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 161,
@@ -2333,7 +2333,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/White.Story.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/White%20Story%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/White%20Story%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 162,
@@ -2347,7 +2347,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Happier.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Happier.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Happier%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Happier%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 163,
@@ -2361,7 +2361,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/After.Run.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/After.Run.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/After%20Run%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/After%20Run%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 164,
@@ -2375,7 +2375,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Monochromatic.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Monochromatic%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Monochromatic%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 165,
@@ -2389,7 +2389,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Snowflake.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Snowflake%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Snowflake%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 166,
@@ -2403,7 +2403,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Migratory.Echoes.SHHis.Ver.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.07.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Migratory%20Echoes%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 167,
@@ -2417,7 +2417,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Mujikaku.A.Priori.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%84%A1%E8%87%AA%E8%A6%9A%E3%82%A2%E3%83%97%E3%83%AA%E3%82%AA%E3%83%AA%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%84%A1%E8%87%AA%E8%A6%9A%E3%82%A2%E3%83%97%E3%83%AA%E3%82%AA%E3%83%AA%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
   {
     id: 168,
@@ -2431,7 +2431,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Kudaranaiya.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%8F%E3%81%A0%E3%82%89%E3%81%AA%E3%81%84%E3%82%84%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%8F%E3%81%A0%E3%82%89%E3%81%AA%E3%81%84%E3%82%84%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
   {
     id: 169,
@@ -2445,7 +2445,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Heikousen.no.Bigaku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.08.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E5%B9%B3%E8%A1%8C%E7%B7%9A%E3%81%AE%E7%BE%8E%E5%AD%A6%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/%E5%B9%B3%E8%A1%8C%E7%B7%9A%E3%81%AE%E7%BE%8E%E5%AD%A6%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
   {
     id: 170,
@@ -2459,7 +2459,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Hanamuke.no.Hanataba.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Hanamuke.no.Hanataba.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%8F%E3%83%8A%E3%83%A0%E3%82%B1%E3%81%AE%E3%83%8F%E3%83%8A%E3%82%BF%E3%83%90%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%8F%E3%83%8A%E3%83%A0%E3%82%B1%E3%81%AE%E3%83%8F%E3%83%8A%E3%82%BF%E3%83%90%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
   {
     id: 171,
@@ -2473,7 +2473,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_GROUP}/Heads.or.Tails.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Heads.or.Tails.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Heads%20or%20Tails%EF%BC%9F%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/Heads%20or%20Tails%EF%BC%9F%20-%20%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
 
   // ==================== 全体曲 (23首) ====================
@@ -2492,7 +2492,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.01.Spread.the.Wings.jpg`,
     notes: '第一年度16人全体曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 234,
@@ -2507,7 +2507,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Multicolored.Sky.flac`,
     albumCover: `${ALBUM_COVER_BASE}/BRILLI@NT.WING.01.Spread.the.Wings.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Multicolored%20Sky%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Multicolored%20Sky%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 235,
@@ -2523,7 +2523,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/SE@SONAL.WINTER.jpg`,
     notes: '18年圣诞节单曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/SNOW%20FLAKES%20MEMORIES%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/SNOW%20FLAKES%20MEMORIES%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 236,
@@ -2553,7 +2553,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.01.jpg`,
     notes: '第二年度19人全体曲 新组合Straylight加入',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Ambitious%20Eve%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 238,
@@ -2568,7 +2568,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Shiny.Days.flac`,
     albumCover: `${ALBUM_COVER_BASE}/FR@GMENT.WING.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%84%E3%81%A4%E3%81%8B%20Shiny%20Days%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%84%E3%81%A4%E3%81%8B%20Shiny%20Days%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 239,
@@ -2585,7 +2585,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/FUTURITY.SMILE.jpg`,
     notes: '19年冬季单曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/FUTURITY%20SMILE%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/FUTURITY%20SMILE%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 240,
@@ -2600,7 +2600,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Spread.the.Wings.19.colors.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/FUTURITY.SMILE.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Spread%20the%20Wings!!%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 241,
@@ -2616,7 +2616,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/SWEET.STEPP.jpg`,
     notes: '20年情人节单曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/SWEET%E2%99%A1STEP%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/SWEET%E2%99%A1STEP%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 242,
@@ -2631,7 +2631,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Multicolored.Sky.19.colors.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/SWEET.STEP.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Multicolored%20Sky%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Multicolored%20Sky%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 243,
@@ -2647,7 +2647,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.01.jpg`,
     notes: '第三年度23人全体曲 新组合noctchill加入',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 244,
@@ -2662,7 +2662,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Dye.the.sky.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/GR@DATE.WING.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Dye%20the%20sky.%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Dye%20the%20sky.%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 245,
@@ -2677,7 +2677,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.01.jpg`,
     notes: '第四年度25人全体曲 新组合SHHis加入',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Resonance%E2%81%BA%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 246,
@@ -2693,7 +2693,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Color.Days.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Color%20Days%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Color%20Days%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 247,
@@ -2709,7 +2709,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.01.jpg`,
     notes: '第五年度25人全体曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%99%B9%E3%81%AE%E8%A1%8C%E6%96%B9%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 248,
@@ -2724,7 +2724,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Daybreak.Age.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.01.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Daybreak%20Age%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Daybreak%20Age%20-28%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 249,
@@ -2739,7 +2739,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/Hoshi.no.Koe.jpg`,
     notes: '音游主题曲 新组合CoMETIK加入',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%98%9F%E3%81%AE%E5%A3%B0%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%98%9F%E3%81%AE%E5%A3%B0%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 250,
@@ -2755,7 +2755,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/Tsubasa.Gravity.jpg`,
     notes: '动画第一季片头曲 前4组合16人',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%84%E3%83%90%E3%82%B5%E3%82%B0%E3%83%A9%E3%83%93%E3%83%86%E3%82%A3%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%84%E3%83%90%E3%82%B5%E3%82%B0%E3%83%A9%E3%83%93%E3%83%86%E3%82%A3%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 251,
@@ -2771,7 +2771,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/Prism.Flare.jpg`,
     notes: '动画第二季片头曲 前5组合19人',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%95%E3%83%AC%E3%82%A2%20-25%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%95%E3%83%AC%E3%82%A2%20-25%20colors-%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 252,
@@ -2788,7 +2788,7 @@ export const songs: Song[] = [
     albumCover: `${ALBUM_COVER_BASE}/Happy.Surprise.Trick.jpg`,
     notes: '动画第二季万圣夜全体曲',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Poison%20Berry%20Daughters%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Poison%20Berry%20Daughters%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 253,
@@ -2819,7 +2819,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Ai.na.View.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Song.for.Prism.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E6%84%9B%E3%81%AAView%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E6%84%9B%E3%81%AAView%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 255,
@@ -2834,7 +2834,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_BASE_ALL}/Summer.Summer.Ocean.Party.Vacation.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Song.for.Prism.jpg`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%83%AA%E3%82%A3%E3%83%90%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%B1%B1%E6%A0%B9%E7%B6%BA%2C%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A%2C%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E5%B0%8F%E6%BE%A4%E9%BA%97%E9%82%A3.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%83%AA%E3%82%A3%E3%83%90%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%B1%B1%E6%A0%B9%E7%B6%BA%2C%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A%2C%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E5%B0%8F%E6%BE%A4%E9%BA%97%E9%82%A3.lrc',
   },
 
   // ==================== 团体曲 (22首) ====================
@@ -2846,7 +2846,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/283.Taiso.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/283体操.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/283%E4%BD%93%E6%93%8D%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/283%E4%BD%93%E6%93%8D%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 257,
@@ -2856,7 +2856,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/CANDY.UNIVERSE.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/CANDY%20UNIVERSE.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/CANDY%20UNIVERSE%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A%2C%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/CANDY%20UNIVERSE%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E5%B8%8C%E6%B0%B4%E3%81%97%E3%81%8A%2C%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99.lrc',
   },
   {
     id: 258,
@@ -2865,7 +2865,7 @@ export const songs: Song[] = [
     type: '团体曲',
     audioUrl: `${AUDIO_RELEASE_BASE}/CRYST@LOUD.mp3`,
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/CRYST%40LOUD%20-%20THE%20IDOLM%40STER.lrc',
+      'https://283pro.site/shinycolors/歌词/CRYST%40LOUD%20-%20THE%20IDOLM%40STER.lrc',
   },
   {
     id: 259,
@@ -2875,7 +2875,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/GOTCHA.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/GOTCHA.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/GOTCHA%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/GOTCHA%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90.lrc',
   },
   {
     id: 260,
@@ -2885,7 +2885,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/KillerxMission.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Killer%C3%97Mission.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Killer%C3%97Mission%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB%2C%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/Killer%C3%97Mission%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB%2C%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
   {
     id: 261,
@@ -2895,7 +2895,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Midnight.parade.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Midnight%20parade!.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Midnight%20parade!%20-%20%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97%2C%E5%85%AB%E5%B7%BB%E3%82%A2%E3%83%B3%E3%83%8A%2C%E4%B8%B8%E5%B2%A1%E5%92%8C%E4%BD%B3%E5%A5%88%2C%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/Midnight%20parade!%20-%20%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97%2C%E5%85%AB%E5%B7%BB%E3%82%A2%E3%83%B3%E3%83%8A%2C%E4%B8%B8%E5%B2%A1%E5%92%8C%E4%BD%B3%E5%A5%88%2C%E5%89%8D%E5%B7%9D%E6%B6%BC%E5%AD%90%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
   },
   {
     id: 262,
@@ -2905,7 +2905,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/ONE.STAR.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/ONE%20STAR.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/ONE%20STAR%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
+      'https://283pro.site/shinycolors/歌词/ONE%20STAR%20-%20%E6%B2%B3%E9%87%8E%E3%81%B2%E3%82%88%E3%82%8A%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99.lrc',
   },
   {
     id: 263,
@@ -2915,7 +2915,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/OPEN.the.New.world.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/OPEN%20the%20New%20world.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/OPEN%20the%20New%20world%20-%20%E8%BF%91%E8%97%A4%E7%8E%B2%E5%A5%88%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B6%BC%E6%9C%AC%E3%81%82%E3%81%8D%E3%81%BB%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80.lrc',
+      'https://283pro.site/shinycolors/歌词/OPEN%20the%20New%20world%20-%20%E8%BF%91%E8%97%A4%E7%8E%B2%E5%A5%88%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B6%BC%E6%9C%AC%E3%81%82%E3%81%8D%E3%81%BB%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80.lrc',
   },
   {
     id: 264,
@@ -2925,7 +2925,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Pioneer.Impact.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Pioneer%20Impact.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Pioneer%20Impact%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB%2C%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Pioneer%20Impact%20-%20%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%82%AB%2C%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 265,
@@ -2936,7 +2936,7 @@ export const songs: Song[] = [
     albumCover:
       'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Poison%20Berry%20Daughters.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Poison%20Berry%20Daughters%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Poison%20Berry%20Daughters%20-%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 266,
@@ -2946,7 +2946,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Secret.utopIA.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Secret%20utopIA.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Secret%20utopIA%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%2C%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%2C%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/Secret%20utopIA%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%2C%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%2C%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 267,
@@ -2955,7 +2955,7 @@ export const songs: Song[] = [
     type: '团体曲',
     audioUrl: `${AUDIO_RELEASE_BASE}/SOLAR.WAY.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/SOLAR%20WAY.jpg',
-    lyricsUrl: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/SOLAR%20WAY%20-%20Team.Sol.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/SOLAR%20WAY%20-%20Team.Sol.lrc',
   },
   {
     id: 268,
@@ -2965,7 +2965,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Sparkle.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/Sparkle.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/Sparkle%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%2C%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+      'https://283pro.site/shinycolors/歌词/Sparkle%20-%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%2C%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 269,
@@ -2975,7 +2975,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Ne.Ne.Ne.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/ねぇ、ねぇ、ねぇ.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%81%AD%E3%81%87%E3%80%81%E3%81%AD%E3%81%87%E3%80%81%E3%81%AD%E3%81%87%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E9%96%A2%E6%A0%B9%E7%9E%B3%2C%E7%B5%90%E5%90%8D%E7%BE%8E%E6%9C%88%2C%E7%99%BD%E7%9F%B3%E6%99%B4%E9%A6%99%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%81%AD%E3%81%87%E3%80%81%E3%81%AD%E3%81%87%E3%80%81%E3%81%AD%E3%81%87%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E9%96%A2%E6%A0%B9%E7%9E%B3%2C%E7%B5%90%E5%90%8D%E7%BE%8E%E6%9C%88%2C%E7%99%BD%E7%9F%B3%E6%99%B4%E9%A6%99%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
   },
   {
     id: 270,
@@ -2985,7 +2985,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Shainiekusasaizu.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/シャイニーエクササイズ.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%A8%E3%82%AF%E3%82%B5%E3%82%B5%E3%82%A4%E3%82%BA%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%A8%E3%82%AF%E3%82%B5%E3%82%B5%E3%82%A4%E3%82%BA%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA%2C%E7%A4%92%E9%83%A8%E8%8A%B1%E5%87%9C%2C%E6%B0%B8%E4%BA%95%E7%9C%9F%E9%87%8C%E5%AD%90%2C%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90%2C%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E7%94%B0%E5%B6%8C%E7%B4%97%E8%98%AD%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 271,
@@ -2996,7 +2996,7 @@ export const songs: Song[] = [
     albumCover:
       'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/プラニスフィア%20～planisphere～.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%97%E3%83%A9%E3%83%8B%E3%82%B9%E3%83%95%E3%82%A3%E3%82%A2%20%EF%BD%9Eplanisphere%EF%BD%9E%20-%20Team.Stella.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%97%E3%83%A9%E3%83%8B%E3%82%B9%E3%83%95%E3%82%A3%E3%82%A2%20%EF%BD%9Eplanisphere%EF%BD%9E%20-%20Team.Stella.lrc',
   },
   {
     id: 272,
@@ -3006,7 +3006,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Homuraimbiteshon.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/ホムラインビテーション.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%9B%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%93%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%9B%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%93%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20%E7%94%B0%E4%B8%AD%E6%9C%89%E7%B4%80%2C%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86%2C%E5%8C%97%E5%8E%9F%E6%B2%99%E5%BC%A5%E9%A6%99%2C%E7%B4%AB%E6%9C%88%E6%9D%8F%E6%9C%B1%E5%BD%A9%2C%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
   },
   {
     id: 273,
@@ -3016,7 +3016,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Rifureimburein.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/リフレインブレイン.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%96%E3%83%AC%E3%82%A4%E3%83%B3%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%2C%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%96%E3%83%AC%E3%82%A4%E3%83%B3%20-%20%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AD%E3%83%A1%E3%83%AA%E3%82%A2%2C%E3%82%B3%E3%83%A1%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF.lrc',
   },
   {
     id: 274,
@@ -3027,7 +3027,7 @@ export const songs: Song[] = [
     albumCover:
       'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/リフレクトサイン%20(2022%20Ver.).jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%83%88%E3%82%B5%E3%82%A4%E3%83%B3%20(2022%20Ver.)%20-%20Team.Luna.lrc',
+      'https://283pro.site/shinycolors/歌词/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%83%88%E3%82%B5%E3%82%A4%E3%83%B3%20(2022%20Ver.)%20-%20Team.Luna.lrc',
   },
   {
     id: 275,
@@ -3037,7 +3037,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Sogo.Gakusha.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/相合学舎.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E7%9B%B8%E5%90%88%E5%AD%A6%E8%88%8E%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB%2C%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
+      'https://283pro.site/shinycolors/歌词/%E7%9B%B8%E5%90%88%E5%AD%A6%E8%88%8E%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB%2C%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA.lrc',
   },
   {
     id: 276,
@@ -3047,7 +3047,7 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Kagayaki.Ni.Kawaru.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/輝きにかわる.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%BC%9D%E3%81%8D%E3%81%AB%E3%81%8B%E3%82%8F%E3%82%8B%20-%20%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99%2C%E5%B2%A1%E5%92%B2%E7%BE%8E%E4%BF%9D%2C%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%BC%9D%E3%81%8D%E3%81%AB%E3%81%8B%E3%82%8F%E3%82%8B%20-%20%E9%BB%92%E6%9C%A8%E3%81%BB%E3%81%AE%E9%A6%99%2C%E5%B2%A1%E5%92%B2%E7%BE%8E%E4%BF%9D%2C%E8%8F%85%E6%B2%BC%E5%8D%83%E7%B4%97.lrc',
   },
   {
     id: 277,
@@ -3057,6 +3057,6 @@ export const songs: Song[] = [
     audioUrl: `${AUDIO_RELEASE_BASE}/Jinrai.Tekka.mp3`,
     albumCover: 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌曲封面/迅雷鉄火.jpg',
     lyricsUrl:
-      'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main/歌词/%E8%BF%85%E9%9B%B7%E9%89%84%E7%81%AB%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA%2C%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
+      'https://283pro.site/shinycolors/歌词/%E8%BF%85%E9%9B%B7%E9%89%84%E7%81%AB%20-%20%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA%2C%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88.lrc',
   },
 ];

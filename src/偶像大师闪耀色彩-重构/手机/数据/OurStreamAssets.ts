@@ -32,10 +32,10 @@ export const STREAM_CATEGORIES: StreamCategory[] = [
 ];
 
 // 视频服务器基础URL
-export const VIDEO_BASE_URL = 'http://124.221.50.133/shinycolors/公开练习';
+export const VIDEO_BASE_URL = 'https://283pro.site/shinycolors/公开练习';
 
-// 封面服务器基础URL
-export const THUMBNAIL_BASE_URL = 'http://124.221.50.133/shinycolors/视频封面';
+// 封面图片 CDN 地址
+export const THUMBNAIL_BASE_URL = 'https://283pro.site/shinycolors/视频封面';
 
 // 辅助函数：根据视频文件名生成封面URL
 function getThumbnail(videoFileName: string): string {

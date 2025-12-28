@@ -1,10 +1,10 @@
 /**
  * Phone 应用图片资源映射
  * Twesta头像共用
- * 服务器: http://124.221.50.133/shinycolors/twesta头像/
+ * 服务器: https://283pro.site/shinycolors/twesta头像/
  */
 
-const PHONE_CDN_BASE = 'http://124.221.50.133/shinycolors/twesta头像';
+const PHONE_CDN_BASE = 'https://283pro.site/shinycolors/twesta头像';
 
 import { IDOL_ENGLISH_NAMES, IDOL_NAMES } from './ChainAssets';
 

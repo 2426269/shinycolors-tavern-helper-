@@ -20,7 +20,7 @@ export interface SpineAsset {
 /**
  * GitHub CDN基础URL
  */
-const CDN_BASE = 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main';
+const CDN_BASE = 'https://283pro.site/shinycolors';
 
 /**
  * 偶像Spine资源映射

@@ -10,12 +10,12 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗6",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+10",
             "isConsumption": false
           },
@@ -27,12 +27,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+10",
             "isConsumption": false
           },
@@ -57,59 +57,59 @@
         "cost": "8",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值值+10",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "成长：通过直接效果切换至强气状态时，这张卡的数值+4（最多4次）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气-6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值值+10",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+10",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "成长：通过直接效果切换至强气状态时，这张卡的数值+4（最多4次）",
             "isConsumption": false
           }
@@ -134,7 +134,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "使用此卡牌后的5回合内，回合开始时，若不处于﻿强气状态中，切换至﻿强气状态",
             "isConsumption": false
           }
@@ -146,7 +146,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "使用此卡牌后的5回合内，回合开始时，若不处于强气状态中，切换至强气状态",
             "isConsumption": false
           },
@@ -171,7 +171,7 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存2段状态",
             "isConsumption": false
           },
@@ -183,7 +183,7 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存2段状态",
             "isConsumption": false
           },
@@ -208,44 +208,44 @@
         "cost": "7",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "全力效果的A类技能卡数值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存状态",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "全力效果的A类技能卡数值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存状态",
             "isConsumption": false
           }
@@ -265,34 +265,34 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "仅在处于温存状态时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气第二阶段",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "此后，处于强气第二阶段时，使用M类技能卡，强气效果的技能卡数值+7。",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "温存时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气2段状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "此后，处于强气第二阶段时，使用M类技能卡，强气效果的技能卡数值+8。",
             "isConsumption": false
           }
@@ -312,24 +312,24 @@
         "cost": "7",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "下一回合，数值+8（提升本次训练中全力值增加总量300%的数值）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "下一回合，数值+8（提升本次训练中全力值增加总量300%的数值）",
             "isConsumption": false
           }
@@ -349,7 +349,7 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗6",
             "isConsumption": true
           },
@@ -359,19 +359,19 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "M类技能卡增加的元气值+8",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗6",
             "isConsumption": true
           },
@@ -381,12 +381,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "M类技能卡增加的元气值+8",
             "isConsumption": false
           }
@@ -411,12 +411,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+10（3次）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存2段状态",
             "isConsumption": false
           }
@@ -428,12 +428,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+16（3次）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "下回合，切换至温存2段状态",
             "isConsumption": false
           }
@@ -453,7 +453,7 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+4",
             "isConsumption": false
           },
@@ -463,14 +463,14 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "随后，回合开始时，若处于全力状态，所有技能卡数值额外+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+5",
             "isConsumption": false
           },
@@ -480,7 +480,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "随后，回合开始时，若处于全力状态，所有技能卡数值额外+2",
             "isConsumption": false
           }
@@ -500,12 +500,12 @@
         "cost": "1",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
@@ -520,19 +520,19 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "M类技能卡的体力消耗值+1",
             "isConsumption": true
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+8",
             "isConsumption": false
           },
@@ -547,7 +547,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "M类技能卡的体力消耗值+1",
             "isConsumption": true
           }
@@ -567,44 +567,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗1",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "提升累积全力值100%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗1",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+9",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "提升累积全力值150%的数值",
             "isConsumption": false
           }
@@ -624,14 +624,14 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换为温存后，使用强气效果技能卡时，该技能卡的数值增加2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换为温存后，使用强气效果技能卡时，该技能卡的数值增加3",
             "isConsumption": false
           }
@@ -656,7 +656,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+1",
             "isConsumption": false
           },
@@ -673,7 +673,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           },
@@ -683,7 +683,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "保留区的技能卡数值增加5",
             "isConsumption": false
           }
@@ -708,12 +708,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "全力效果的A技能卡数值增加4",
             "isConsumption": false
           },
@@ -730,12 +730,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "全力效果的技能卡数值增加9",
             "isConsumption": false
           },
@@ -760,12 +760,12 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+3（2次）",
             "isConsumption": false
           },
@@ -777,12 +777,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+6（2次）",
             "isConsumption": false
           },
@@ -807,29 +807,29 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存2段状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "此后，温存状态下，直接增加全力值后，全力值+1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气消耗-1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存2段状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "此后，温存状态下，直接增加全力值后，全力值+1",
             "isConsumption": false
           }
@@ -851,24 +851,24 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力减少.png",
             "effect": "消费体力减少2回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力减少.png",
             "effect": "消费体力减少3回合",
             "isConsumption": false
           }
@@ -893,7 +893,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
@@ -910,7 +910,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
@@ -940,17 +940,17 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+2",
             "isConsumption": false
           }
@@ -962,17 +962,17 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/温存.png",
             "effect": "切换至温存状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+8",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+3",
             "isConsumption": false
           }
@@ -994,24 +994,24 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+2(2次)",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/强气.png",
             "effect": "切换至强气状态",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+4(2次)",
             "isConsumption": false
           }
@@ -1031,7 +1031,7 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+1",
             "isConsumption": false
           },
@@ -1043,7 +1043,7 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/全力值.png",
             "effect": "全力值+3",
             "isConsumption": false
           },
@@ -1072,24 +1072,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗5",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象250%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象260%的数值",
             "isConsumption": false
           }
@@ -1109,12 +1109,12 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗2",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
@@ -1131,12 +1131,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗2",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+5",
             "isConsumption": false
           },
@@ -1166,7 +1166,7 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲调整为1.5倍",
             "isConsumption": false
           },
@@ -1176,14 +1176,14 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合开始时，元气+4",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲调整为1.5倍",
             "isConsumption": false
           },
@@ -1193,7 +1193,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合开始时，元气+8",
             "isConsumption": false
           }
@@ -1218,7 +1218,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+8",
             "isConsumption": false
           }
@@ -1230,7 +1230,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+10",
             "isConsumption": false
           }
@@ -1250,44 +1250,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象3以上时，技能卡使用数+1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象3以上时，技能卡使用数+2",
             "isConsumption": false
           }
@@ -1307,12 +1307,12 @@
         "cost": "1",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象强化+20%",
             "isConsumption": false
           },
@@ -1329,12 +1329,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象强化+20%",
             "isConsumption": false
           },
@@ -1364,24 +1364,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+7",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+9",
             "isConsumption": false
           }
@@ -1406,17 +1406,17 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "随后，每次使用增加元气的技能卡时，好印象+1",
             "isConsumption": false
           }
@@ -1428,17 +1428,17 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "随后，每次使用增加元气的技能卡时，好印象+1",
             "isConsumption": false
           }
@@ -1458,24 +1458,24 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "此后，每使用一张技能卡 ，干劲+1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "此后，每使用一张技能卡 ，干劲+1",
             "isConsumption": false
           }
@@ -1495,24 +1495,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "随后，在使用好印象效果卡后，增加好印象30%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "随后，在使用好印象效果卡后，增加好印象50%的数值",
             "isConsumption": false
           }
@@ -1532,29 +1532,29 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "使用这张技能卡后，干劲在6以上时，元气+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "每使用2张A类技能卡时，元气＋7",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "使用这张技能卡后，干劲在6以上时，元气+8",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "每使用2张A类技能卡时，元气＋8",
             "isConsumption": false
           }
@@ -1574,29 +1574,29 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "之后每回合结束时，好印象+1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "费用变为2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "之后每回合结束时，好印象+1",
             "isConsumption": false
           }
@@ -1616,24 +1616,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+4（干劲提升效果1.8倍）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "提升干劲300%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+6（干劲提升效果2倍）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "提升干劲400%的数值",
             "isConsumption": false
           }
@@ -1653,34 +1653,34 @@
         "cost": "1",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象乘以1.1倍",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象乘以1.1倍",
             "isConsumption": false
           }
@@ -1700,44 +1700,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气100%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气120%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           }
@@ -1757,44 +1757,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合，元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "最后一回合时提升元气130%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合，元气+8",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "最后一回合时提升元气130%的数值",
             "isConsumption": false
           }
@@ -1814,7 +1814,7 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
@@ -1824,14 +1824,14 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象10以上时，提升好印象140％的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
@@ -1841,7 +1841,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象10以上时，提升好印象220％的数值",
             "isConsumption": false
           }
@@ -1861,34 +1861,34 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲6以上时，干劲+3",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+8",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲3以上时，干劲+5",
             "isConsumption": false
           }
@@ -1908,12 +1908,12 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
@@ -1925,12 +1925,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+5",
             "isConsumption": false
           },
@@ -1955,34 +1955,34 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           }
@@ -2002,24 +2002,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "干劲3以上时，元气+4",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "干劲3以上时，元气+7",
             "isConsumption": false
           }
@@ -2044,7 +2044,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "此后，回合开始时，若体力在50%以下，提升元气30%的数值",
             "isConsumption": true
           },
@@ -2061,7 +2061,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "此后，回合开始时，若体力在50%以下，提升元气40%的数值",
             "isConsumption": true
           },
@@ -2086,22 +2086,22 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "若好印象不少于1，可以使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "获得最大生命值10%的体力回复",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
@@ -2113,22 +2113,22 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "若好印象不少于1，可以使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "获得最大生命值10%的体力回复",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+10",
             "isConsumption": false
           },
@@ -2153,22 +2153,22 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗7",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象10以上时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           },
@@ -2185,22 +2185,22 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗5",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象10以上时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+4",
             "isConsumption": false
           },
@@ -2230,24 +2230,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（课程中每使用1枚技能卡，元气增加量+5）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（课程中每使用1枚技能卡，元气增加量+8）",
             "isConsumption": false
           }
@@ -2267,24 +2267,24 @@
         "cost": "7",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（训练中每使用一张技能卡，元气增加值+5）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "精力+2（训练中每使用一张技能卡，精力增加值+5）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+2",
             "isConsumption": false
           }
@@ -2304,44 +2304,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗2",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合，元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "此后，使用直接效果增加30精力以上后，提升精力20%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗2",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "下回合，元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "此后，使用直接效果增加30精力以上后，提升精力20%的数值",
             "isConsumption": false
           }
@@ -2361,14 +2361,14 @@
         "cost": "8",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "随后三个回合内，回合结束时，增加元气60%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "随后三个回合内，回合结束时，增加元气80%的数值",
             "isConsumption": false
           }
@@ -2388,14 +2388,14 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象增加量增加100%（3回合）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气消耗-3，好印象增加量+100％（3回合）",
             "isConsumption": false
           }
@@ -2417,14 +2417,14 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+6",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+8",
             "isConsumption": false
           }
@@ -2444,24 +2444,24 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象120%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象160%的数值",
             "isConsumption": false
           }
@@ -2481,24 +2481,24 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "提升干劲250%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "提升干劲350%的数值",
             "isConsumption": false
           }
@@ -2518,34 +2518,34 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气100%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气140%的数值",
             "isConsumption": false
           }
@@ -2567,24 +2567,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+5",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+6",
             "isConsumption": false
           }
@@ -2604,44 +2604,44 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气50%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗4",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气70%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           }
@@ -2661,24 +2661,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "干劲6以上时，元气+3",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "干劲6以上时，元气+5",
             "isConsumption": false
           }
@@ -2698,24 +2698,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（演出中每使用1张技能卡元气+3）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（演出中每使用1张技能卡元气+4）",
             "isConsumption": false
           }
@@ -2735,19 +2735,19 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象190％的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象200％的数值",
             "isConsumption": false
           }
@@ -2767,14 +2767,14 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+6",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "好印象+8",
             "isConsumption": false
           }
@@ -2794,34 +2794,34 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（干劲效果1.5倍计算）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气40％的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力削减.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力削减.png",
             "effect": "消费体力削减1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+2（干劲效果1.5倍计算）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "提升元气50％的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力削减.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力削减.png",
             "effect": "消费体力削减2",
             "isConsumption": false
           }
@@ -2841,24 +2841,24 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/干劲.png",
             "effect": "干劲+3",
             "isConsumption": false
           }
@@ -2878,14 +2878,14 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "此后的2个回合，回合结束时，提升元气50%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "此后的3个回合，回合结束时，提升元气50%的数值",
             "isConsumption": false
           }
@@ -2909,14 +2909,14 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+34",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+48",
             "isConsumption": false
           }
@@ -2936,7 +2936,7 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+2回合",
             "isConsumption": false
           },
@@ -2948,7 +2948,7 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+2回合",
             "isConsumption": false
           },
@@ -2973,29 +2973,29 @@
         "cost": "7",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+14",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "费用变为4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+15",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           }
@@ -3022,7 +3022,7 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+2回合",
             "isConsumption": false
           }
@@ -3042,25 +3042,25 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+4回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+4回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+4回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+5回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+5回合",
             "isConsumption": false
           }
         ],
@@ -3079,7 +3079,7 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗3",
             "isConsumption": true
           },
@@ -3091,12 +3091,12 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力消耗2",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+1",
             "isConsumption": false
           },
@@ -3121,35 +3121,35 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳5回合以上时，提升好调回合数350%的数值",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调5回合以上时，提升好调回合数350%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳5回合以上时，提升好调回合数350%的数值",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调5回合以上时，提升好调回合数350%的数值",
             "isConsumption": false
           }
         ],
@@ -3168,24 +3168,24 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+12",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时，数值+14",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+18",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时，数值+20",
             "isConsumption": false
           }
@@ -3205,14 +3205,14 @@
         "cost": "8",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+9（3次）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+14（3次）",
             "isConsumption": false
           }
@@ -3232,24 +3232,24 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气-4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "增加好调回合数100%的集中",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气-1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "增加好调回合数100%的集中",
             "isConsumption": false
           }
@@ -3269,34 +3269,34 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时可以使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+9",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "提升好调200%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时可以使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+12",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "提升好调300%的数值",
             "isConsumption": false
           }
@@ -3316,34 +3316,34 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中6以上时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中变为1.3倍",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "下回合开始时，数值+9（3次，触发1.5倍集中效果）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中6以上时可使用",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中1.5倍",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "下回合开始时，数值+9（3次，触发1.5倍集中效果）",
             "isConsumption": false
           }
@@ -3363,13 +3363,13 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           },
           {
@@ -3385,13 +3385,13 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+3回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+3回合",
             "isConsumption": false
           },
           {
@@ -3425,7 +3425,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+3",
             "isConsumption": false
           },
@@ -3442,12 +3442,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力减少.png",
             "effect": "消费体力减少1回合",
             "isConsumption": false
           },
@@ -3472,24 +3472,24 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+8(2次)",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中3以上时，集中+2",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+10(2次)",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中3以上时，集中+4",
             "isConsumption": false
           }
@@ -3509,29 +3509,29 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气-3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "提升好调回合数1100%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调变为0",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "提升好调回合数1100%的数值",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调变为0",
             "isConsumption": false
           }
@@ -3551,29 +3551,29 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+7（2次）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中6以上时，数值+7",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "费用变为3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+9（2次）",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中6以上时，数值+9",
             "isConsumption": false
           }
@@ -3593,44 +3593,44 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+4回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调4回合以上时，下回合，技能卡使用数+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调12回合以上时，2回合后技能卡使用数+1",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+4回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调4回合以上时，下回合，技能卡使用数+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调12回合以上时，2回合后技能卡使用数+1",
             "isConsumption": false
           }
@@ -3650,24 +3650,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "消耗6体力",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "此后，使用直接效果，集中增加7以上时，数值+12（集中效果1.5倍加成）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "消耗3体力",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "此后，使用直接效果，集中增加7以上时，数值+12（集中效果1.5倍加成）",
             "isConsumption": false
           }
@@ -3692,7 +3692,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
@@ -3714,7 +3714,7 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+5回合",
             "isConsumption": false
           },
@@ -3744,29 +3744,29 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力回复4",
             "isConsumption": true
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "费用变为3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力回复5",
             "isConsumption": true
           }
@@ -3791,12 +3791,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力减少.png",
             "effect": "消费体力减少+2",
             "isConsumption": false
           }
@@ -3808,12 +3808,12 @@
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+5回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/消费体力减少.png",
             "effect": "消费体力减少+2",
             "isConsumption": false
           }
@@ -3833,14 +3833,14 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "数值+7（集中效果2倍适用）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "数值+17（集中效果2倍适用）",
             "isConsumption": false
           },
@@ -3865,24 +3865,24 @@
         "cost": "7",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "此后，每回合开始时，好调+2回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "此后，每回合开始时，好调+2回合",
             "isConsumption": false
           }
@@ -3902,17 +3902,17 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "好调消耗2回合",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "3回合后，好调+5回合",
             "isConsumption": false
           },
@@ -3924,17 +3924,17 @@
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "好调消耗2回合",
             "isConsumption": true
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "3回合后，好调+7回合",
             "isConsumption": false
           },
@@ -3961,24 +3961,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+18",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+25",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+4回合",
             "isConsumption": false
           }
@@ -3998,29 +3998,29 @@
         "cost": "5",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+12",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中3以上时，数值+12",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "费用更改为2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+12",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中3以上时，数值+12",
             "isConsumption": false
           }
@@ -4040,24 +4040,24 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时，集中+3",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+6",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调状态时，集中+4",
             "isConsumption": false
           }
@@ -4077,14 +4077,14 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "数值+17（集中效果2倍适用）",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "数值+24（集中效果2.5倍适用）",
             "isConsumption": false
           }
@@ -4104,24 +4104,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+10",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+4",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+12",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           }
@@ -4143,14 +4143,14 @@
         "cost": "3",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+17",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+25",
             "isConsumption": false
           }
@@ -4170,24 +4170,24 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+3",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+7",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+5",
             "isConsumption": false
           }
@@ -4207,19 +4207,19 @@
         "cost": "6",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+10",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中6以上时，数值+10",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+12（2次）",
             "isConsumption": false
           }
@@ -4239,34 +4239,34 @@
         "cost": "0",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+1",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力回复2",
             "isConsumption": true
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/数值.png",
             "effect": "数值+3",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+4",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/体力.png",
             "effect": "体力回复2",
             "isConsumption": true
           }
@@ -4286,25 +4286,25 @@
         "cost": "4",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+3回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调+4回合",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           }
         ],
@@ -4323,14 +4323,14 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象200%的数值",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好印象.png",
             "effect": "提升好印象250%的数值",
             "isConsumption": false
           }
@@ -4350,25 +4350,25 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+2回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+2回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/元气.png",
             "effect": "元气+5",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png",
-            "effect": "状态绝佳+3回合",
+            "icon": "https://283pro.site/shinycolors/游戏图标/绝好调.png",
+            "effect": "绝好调+3回合",
             "isConsumption": false
           }
         ],
@@ -4387,24 +4387,24 @@
         "cost": "2",
         "effectEntries": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调2回合",
             "isConsumption": false
           }
         ],
         "effectEntriesEnhanced": [
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/集中.png",
             "effect": "集中+2",
             "isConsumption": false
           },
           {
-            "icon": "https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png",
+            "icon": "https://283pro.site/shinycolors/游戏图标/好调.png",
             "effect": "好调3回合",
             "isConsumption": false
           }

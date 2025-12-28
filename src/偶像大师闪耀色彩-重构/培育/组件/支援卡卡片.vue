@@ -75,7 +75,7 @@ function handleClick() {
 
 function onImageError(e: Event) {
   const img = e.target as HTMLImageElement;
-  img.src = 'https://via.placeholder.com/200x280?text=No+Image';
+  img.src = 'https://placehold.co/200x280?text=No+Image';
 }
 </script>
 

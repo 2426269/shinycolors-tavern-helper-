@@ -28,9 +28,9 @@ export interface CardAttribute {
  */
 export function getAttributeIcon(attributeType: AttributeType): string {
   const iconMap = {
-    理性: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/理性.png',
-    感性: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/感性.png',
-    非凡: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/非凡.png',
+    理性: 'https://283pro.site/shinycolors/游戏图标/理性.png',
+    感性: 'https://283pro.site/shinycolors/游戏图标/感性.png',
+    非凡: 'https://283pro.site/shinycolors/游戏图标/非凡.png',
   };
   return iconMap[attributeType];
 }
@@ -40,12 +40,12 @@ export function getAttributeIcon(attributeType: AttributeType): string {
  */
 export function getStyleIcon(style: RecommendedStyle): string {
   const iconMap = {
-    好调: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png',
-    集中: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png',
-    好印象: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png',
-    干劲: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png',
-    全力: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力.png',
-    坚决: 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/坚决.png',
+    好调: 'https://283pro.site/shinycolors/游戏图标/好调.png',
+    集中: 'https://283pro.site/shinycolors/游戏图标/集中.png',
+    好印象: 'https://283pro.site/shinycolors/游戏图标/好印象.png',
+    干劲: 'https://283pro.site/shinycolors/游戏图标/干劲.png',
+    全力: 'https://283pro.site/shinycolors/游戏图标/全力.png',
+    坚决: 'https://283pro.site/shinycolors/游戏图标/坚决.png',
   };
   return iconMap[style];
 }

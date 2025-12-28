@@ -69,11 +69,11 @@ export class ExampleCardSelector {
   } {
     switch (rarity) {
       case 'UR':
-        // UR特殊策略：10张SSR，告诉AI必须比这些更强
+        // UR策略：3张相应计划的UR卡 + 7张角色专属SSR卡
         return {
-          mainCount: 10,
-          lowerRarity: 'SSR', // 实际上是"示例"而非"低稀有度"
-          lowerCount: 10,
+          mainCount: 3, // 从技能卡库抽取UR
+          lowerRarity: 'SSR',
+          lowerCount: 7, // 从角色专属库抽取SSR
           higherRarity: null,
           higherCount: 0,
         };
@@ -133,6 +133,29 @@ export class ExampleCardSelector {
   private static randomSample<T>(pool: T[], count: number): T[] {
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, Math.min(count, shuffled.length));
+  }
+
+  /**
+   * 从技能卡库抽取（用于UR卡）
+   * @param rarity 稀有度
+   * @param plan 培育计划
+   * @returns 过滤后的技能卡列表
+   */
+  private static filterCardsFromSkillLib(rarity: SkillCardRarity, plan?: ProducePlan): SkillCard[] {
+    const library = SKILL_CARD_LIBRARY as unknown as Record<string, Record<string, SkillCard[]>>;
+    if (plan && library[plan]?.[rarity]) {
+      console.log(`📊 从技能卡库抽取 ${library[plan][rarity].length} 张 ${plan} ${rarity} 卡`);
+      return [...library[plan][rarity]];
+    }
+    // 无指定计划则返回所有
+    const result: SkillCard[] = [];
+    for (const planData of Object.values(library)) {
+      if (planData[rarity]) {
+        result.push(...planData[rarity]);
+      }
+    }
+    console.log(`📊 从技能卡库抽取 ${result.length} 张 ${rarity} 卡（所有计划）`);
+    return result;
   }
 
   /**
@@ -212,11 +235,17 @@ export class ExampleCardSelector {
     let lowerRarityCards: SkillCard[] = [];
     let higherRarityCards: SkillCard[] = [];
 
-    // UR特殊处理
+    // UR特殊处理：3张UR（从技能卡库）+ 7张SSR（从角色专属库）
     if (targetRarity === 'UR') {
+      // 从技能卡库抽取UR卡作为设计参考
+      const urPool = this.filterCardsFromSkillLib('UR', targetPlan);
+      exampleCards = this.randomSample(urPool, strategy.mainCount);
+      console.log(`📊 [UR生成] 抽取 ${exampleCards.length} 张UR卡作为设计参考`);
+
+      // 从角色专属库抽取SSR卡供超越
       const ssrPool = this.filterCards('SSR', targetPlan, targetAttribute);
-      exampleCards = this.randomSample(ssrPool, strategy.lowerCount);
-      console.log(`📊 [UR生成] 抽取 ${exampleCards.length} 张SSR卡作为强度参考（需超越这些卡）`);
+      lowerRarityCards = this.randomSample(ssrPool, strategy.lowerCount);
+      console.log(`📊 [UR生成] 抽取 ${lowerRarityCards.length} 张SSR卡（需超越这些卡）`);
     } else {
       // 抽取主示例卡
       const mainPool = this.filterCards(targetRarity, targetPlan, targetAttribute);
@@ -256,12 +285,16 @@ export class ExampleCardSelector {
 
     // UR特殊说明
     if (targetRarity === 'UR') {
-      markdown += `## ⚠️ UR卡设计要求\n`;
-      markdown += `以下是 **10张SSR卡**，你设计的UR卡**必须在所有方面超越这些SSR卡**：\n`;
+      markdown += `## 🌟 UR卡设计要求\n`;
+      markdown += `以下是当前培育计划的**官方UR卡（传说级）**，请严格遵循其强度和设计风格：\n\n`;
+      markdown += this.formatCardTable(result.exampleCards, 'UR级示例（设计参考）');
+      markdown += '\n';
+      markdown += `---\n\n`;
+      markdown += `以下是 **SSR卡**，你设计的UR卡**必须全面超越**这些卡：\n`;
       markdown += `- 更高的效果数值\n`;
       markdown += `- 更独特的机制\n`;
       markdown += `- 更强的培育计划协同性\n\n`;
-      markdown += this.formatCardTable(result.exampleCards, 'SSR参考（必须超越）');
+      markdown += this.formatCardTable(result.lowerRarityCards, 'SSR参考（必须超越）');
       return markdown;
     }
 

@@ -4,10 +4,12 @@
  */
 
 import { z } from 'zod';
+import { mechanicRegistry } from '../战斗/引擎-NG/MechanicRegistry';
+import type { FlowDef, MechanicDef } from '../战斗/引擎-NG/types';
 import type { ProducePlan, SkillCard, SkillCardRarity } from '../战斗/类型/技能卡类型';
 import { MessageService } from '../通信/消息服务';
-import { ChainOfThoughtManager } from './思维链区';
-import { PromptManager, type PromptVariables } from './提示词区';
+import { ChainOfThoughtManager, ChainOfThoughtMode } from './思维链区';
+import { PromptManager, PromptMode, type PromptVariables } from './提示词区';
 import { getFullMechanicExplanation, getProducePlanMechanicMarkdown } from './游戏机制数据库';
 import { ExampleCardSelector, type ExampleCardConfig } from './示例卡抽取区';
 
@@ -69,6 +71,32 @@ export interface SkillCardGenerationOptions {
   cardImageUrl?: string;
   /** 觉醒卡面图片 URL（可选，多模态 AI 可用） */
   awakenedImageUrl?: string;
+}
+
+/**
+ * 流派生成选项
+ */
+export interface FlowGenerationOptions {
+  /** 用户输入的灵感描述 */
+  userDescription: string;
+  /** 倾向的培育计划 */
+  producePlan: ProducePlan;
+}
+
+/**
+ * 流派配套卡生成选项
+ */
+export interface FlowCardGenerationOptions {
+  /** 角色名称 */
+  characterName: string;
+  /** 卡牌稀有度 */
+  rarity: SkillCardRarity;
+  /** 角色定位 */
+  rolePosition: string;
+  /** 流派定义 */
+  flowDef: FlowDef;
+  /** 是否流式输出 */
+  streaming?: boolean;
 }
 
 /**
@@ -134,9 +162,9 @@ const AIGeneratedSkillCardSchema = z.object({
   cost: z.string(),
   producePlan: z.enum(['感性', '理性', '非凡', '自由']),
 
-  // 词条式效果（必须是非空数组）
+  // 词条式效果（effectEntries 必须非空，effectEntriesEnhanced 对 UR 卡可选）
   effectEntries: z.array(EffectEntrySchema).min(1, '效果词条不能为空数组'),
-  effectEntriesEnhanced: z.array(EffectEntrySchema).min(1, '强化效果词条不能为空数组'),
+  effectEntriesEnhanced: z.array(EffectEntrySchema).optional(), // UR 卡不可强化，无此字段
 
   // 条件效果（可选，但如果提供则必须是数组）
   conditionalEffects: z.array(ConditionalEffectEntrySchema).optional().default([]),
@@ -576,14 +604,14 @@ export class AIGenerationAssistant {
 
         // 检查是否缺少词条式格式字段
         const hasOldFormat = skillCard.effect && skillCard.effectEnhanced;
-        const hasNewFormat = skillCard.effectEntries && skillCard.effectEntriesEnhanced;
+        const hasEffectEntries = skillCard.effectEntries && skillCard.effectEntries.length > 0;
 
         let hint = '';
-        if (hasOldFormat && !hasNewFormat) {
+        if (hasOldFormat && !hasEffectEntries) {
           hint =
-            '\n\n⚠️ 检测到旧格式输出！AI使用了 "effect" 和 "effectEnhanced" 字段，但新格式需要 "effectEntries" 和 "effectEntriesEnhanced" 数组。';
-        } else if (!hasNewFormat) {
-          hint = '\n\n⚠️ 缺少必需的词条式格式字段："effectEntries" 和 "effectEntriesEnhanced"。';
+            '\n\n⚠️ 检测到旧格式输出！AI使用了 "effect" 和 "effectEnhanced" 字段，但新格式需要 "effectEntries" 数组。';
+        } else if (!hasEffectEntries) {
+          hint = '\n\n⚠️ 缺少必需的词条式格式字段："effectEntries"。（UR 卡无需 effectEntriesEnhanced）';
         }
 
         throw new Error(`技能卡格式验证失败:\n${errorMessages}${hint}`);
@@ -742,6 +770,122 @@ export class AIGenerationAssistant {
   }
 
   /**
+   * 生成新流派 (P-Lab)
+   */
+  async generateFlow(
+    options: FlowGenerationOptions,
+  ): Promise<{ success: boolean; flow?: FlowDef; mechanics?: MechanicDef[]; error?: string; rawOutput?: string }> {
+    console.log('🎨 开始生成新流派...', options);
+
+    let rawOutput = '';
+
+    try {
+      // 1. 获取游戏机制说明
+      const { getAllProducePlanMechanicsMarkdown, getEffectCategoriesMarkdown } = await import('./游戏机制数据库');
+      const producePlanMechanics = getAllProducePlanMechanicsMarkdown();
+      const effectCategories = getEffectCategoriesMarkdown();
+
+      // 2. 组装提示词
+      const chainOfThought = ChainOfThoughtManager.getChain(ChainOfThoughtMode.STYLE_DESIGN);
+      const promptVariables: PromptVariables = {
+        userDescription: options.userDescription,
+        producePlan: options.producePlan,
+        producePlanMechanic: producePlanMechanics,
+        existingMechanics: effectCategories,
+      };
+      const promptFramework = PromptManager.getPrompt(PromptMode.STYLE_DESIGN, promptVariables);
+
+      const systemPrompt = `# 流派设计思维链\n\n${chainOfThought}\n\n# 流派设计要求\n\n${promptFramework}`;
+
+      // 3. 调用 AI
+      rawOutput = await this.callAI('System', 'FlowDesigner', systemPrompt, true);
+
+      // 4. 解析 JSON
+      const jsonMatch = rawOutput.match(/```json\s*([\s\S]*?)\s*```/) || rawOutput.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('无法解析 AI 输出的 JSON');
+
+      const data = JSON.parse(jsonMatch[1] || jsonMatch[0]);
+
+      // 5. 简单验证
+      if (!data.flow || !data.mechanics) throw new Error('返回数据缺少 flow 或 mechanics 字段');
+
+      return {
+        success: true,
+        flow: data.flow as FlowDef,
+        mechanics: data.mechanics as MechanicDef[],
+        rawOutput,
+      };
+    } catch (error) {
+      console.error('❌ 流派生成失败:', error);
+      return { success: false, error: String(error), rawOutput };
+    }
+  }
+
+  /**
+   * 生成流派配套卡 (P-Lab)
+   */
+  async generateFlowCard(options: FlowCardGenerationOptions): Promise<GenerationResult> {
+    console.log('🎨 开始生成流派配套卡...', options.characterName);
+
+    try {
+      // 1. 准备上下文
+      const existingMechanicsMd = mechanicRegistry.toPromptMarkdown(options.flowDef.id);
+
+      // 2. 组装提示词
+      const chainOfThought = ChainOfThoughtManager.getChain(ChainOfThoughtMode.FLOW_CARD_GEN);
+      const promptVariables: PromptVariables = {
+        characterName: options.characterName,
+        rarity: options.rarity,
+        rolePosition: options.rolePosition,
+        theme: options.flowDef.nameCN,
+        flowDefJson: JSON.stringify(options.flowDef, null, 2),
+        existingMechanics: existingMechanicsMd,
+      };
+      const promptFramework = PromptManager.getPrompt(PromptMode.FLOW_CARD_GEN, promptVariables);
+
+      const systemPrompt = `# 配套卡生成思维链\n\n${chainOfThought}\n\n# 生成要求\n\n${promptFramework}`;
+
+      // 3. 调用 AI
+      const aiOutput = await this.callAI(options.characterName, undefined, systemPrompt, options.streaming ?? true);
+
+      // 4. 解析与转换
+      // 复用现有的解析逻辑，但需要适配 engine_data
+      const jsonMatch = aiOutput.match(/```json\s*([\s\S]*?)\s*```/) || aiOutput.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('无法解析 JSON');
+
+      const aiCard = JSON.parse(jsonMatch[1] || jsonMatch[0]);
+
+      // 构造 SkillCard
+      const skillCard: SkillCard = {
+        id: `plab_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
+        name: aiCard.display.name,
+        rarity: options.rarity,
+        plan: options.flowDef.plan === 'mixed' ? '感性' : options.flowDef.plan, // 兜底
+        cardType: 'A', // 默认为主动，具体看 engine_data
+        cost: aiCard.engine_data?.cost?.genki ? `体力消耗${aiCard.engine_data.cost.genki}` : '无消耗',
+
+        // 兼容字段
+        effect_before: aiCard.display.description,
+        effect_after: aiCard.display.description,
+        effectEntries: [],
+
+        // 新字段
+        flowRefs: aiCard.flowRefs,
+        mechanicRefs: aiCard.mechanicRefs,
+        // 注意：这里需要把 engine_data 存下来，但 SkillCard 接口目前可能还没完全适配 engine_data 的存储
+        // 暂时存到 legacy_effects 或扩展 SkillCard 接口
+        // 假设 SkillCardV2 已经生效，我们强行断言
+        ...aiCard,
+      };
+
+      return { success: true, skillCard, rawOutput: aiOutput };
+    } catch (error) {
+      console.error('❌ 配套卡生成失败:', error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  /**
    * 获取助手状态
    */
   getStatus(): {
@@ -782,4 +926,18 @@ export async function generateSkillCard(options: SkillCardGenerationOptions): Pr
 export async function batchGenerateSkillCards(optionsList: SkillCardGenerationOptions[]): Promise<GenerationResult[]> {
   const assistant = getAIAssistant();
   return await assistant.batchGenerateSkillCards(optionsList);
+}
+
+/**
+ * 快捷函数：生成新流派
+ */
+export async function generateFlow(options: FlowGenerationOptions) {
+  return await getAIAssistant().generateFlow(options);
+}
+
+/**
+ * 快捷函数：生成流派配套卡
+ */
+export async function generateFlowCard(options: FlowCardGenerationOptions) {
+  return await getAIAssistant().generateFlowCard(options);
 }

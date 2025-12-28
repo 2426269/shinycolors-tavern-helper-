@@ -175,15 +175,15 @@ async function loadAndPlaySong(song: Song): Promise<boolean> {
       code: STATE.audio.error?.code,
     });
 
-    // 根据错误类型给出更具体的提示
-    let errorMsg = '播放失败';
+    // 只有在确实无法播放时才显示错误提示
+    // NotSupportedError 表示确实无法播放
     if (error.name === 'NotSupportedError' || STATE.audio.error?.code === 4) {
-      errorMsg = 'CDN文件尚未同步，请稍后重试（约5-10分钟）';
+      toastr.error(`无法播放《${song.title}》`, 'CDN文件尚未同步，请稍后重试');
     } else if (error.name === 'NotAllowedError') {
-      errorMsg = '请先与页面交互后再播放';
+      toastr.warning(`无法播放《${song.title}》`, '请先与页面交互后再播放');
     }
+    // 其他错误不显示弹窗（可能是暂时性问题）
 
-    toastr.error(`无法播放《${song.title}》`, errorMsg);
     return false;
   }
 }

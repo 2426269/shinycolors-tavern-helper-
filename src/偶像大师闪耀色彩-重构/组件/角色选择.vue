@@ -67,11 +67,7 @@
 
             <!-- 体力 -->
             <div class="stamina-display">
-              <img
-                src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png"
-                alt="体力"
-                class="stat-icon"
-              />
+              <img src="https://283pro.site/shinycolors/游戏图标/体力.png" alt="体力" class="stat-icon" />
               <span class="stamina-value">{{ currentCard.attribute?.stamina || 30 }}</span>
             </div>
 
@@ -82,11 +78,7 @@
                   <span class="grade">{{ getGrade(currentCard.attribute?.stats.vocal || 0) }}</span>
                 </div>
                 <div class="stat-bottom">
-                  <img
-                    src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Vocal.png"
-                    alt="Vo"
-                    class="dimension-icon"
-                  />
+                  <img src="https://283pro.site/shinycolors/游戏图标/Vocal.png" alt="Vo" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.vocal || 0 }}</span>
                 </div>
               </div>
@@ -96,11 +88,7 @@
                   <span class="grade">{{ getGrade(currentCard.attribute?.stats.dance || 0) }}</span>
                 </div>
                 <div class="stat-bottom">
-                  <img
-                    src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Dance.png"
-                    alt="Da"
-                    class="dimension-icon"
-                  />
+                  <img src="https://283pro.site/shinycolors/游戏图标/Dance.png" alt="Da" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.dance || 0 }}</span>
                 </div>
               </div>
@@ -110,11 +98,7 @@
                   <span class="grade">{{ getGrade(currentCard.attribute?.stats.visual || 0) }}</span>
                 </div>
                 <div class="stat-bottom">
-                  <img
-                    src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Visual.png"
-                    alt="Vi"
-                    class="dimension-icon"
-                  />
+                  <img src="https://283pro.site/shinycolors/游戏图标/Visual.png" alt="Vi" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.visual || 0 }}</span>
                 </div>
               </div>
@@ -260,12 +244,14 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue';
+
 import type { GachaData } from '../../偶像大师闪耀色彩/utils/game-data';
 import { getGachaData } from '../../偶像大师闪耀色彩/utils/game-data';
 import { ALL_CARDS } from '../卡牌管理/全部卡牌数据';
 import { getCardAttribute } from '../卡牌管理/卡牌属性';
 import { buildUrlFromFileName } from '../工具/卡牌工具';
 import { getAttributeIcon } from '../类型/卡牌属性类型';
+import { SPINE_CHARACTERS } from '../角色管理/spine资源映射';
 import { getAllUnits, IDOLS } from '../角色管理/角色数据';
 
 const emit = defineEmits<{
@@ -314,6 +300,23 @@ onMounted(async () => {
       if (ownedCards[cardId]) {
         const attribute = getCardAttribute(card.fullName);
 
+        // 查找对应的 Spine ID
+        let spineId = '';
+        const spineChar = SPINE_CHARACTERS.find(c => c.chineseName === card.character);
+        if (spineChar) {
+          // 尝试通过 enzaId 匹配
+          const spineCard = spineChar.cards.find(c => c.enzaId === (card.enzaId || ''));
+          if (spineCard) {
+            spineId = `${spineChar.japaneseName}_${spineCard.name}`;
+          } else {
+            // 尝试通过主题匹配
+            const spineCardByTheme = spineChar.cards.find(c => c.displayName === card.theme);
+            if (spineCardByTheme) {
+              spineId = `${spineChar.japaneseName}_${spineCardByTheme.name}`;
+            }
+          }
+        }
+
         cards.push({
           id: cardId,
           fullName: card.fullName,
@@ -324,15 +327,12 @@ onMounted(async () => {
           imageUrl: buildUrlFromFileName(card.baseImage, false),
           obtainedAt: ownedCards[cardId].obtainedAt,
           attribute,
+          spineId, // 添加正确的 Spine ID
         });
       }
     }
 
-    cards.sort((a, b) => {
-      const timeA = new Date(a.obtainedAt).getTime();
-      const timeB = new Date(b.obtainedAt).getTime();
-      return timeB - timeA;
-    });
+    // 不在这里排序，让 filteredCardsList 的排序逻辑来处理
 
     ownedCardsList.value = cards;
     console.log('已拥有的卡片列表:', cards);
@@ -380,12 +380,14 @@ watch(currentIndex, newIndex => {
   }
 });
 
-// 当前显示的卡片
+// 当前显示的卡片（使用筛选后的列表）
 const currentCard = computed(() => {
-  if (ownedCardsList.value.length === 0) {
+  if (filteredCardsList.value.length === 0) {
     return null;
   }
-  return ownedCardsList.value[currentIndex.value];
+  // 确保 currentIndex 在有效范围内
+  const safeIndex = Math.min(currentIndex.value, filteredCardsList.value.length - 1);
+  return filteredCardsList.value[safeIndex];
 });
 
 // 当前角色的好感度（一个角色的所有卡片共享好感度，0-10等级）
@@ -558,7 +560,8 @@ const cycleSortMode = () => {
 // 选择卡片
 const selectCard = (card: any, index: number) => {
   selectedCardId.value = card.id;
-  currentIndex.value = ownedCardsList.value.findIndex(c => c.id === card.id);
+  // 使用在筛选列表中的索引
+  currentIndex.value = index;
   scrollToCard(index);
 };
 
@@ -647,7 +650,7 @@ const showDetail = () => {
 // 图片加载失败处理
 const onImageError = (e: Event) => {
   const img = e.target as HTMLImageElement;
-  img.src = 'https://via.placeholder.com/512x724?text=No+Image';
+  img.src = 'https://placehold.co/512x724?text=No+Image';
 };
 
 // 键盘导航

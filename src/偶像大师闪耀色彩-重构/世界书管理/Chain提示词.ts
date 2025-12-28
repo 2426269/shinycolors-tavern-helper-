@@ -124,7 +124,7 @@ export const CHAIN_STICKERS = [
 /**
  * 贴纸服务器地址
  */
-export const STICKER_BASE_URL = 'http://124.221.50.133/shinycolors/sticker/';
+export const STICKER_BASE_URL = 'https://283pro.site/shinycolors/sticker/';
 
 /**
  * 获取贴纸完整 URL（正确编码方括号和中文）

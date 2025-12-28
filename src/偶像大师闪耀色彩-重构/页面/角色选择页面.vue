@@ -117,7 +117,7 @@ import { getSpineId, SPINE_CHARACTERS, type CharacterSpineData, type SpineCard }
 import { IDOLS } from '../角色管理/角色数据';
 
 // CDN头像路径
-const CDN_BASE = 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main';
+const CDN_BASE = 'https://283pro.site/shinycolors';
 
 // Props
 const props = defineProps<{

@@ -1,11 +1,11 @@
 /**
  * Chain 应用图片资源映射
- * 服务器: http://124.221.50.133/shinycolors/chain/
+ * 服务器: https://283pro.site/shinycolors/twesta头像/
  *
  * 偶像数据来源: 角色管理/角色数据.ts
  */
 
-const CHAIN_CDN_BASE = 'http://124.221.50.133/shinycolors/chain';
+const CHAIN_CDN_BASE = 'https://283pro.site/shinycolors/twesta头像';
 
 // 偶像英文名（文件名用）到中文名的映射
 // 注意：Chain 图片文件名使用 PascalCase，如 SfpChainIcon_Mano.webp

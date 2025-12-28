@@ -5,7 +5,7 @@
 
 // ==================== 服务器配置 ====================
 
-const TWESTA_BASE_URL = 'http://124.221.50.133/shinycolors';
+const TWESTA_BASE_URL = 'https://283pro.site/shinycolors';
 const TWESTA_AVATAR_PATH = 'twesta头像';
 const TWESTA_IMAGE_PATH = 'Shiny_Prism_Twesta';
 

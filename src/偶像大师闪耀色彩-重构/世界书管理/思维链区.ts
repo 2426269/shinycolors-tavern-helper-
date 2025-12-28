@@ -27,6 +27,12 @@ export enum ChainOfThoughtMode {
   TWESTA_IMAGE_POST = 'twesta_image_post',
   /** Twesta 节奏事件模式 */
   TWESTA_DRAMA_EVENT = 'twesta_drama_event',
+
+  // P-Lab 模式
+  /** 流派设计模式 */
+  STYLE_DESIGN = 'style_design',
+  /** 流派配套卡生成模式 */
+  FLOW_CARD_GEN = 'flow_card_gen',
 }
 
 /**
@@ -67,6 +73,11 @@ export class ChainOfThoughtManager {
 - type字段是否为"主动"或"精神"？
 - effectEntries 数组非空？
 - 所有 effect 字段纯中文？
+
+## 7. （可选）engine_data 设计
+- 如果输出 engine_data，构建 logic_chain
+- 持续效果用 REGISTER_HOOK
+- 创造新机制用 ADD_TAG + visuals
 </think>
 
 以下是生成的技能卡JSON：
@@ -212,6 +223,69 @@ export class ChainOfThoughtManager {
   }
 
   /**
+   * 流派设计模式思维链
+   */
+  static getStyleDesignChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 灵感解析
+- 用户想要什么样的流派？（关键词：病娇、负面、星空、机械...）
+- 这个流派最适合哪种培育计划？（感性/理性/非凡）
+- 核心体验是什么？（高风险高回报 / 稳扎稳打 / 资源循环）
+
+## 2. 核心机制构思
+- 需要发明什么新机制（Tag）吗？
+- 机制的运作逻辑：
+  - 触发条件（如：体力<30%）
+  - 效果（如：得分倍率提升）
+  - 视觉表现（图标、颜色）
+
+## 3. 体系规划
+- 核心资源是什么？（好调/集中/好印象/体力/新资源）
+- 典型的战斗节奏是怎样的？（铺垫 -> 爆发 -> 收尾）
+- 适合哪些角色担当 Center？
+
+## 4. 输出检查
+- FlowDef 结构完整？
+- MechanicDef 定义清晰？
+- 视觉主题是否契合？
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
+   * 流派配套卡生成模式思维链
+   */
+  static getFlowCardGenChain(): string {
+    return `[Chain of thought]
+<think>
+## 1. 流派理解
+- 当前流派（FlowDef）的核心机制是什么？
+- 关键 Tag 和资源是什么？
+- 视觉主题颜色和图标？
+
+## 2. 角色定位
+- 当前角色在流派中扮演什么位置？（Center核心 / 启动器 / 资源工 / 挂件）
+- 稀有度要求？（UR/SSR/SR/R）
+- 角色性格如何融入技能描述？
+
+## 3. 技能设计
+- 必须引用流派的核心机制（flowRefs / mechanicRefs）
+- UR/SSR：设计复杂的联动效果（Hook / 条件判断）
+- SR/R：设计扎实的基础效果（数值 / 资源）
+- 视觉提示：如果是新机制，确保 visuals 字段正确
+
+## 4. 格式检查
+- engine_data 逻辑闭环？
+- flowRefs 正确指向当前流派？
+- display 描述符合角色口吻？
+</think>
+[/Chain of thought]
+`;
+  }
+
+  /**
    * 获取指定模式的思维链（优先使用自定义格式）
    */
   static getChain(mode: ChainOfThoughtMode): string {
@@ -248,6 +322,11 @@ export class ChainOfThoughtManager {
         return `[Chain of thought]\n<think>\n看图说话: 以偶像视角自然描述\n营业模式配文\n</think>\n[/Chain of thought]`;
       case ChainOfThoughtMode.TWESTA_DRAMA_EVENT:
         return `[Chain of thought]\n<think>\n节奏事件: 剧情发展与用户行动\n保持平衡性\n</think>\n[/Chain of thought]`;
+      // P-Lab 模式
+      case ChainOfThoughtMode.STYLE_DESIGN:
+        return this.getStyleDesignChain();
+      case ChainOfThoughtMode.FLOW_CARD_GEN:
+        return this.getFlowCardGenChain();
       default:
         console.error(`❌ 未知的思维链模式: ${mode}`);
         return '';
@@ -289,6 +368,9 @@ export class ChainOfThoughtManager {
       [ChainOfThoughtMode.TWESTA_COMMENT]: 'Twesta评论思维链',
       [ChainOfThoughtMode.TWESTA_IMAGE_POST]: 'Twesta看图说话思维链',
       [ChainOfThoughtMode.TWESTA_DRAMA_EVENT]: 'Twesta节奏事件思维链',
+      // P-Lab
+      [ChainOfThoughtMode.STYLE_DESIGN]: '流派设计思维链',
+      [ChainOfThoughtMode.FLOW_CARD_GEN]: '流派配套卡生成思维链',
     };
     return modeNames[mode] || '未知模式思维链';
   }

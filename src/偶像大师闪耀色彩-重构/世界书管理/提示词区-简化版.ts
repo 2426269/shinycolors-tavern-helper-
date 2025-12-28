@@ -69,17 +69,17 @@ export class PromptManagerSimplified {
 
 | 效果类型 | 图标URL |
 |---------|---------|
-| 数值 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/数值.png\` |
-| 元气 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/元气.png\` |
-| 干劲 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/干劲.png\` |
-| 好印象 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好印象.png\` |
-| 集中 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/集中.png\` |
-| 全力值 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/全力值.png\` |
-| 好调 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/好调.png\` |
-| 绝好调 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/绝好调.png\` |
-| 强气 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/强气.png\` |
-| 温存 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/温存.png\` |
-| 消费体力减少 | \`https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/消费体力减少.png\` |
+| 数值 | \`https://283pro.site/shinycolors/游戏图标/数值.png\` |
+| 元气 | \`https://283pro.site/shinycolors/游戏图标/元气.png\` |
+| 干劲 | \`https://283pro.site/shinycolors/游戏图标/干劲.png\` |
+| 好印象 | \`https://283pro.site/shinycolors/游戏图标/好印象.png\` |
+| 集中 | \`https://283pro.site/shinycolors/游戏图标/集中.png\` |
+| 全力值 | \`https://283pro.site/shinycolors/游戏图标/全力值.png\` |
+| 好调 | \`https://283pro.site/shinycolors/游戏图标/好调.png\` |
+| 绝好调 | \`https://283pro.site/shinycolors/游戏图标/绝好调.png\` |
+| 强气 | \`https://283pro.site/shinycolors/游戏图标/强气.png\` |
+| 温存 | \`https://283pro.site/shinycolors/游戏图标/温存.png\` |
+| 消费体力减少 | \`https://283pro.site/shinycolors/游戏图标/消费体力减少.png\` |
 | 抽卡/条件等 | \`""\`（空字符串） |
 
 ---

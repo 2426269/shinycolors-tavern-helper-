@@ -1,5 +1,8 @@
 <template>
   <div class="produce-main-page">
+    <!-- 背景图层（基于时间切换） -->
+    <div class="background-image-layer" :style="{ backgroundImage: `url(${backgroundImageUrl})` }"></div>
+
     <!-- Spine背景层（固定，与其他UI不在同一图层） -->
     <div class="spine-background-layer">
       <SpinePlayer v-if="idol?.spineUrl" :idol-id="idol.spineUrl" costume="normal" class="spine-player" />
@@ -36,7 +39,7 @@
             </div>
             <div class="hp-info">
               <img
-                src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png"
+                src="https://283pro.site/shinycolors/游戏图标/体力.png"
                 alt="体力"
                 class="hp-icon"
               />
@@ -87,7 +90,7 @@
           </div>
           <div class="stat-details">
             <img
-              src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Vocal.png"
+              src="https://283pro.site/shinycolors/游戏图标/Vocal.png"
               alt="Vo"
               class="stat-icon"
             />
@@ -126,7 +129,7 @@
           </div>
           <div class="stat-details">
             <img
-              src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Dance.png"
+              src="https://283pro.site/shinycolors/游戏图标/Dance.png"
               alt="Da"
               class="stat-icon"
             />
@@ -165,7 +168,7 @@
           </div>
           <div class="stat-details">
             <img
-              src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Visual.png"
+              src="https://283pro.site/shinycolors/游戏图标/Visual.png"
               alt="Vi"
               class="stat-icon"
             />
@@ -257,11 +260,39 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import PhoneContainer from '../../手机/组件/PhoneContainer.vue';
 import Calendar from '../../时间/组件/Calendar.vue';
 import SpinePlayer from '../../组件/Spine播放器.vue';
 import { getGrade, getGradeProgress } from '../服务/GradeService';
+
+// 背景图 URL 基础路径
+const BACKGROUND_BASE_URL = 'https://283pro.site/shinycolors/background';
+
+// 获取基于时间的背景图ID（白天=00014练习室，夜晚=00021夜间练习室）
+function getTimeBasedBackgroundId(): string {
+  const hour = new Date().getHours();
+  // 7:00-18:59 白天 -> 00014
+  // 19:00-6:59 夜晚 -> 00021
+  return hour >= 7 && hour < 19 ? '00014' : '00021';
+}
+
+const currentBackgroundId = ref(getTimeBasedBackgroundId());
+const backgroundImageUrl = computed(() => `${BACKGROUND_BASE_URL}/${currentBackgroundId.value}.webp`);
+
+// 每分钟检查是否需要切换背景
+let backgroundUpdateTimer: ReturnType<typeof setInterval> | null = null;
+onMounted(() => {
+  backgroundUpdateTimer = setInterval(() => {
+    const newId = getTimeBasedBackgroundId();
+    if (newId !== currentBackgroundId.value) {
+      currentBackgroundId.value = newId;
+    }
+  }, 60000);
+});
+onUnmounted(() => {
+  if (backgroundUpdateTimer) clearInterval(backgroundUpdateTimer);
+});
 
 // Props
 const props = withDefaults(
@@ -360,6 +391,19 @@ const getStatArcDashArray = (value: number) => {
   z-index: 10000; /* 确保显示在主页面上方 */
   background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
   overflow: hidden;
+}
+
+/* 背景图层 */
+.background-image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Spine背景层 */

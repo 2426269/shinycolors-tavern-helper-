@@ -250,11 +250,7 @@
               <!-- 体力 -->
               <div v-if="selectedCard.attribute" class="stat-row">
                 <div class="stat-label">
-                  <img
-                    src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/体力.png"
-                    alt="体力"
-                    class="stat-icon"
-                  />
+                  <img src="https://283pro.site/shinycolors/游戏图标/体力.png" alt="体力" class="stat-icon" />
                   <span>体力</span>
                 </div>
                 <div class="stat-value">{{ selectedCard.attribute.stamina }}</div>
@@ -274,11 +270,7 @@
                 <h4>三维属性</h4>
                 <div class="chart-item">
                   <div class="chart-label">
-                    <img
-                      src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Vocal.png"
-                      alt="Vocal"
-                      class="chart-icon"
-                    />
+                    <img src="https://283pro.site/shinycolors/游戏图标/Vocal.png" alt="Vocal" class="chart-icon" />
                     <span>Vocal</span>
                   </div>
                   <div class="chart-bar-wrapper">
@@ -293,11 +285,7 @@
 
                 <div class="chart-item">
                   <div class="chart-label">
-                    <img
-                      src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Dance.png"
-                      alt="Dance"
-                      class="chart-icon"
-                    />
+                    <img src="https://283pro.site/shinycolors/游戏图标/Dance.png" alt="Dance" class="chart-icon" />
                     <span>Dance</span>
                   </div>
                   <div class="chart-bar-wrapper">
@@ -312,11 +300,7 @@
 
                 <div class="chart-item">
                   <div class="chart-label">
-                    <img
-                      src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/游戏图标/Visual.png"
-                      alt="Visual"
-                      class="chart-icon"
-                    />
+                    <img src="https://283pro.site/shinycolors/游戏图标/Visual.png" alt="Visual" class="chart-icon" />
                     <span>Visual</span>
                   </div>
                   <div class="chart-bar-wrapper">
@@ -482,6 +466,20 @@
                     <i :class="isSkillEnhanced ? 'fas fa-star' : 'far fa-star'"></i>
                     {{ isSkillEnhanced ? '觉醒效果' : '基础效果' }}
                   </button>
+
+                  <!-- 查看原始输出按钮 -->
+                  <button v-if="rawAIOutput" class="view-raw-output-btn" @click="showRawOutput = !showRawOutput">
+                    <i class="fas" :class="showRawOutput ? 'fa-eye-slash' : 'fa-code'"></i>
+                    <span>{{ showRawOutput ? '隐藏原始输出' : '查看原始输出' }}</span>
+                  </button>
+                  <!-- 原始输出显示区域 -->
+                  <div v-if="showRawOutput && rawAIOutput" class="raw-output-container">
+                    <div class="raw-output-header">
+                      <h4><i class="fas fa-code"></i> AI 原始输出</h4>
+                      <button class="copy-output-btn" @click="copyRawOutput"><i class="fas fa-copy"></i> 复制</button>
+                    </div>
+                    <pre class="raw-output-content">{{ rawAIOutput }}</pre>
+                  </div>
                 </div>
               </div>
             </template>
@@ -645,7 +643,7 @@ async function initializeCards() {
     const theme = card.theme;
 
     // 使用角色缩略图（未觉醒版本）
-    const thumbnailUrl = `https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/角色缩略图/${card.fullName}.webp`;
+    const thumbnailUrl = `https://283pro.site/shinycolors/角色缩略图/${card.fullName}.webp`;
 
     // 保存完整卡面URL用于详情弹窗
     const fullImageUrl = buildUrlFromFileName(card.baseImage, false);

@@ -7,15 +7,11 @@
 // ============================================================================
 
 /**
- * jsDelivr CDN 基础路径
- *
- * 使用 jsDelivr CDN 访问 GitHub 仓库：
- * - 使用国内可访问的 testingcf.jsdelivr.net 镜像
- * - WebP 格式压缩，文件体积减少 85%
- * - 支持 CORS，可以使用 IndexedDB 缓存
- * - 格式：https://cdn.jsdelivr.net/gh/用户名/仓库名@分支/路径
+ * 自有 CDN 基础路径
+ * 使用 283pro.site 域名，所有资源统一托管
  */
-export const CDN_BASE = 'https://cdn.jsdelivr.net/gh/2426269/shinycolors-assets-cdn@main';
+export const CDN_DOMAIN = 'https://283pro.site';
+export const CDN_BASE = `${CDN_DOMAIN}/shinycolors`;
 
 /** 角色卡图片路径（WebP格式，日文原名） */
 export const CARD_IMAGE_BASE = `${CDN_BASE}/角色卡面`;
@@ -23,11 +19,8 @@ export const CARD_IMAGE_BASE = `${CDN_BASE}/角色卡面`;
 /** 卡池缩略图路径（WebP格式） */
 export const POOL_IMAGE_BASE = `${CDN_BASE}/卡池缩略图`;
 
-/** GitHub Release 基础路径（用于游戏图标等资源） */
-const RELEASE_BASE = 'https://github.com/2426269/shinycolors-assets/releases/download';
-
 /** 游戏图标路径 */
-export const GAME_ICONS_BASE = `${RELEASE_BASE}/游戏图标`;
+export const GAME_ICONS_BASE = `${CDN_BASE}/游戏图标`;
 
 /** 羽石图标（与主页面一致） */
 export const FEATHER_STONE_IMAGE = `${GAME_ICONS_BASE}/Feather_Jewel.png`;
@@ -38,31 +31,24 @@ export const RESOURCE_ICONS = {
   RAINBOW_PIECE: `${GAME_ICONS_BASE}/Rainbow_Memorial_Piece.png`,
 } as const;
 
-/** 专辑封面图片 Release 路径 */
-export const ALBUM_COVER_BASE = 'https://github.com/2426269/shinycolors-assets/releases/download/歌曲图片';
+/** 专辑封面图片路径 */
+export const ALBUM_COVER_BASE = `${CDN_BASE}/歌曲封面`;
 
-/** 个人曲音频 Release 路径 */
-export const AUDIO_BASE_PERSONAL =
-  'https://github.com/2426269/shinycolors-assets/releases/download/personal-songs-v1.0';
+/** 音频文件基础路径（所有歌曲统一路径，不再区分个人曲/组合曲/全体曲） */
+export const AUDIO_CDN_BASE = `${CDN_BASE}/歌曲`;
 
-/** 组合曲音频 Release 路径 */
-export const AUDIO_BASE_GROUP = 'https://github.com/2426269/shinycolors-assets/releases/download/group-songs-v1.0';
+/** 保留向后兼容的别名 */
+export const AUDIO_BASE = AUDIO_CDN_BASE;
+export const AUDIO_BASE_PERSONAL = AUDIO_CDN_BASE;
+export const AUDIO_BASE_GROUP = AUDIO_CDN_BASE;
+export const AUDIO_BASE_ALL = AUDIO_CDN_BASE;
+export const AUDIO_RELEASE_BASE = AUDIO_CDN_BASE;
 
-/** 全体曲音频 Release 路径 */
-export const AUDIO_BASE_ALL = 'https://github.com/2426269/shinycolors-assets/releases/download/music-v1.0';
-
-/** 保留 AUDIO_BASE 用于向后兼容（默认指向个人曲） */
-export const AUDIO_BASE = AUDIO_BASE_PERSONAL;
-
-/** 歌曲和歌词统一 Release 路径（新版，包含所有歌曲和LRC歌词） */
-export const AUDIO_RELEASE_BASE =
-  'https://github.com/2426269/shinycolors-assets-cdn/releases/download/%E6%AD%8C%E6%9B%B2%E5%92%8C%E6%AD%8C%E8%AF%8D';
-
-/** 歌词文件CDN路径（使用jsDelivr支持CORS） */
+/** 歌词文件路径 */
 export const LYRICS_CDN_BASE = `${CDN_BASE}/歌词`;
 
-/** Spine动画资源CDN路径（使用Cloudflare R2） */
-export const SPINE_CDN_BASE = 'https://pub-9f6f9a2797c442e4aa54a0530f17aed9.r2.dev/spine';
+/** Spine动画资源CDN路径 */
+export const SPINE_CDN_BASE = `${CDN_BASE}/spine`;
 
 // ============================================================================
 // 概率配置

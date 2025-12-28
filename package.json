@@ -1,4 +1,6 @@
 {
+  "name": "shinycolors-ai-project",
+  "version": "1.0.0",
   "scripts": {
     "build:dev": "webpack --mode development",
     "build": "webpack --mode production",

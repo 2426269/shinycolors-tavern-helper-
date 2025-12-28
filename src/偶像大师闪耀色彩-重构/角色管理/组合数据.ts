@@ -6,7 +6,7 @@
  */
 
 // CDN基础URL
-const CDN_BASE = 'https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main';
+const CDN_BASE = 'https://283pro.site/shinycolors';
 const UNIT_ICON_BASE = `${CDN_BASE}/组合小图标`;
 
 /**

@@ -8,10 +8,7 @@
       <div class="pool-sidebar">
         <div class="pool-item active">
           <div class="pool-thumbnail">
-            <img
-              src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/卡池缩略图/星月夜を歩いて.webp"
-              alt="星月夜を歩いて"
-            />
+            <img src="https://283pro.site/shinycolors/卡池缩略图/星月夜を歩いて.webp" alt="星月夜を歩いて" />
           </div>
           <div class="pool-name">星月夜を歩いて</div>
         </div>
@@ -22,7 +19,7 @@
         <!-- 全屏背景卡面 -->
         <div class="fullscreen-card-bg">
           <img
-            src="https://raw.githubusercontent.com/2426269/shinycolors-assets-cdn/main/角色卡面/絵空靴 杜野凛世.webp"
+            src="https://283pro.site/shinycolors/角色卡面/絵空靴 杜野凛世.webp"
             alt="【絵空靴】杜野凛世"
             class="bg-card-image"
             loading="lazy"
