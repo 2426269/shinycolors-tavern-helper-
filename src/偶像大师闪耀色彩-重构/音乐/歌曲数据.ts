@@ -308,8 +308,7 @@ export const songs: Song[] = [
     music: '南直博',
     audioUrl: `${AUDIO_BASE}/Darling.you.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Darling%20you!%20-%20%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Darling%20you!%20-%20%E8%8A%9D%E5%B4%8E%E5%85%B8%E5%AD%90.lrc',
   },
   {
     id: 19,
@@ -340,8 +339,7 @@ export const songs: Song[] = [
     music: '睦月周平',
     audioUrl: `${AUDIO_BASE}/SOS.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/SOS%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/SOS%20-%20%E5%B9%B8%E6%9D%91%E6%81%B5%E7%90%86.lrc',
   },
   {
     id: 21,
@@ -372,8 +370,7 @@ export const songs: Song[] = [
     music: '大西克巳',
     audioUrl: `${AUDIO_BASE}/HAREBARE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/HAREBARE!!%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/HAREBARE!!%20-%20%E5%B3%AF%E7%94%B0%E8%8C%89%E5%84%AA.lrc',
   },
   {
     id: 23,
@@ -388,8 +385,7 @@ export const songs: Song[] = [
     music: '家原正樹、Jam9',
     audioUrl: `${AUDIO_BASE}/statice.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-Sol-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/statice%20-%20%E5%92%8C%E4%B9%85%E4%BA%95%E5%84%AA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/statice%20-%20%E5%92%8C%E4%B9%85%E4%BA%95%E5%84%AA.lrc',
   },
   {
     id: 24,
@@ -420,8 +416,7 @@ export const songs: Song[] = [
     music: 'Stand Alone、小久保祐希、Karen Yamaguchi',
     audioUrl: `${AUDIO_BASE}/Look.up.to.the.sky.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-SHHis-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Look%20up%20to%20the%20sky%20-%20%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Look%20up%20to%20the%20sky%20-%20%E5%B1%B1%E6%A0%B9%E7%B6%BA.lrc',
   },
   {
     id: 26,
@@ -484,8 +479,7 @@ export const songs: Song[] = [
     music: 'ねりきり',
     audioUrl: `${AUDIO_BASE}/Muku.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/COLORFUL.FE@THERS.-CoMETIK-.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/%E7%84%A1%E5%9E%A2%20-%20%E4%B8%89%E5%B7%9D%E8%8F%AF%E6%9C%88.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/%E7%84%A1%E5%9E%A2%20-%20%E4%B8%89%E5%B7%9D%E8%8F%AF%E6%9C%88.lrc',
   },
   {
     id: 30,
@@ -2108,8 +2102,7 @@ export const songs: Song[] = [
     lyrics: '秋浦智裕(onetrap)',
     audioUrl: `${AUDIO_BASE_GROUP}/Reflection.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.06.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Reflection%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Reflection%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 146,
@@ -2150,8 +2143,7 @@ export const songs: Song[] = [
     lyrics: '秋浦智裕',
     audioUrl: `${AUDIO_BASE_GROUP}/Aozora.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Aozora.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/%E9%9D%92%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/%E9%9D%92%E7%A9%BA%20-%20%E3%83%8E%E3%82%AF%E3%83%81%E3%83%AB.lrc',
   },
   {
     id: 149,
@@ -2220,8 +2212,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/OH.MY.GOD.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.08.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/OH%20MY%20GOD%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/OH%20MY%20GOD%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 154,
@@ -2234,8 +2225,7 @@ export const songs: Song[] = [
     lyrics: 'Kohei Yokono、小久保祐希、JUNE',
     audioUrl: `${AUDIO_BASE_GROUP}/Fly.and.Fly.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/L@YERED.WING.08.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Fly%20and%20Fly%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Fly%20and%20Fly%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 155,
@@ -2262,8 +2252,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/Fashionable.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.08.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Fashionable%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Fashionable%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 157,
@@ -2276,8 +2265,7 @@ export const songs: Song[] = [
     lyrics: '石黑剛、常楽寺澪',
     audioUrl: `${AUDIO_BASE_GROUP}/Bouncy.Girl.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/PANOR@MA.WING.08.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Bouncy%20Girl%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Bouncy%20Girl%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 158,
@@ -2304,8 +2292,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/Forbidden.Paradise.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Forbidden%20Paradise%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Forbidden%20Paradise%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 160,
@@ -2318,8 +2305,7 @@ export const songs: Song[] = [
     lyrics: '小久保祐希、YAGO',
     audioUrl: `${AUDIO_BASE_GROUP}/SWEETEST.BITE.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/SWEETEST%20BITE%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/SWEETEST%20BITE%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 161,
@@ -2332,8 +2318,7 @@ export const songs: Song[] = [
     lyrics: 'YUU for YOU、常楽寺澪',
     audioUrl: `${AUDIO_BASE_GROUP}/White.Story.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/CANVAS.07.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/White%20Story%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/White%20Story%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 162,
@@ -2346,8 +2331,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/Happier.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/Happier.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Happier%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Happier%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 163,
@@ -2360,8 +2344,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/After.Run.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/After.Run.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/After%20Run%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/After%20Run%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 164,
@@ -2374,8 +2357,7 @@ export const songs: Song[] = [
     lyrics: 'Co-sho',
     audioUrl: `${AUDIO_BASE_GROUP}/Monochromatic.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.07.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Monochromatic%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Monochromatic%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 165,
@@ -2388,8 +2370,7 @@ export const songs: Song[] = [
     lyrics: '小久保祐希、石黑剛、YHEL、YHEL',
     audioUrl: `${AUDIO_BASE_GROUP}/Snowflake.mp3`,
     albumCover: `${ALBUM_COVER_BASE}/ECHOES.07.jpg`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/Snowflake%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/Snowflake%20-%20%E3%82%B7%E3%83%BC%E3%82%BA.lrc',
   },
   {
     id: 166,
@@ -2864,8 +2845,7 @@ export const songs: Song[] = [
     artist: 'THE IDOLM@STER',
     type: '团体曲',
     audioUrl: `${AUDIO_RELEASE_BASE}/CRYST@LOUD.mp3`,
-    lyricsUrl:
-      'https://283pro.site/shinycolors/歌词/CRYST%40LOUD%20-%20THE%20IDOLM%40STER.lrc',
+    lyricsUrl: 'https://283pro.site/shinycolors/歌词/CRYST%40LOUD%20-%20THE%20IDOLM%40STER.lrc',
   },
   {
     id: 259,

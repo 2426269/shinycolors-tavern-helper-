@@ -38,11 +38,7 @@
               <div class="hp-bar-fill" :style="{ width: `${(stamina / maxStamina) * 100}%` }"></div>
             </div>
             <div class="hp-info">
-              <img
-                src="https://283pro.site/shinycolors/游戏图标/体力.png"
-                alt="体力"
-                class="hp-icon"
-              />
+              <img src="https://283pro.site/shinycolors/游戏图标/体力.png" alt="体力" class="hp-icon" />
               <span class="hp-value">{{ stamina }}/{{ maxStamina }}</span>
             </div>
           </div>
@@ -89,11 +85,7 @@
             </div>
           </div>
           <div class="stat-details">
-            <img
-              src="https://283pro.site/shinycolors/游戏图标/Vocal.png"
-              alt="Vo"
-              class="stat-icon"
-            />
+            <img src="https://283pro.site/shinycolors/游戏图标/Vocal.png" alt="Vo" class="stat-icon" />
             <span class="stat-value">{{ stats.vocal }}</span>
             <span class="stat-max">/1000</span>
           </div>
@@ -128,11 +120,7 @@
             </div>
           </div>
           <div class="stat-details">
-            <img
-              src="https://283pro.site/shinycolors/游戏图标/Dance.png"
-              alt="Da"
-              class="stat-icon"
-            />
+            <img src="https://283pro.site/shinycolors/游戏图标/Dance.png" alt="Da" class="stat-icon" />
             <span class="stat-value">{{ stats.dance }}</span>
             <span class="stat-max">/1000</span>
           </div>
@@ -167,11 +155,7 @@
             </div>
           </div>
           <div class="stat-details">
-            <img
-              src="https://283pro.site/shinycolors/游戏图标/Visual.png"
-              alt="Vi"
-              class="stat-icon"
-            />
+            <img src="https://283pro.site/shinycolors/游戏图标/Visual.png" alt="Vi" class="stat-icon" />
             <span class="stat-value">{{ stats.visual }}</span>
             <span class="stat-max">/1000</span>
           </div>

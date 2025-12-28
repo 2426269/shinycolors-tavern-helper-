@@ -43,11 +43,7 @@
           </div>
           <!-- 体力 -->
           <div class="stamina-row">
-            <img
-              src="https://283pro.site/shinycolors/游戏图标/体力.png"
-              alt="体力"
-              class="stat-icon"
-            />
+            <img src="https://283pro.site/shinycolors/游戏图标/体力.png" alt="体力" class="stat-icon" />
             <span class="value">{{ selectedIdol?.stamina || 30 }}</span>
           </div>
         </div>
@@ -59,11 +55,7 @@
               <span class="grade">{{ getGrade(selectedIdol?.stats?.vocal || 0) }}</span>
             </div>
             <div class="stat-info">
-              <img
-                src="https://283pro.site/shinycolors/游戏图标/Vocal.png"
-                alt="Vo"
-                class="dim-icon"
-              />
+              <img src="https://283pro.site/shinycolors/游戏图标/Vocal.png" alt="Vo" class="dim-icon" />
               <span class="stat-value">{{ selectedIdol?.stats?.vocal || 0 }}</span>
             </div>
           </div>
@@ -72,11 +64,7 @@
               <span class="grade">{{ getGrade(selectedIdol?.stats?.dance || 0) }}</span>
             </div>
             <div class="stat-info">
-              <img
-                src="https://283pro.site/shinycolors/游戏图标/Dance.png"
-                alt="Da"
-                class="dim-icon"
-              />
+              <img src="https://283pro.site/shinycolors/游戏图标/Dance.png" alt="Da" class="dim-icon" />
               <span class="stat-value">{{ selectedIdol?.stats?.dance || 0 }}</span>
             </div>
           </div>
@@ -85,11 +73,7 @@
               <span class="grade">{{ getGrade(selectedIdol?.stats?.visual || 0) }}</span>
             </div>
             <div class="stat-info">
-              <img
-                src="https://283pro.site/shinycolors/游戏图标/Visual.png"
-                alt="Vi"
-                class="dim-icon"
-              />
+              <img src="https://283pro.site/shinycolors/游戏图标/Visual.png" alt="Vi" class="dim-icon" />
               <span class="stat-value">{{ selectedIdol?.stats?.visual || 0 }}</span>
             </div>
           </div>
