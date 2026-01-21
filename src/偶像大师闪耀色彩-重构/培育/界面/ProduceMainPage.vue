@@ -170,24 +170,23 @@
         <span>请选择行动</span>
       </div>
 
-      <!-- 活动组件区域（接口预留） -->
+      <!-- 活动组件区域 -->
       <div class="activity-section">
-        <div class="activity-slot" @click="$emit('activity', 0)">
-          <div class="activity-placeholder">
-            <i class="fas fa-plus"></i>
-            <span>活动1</span>
-          </div>
-        </div>
-        <div class="activity-slot" @click="$emit('activity', 1)">
-          <div class="activity-placeholder">
-            <i class="fas fa-plus"></i>
-            <span>活动2</span>
-          </div>
-        </div>
-        <div class="activity-slot" @click="$emit('activity', 2)">
-          <div class="activity-placeholder">
-            <i class="fas fa-plus"></i>
-            <span>活动3</span>
+        <div
+          v-for="action in availableActions"
+          :key="action.type + (action.primaryStat || '')"
+          class="activity-slot"
+          :class="[action.primaryStat || action.type.toLowerCase(), { 'sp-glow': action.isSP }]"
+          @click="handleActionClick(action)"
+        >
+          <div class="activity-content">
+            <img
+              :src="`https://283pro.site/shinycolors/游戏图标/${encodeURIComponent(action.iconFile)}`"
+              :alt="action.label"
+              class="activity-icon"
+            />
+            <span class="activity-label">{{ action.label }}</span>
+            <span v-if="action.isSP" class="sp-badge">SP</span>
           </div>
         </div>
       </div>
@@ -249,6 +248,10 @@ import PhoneContainer from '../../手机/组件/PhoneContainer.vue';
 import Calendar from '../../时间/组件/Calendar.vue';
 import SpinePlayer from '../../组件/Spine播放器.vue';
 import { getGrade, getGradeProgress } from '../服务/GradeService';
+import type { ScenarioId, WeekActionType } from '../类型/ProduceTypes';
+
+// 图标 CDN 基础路径
+const ICON_CDN = 'https://283pro.site/shinycolors/游戏图标';
 
 // 背景图 URL 基础路径
 const BACKGROUND_BASE_URL = 'https://283pro.site/shinycolors/background';
@@ -278,6 +281,56 @@ onUnmounted(() => {
   if (backgroundUpdateTimer) clearInterval(backgroundUpdateTimer);
 });
 
+// ==================== 行动类型配置 ====================
+
+interface ActionItem {
+  type: WeekActionType;
+  label: string;
+  iconFile: string;
+  isSP?: boolean;
+  primaryStat?: 'vocal' | 'dance' | 'visual';
+}
+
+/** 行动类型图标映射 */
+const ACTION_ICON_MAP: Record<string, string> = {
+  LESSON: 'vo 课程.webp', // 默认 Vocal (会被覆盖)
+  LESSON_VOCAL: 'vo 课程.webp',
+  LESSON_DANCE: 'da 课程.webp',
+  LESSON_VISUAL: 'vi 课程.webp',
+  SP_LESSON: 'vo 课程.webp', // SP 课程用主属性图标
+  BUSINESS: '营业.webp',
+  OUTING: '外出.webp',
+  REST: '悠闲.png',
+  SUPPORT: '慰问.webp',
+  SPECIAL_GUIDANCE: '特别指导.webp',
+  SHOP: '交谈.webp',
+  EXAM_MIDTERM: '状态极佳.png',
+  EXAM_FINAL: '状态极佳.png',
+  AUDITION_1: '状态极佳.png',
+  AUDITION_2: '状态极佳.png',
+  AUDITION_3: '状态极佳.png',
+};
+
+/** 行动类型中文标签 */
+const ACTION_LABELS: Record<string, string> = {
+  LESSON: '课程',
+  LESSON_VOCAL: 'Vo课程',
+  LESSON_DANCE: 'Da课程',
+  LESSON_VISUAL: 'Vi课程',
+  SP_LESSON: 'SP课程',
+  BUSINESS: '营业',
+  OUTING: '外出',
+  REST: '休息',
+  SUPPORT: '慰问',
+  SPECIAL_GUIDANCE: '特别指导',
+  SHOP: '商店',
+  EXAM_MIDTERM: '中間試験',
+  EXAM_FINAL: '最終試験',
+  AUDITION_1: '1次试镜',
+  AUDITION_2: '2次试镜',
+  AUDITION_3: '最终试镜',
+};
+
 // Props
 const props = withDefaults(
   defineProps<{
@@ -289,6 +342,8 @@ const props = withDefaults(
       cardImageUrl?: string;
       avatarUrl?: string;
     };
+    // 剧本信息
+    scenarioId?: ScenarioId;
     // 时间信息
     currentDate?: string; // "2018-04-24"
     currentWeek?: number;
@@ -311,8 +366,11 @@ const props = withDefaults(
     genki?: number;
     // 饮料槽
     drinks?: Array<{ id: string; name: string; iconUrl: string } | null>;
+    // 可用行动列表 (由 ProduceHost 提供)
+    weekActions?: ActionItem[];
   }>(),
   {
+    scenarioId: 'wing',
     currentDate: '2018-04-24',
     currentWeek: 1,
     weeksUntilCompetition: 12,
@@ -322,22 +380,73 @@ const props = withDefaults(
     maxStamina: 30,
     genki: 0,
     drinks: () => [null, null, null],
+    weekActions: () => [],
   },
 );
 
 // Emits
-defineEmits<{
+const emit = defineEmits<{
   goBack: [];
   activity: [index: number];
   useDrink: [index: number];
   openDeck: [];
   openPhone: [];
   openDiary: [];
+  // 新增：课程/考试战斗
+  startLesson: [primaryStat: 'vocal' | 'dance' | 'visual', isSP: boolean];
+  startExam: [examType: WeekActionType];
+  executeAction: [action: ActionItem];
 }>();
 
 // 弹窗状态
 const showCalendar = ref(false);
 const showPhone = ref(false);
+
+// ==================== 可用行动 ====================
+
+/** 如果 weekActions 为空，生成默认的三维课程 */
+const availableActions = computed<ActionItem[]>(() => {
+  if (props.weekActions && props.weekActions.length > 0) {
+    return props.weekActions;
+  }
+
+  // 默认显示三维课程
+  return [
+    { type: 'LESSON', label: 'Vo课程', iconFile: 'vo 课程.webp', primaryStat: 'vocal' },
+    { type: 'LESSON', label: 'Da课程', iconFile: 'da 课程.webp', primaryStat: 'dance' },
+    { type: 'LESSON', label: 'Vi课程', iconFile: 'vi 课程.webp', primaryStat: 'visual' },
+  ];
+});
+
+/** 获取行动图标 URL */
+function getActionIconUrl(actionType: string): string {
+  const iconFile = ACTION_ICON_MAP[actionType] || 'vo 课程.webp';
+  return `${ICON_CDN}/${encodeURIComponent(iconFile)}`;
+}
+
+/** 处理行动点击 */
+function handleActionClick(action: ActionItem) {
+  console.log('[ProduceMainPage] 点击行动:', action);
+
+  // 课程类型
+  if (action.type === 'LESSON' || action.type === 'SP_LESSON') {
+    const primaryStat = action.primaryStat || 'vocal';
+    const isSP = action.isSP || action.type === 'SP_LESSON';
+    emit('startLesson', primaryStat, isSP);
+    return;
+  }
+
+  // 考试/试镜类型
+  if (['EXAM_MIDTERM', 'EXAM_FINAL', 'AUDITION_1', 'AUDITION_2', 'AUDITION_3'].includes(action.type)) {
+    emit('startExam', action.type);
+    return;
+  }
+
+  // 其他行动
+  emit('executeAction', action);
+}
+
+// ==================== 格式化工具 ====================
 
 // 格式化日期显示
 const formattedDate = computed(() => {
@@ -685,9 +794,9 @@ const getStatArcDashArray = (value: number) => {
 
 .activity-slot {
   width: 100px;
-  height: 100px;
+  height: 120px;
   background: rgba(255, 255, 255, 0.1);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -698,22 +807,73 @@ const getStatArcDashArray = (value: number) => {
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+  }
+
+  // 属性颜色边框
+  &.vocal {
+    border-color: rgba(255, 105, 180, 0.6);
+    background: rgba(255, 105, 180, 0.15);
+  }
+  &.dance {
+    border-color: rgba(79, 195, 247, 0.6);
+    background: rgba(79, 195, 247, 0.15);
+  }
+  &.visual {
+    border-color: rgba(255, 213, 79, 0.6);
+    background: rgba(255, 213, 79, 0.15);
+  }
+
+  // SP 发光效果
+  &.sp-glow {
+    animation: sp-glow-pulse 2s ease-in-out infinite;
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   }
 }
 
-.activity-placeholder {
+@keyframes sp-glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+  }
+}
+
+.activity-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  color: rgba(255, 255, 255, 0.5);
+  gap: 8px;
+  position: relative;
 
-  i {
-    font-size: 24px;
+  .activity-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
 
-  span {
+  .activity-label {
     font-size: 12px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .sp-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #ffd700, #ffaa00);
+    color: #333;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
 

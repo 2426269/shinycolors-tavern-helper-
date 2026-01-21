@@ -66,6 +66,14 @@ export interface BattleState {
   stamina: number; // 战斗体力
   genki: number; // 战斗元气
   predictedScores: Record<string, number>; // T7: 预计算得分
+  // 子任务1: 战斗结束判定由 Core 计算
+  isBattleEnded: boolean;
+  battleEndReason?: 'turn_limit' | 'perfect' | 'target';
+  perfectScore: number; // 由 Core 写入，UI 只读
+  // 子任务2: 动画事件桥接，由 Core 写入，UI 只读
+  // 使用 any[] 以兼容不同事件类型
+  _initialEvents?: any[];
+  _pendingEvents?: any[];
 }
 
 /** 战斗 Buff 数据 (UI 展示用) */
@@ -504,11 +512,12 @@ export class ProduceHostCore {
       data: { trigger: 'LESSON_START', count: 0 },
     };
 
-    (this.battleStateNG as any)._initialEvents = [lessonStartEvent, ...initialEvents, handEnterEvent];
+    // 子任务2: 将初始事件写入 ctx.battleState (UI 只读取该字段)
+    this.ctx.battleState._initialEvents = [lessonStartEvent as any, ...initialEvents, handEnterEvent];
 
     console.log('[ProduceHostCore] 初始抽牌完成', {
       drawn: drawResult.logs,
-      events: (this.battleStateNG as any)._initialEvents.length,
+      events: this.ctx.battleState._initialEvents!.length,
     });
 
     // T-Fix: 恢复 ctx.battleState 更新 (Regression Fix)
@@ -518,6 +527,10 @@ export class ProduceHostCore {
     this.ctx.battleState.maxTurns = battleConfig.maxTurns;
     this.ctx.battleState.turnSequence = []; // 课程不需要回合序列
     this.ctx.battleState.targetScore = battleConfig.targetScore;
+    // 子任务1: 设置 perfectScore 并重置结束状态
+    this.ctx.battleState.perfectScore = result.isSP ? 3000 : 2000;
+    this.ctx.battleState.isBattleEnded = false;
+    this.ctx.battleState.battleEndReason = undefined;
 
     // T-Fix: 无条件同步引擎状态 (Regression Fix)
     this.syncEngineState();
@@ -798,18 +811,19 @@ export class ProduceHostCore {
 
     const events = this.engine.turnController.endTurn(this.battleStateNG);
 
-    // Task 2: 处理回合结束产生的事件
-    // 目前 ProduceHostCore 没有直接向 UI 推送事件的机制 (除了 syncEngineState)
-    // 我们将这些事件暂存到 battleStateNG 的 _pendingEvents 中，供 UI 读取
+    // 子任务2: 将回合结束事件写入 ctx.battleState (UI 只读取该字段)
     if (events && events.length > 0) {
-      if (!(this.battleStateNG as any)._pendingEvents) {
-        (this.battleStateNG as any)._pendingEvents = [];
+      if (!this.ctx.battleState._pendingEvents) {
+        this.ctx.battleState._pendingEvents = [];
       }
-      (this.battleStateNG as any)._pendingEvents.push(...events);
-      console.log(`[ProduceHostCore] 回合结束产生 ${events.length} 个事件，已暂存`);
+      this.ctx.battleState._pendingEvents.push(...events);
+      console.log(`[ProduceHostCore] 回合结束产生 ${events.length} 个事件，已写入 ctx.battleState`);
     }
 
     this.syncEngineState();
+
+    // 子任务A: 修复 - endTurn 后必须调用 checkBattleEnd
+    this.checkBattleEnd();
   }
 
   /**
@@ -826,17 +840,45 @@ export class ProduceHostCore {
   }
 
   /**
-   * 检查战斗是否结束
+   * 子任务1: 检查战斗是否结束并写入 battleState
+   * 由 Core 计算，UI 只读取 battleState.isBattleEnded
    */
   private checkBattleEnd(): void {
     if (!this.engine || !this.battleStateNG) return;
 
-    // const state = this.battleStateNG; // Unused variable
-    // const targetScore = this.ctx.battleState.targetScore; // Unused variable
+    const state = this.battleStateNG;
+    const battleState = this.ctx.battleState;
+    const perfectScore = battleState.perfectScore;
 
-    // 简单判断：回合耗尽或达到目标分数 (这里仅作示例，实际逻辑可能更复杂)
-    // 注意：这里需要根据实际需求决定是否自动结束，或者由 UI 触发 completeLessonBattle
-    // 目前保持 UI 驱动，这里仅做状态同步
+    // 判定条件 1: 回合耗尽 (子任务3: 修复差一错误，从 > 改为 >=)
+    if (state.turn >= state.maxTurns) {
+      battleState.isBattleEnded = true;
+      battleState.battleEndReason = 'turn_limit';
+      console.log('[ProduceHostCore] 战斗结束: 回合耗尽');
+      return;
+    }
+
+    // 判定条件 2: 达到 Perfect 分数
+    if (state.score >= perfectScore) {
+      battleState.isBattleEnded = true;
+      battleState.battleEndReason = 'perfect';
+      console.log('[ProduceHostCore] 战斗结束: 达到 Perfect 分数', state.score, '>=', perfectScore);
+      return;
+    }
+
+    // 判定条件 3: 达到目标分数 (target 与 perfect 的区别: target 是及格线，perfect 是满分线)
+    const targetScore = battleState.targetScore;
+    if (targetScore > 0 && state.score >= targetScore && perfectScore <= 0) {
+      // 仅当没有设置 perfectScore 时，targetScore 才触发结束
+      battleState.isBattleEnded = true;
+      battleState.battleEndReason = 'target';
+      console.log('[ProduceHostCore] 战斗结束: 达到目标分数', state.score, '>=', targetScore);
+      return;
+    }
+
+    // 未结束
+    battleState.isBattleEnded = false;
+    battleState.battleEndReason = undefined;
   }
 
   // ==================== 周推进 ====================
@@ -975,6 +1017,13 @@ export function createInitialBattleState(primaryStat: 'vocal' | 'dance' | 'visua
     stamina: 0,
     genki: 0,
     predictedScores: {},
+    // 子任务1: 战斗结束判定字段
+    isBattleEnded: false,
+    battleEndReason: undefined,
+    perfectScore: 0,
+    // 子任务2: 动画事件字段
+    _initialEvents: undefined,
+    _pendingEvents: undefined,
   };
 }
 

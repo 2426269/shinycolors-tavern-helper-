@@ -100,8 +100,9 @@ export function sortCards(cards: DisplayCard[], sortBy: SortOption): DisplayCard
 
 /**
  * 从localStorage加载技能卡数据
+ * T-15: 返回完整卡牌对象（包括 engine_data）
  */
-export function loadSkillCard(cardFullName: string): { name: string; description: string; effect: string } | null {
+export function loadSkillCard(cardFullName: string): any | null {
   try {
     const skillData = localStorage.getItem(`skill_${cardFullName}`);
     if (skillData) {
@@ -115,13 +116,31 @@ export function loadSkillCard(cardFullName: string): { name: string; description
 
 /**
  * 保存技能卡数据到localStorage
+ * T-15: 保存完整卡牌对象（包括 engine_data、display、effectEntries 等）
  */
-export function saveSkillCard(
-  cardFullName: string,
-  skill: { name: string; description: string; effect: string },
-): void {
+export function saveSkillCard(cardFullName: string, skill: any): void {
   try {
+    // T-Repair: 检查是否为修复模式保存
+    if (skill.repair_meta) {
+      const existing = loadSkillCard(cardFullName);
+      if (existing && existing.engine_data) {
+        // 如果现有数据有 engine_data，且没有 engine_data_original，则备份
+        if (!existing.engine_data_original) {
+          skill.engine_data_original = existing.engine_data;
+          console.log(`🔧 [saveSkillCard] 备份原始 engine_data`);
+        } else {
+          // 如果已有备份，保留原备份
+          skill.engine_data_original = existing.engine_data_original;
+        }
+      }
+    }
+
     localStorage.setItem(`skill_${cardFullName}`, JSON.stringify(skill));
+    console.log(`💾 [saveSkillCard] 已保存完整卡牌数据: ${cardFullName}`, {
+      hasEngineData: !!skill.engine_data,
+      hasDisplay: !!skill.display,
+      isRepair: !!skill.repair_meta,
+    });
   } catch (error) {
     console.error(`保存技能卡失败: ${cardFullName}`, error);
   }

@@ -1,12 +1,31 @@
 /**
  * 示例卡片抽取区
  * 负责从技能卡数据库中抽取示例卡，用于AI生成参考
+ * 直接使用完整卡库（含 engine_data）
  */
 
 import SKILL_CARD_LIBRARY from '../战斗/数据/技能卡库.json';
 import CHARACTER_SKILL_CARDS from '../战斗/数据/角色专属技能卡库.json';
 import type { ProducePlan, SkillCard, SkillCardRarity } from '../战斗/类型/技能卡类型';
 import type { AttributeType } from '../类型/卡牌属性类型';
+
+/**
+ * 扩展的 SkillCard，包含示例卡元信息和 display 字段
+ */
+export interface SkillCardV2WithConfidence extends Omit<SkillCard, 'display'> {
+  /** 示例置信度标签（兼容旧代码） */
+  example_confidence?: 'manual_gold' | 'high' | 'high_partial' | 'low_text_only';
+  /** 下限示例来源稀有度 */
+  example_source_rarity?: SkillCardRarity;
+  /** 展示层数据 */
+  display?: {
+    name: string;
+    nameJP?: string;
+    description?: string;
+    description_enhanced?: string;
+    flavor?: string;
+  };
+}
 
 /**
  * 获取所有技能卡
@@ -30,7 +49,7 @@ function getAllSkillCards(): SkillCard[] {
 /**
  * 示例卡抽取配置
  */
-interface ExampleCardConfig {
+export interface ExampleCardConfig {
   /** 目标稀有度（用于确定抽取策略） */
   targetRarity: SkillCardRarity;
   /** 目标培育计划 */
@@ -40,90 +59,9 @@ interface ExampleCardConfig {
 }
 
 /**
- * 抽取结果分类
- */
-interface ExampleCardResult {
-  /** 示例卡（与目标稀有度相同，用于提供设计参考） */
-  exampleCards: SkillCard[];
-  /** 参考卡（低于目标稀有度，提醒设计强度下限） */
-  lowerRarityCards: SkillCard[];
-  /** 对比卡（高于目标稀有度，提醒设计强度上限） */
-  higherRarityCards: SkillCard[];
-}
-
-/**
  * 示例卡抽取管理器
  */
 export class ExampleCardSelector {
-  /**
-   * 获取稀有度对应的抽取策略
-   * @param rarity 目标稀有度
-   * @returns 抽取策略 {主示例数量, 低稀有度, 低稀有度数量, 高稀有度, 高稀有度数量}
-   */
-  private static getSelectionStrategy(rarity: SkillCardRarity): {
-    mainCount: number;
-    lowerRarity: SkillCardRarity | null;
-    lowerCount: number;
-    higherRarity: SkillCardRarity | null;
-    higherCount: number;
-  } {
-    switch (rarity) {
-      case 'UR':
-        // UR策略：3张相应计划的UR卡 + 7张角色专属SSR卡
-        return {
-          mainCount: 3, // 从技能卡库抽取UR
-          lowerRarity: 'SSR',
-          lowerCount: 7, // 从角色专属库抽取SSR
-          higherRarity: null,
-          higherCount: 0,
-        };
-      case 'SSR':
-        // 6张SSR示例 + 2张SR参考 + 2张R参考
-        return {
-          mainCount: 6,
-          lowerRarity: 'SR',
-          lowerCount: 2,
-          higherRarity: 'R',
-          higherCount: 2,
-        };
-      case 'SR':
-        // 6张SR示例 + 2张R参考 + 2张SSR对比
-        return {
-          mainCount: 6,
-          lowerRarity: 'R',
-          lowerCount: 2,
-          higherRarity: 'SSR',
-          higherCount: 2,
-        };
-      case 'R':
-        // 6张R示例 + 2张N参考 + 2张SR对比
-        return {
-          mainCount: 6,
-          lowerRarity: 'N',
-          lowerCount: 2,
-          higherRarity: 'SR',
-          higherCount: 2,
-        };
-      case 'N':
-        // 8张N示例 + 2张R对比
-        return {
-          mainCount: 8,
-          lowerRarity: null,
-          lowerCount: 0,
-          higherRarity: 'R',
-          higherCount: 2,
-        };
-      default:
-        return {
-          mainCount: 10,
-          lowerRarity: null,
-          lowerCount: 0,
-          higherRarity: null,
-          higherCount: 0,
-        };
-    }
-  }
-
   /**
    * 从卡池中随机抽取指定数量的卡牌
    * @param pool 卡池
@@ -133,29 +71,6 @@ export class ExampleCardSelector {
   private static randomSample<T>(pool: T[], count: number): T[] {
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, Math.min(count, shuffled.length));
-  }
-
-  /**
-   * 从技能卡库抽取（用于UR卡）
-   * @param rarity 稀有度
-   * @param plan 培育计划
-   * @returns 过滤后的技能卡列表
-   */
-  private static filterCardsFromSkillLib(rarity: SkillCardRarity, plan?: ProducePlan): SkillCard[] {
-    const library = SKILL_CARD_LIBRARY as unknown as Record<string, Record<string, SkillCard[]>>;
-    if (plan && library[plan]?.[rarity]) {
-      console.log(`📊 从技能卡库抽取 ${library[plan][rarity].length} 张 ${plan} ${rarity} 卡`);
-      return [...library[plan][rarity]];
-    }
-    // 无指定计划则返回所有
-    const result: SkillCard[] = [];
-    for (const planData of Object.values(library)) {
-      if (planData[rarity]) {
-        result.push(...planData[rarity]);
-      }
-    }
-    console.log(`📊 从技能卡库抽取 ${result.length} 张 ${rarity} 卡（所有计划）`);
-    return result;
   }
 
   /**
@@ -223,179 +138,6 @@ export class ExampleCardSelector {
   }
 
   /**
-   * 抽取示例卡片
-   * @param config 抽取配置
-   * @returns 分类后的示例卡结果
-   */
-  static selectExampleCards(config: ExampleCardConfig): ExampleCardResult {
-    const { targetRarity, targetPlan, targetAttribute } = config;
-    const strategy = this.getSelectionStrategy(targetRarity);
-
-    let exampleCards: SkillCard[] = [];
-    let lowerRarityCards: SkillCard[] = [];
-    let higherRarityCards: SkillCard[] = [];
-
-    // UR特殊处理：3张UR（从技能卡库）+ 7张SSR（从角色专属库）
-    if (targetRarity === 'UR') {
-      // 从技能卡库抽取UR卡作为设计参考
-      const urPool = this.filterCardsFromSkillLib('UR', targetPlan);
-      exampleCards = this.randomSample(urPool, strategy.mainCount);
-      console.log(`📊 [UR生成] 抽取 ${exampleCards.length} 张UR卡作为设计参考`);
-
-      // 从角色专属库抽取SSR卡供超越
-      const ssrPool = this.filterCards('SSR', targetPlan, targetAttribute);
-      lowerRarityCards = this.randomSample(ssrPool, strategy.lowerCount);
-      console.log(`📊 [UR生成] 抽取 ${lowerRarityCards.length} 张SSR卡（需超越这些卡）`);
-    } else {
-      // 抽取主示例卡
-      const mainPool = this.filterCards(targetRarity, targetPlan, targetAttribute);
-      exampleCards = this.randomSample(mainPool, strategy.mainCount);
-      console.log(`📊 [主示例] 抽取 ${exampleCards.length} 张 ${targetRarity} 卡作为设计参考`);
-
-      // 抽取低稀有度参考卡
-      if (strategy.lowerRarity && strategy.lowerCount > 0) {
-        const lowerPool = this.filterCards(strategy.lowerRarity, targetPlan, targetAttribute);
-        lowerRarityCards = this.randomSample(lowerPool, strategy.lowerCount);
-        console.log(`📊 [强度下限] 抽取 ${lowerRarityCards.length} 张 ${strategy.lowerRarity} 卡提醒设计强度下限`);
-      }
-
-      // 抽取高稀有度对比卡
-      if (strategy.higherRarity && strategy.higherCount > 0) {
-        const higherPool = this.filterCards(strategy.higherRarity, targetPlan, targetAttribute);
-        higherRarityCards = this.randomSample(higherPool, strategy.higherCount);
-        console.log(`📊 [强度上限] 抽取 ${higherRarityCards.length} 张 ${strategy.higherRarity} 卡提醒设计强度上限`);
-      }
-    }
-
-    return {
-      exampleCards,
-      lowerRarityCards,
-      higherRarityCards,
-    };
-  }
-
-  /**
-   * 将示例卡格式化为Markdown表格（用于世界书展示）
-   * @param result 抽取结果
-   * @param targetRarity 目标稀有度
-   * @returns Markdown格式的表格字符串
-   */
-  static formatAsMarkdown(result: ExampleCardResult, targetRarity: SkillCardRarity): string {
-    let markdown = '';
-
-    // UR特殊说明
-    if (targetRarity === 'UR') {
-      markdown += `## 🌟 UR卡设计要求\n`;
-      markdown += `以下是当前培育计划的**官方UR卡（传说级）**，请严格遵循其强度和设计风格：\n\n`;
-      markdown += this.formatCardTable(result.exampleCards, 'UR级示例（设计参考）');
-      markdown += '\n';
-      markdown += `---\n\n`;
-      markdown += `以下是 **SSR卡**，你设计的UR卡**必须全面超越**这些卡：\n`;
-      markdown += `- 更高的效果数值\n`;
-      markdown += `- 更独特的机制\n`;
-      markdown += `- 更强的培育计划协同性\n\n`;
-      markdown += this.formatCardTable(result.lowerRarityCards, 'SSR参考（必须超越）');
-      return markdown;
-    }
-
-    // 常规稀有度
-    if (result.exampleCards.length > 0) {
-      markdown += this.formatCardTable(result.exampleCards, `${targetRarity}级示例（设计参考）`);
-      markdown += '\n';
-    }
-
-    if (result.lowerRarityCards.length > 0) {
-      const lowerRarity = result.lowerRarityCards[0]?.rarity || '低稀有度';
-      markdown += this.formatCardTable(result.lowerRarityCards, `${lowerRarity}级参考（强度下限）`);
-      markdown += '\n';
-    }
-
-    if (result.higherRarityCards.length > 0) {
-      const higherRarity = result.higherRarityCards[0]?.rarity || '高稀有度';
-      markdown += this.formatCardTable(result.higherRarityCards, `${higherRarity}级对比（强度上限）`);
-      markdown += '\n';
-    }
-
-    return markdown;
-  }
-
-  /**
-   * 格式化卡牌列表为Markdown（词条式JSON格式）
-   */
-  private static formatCardTable(cards: SkillCard[], title: string): string {
-    if (cards.length === 0) return '';
-
-    let markdown = `### ${title}\n\n`;
-    markdown += `以下示例卡均使用词条式格式（effectEntries数组），请严格参考这种格式输出：\n\n`;
-
-    cards.forEach((card, index) => {
-      markdown += `**示例 ${index + 1}：${card.name}** (${card.rarity} - ${card.plan})\n`;
-      markdown += `\`\`\`json\n`;
-
-      // 拆分卡牌名称为日文和中文
-      const nameParts = card.name.split(' / ');
-      const nameJP = nameParts[0] || card.name;
-      const nameCN = nameParts[1] || nameJP;
-
-      // 输出完整的技能卡JSON，包含词条式格式（不包含type字段，避免默认陷阱问题）
-      const cardForDisplay: Record<string, unknown> = {
-        id: card.id,
-        nameJP: nameJP,
-        nameCN: nameCN,
-        rarity: card.rarity,
-        cost: card.cost,
-        producePlan: card.plan,
-        effectEntries: card.effectEntries || [],
-        effectEntriesEnhanced: card.effectEntriesEnhanced || [],
-        conditionalEffects: card.conditionalEffects || [],
-        conditionalEffectsEnhanced: card.conditionalEffectsEnhanced || [],
-        restrictions: card.restrictions || { isDuplicatable: true, usesPerBattle: null },
-        flavor: card.flavor || '',
-      };
-
-      // 只有当cardType有值时才添加type字段
-      if (card.cardType) {
-        const cardTypeText = card.cardType === 'A' ? '主动' : card.cardType === 'M' ? '精神' : '陷阱';
-        cardForDisplay.type = cardTypeText;
-      }
-
-      markdown += JSON.stringify(cardForDisplay, null, 2);
-      markdown += `\n\`\`\`\n\n`;
-    });
-
-    return markdown;
-  }
-
-  /**
-   * 将示例卡格式化为JSON字符串（用于提示词变量替换）
-   * @param result 抽取结果
-   * @param targetRarity 目标稀有度
-   * @returns JSON格式的字符串
-   */
-  static formatAsJSON(result: ExampleCardResult, targetRarity: SkillCardRarity): string {
-    if (targetRarity === 'UR') {
-      return JSON.stringify(
-        {
-          note: 'UR卡必须在所有方面超越以下SSR卡',
-          reference_ssr_cards: result.exampleCards,
-        },
-        null,
-        2,
-      );
-    }
-
-    return JSON.stringify(
-      {
-        example_cards: result.exampleCards,
-        lower_rarity_reference: result.lowerRarityCards,
-        higher_rarity_ceiling: result.higherRarityCards,
-      },
-      null,
-      2,
-    );
-  }
-
-  /**
    * 所有示例卡的固定UID基数
    */
   private static readonly EXAMPLE_CARDS_UID_BASE = 999999900; // 为示例卡预留100个UID
@@ -407,8 +149,7 @@ export class ExampleCardSelector {
    * @returns Promise<void>
    */
   static async addExampleCardsToWorldbook(worldbookName: string, config: ExampleCardConfig): Promise<void> {
-    const result = this.selectExampleCards(config);
-    const markdown = this.formatAsMarkdown(result, config.targetRarity);
+    const markdown = this.getV2ExamplesMarkdown(config);
 
     // 确保世界书存在
     const worldbooks = getWorldbookNames();
@@ -489,5 +230,166 @@ export class ExampleCardSelector {
       replaceWorldbook(worldbookName, worldbook);
       console.log('🗑️ 已从世界书移除示例卡片');
     }
+  }
+
+  // ==================== SkillCardV2 格式支持 ====================
+
+  /**
+   * 稀有度抽取配方
+   */
+  private static readonly RARITY_RECIPES: Record<
+    string,
+    {
+      standardCount: number;
+      standardSource: 'manual_gold' | 'high';
+      lowerBoundCount: number;
+      lowerBoundRarity: 'R' | 'SR' | 'SSR' | null;
+    }
+  > = {
+    UR: { standardCount: 3, standardSource: 'manual_gold', lowerBoundCount: 2, lowerBoundRarity: 'SSR' },
+    SSR: { standardCount: 5, standardSource: 'high', lowerBoundCount: 2, lowerBoundRarity: 'SR' },
+    SR: { standardCount: 5, standardSource: 'high', lowerBoundCount: 2, lowerBoundRarity: 'R' },
+    R: { standardCount: 5, standardSource: 'high', lowerBoundCount: 0, lowerBoundRarity: null },
+  };
+
+  /**
+   * 获取按稀有度分层的示例卡（P1 新策略）
+   * - UR: 3张 manual_gold(UR) + 2张 high(SSR)
+   * - SSR: 5张 high(SSR) + 2张 high(SR)
+   * - SR: 5张 high(SR) + 2张 high(R)
+   * - R: 5张 high(R)
+   * @param config 抽取配置
+   * @returns 分层后的 SkillCardV2 数组
+   */
+  static getExamplesByRarityTier(config: ExampleCardConfig): SkillCardV2WithConfidence[] {
+    const { targetRarity, targetPlan } = config;
+    const recipe = this.RARITY_RECIPES[targetRarity] || this.RARITY_RECIPES['R'];
+
+    const result: SkillCardV2WithConfidence[] = [];
+
+    // 直接从技能卡库获取卡牌（现在都有 engine_data）
+    const getCardsWithEngineData = (rarity: SkillCardRarity): SkillCardV2WithConfidence[] => {
+      const cards = this.filterCards(rarity, targetPlan, config.targetAttribute);
+      return cards
+        .filter((c: any) => c.engine_data) // 只保留有 engine_data 的卡
+        .map((c: any) => ({
+          ...c,
+          example_confidence: 'high' as const,
+        }));
+    };
+
+    // 1. 抽取标准示范
+    const standardCandidates = getCardsWithEngineData(targetRarity);
+    const selectedStandard = this.randomSample(standardCandidates, recipe.standardCount);
+
+    // UR 卡标记为 manual_gold（最高质量）
+    for (const card of selectedStandard) {
+      if (recipe.standardSource === 'manual_gold') {
+        card.example_confidence = 'manual_gold';
+      }
+    }
+    result.push(...selectedStandard);
+    console.log(`📊 [分层示例] 标准示范(${targetRarity}): ${selectedStandard.length}/${recipe.standardCount}`);
+
+    // 2. 抽取下限示例（如果有）
+    if (recipe.lowerBoundRarity && recipe.lowerBoundCount > 0) {
+      const lowerCandidates = getCardsWithEngineData(recipe.lowerBoundRarity);
+      const selectedLower = this.randomSample(lowerCandidates, recipe.lowerBoundCount);
+
+      // 为下限示例添加 example_source_rarity 标注
+      for (const card of selectedLower) {
+        card.example_source_rarity = recipe.lowerBoundRarity;
+      }
+
+      result.push(...selectedLower);
+      console.log(
+        `📊 [分层示例] 下限参考(${recipe.lowerBoundRarity}): ${selectedLower.length}/${recipe.lowerBoundCount}`,
+      );
+    }
+
+    return result;
+  }
+
+  /**
+   * @deprecated 使用 getExamplesByRarityTier() 代替（P1 策略回滚）
+   * 获取混合示例卡（旧版 70/20/10 比例）
+   */
+  static getMixedV2Examples(config: ExampleCardConfig, totalCount = 10): SkillCardV2WithConfidence[] {
+    // 重定向到新方法
+    console.warn('⚠️ getMixedV2Examples 已弃用，请使用 getExamplesByRarityTier()');
+    return this.getExamplesByRarityTier(config);
+  }
+
+  /**
+   * 格式化 SkillCardV2 为 Markdown（effectEntries + engine_data 双必填格式）
+   * F3.1: 确保输出包含 effectEntries 以教会 AI 输出词条格式
+   */
+  static formatV2AsMarkdown(cards: SkillCardV2WithConfidence[], title: string): string {
+    if (cards.length === 0) return '';
+
+    let markdown = `### ${title}\n\n`;
+    markdown += `以下示例使用 SkillCardV2 格式（effectEntries + engine_data 双必填）：\n`;
+    markdown += `> **学习规则**：只学习 manual_gold/high 的完整结构；high_partial 学习词条格式但禁止学习 partial_effects；low_text_only 仅供风格参考。\n\n`;
+
+    cards.forEach((card, index) => {
+      const confidenceLabel =
+        card.example_confidence === 'manual_gold'
+          ? '🏆'
+          : card.example_confidence === 'high'
+            ? '✓'
+            : card.example_confidence === 'high_partial'
+              ? '⚡'
+              : '📝';
+
+      // F3.3: low_text_only 仅输出氛围片段，不输出 JSON 结构
+      if (card.example_confidence === 'low_text_only') {
+        markdown += `**氛围参考 ${index + 1}** ${confidenceLabel} - ${card.display?.name || card.name}\n`;
+        markdown += `> ${card.display?.flavor || card.flavor || '（无氛围文本）'}\n\n---\n\n`;
+        return;
+      }
+
+      // 显示下限示例的来源稀有度
+      const sourceRarityLabel = card.example_source_rarity ? ` [下限参考-${card.example_source_rarity}]` : '';
+      markdown += `**示例 ${index + 1}** ${confidenceLabel} \`${card.example_confidence}\`${sourceRarityLabel} - ${card.display?.name || card.name} (${card.rarity} - ${card.plan})\n`;
+      markdown += `\`\`\`json\n`;
+
+      // F3.1: 自定义输出顺序，确保 effectEntries 在 engine_data 之前
+      const orderedCard: Record<string, any> = {
+        example_confidence: card.example_confidence,
+      };
+      // 仅当存在时才输出 example_source_rarity
+      if (card.example_source_rarity) {
+        orderedCard.example_source_rarity = card.example_source_rarity;
+      }
+      orderedCard.id = card.id;
+      orderedCard.rarity = card.rarity;
+      orderedCard.type = card.type;
+      orderedCard.plan = card.plan;
+      // ⚡ F3.1: 必须包含 effectEntries（展示层）
+      orderedCard.effectEntries = card.effectEntries || [];
+      orderedCard.effectEntriesEnhanced = card.effectEntriesEnhanced || [];
+      // engine_data（执行层）
+      orderedCard.engine_data = card.engine_data;
+      // F4.3: 不再输出 display（省 Token，effectEntries 已作为前端展示）
+      orderedCard.restrictions = card.restrictions;
+      // 保留 flavor 作为可选氛围文本
+      if (card.display?.flavor) {
+        orderedCard.flavor = card.display.flavor;
+      }
+
+      markdown += JSON.stringify(orderedCard, null, 2);
+      markdown += `\n\`\`\`\n\n`;
+    });
+
+    return markdown;
+  }
+
+  /**
+   * 获取 V2 格式的示例 Markdown（用于世界书）
+   */
+  static getV2ExamplesMarkdown(config: ExampleCardConfig): string {
+    // P1: 使用新的分层抽取策略
+    const tieredCards = this.getExamplesByRarityTier(config);
+    return this.formatV2AsMarkdown(tieredCards, `SkillCardV2 示例（${config.targetRarity} - ${config.targetPlan}）`);
   }
 }

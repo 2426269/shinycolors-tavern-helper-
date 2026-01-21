@@ -28,6 +28,14 @@ export interface SkillCard {
     usesPerBattle: number | null;
   };
   flavor: string;
+  // T8: engine_data 移除，由 ProduceHostCore.convertToSkillCardV2 从 effectEntries 生成
+  display?: {
+    name: string;
+    nameJP?: string;
+    description: string;
+    flavor?: string;
+  };
+  visual_hint?: any;
 }
 
 export interface GachaContext {
@@ -53,7 +61,7 @@ const SKILL_CARDS_BY_CATEGORY: Record<SkillCardCategory, Record<SkillCardRarity,
 
 // 初始化技能卡分类
 function initSkillCards() {
-  const data = skillCardsData as Record<string, Record<string, SkillCard[]>>;
+  const data = skillCardsData as unknown as Record<string, Record<string, SkillCard[]>>;
 
   for (const [category, rarities] of Object.entries(data)) {
     const cat = category as SkillCardCategory;

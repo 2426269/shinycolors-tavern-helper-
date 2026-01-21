@@ -6,6 +6,5 @@
 export * from './MemoryCard';
 export * from './SupportCard';
 
-// TODO: 添加更多类型导出
-// export * from './ProduceState';
-// export * from './Scenario';
+// 培育状态相关
+export * from './ProduceTypes';

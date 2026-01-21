@@ -12,6 +12,7 @@ import type { BattleContext, JsonLogicExpression } from './types';
  */
 export class RuleEvaluator {
   private rngSeed: number;
+  private rngFn?: () => number; // T-2: 注入的 RNG 函数
 
   constructor(seed?: number) {
     this.rngSeed = seed ?? Date.now();
@@ -19,17 +20,46 @@ export class RuleEvaluator {
   }
 
   /**
+   * T-2: 注入 RNG 函数
+   */
+  public setRng(fn: () => number): void {
+    this.rngFn = fn;
+  }
+
+  /**
+   * T-2: 统一随机数入口 - 优先使用注入的 rngFn
+   */
+  public random(): number {
+    if (this.rngFn) {
+      return this.rngFn();
+    }
+    return this.nextRandom();
+  }
+
+  /**
    * 注册自定义操作符
    */
   private registerCustomOperations(): void {
-    // 随机数操作符（可复现）
+    // 随机数操作符（T-2: 使用 this.random() 统一入口）
     jsonLogic.add_operation('rand', () => {
-      return this.nextRandom();
+      return this.random();
     });
 
-    // 检查是否有 Tag
+    // 检查是否有 Tag (支持前缀兼容)
     jsonLogic.add_operation('hasTag', (tag: string, tags: string[]) => {
-      return tags?.includes(tag) ?? false;
+      if (!tags || !Array.isArray(tags)) return false;
+
+      // 1. 精确匹配
+      if (tags.includes(tag)) return true;
+
+      // 2. 若 tag 不含冒号，尝试 ai:${tag} 和 std:${tag}
+      if (!tag.includes(':')) {
+        if (tags.includes(`ai:${tag}`)) return true;
+        if (tags.includes(`std:${tag}`)) return true;
+      }
+
+      // 3. 若 tag 含冒号，仅精确匹配（已在步骤1处理）
+      return false;
     });
 
     // 检查是否有 Buff
@@ -57,6 +87,15 @@ export class RuleEvaluator {
     jsonLogic.add_operation('clamp', (value: number, min: number, max: number) => {
       return Math.min(Math.max(value, min), max);
     });
+
+    // T7: 匹配卡名（支持中文名和日文名）
+    jsonLogic.add_operation(
+      'matchCardName',
+      (targetNames: string | string[], cardName: string, cardNameJP?: string) => {
+        const names = Array.isArray(targetNames) ? targetNames : [targetNames];
+        return names.includes(cardName) || (cardNameJP && names.includes(cardNameJP));
+      },
+    );
   }
 
   /**
@@ -94,6 +133,24 @@ export class RuleEvaluator {
       console.error('❌ [RuleEvaluator] 条件评估失败:', error);
       console.error('规则:', JSON.stringify(rule));
       return false; // 失败时默认不执行
+    }
+  }
+
+  /**
+   * 评估通用规则
+   * @param rule JSON Logic 规则
+   * @param context 战斗上下文
+   * @returns 评估结果
+   */
+  public evaluate(rule: JsonLogicExpression | undefined, context: BattleContext): any {
+    if (rule === undefined || rule === null) {
+      return true; // 默认通过
+    }
+    try {
+      return jsonLogic.apply(rule, context);
+    } catch (error) {
+      console.error('❌ [RuleEvaluator] 规则评估失败:', error);
+      return false;
     }
   }
 
@@ -145,11 +202,21 @@ export class RuleEvaluator {
           heat: 0,
           buffs: {},
           tags: [],
-          state_switch_count: 0,
+          state_switch_count: {}, // EV1: per-state 计数
+          state_switch_count_total: 0, // EV1: 总次数
         },
         turn: 1,
         max_turns: 12,
         cards_played_this_turn: 0,
+        cards_played_total: 0, // 总出牌数
+        rng: 0.5,
+        // EV1: 新增字段默认值
+        play_turn: 1,
+        deck_count: 0,
+        discard_count: 0,
+        cards_in_hand_by_rarity: { N: 0, R: 0, SR: 0, SSR: 0, UR: 0 },
+        new_state: undefined,
+        stamina_cost: 0,
       };
 
       jsonLogic.apply(rule, testContext);
@@ -162,12 +229,15 @@ export class RuleEvaluator {
 
 /**
  * 创建战斗上下文（从战斗状态转换）
+ * @param state 战斗状态对象
+ * @param rng 随机数 (0-1)。回放/录制场景必须注入确定性数值。
  */
-export function createBattleContext(state: any): BattleContext {
+export function createBattleContext(state: any, rng: number): BattleContext {
+  // T-2: rng 必须显式传入，禁止默认 Math.random()
   return {
     player: {
       genki: state.genki ?? 0,
-      genki_percent: state.maxStamina > 0 ? (state.genki / state.maxStamina) * 100 : 0,
+      genki_percent: state.maxGenki > 0 ? (state.genki / state.maxGenki) * 100 : 0,
       stamina: state.stamina ?? 0,
       stamina_percent: state.maxStamina > 0 ? (state.stamina / state.maxStamina) * 100 : 0,
       score: state.score ?? 0,
@@ -178,11 +248,21 @@ export function createBattleContext(state: any): BattleContext {
       heat: state.heat ?? 0,
       buffs: buffMapToRecord(state.buffs),
       tags: state.tags ?? [],
-      state_switch_count: state.stateSwitchCount ?? 0,
+      state_switch_count: state.stateSwitchCount ?? {}, // EV1: per-state 计数
+      state_switch_count_total: state.stateSwitchCountTotal ?? 0, // EV1: 总次数
     },
     turn: state.turn ?? 1,
     max_turns: state.maxTurns ?? 12,
-    cards_played_this_turn: state.cardsUsedThisTurn ?? 0,
+    cards_played_this_turn: state.cardsPlayedThisTurn ?? 0,
+    cards_played_total: state.cardsPlayedTotal ?? 0, // 总出牌数
+    rng: rng, // 直接使用数值
+    // EV1: 新增字段
+    play_turn: state.playTurn ?? state.turn ?? 1,
+    deck_count: state.deckCount ?? 0,
+    discard_count: state.discardCount ?? 0,
+    cards_in_hand_by_rarity: state.cardsInHandByRarity ?? { N: 0, R: 0, SR: 0, SSR: 0, UR: 0 },
+    new_state: state.newState,
+    stamina_cost: state.staminaCost ?? 0,
   };
 }
 

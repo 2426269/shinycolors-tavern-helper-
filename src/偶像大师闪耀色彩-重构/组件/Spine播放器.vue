@@ -827,8 +827,9 @@ function updateSpineTransform() {
   currentContainer.scale.set(finalScale, finalScale);
 
   // 默认偏移值（与 renderToStage 一致）
-  const defaultOffsetX = isFullscreenMode ? -520 : -240;
-  const defaultOffsetY = isFullscreenMode ? -320 : -250;
+  // 全屏时不要偏移太多，保持人物可见
+  const defaultOffsetX = isFullscreenMode ? -100 : -240;
+  const defaultOffsetY = isFullscreenMode ? -350 : -250;
   const debugOffsetX = props.debugOffsetX || 0;
   const debugOffsetY = props.debugOffsetY || 0;
   currentContainer.position.set(

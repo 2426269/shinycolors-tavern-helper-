@@ -16,6 +16,8 @@ export interface BuffInstance {
   visual_hint?: VisualHint; // AI 创造的 Buff 需要
   multiplier?: number; // Buff 增益倍率（默认 1.0）
   source?: string; // 来源（卡牌 ID 或机制 ID）
+  addedThisTurn?: boolean; // 本回合添加，跳过首次扣减
+  decay_per_turn?: number; // 每回合层数衰减
 }
 
 // ==================== Tag 数据结构 ====================
@@ -45,6 +47,16 @@ const STANDARD_BUFF_CONFIG: Record<
   AlloutState: { name: '全力状态', category: 'positive' },
   ConserveState: { name: '温存状态', category: 'positive' },
   ResoluteState: { name: '强气状态', category: 'positive' },
+  // ===== 子任务1新增 =====
+  AllPower: { name: '全力值', category: 'positive' },
+  Heat: { name: '热意', category: 'positive' },
+  StaminaCut: { name: '体力消耗削减', category: 'positive' },
+  StaminaIncrease: { name: '体力消耗增加', category: 'negative' },
+  StaminaExtra: { name: '体力消耗追加', category: 'negative' },
+  ScoreFinalMultiplier: { name: '最终得分倍率', category: 'positive' },
+  // ===== 新增: 通用得分加成 =====
+  ScoreBonus: { name: '得分增加', category: 'positive' },
+  GoodImpressionBonus: { name: '好印象效果增加', category: 'positive' },
 };
 
 // ==================== StateManager 类 ====================
@@ -52,13 +64,18 @@ const STANDARD_BUFF_CONFIG: Record<
 export class StateManager {
   private buffs: Map<string, BuffInstance> = new Map();
   private tags: Map<string, TagInstance> = new Map();
-  private stateSwitchCount: number = 0;
-  private buffMultipliers: Map<string, number> = new Map();
-
-  // ==================== Buff 操作 ====================
+  private stateSwitchCount: Record<string, number> = {}; // EV1: per-state 计数
+  private stateSwitchCountTotal: number = 0; // EV1: 总次数
+  private buffGainMultipliers: Map<string, number> = new Map(); // T-B3: 获得量倍率
+  private buffEffectMultipliers: Map<string, number> = new Map(); // T-B4: 效果倍率
 
   /**
    * 添加或叠加 Buff
+   * Buff 立即生效，但从下回合结束才开始扣减 duration
+   *
+   * 规则:
+   * 1) duration > 0 的 Buff 仅刷新 duration，不叠加 stacks
+   * 2) decay_per_turn 对 duration = -1 的 Buff 仍生效
    */
   public addBuff(
     buffId: StandardBuffId | string,
@@ -66,17 +83,27 @@ export class StateManager {
     duration: number = -1,
     visualHint?: VisualHint,
     source?: string,
+    decayPerTurn?: number,
   ): void {
     const existing = this.buffs.get(buffId);
 
     if (existing) {
-      // 叠加层数
-      existing.stacks += stacks;
-      // 刷新持续时间（取较大值）
-      if (duration > existing.duration) {
-        existing.duration = duration;
+      // 叠加层数 (回合制Buff只刷新duration，不叠加stacks)
+      if (duration > 0) {
+        // 回合制: 累加持续时间（T-B1修复：从 max() 改为 +=）
+        existing.duration += duration;
+        existing.addedThisTurn = true; // 刷新时也跳过本回合扣减
+      } else {
+        // 层数制: 叠加层数（T-B3: 应用获得量倍率）
+        const gainMultiplier = this.getBuffGainMultiplier(buffId);
+        const actualStacks = Math.ceil(stacks * gainMultiplier);
+        existing.stacks += actualStacks;
       }
-      console.log(`✨ [StateManager] Buff叠加: ${buffId} → ${existing.stacks}层`);
+      // 更新衰减率（如果提供）
+      if (decayPerTurn !== undefined) {
+        existing.decay_per_turn = decayPerTurn;
+      }
+      console.log(`✨ [StateManager] Buff叠加: ${buffId} → ${existing.stacks}层, ${existing.duration}回合`);
     } else {
       // 新增 Buff
       const config = STANDARD_BUFF_CONFIG[buffId as StandardBuffId];
@@ -89,9 +116,13 @@ export class StateManager {
         visual_hint: visualHint,
         multiplier: 1.0,
         source,
+        addedThisTurn: duration > 0, // 回合制Buff标记为本回合添加
+        decay_per_turn: decayPerTurn,
       };
       this.buffs.set(buffId, newBuff);
-      console.log(`✨ [StateManager] 新增Buff: ${buffId} (${stacks}层, ${duration}回合)`);
+      console.log(
+        `✨ [StateManager] 新增Buff: ${buffId} (${stacks}层, ${duration}回合${decayPerTurn ? `, 每回合衰减${decayPerTurn}` : ''})`,
+      );
     }
   }
 
@@ -122,6 +153,13 @@ export class StateManager {
   }
 
   /**
+   * 获取 Buff 剩余回合数
+   */
+  public getBuffDuration(buffId: string): number {
+    return this.buffs.get(buffId)?.duration ?? 0;
+  }
+
+  /**
    * 检查是否有 Buff
    */
   public hasBuff(buffId: string): boolean {
@@ -136,22 +174,52 @@ export class StateManager {
   }
 
   /**
-   * 设置 Buff 倍率
+   * T-B3: 设置 Buff 获得量倍率
    */
-  public setBuffMultiplier(buffId: string, multiplier: number): void {
-    this.buffMultipliers.set(buffId, multiplier);
+  public setBuffGainMultiplier(buffId: string, multiplier: number): void {
+    this.buffGainMultipliers.set(buffId, multiplier);
     const buff = this.buffs.get(buffId);
     if (buff) {
       buff.multiplier = multiplier;
     }
-    console.log(`📊 [StateManager] 设置Buff倍率: ${buffId} → ${multiplier}x`);
+    console.log(`📊 [StateManager] 设置获得量倍率: ${buffId} → ${multiplier}x`);
   }
 
   /**
-   * 获取 Buff 倍率
+   * T-B3: 获取 Buff 获得量倍率
    */
-  public getBuffMultiplier(buffId: string): number {
-    return this.buffMultipliers.get(buffId) ?? 1.0;
+  public getBuffGainMultiplier(buffId: string): number {
+    return this.buffGainMultipliers.get(buffId) ?? 1.0;
+  }
+
+  /**
+   * T-B4: 设置 Buff 效果倍率（有效层数×N）
+   */
+  public setBuffEffectMultiplier(buffId: string, multiplier: number): void {
+    this.buffEffectMultipliers.set(buffId, multiplier);
+    console.log(`📊 [StateManager] 设置效果倍率: ${buffId} → ${multiplier}x`);
+  }
+
+  /**
+   * T-B4: 获取 Buff 效果倍率
+   */
+  public getBuffEffectMultiplier(buffId: string): number {
+    return this.buffEffectMultipliers.get(buffId) ?? 1.0;
+  }
+
+  /**
+   * T-B2: 确保 Buff 至少保持 N 回合（使用 max 逻辑）
+   */
+  public ensureBuffTurns(buffId: string, turns: number): void {
+    const existing = this.buffs.get(buffId);
+    if (existing) {
+      if (turns > existing.duration) {
+        existing.duration = turns;
+        console.log(`⏰ [StateManager] 确保Buff回合: ${buffId} → ${turns}回合`);
+      }
+    } else {
+      this.addBuff(buffId, 1, turns);
+    }
   }
 
   // ==================== Tag 操作 ====================
@@ -233,30 +301,57 @@ export class StateManager {
    * 记录状态切换
    */
   public recordStateSwitch(fromState: string | null, toState: string): void {
-    this.stateSwitchCount++;
-    console.log(`🔄 [StateManager] 状态切换: ${fromState ?? 'null'} → ${toState} (总计: ${this.stateSwitchCount}次)`);
+    // EV1: 更新 per-state 计数
+    this.stateSwitchCount[toState] = (this.stateSwitchCount[toState] ?? 0) + 1;
+    this.stateSwitchCountTotal++;
+    console.log(
+      `🔄 [StateManager] 状态切换: ${fromState ?? 'null'} → ${toState} (${toState}=${this.stateSwitchCount[toState]}, 总计=${this.stateSwitchCountTotal})`,
+    );
   }
 
   /**
-   * 获取状态切换次数
+   * 获取状态切换次数 (per-state 计数)
    */
-  public getStateSwitchCount(): number {
-    return this.stateSwitchCount;
+  public getStateSwitchCount(): Record<string, number> {
+    return { ...this.stateSwitchCount };
+  }
+
+  /**
+   * 获取状态切换总次数
+   */
+  public getStateSwitchCountTotal(): number {
+    return this.stateSwitchCountTotal;
   }
 
   // ==================== 回合结束处理 ====================
 
   /**
    * 回合结束时更新持续时间
+   * 本回合添加的 Buff 不扣减，从下回合结束开始扣
    */
   public onTurnEnd(): void {
     // 更新 Buff 持续时间
     for (const [id, buff] of this.buffs) {
+      // 本回合添加的 Buff 跳过扣减
+      if (buff.addedThisTurn) {
+        buff.addedThisTurn = false;
+        continue;
+      }
       if (buff.duration > 0) {
         buff.duration--;
         if (buff.duration === 0) {
           this.buffs.delete(id);
           console.log(`⏰ [StateManager] Buff过期: ${id}`);
+        }
+      }
+      // 层数衰减 (decay_per_turn)
+      if (buff.decay_per_turn && buff.stacks > 0) {
+        buff.stacks -= buff.decay_per_turn;
+        if (buff.stacks <= 0) {
+          this.buffs.delete(id);
+          console.log(`⬇️ [StateManager] Buff层数衰减归零: ${id}`);
+        } else {
+          console.log(`⬇️ [StateManager] Buff衰减: ${id} 剩余${buff.stacks}层`);
         }
       }
     }
@@ -281,22 +376,48 @@ export class StateManager {
   public reset(): void {
     this.buffs.clear();
     this.tags.clear();
-    this.buffMultipliers.clear();
-    this.stateSwitchCount = 0;
+    this.buffGainMultipliers.clear(); // T-B3: 重命名
+    this.buffEffectMultipliers.clear(); // T-B4: 效果倍率
+    this.stateSwitchCount = {}; // EV1: per-state 计数
+    this.stateSwitchCountTotal = 0; // EV1: 总次数
     console.log('🔄 [StateManager] 状态已重置');
   }
 
   // ==================== 序列化 ====================
 
   /**
-   * 导出为记录格式（用于 JSON Logic）
+   * T-10: 导出原始层数记录（不应用效果倍率）
+   * 用于条件判断 (when)，判断物理层数
    */
-  public toBuffRecord(): Record<string, number> {
+  public toBuffRawRecord(): Record<string, number> {
     const record: Record<string, number> = {};
     for (const [id, buff] of this.buffs) {
-      record[id] = buff.stacks;
+      record[id] = buff.stacks; // 原始层数
     }
     return record;
+  }
+
+  /**
+   * T-10: 导出有效层数记录（应用效果倍率）
+   * 用于得分计算，层数 × effectMultiplier
+   */
+  public toBuffEffectiveRecord(): Record<string, number> {
+    const record: Record<string, number> = {};
+    for (const [id, buff] of this.buffs) {
+      const effectMultiplier = this.getBuffEffectMultiplier(id);
+      record[id] = buff.stacks * effectMultiplier;
+    }
+    return record;
+  }
+
+  /**
+   * 导出为记录格式（用于 JSON Logic）
+   * @deprecated 使用 toBuffRawRecord 或 toBuffEffectiveRecord
+   * T-B4: 默认返回有效层数（向后兼容）
+   */
+  public toBuffRecord(): Record<string, number> {
+    // T-10: 保持向后兼容，默认返回有效层数
+    return this.toBuffEffectiveRecord();
   }
 }
 

@@ -174,7 +174,11 @@ export class ActionExecutor {
 
     // 5. 执行卡牌效果
     if (card.engine_data?.logic_chain) {
-      events.push({ type: BattleEventType.LOGIC_CHAIN_START, timestamp: timestamp(), data: { source_card_id: card.id } });
+      events.push({
+        type: BattleEventType.LOGIC_CHAIN_START,
+        timestamp: timestamp(),
+        data: { source_card_id: card.id },
+      });
       const chainRes = this.executeLogicChain(card.engine_data.logic_chain, state, cardContext, rng);
       if (chainRes.events) events.push(...chainRes.events);
       events.push({ type: BattleEventType.LOGIC_CHAIN_END, timestamp: timestamp(), data: { source_card_id: card.id } });
@@ -977,12 +981,14 @@ export class ActionExecutor {
         if (source.length > 0) {
           const card = source[0];
           this.cardZoneManager.moveCard(card.id, zone, action.to_zone);
+          // Follow-up: 当移动到手牌且来源不是抽牌堆时，使用 CARD_PULL 事件
+          const isPull = action.to_zone === 'hand' && zone !== 'deck';
           return {
             success: true,
             logs: [`移动卡牌: ${card.display.name} (${zone} → ${action.to_zone})`],
             events: [
               {
-                type: BattleEventType.CARD_MOVE,
+                type: isPull ? BattleEventType.CARD_PULL : BattleEventType.CARD_MOVE,
                 timestamp: Date.now(),
                 data: { card_id: card.id, from_zone: zone, to_zone: action.to_zone },
               },
@@ -1010,12 +1016,14 @@ export class ActionExecutor {
     const card = source[0];
     this.cardZoneManager.moveCard(card.id, action.from_zone, action.to_zone);
 
+    // Follow-up: 当移动到手牌且来源不是抽牌堆时，使用 CARD_PULL 事件
+    const isPull = action.to_zone === 'hand' && action.from_zone !== 'deck';
     return {
       success: true,
       logs: [`移动卡牌: ${card.display.name} (${action.from_zone} → ${action.to_zone})`],
       events: [
         {
-          type: BattleEventType.CARD_MOVE,
+          type: isPull ? BattleEventType.CARD_PULL : BattleEventType.CARD_MOVE,
           timestamp: Date.now(),
           data: { card_id: card.id, from_zone: action.from_zone, to_zone: action.to_zone },
         },

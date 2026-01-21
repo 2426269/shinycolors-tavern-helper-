@@ -216,7 +216,7 @@ function handleBackdropClick() {
 
 function handleImageError(e: Event) {
   const img = e.target as HTMLImageElement;
-  img.src = 'https://placehold.co/100x100?text=No+Image';
+  img.src = 'https://via.placeholder.com/100x100?text=No+Image';
 }
 
 function handleIconError(e: Event) {

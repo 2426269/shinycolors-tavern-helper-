@@ -3,8 +3,51 @@
  * 提供技能卡的筛选、搜索、强化等功能
  */
 
-import { getAllSkillCards, SKILL_CARD_LIBRARY } from '../数据/技能卡库';
+import skillCardsData from '../数据/技能卡库.json';
 import type { ProducePlan, SkillCard, SkillCardFilter, SkillCardRarity } from '../类型/技能卡类型';
+
+// 技能卡库按培育计划索引
+const SKILL_CARD_LIBRARY: Record<ProducePlan, SkillCard[]> = {
+  非凡: [],
+  理性: [],
+  感性: [],
+  自由: [],
+};
+
+// 从 JSON 数据构建卡库
+const planMapping: Record<string, ProducePlan> = {
+  非凡: '非凡',
+  理性: '理性',
+  感性: '感性',
+  自由: '自由',
+};
+
+for (const [planKey, rarities] of Object.entries(skillCardsData)) {
+  const plan = planMapping[planKey];
+  if (plan && typeof rarities === 'object') {
+    for (const cards of Object.values(rarities as Record<string, unknown[]>)) {
+      if (Array.isArray(cards)) {
+        for (const card of cards) {
+          const skillCard = card as SkillCard;
+          // 设置 plan 字段
+          skillCard.plan = plan;
+          // 映射 type 到 cardType
+          if (!skillCard.cardType && skillCard.type) {
+            skillCard.cardType = skillCard.type === '主动' ? 'A' : skillCard.type === '精神' ? 'M' : 'A';
+          }
+          SKILL_CARD_LIBRARY[plan].push(skillCard);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 获取所有技能卡
+ */
+export function getAllSkillCards(): SkillCard[] {
+  return Object.values(SKILL_CARD_LIBRARY).flat();
+}
 
 /**
  * 根据培育计划获取技能卡
@@ -18,14 +61,14 @@ export function getSkillCardsByPlan(plan: ProducePlan): SkillCard[] {
  */
 export function getSkillCardsByRarity(rarity: SkillCardRarity, plan?: ProducePlan): SkillCard[] {
   const cards = plan ? getSkillCardsByPlan(plan) : getAllSkillCards();
-  return cards.filter(card => card.rarity === rarity);
+  return cards.filter((card: SkillCard) => card.rarity === rarity);
 }
 
 /**
  * 根据ID查找技能卡
  */
 export function getSkillCardById(id: string): SkillCard | undefined {
-  return getAllSkillCards().find(card => card.id === id);
+  return getAllSkillCards().find((card: SkillCard) => card.id === id);
 }
 
 /**
@@ -34,9 +77,9 @@ export function getSkillCardById(id: string): SkillCard | undefined {
 export function getSkillCardsByName(name: string, exactMatch: boolean = false): SkillCard[] {
   const all = getAllSkillCards();
   if (exactMatch) {
-    return all.filter(card => card.name === name);
+    return all.filter((card: SkillCard) => card.name === name);
   }
-  return all.filter(card => card.name.includes(name));
+  return all.filter((card: SkillCard) => card.name.includes(name));
 }
 
 /**
@@ -48,36 +91,36 @@ export function filterSkillCards(filter: SkillCardFilter): SkillCard[] {
   // 按稀有度筛选
   if (filter.rarity) {
     const rarities = Array.isArray(filter.rarity) ? filter.rarity : [filter.rarity];
-    cards = cards.filter(card => rarities.includes(card.rarity));
+    cards = cards.filter((card: SkillCard) => rarities.includes(card.rarity));
   }
 
   // 按培育计划筛选
   if (filter.plan) {
     const plans = Array.isArray(filter.plan) ? filter.plan : [filter.plan];
-    cards = cards.filter(card => plans.includes(card.plan));
+    cards = cards.filter((card: SkillCard) => plans.includes(card.plan));
   }
 
   // 按卡牌类型筛选
   if (filter.cardType) {
     const types = Array.isArray(filter.cardType) ? filter.cardType : [filter.cardType];
-    cards = cards.filter(card => types.includes(card.cardType));
+    cards = cards.filter((card: SkillCard) => types.includes(card.cardType));
   }
 
   // 按强化状态筛选
   if (filter.enhanced !== undefined) {
-    cards = cards.filter(card => card.enhanced === filter.enhanced);
+    cards = cards.filter((card: SkillCard) => card.enhanced === filter.enhanced);
   }
 
   // 按专属卡筛选
   if (filter.isExclusive !== undefined) {
-    cards = cards.filter(card => card.isExclusive === filter.isExclusive);
+    cards = cards.filter((card: SkillCard) => card.isExclusive === filter.isExclusive);
   }
 
   // 按关键词搜索
   if (filter.keyword) {
     const keyword = filter.keyword.toLowerCase();
     cards = cards.filter(
-      card =>
+      (card: SkillCard) =>
         card.name.toLowerCase().includes(keyword) ||
         card.effect_before.toLowerCase().includes(keyword) ||
         card.effect_after.toLowerCase().includes(keyword),

@@ -3,8 +3,14 @@
  */
 
 // 核心服务
+export {
+  AIGenerationAssistant,
+  batchGenerateSkillCards,
+  generateSkillCard,
+  generateSkillCardRepair,
+  getAIAssistant,
+} from './AI生成助手';
 export { WorldbookService } from './世界书服务';
-export { AIGenerationAssistant, getAIAssistant, generateSkillCard, batchGenerateSkillCards } from './AI生成助手';
 
 // 子模块
 export { ChainOfThoughtManager, ChainOfThoughtMode } from './思维链区';
@@ -13,19 +19,19 @@ export { ExampleCardSelector } from './示例卡抽取区';
 
 // 游戏机制数据库
 export {
-  PRODUCE_PLAN_MECHANICS,
   ALL_EFFECTS,
   EFFECT_CATEGORIES,
   IMPORTANT_RULES,
-  getProducePlanMechanicMarkdown,
+  PRODUCE_PLAN_MECHANICS,
   getAllProducePlanMechanicsMarkdown,
-  getEffectsByPlanMarkdown,
   getEffectCategoriesMarkdown,
-  getImportantRulesMarkdown,
+  getEffectsByPlanMarkdown,
   getFullMechanicExplanation,
+  getImportantRulesMarkdown,
+  getProducePlanMechanicMarkdown,
 } from './游戏机制数据库';
 
 // 类型导出
-export type { PromptVariables, ExampleCardConfig } from './世界书服务';
-export type { SkillCardGenerationOptions, GenerationResult } from './AI生成助手';
-export type { ProducePlanMechanic, EffectData } from './游戏机制数据库';
+export type { GenerationResult, SkillCardGenerationOptions } from './AI生成助手';
+export type { ExampleCardConfig, PromptVariables } from './世界书服务';
+export type { EffectData, ProducePlanMechanic } from './游戏机制数据库';

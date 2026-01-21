@@ -14,8 +14,44 @@ class AnimationController {
   // DOM 元素引用映射 (id -> HTMLElement)
   private _elementRefs: Map<string, HTMLElement> = new Map();
 
+  // 子任务A: 全局速度倍率 (2.0 = 2倍速)
+  private _speedMultiplier = 2.0;
+
+  // 子任务C: 可并行播放的事件类型
+  private readonly PARALLEL_EVENT_TYPES: Set<BattleEventType> = new Set([
+    BattleEventType.GAIN_SCORE,
+    BattleEventType.ADD_BUFF,
+    BattleEventType.REMOVE_BUFF,
+    BattleEventType.MODIFY_GENKI,
+    BattleEventType.MODIFY_STAMINA,
+    BattleEventType.ADD_TAG,
+    BattleEventType.REMOVE_TAG,
+  ]);
+
   constructor() {
     // 初始化
+  }
+
+  /**
+   * 设置动画速度倍率
+   */
+  public setSpeed(multiplier: number) {
+    this._speedMultiplier = Math.max(0.1, multiplier);
+    console.log(`🎬 [Animation] 速度倍率设置为: ${this._speedMultiplier}x`);
+  }
+
+  /**
+   * 获取调整后的时长
+   */
+  private getDuration(baseDuration: number): number {
+    return baseDuration / this._speedMultiplier;
+  }
+
+  /**
+   * 获取调整后的延迟
+   */
+  private getDelay(baseDelay: number): number {
+    return baseDelay / this._speedMultiplier;
   }
 
   /**
@@ -55,7 +91,7 @@ class AnimationController {
   }
 
   /**
-   * 处理队列中的事件
+   * 处理队列中的事件 (子任务C: 支持并行)
    */
   private async processQueue() {
     // 创建新的 Timeline
@@ -67,14 +103,25 @@ class AnimationController {
     });
 
     while (this._queue.length > 0) {
-      const event = this._queue.shift();
-      if (!event) continue;
+      // 收集可并行的事件
+      const parallelBatch: BattleEvent[] = [];
+      const firstEvent = this._queue[0];
 
-      console.log(`🎬 [Animation] 处理事件: ${event.type}`, event.data);
+      if (this.PARALLEL_EVENT_TYPES.has(firstEvent.type)) {
+        // 收集连续的可并行事件
+        while (this._queue.length > 0 && this.PARALLEL_EVENT_TYPES.has(this._queue[0].type)) {
+          parallelBatch.push(this._queue.shift()!);
+        }
 
-      // 根据事件类型构建动画步骤
-      // 目前仅打印日志，后续在 Subtask 3 中实现具体视觉效果
-      await this.playEventAnimation(event);
+        // 并行播放
+        console.log(`🎬 [Animation] 并行播放 ${parallelBatch.length} 个事件`);
+        await Promise.all(parallelBatch.map(e => this.playEventAnimation(e)));
+      } else {
+        // 串行播放
+        const event = this._queue.shift()!;
+        console.log(`🎬 [Animation] 串行播放事件: ${event.type}`, event.data);
+        await this.playEventAnimation(event);
+      }
     }
   }
 
@@ -152,7 +199,7 @@ class AnimationController {
         break;
       default:
         // 未实现的事件类型，默认等待一小段时间
-        await new Promise(r => setTimeout(r, 50));
+        await new Promise(r => setTimeout(r, this.getDelay(20)));
         break;
     }
   }
@@ -167,7 +214,7 @@ class AnimationController {
       // 元气扣除动画：闪烁红色 -> 缩短
       await gsap.to(genkiBar, {
         backgroundColor: '#ff4d4d',
-        duration: 0.1,
+        duration: this.getDuration(0.1),
         yoyo: true,
         repeat: 1,
         onComplete: () => {
@@ -182,7 +229,7 @@ class AnimationController {
       // 体力扣除动画：震动 -> 变色
       await gsap.to(hpBar, {
         x: 5,
-        duration: 0.05,
+        duration: this.getDuration(0.05),
         yoyo: true,
         repeat: 3,
       });
@@ -197,7 +244,7 @@ class AnimationController {
     await gsap.fromTo(
       scoreEl,
       { scale: 1.5, color: '#ffeb3b' },
-      { scale: 1, color: 'white', duration: 0.5, ease: 'back.out(1.7)' },
+      { scale: 1, color: 'white', duration: this.getDuration(0.5), ease: 'back.out(1.7)' },
     );
   }
 
@@ -211,7 +258,7 @@ class AnimationController {
           x: 100,
           opacity: 0,
           rotation: 10,
-          duration: 0.4,
+          duration: this.getDuration(0.25),
           ease: 'power2.out',
         });
       }
@@ -231,13 +278,13 @@ class AnimationController {
             // 增强效果：放大 -> 移动 -> 消失
             const tl = gsap.timeline();
             await tl
-              .to(cardEl, { scale: 1.2, duration: 0.2, ease: 'power1.out' }) // 放大
+              .to(cardEl, { scale: 1.15, duration: this.getDuration(0.1), ease: 'power1.out' }) // 放大
               .to(cardEl, {
                 x: x,
                 y: y,
                 scale: 0.1,
                 opacity: 0,
-                duration: 0.5,
+                duration: this.getDuration(0.3),
                 ease: 'power2.in',
               });
           } else {
@@ -245,7 +292,7 @@ class AnimationController {
             await gsap.to(cardEl, {
               y: -100,
               opacity: 0,
-              duration: 0.3,
+              duration: this.getDuration(0.3),
             });
           }
         }
@@ -257,7 +304,11 @@ class AnimationController {
     const buffArea = this._elementRefs.get('buff-area');
     if (buffArea) {
       // 整个 Buff 区闪烁一下
-      await gsap.fromTo(buffArea, { filter: 'brightness(2)' }, { filter: 'brightness(1)', duration: 0.3 });
+      await gsap.fromTo(
+        buffArea,
+        { filter: 'brightness(2)' },
+        { filter: 'brightness(1)', duration: this.getDuration(0.3) },
+      );
     }
   }
 
@@ -277,7 +328,7 @@ class AnimationController {
         { boxShadow: 'inset 0 0 0 0 rgba(255, 255, 255, 0)' },
         {
           boxShadow: 'inset 0 0 50px 10px rgba(255, 255, 255, 0.3)',
-          duration: 0.2,
+          duration: this.getDuration(0.2),
           yoyo: true,
           repeat: 1,
           ease: 'power2.inOut',
@@ -303,7 +354,7 @@ class AnimationController {
 
     if (data.zone === 'hand' && data.instance_ids) {
       // 等待 Vue 渲染新卡牌
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, this.getDelay(30)));
 
       for (const id of data.instance_ids) {
         const cardEl = this._elementRefs.get(`card-${id}`);
@@ -313,7 +364,7 @@ class AnimationController {
             scale: 0,
             opacity: 0,
             y: -200, // 从上方掉落
-            duration: 0.5,
+            duration: this.getDuration(0.3),
             ease: 'back.out(1.7)',
             clearProps: 'all', // 动画结束后清除样式，避免影响交互
           });
@@ -348,7 +399,7 @@ class AnimationController {
     // 让我们先实现 animateBanner。
 
     // 等待 Vue 渲染
-    await new Promise(r => setTimeout(r, 100));
+    await new Promise(r => setTimeout(r, this.getDelay(30)));
 
     const tl = gsap.timeline();
     data.card_ids.forEach((id, index) => {
@@ -359,10 +410,10 @@ class AnimationController {
           {
             y: 100,
             opacity: 0,
-            duration: 0.5,
+            duration: this.getDuration(0.3),
             ease: 'back.out(1.2)',
           },
-          index * 0.1, // 错开播放
+          index * this.getDuration(0.08), // 错开播放
         );
       }
     });
@@ -377,7 +428,7 @@ class AnimationController {
 
     // 回合开始抽牌，通常伴随 "Turn Start" UI，这里仅处理卡牌动画
     // 实际卡牌移动由 CARD_MOVE 处理，这里可以加个音效或全局提示
-    await new Promise(r => setTimeout(r, 200));
+    await new Promise(r => setTimeout(r, this.getDelay(50)));
   }
 
   // ... (animateTurnEndDiscard, animateModifyStamina, etc.)
@@ -413,12 +464,12 @@ class AnimationController {
 
     document.body.appendChild(banner);
 
-    // 播放动画
+    // 播放动画 (子任务B: 调低基准值)
     await gsap
       .timeline()
-      .to(banner, { opacity: 1, duration: 0.3 })
-      .to(banner, { scale: 1.2, duration: 0.1, yoyo: true, repeat: 1 })
-      .to(banner, { opacity: 0, duration: 0.3, delay: 0.8 })
+      .to(banner, { opacity: 1, duration: this.getDuration(0.15) })
+      .to(banner, { scale: 1.1, duration: this.getDuration(0.08), yoyo: true, repeat: 1 })
+      .to(banner, { opacity: 0, duration: this.getDuration(0.15), delay: this.getDelay(0.3) })
       .call(() => {
         if (banner.parentNode) banner.parentNode.removeChild(banner);
       });
@@ -431,7 +482,7 @@ class AnimationController {
     // 例如：手牌区域整体变暗或下沉
     const handArea = this._elementRefs.get('hand-area'); // 假设有这个 ref
     if (handArea) {
-      await gsap.to(handArea, { opacity: 0.5, duration: 0.2, yoyo: true, repeat: 1 });
+      await gsap.to(handArea, { opacity: 0.5, duration: this.getDuration(0.2), yoyo: true, repeat: 1 });
     }
   }
 
@@ -444,7 +495,7 @@ class AnimationController {
       await gsap.to(hpBar, {
         x: 5,
         backgroundColor: '#ff4d4d',
-        duration: 0.05,
+        duration: this.getDuration(0.05),
         yoyo: true,
         repeat: 3,
         onComplete: () => {
@@ -456,7 +507,7 @@ class AnimationController {
       await gsap.fromTo(
         hpBar,
         { filter: 'brightness(1.5) sepia(1) hue-rotate(50deg)' }, // 模拟绿色高亮
-        { filter: 'none', duration: 0.5 },
+        { filter: 'none', duration: this.getDuration(0.5) },
       );
     }
   }
@@ -468,7 +519,7 @@ class AnimationController {
     // 如果是单独事件，这里可以做一个快速的旋转切换效果
     const handArea = this._elementRefs.get('hand-area');
     if (handArea) {
-      await gsap.to(handArea, { rotationY: 360, duration: 0.5, ease: 'power2.inOut' });
+      await gsap.to(handArea, { rotationY: 360, duration: this.getDuration(0.5), ease: 'power2.inOut' });
     }
   }
 
@@ -485,7 +536,7 @@ class AnimationController {
         y: 100,
         opacity: 0,
         scale: 0.5,
-        duration: 0.6,
+        duration: this.getDuration(0.35),
         ease: 'elastic.out(1, 0.8)',
       });
     }
@@ -497,12 +548,16 @@ class AnimationController {
 
     if (data.delta > 0) {
       // 增加元气：蓝色闪光
-      await gsap.fromTo(genkiBar, { filter: 'brightness(1.5) hue-rotate(180deg)' }, { filter: 'none', duration: 0.5 });
+      await gsap.fromTo(
+        genkiBar,
+        { filter: 'brightness(1.5) hue-rotate(180deg)' },
+        { filter: 'none', duration: this.getDuration(0.5) },
+      );
     } else {
       // 减少元气：红色闪烁
       await gsap.to(genkiBar, {
         backgroundColor: '#ff4d4d',
-        duration: 0.1,
+        duration: this.getDuration(0.1),
         yoyo: true,
         repeat: 1,
         onComplete: () => {
@@ -518,7 +573,7 @@ class AnimationController {
     // 这里简单让 Buff 区域震动一下
     const buffArea = this._elementRefs.get('buff-area');
     if (buffArea) {
-      await gsap.to(buffArea, { x: 5, duration: 0.05, yoyo: true, repeat: 3 });
+      await gsap.to(buffArea, { x: 5, duration: this.getDuration(0.05), yoyo: true, repeat: 3 });
     }
   }
 
@@ -532,7 +587,7 @@ class AnimationController {
         { filter: 'drop-shadow(0 0 0 rgba(255, 215, 0, 0))' },
         {
           filter: 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.8))',
-          duration: 0.3,
+          duration: this.getDuration(0.3),
           yoyo: true,
           repeat: 1,
         },
@@ -550,7 +605,7 @@ class AnimationController {
         { filter: 'grayscale(0)' },
         {
           filter: 'grayscale(1)',
-          duration: 0.2,
+          duration: this.getDuration(0.2),
           yoyo: true,
           repeat: 1,
         },

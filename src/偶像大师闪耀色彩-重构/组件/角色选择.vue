@@ -81,6 +81,9 @@
                   <img src="https://283pro.site/shinycolors/游戏图标/Vocal.png" alt="Vo" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.vocal || 0 }}</span>
                 </div>
+                <div class="lesson-bonus" :class="getBonusClass(currentLessonBonus?.vocal)">
+                  +{{ formatBonus(currentLessonBonus?.vocal) }}%
+                </div>
               </div>
 
               <div class="circle-item dance">
@@ -90,6 +93,9 @@
                 <div class="stat-bottom">
                   <img src="https://283pro.site/shinycolors/游戏图标/Dance.png" alt="Da" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.dance || 0 }}</span>
+                </div>
+                <div class="lesson-bonus" :class="getBonusClass(currentLessonBonus?.dance)">
+                  +{{ formatBonus(currentLessonBonus?.dance) }}%
                 </div>
               </div>
 
@@ -101,13 +107,19 @@
                   <img src="https://283pro.site/shinycolors/游戏图标/Visual.png" alt="Vi" class="dimension-icon" />
                   <span class="stat-value">{{ currentCard.attribute?.stats.visual || 0 }}</span>
                 </div>
+                <div class="lesson-bonus" :class="getBonusClass(currentLessonBonus?.visual)">
+                  +{{ formatBonus(currentLessonBonus?.visual) }}%
+                </div>
               </div>
             </div>
 
             <!-- 属性类型标签 -->
             <div v-if="currentCard.attribute" class="attribute-type-tag">
-              <img :src="getAttributeIcon(currentCard.attribute.type)" :alt="currentCard.attribute.type" />
-              <span>{{ currentCard.attribute.type }}</span>
+              <img
+                :src="getAttributeIcon(currentCard.attribute.attributeType)"
+                :alt="currentCard.attribute.attributeType"
+              />
+              <span>{{ currentCard.attribute.attributeType }}</span>
             </div>
           </div>
         </div>
@@ -249,6 +261,7 @@ import type { GachaData } from '../../偶像大师闪耀色彩/utils/game-data';
 import { getGachaData } from '../../偶像大师闪耀色彩/utils/game-data';
 import { ALL_CARDS } from '../卡牌管理/全部卡牌数据';
 import { getCardAttribute } from '../卡牌管理/卡牌属性';
+import { getLessonBonusFromData } from '../培育/服务/ProduceControlService';
 import { buildUrlFromFileName } from '../工具/卡牌工具';
 import { getAttributeIcon } from '../类型/卡牌属性类型';
 import { SPINE_CHARACTERS } from '../角色管理/spine资源映射';
@@ -397,6 +410,27 @@ const currentAffection = computed(() => {
   // 将0-100映射到0-10
   return Math.floor(affection / 10);
 });
+
+// 当前角色卡的训练加成
+const currentLessonBonus = computed(() => {
+  if (!currentCard.value) return null;
+  // 使用卡牌的 fullName 来获取训练加成
+  return getLessonBonusFromData(currentCard.value.fullName);
+});
+
+// 根据加成值获取样式类名 (bonusValue 是小数如 0.245)
+const getBonusClass = (bonusValue: number | undefined): string => {
+  if (!bonusValue) return 'low';
+  if (bonusValue >= 0.2) return 'high'; // >= 20%
+  if (bonusValue >= 0.13) return 'mid'; // >= 13%
+  return 'low';
+};
+
+// 格式化加成值为百分比显示 (0.245 -> "24.5")
+const formatBonus = (bonusValue: number | undefined): string => {
+  if (!bonusValue) return '0.0';
+  return (bonusValue * 100).toFixed(1);
+};
 
 // 获取角色所属组合
 const getCharacterUnit = (characterName: string): string => {
@@ -1072,6 +1106,32 @@ onMounted(() => {
 
   &.visual .circle-bg {
     background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  }
+
+  .lesson-bonus {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #aaa;
+    transition: all 0.3s ease;
+
+    &.high {
+      background: linear-gradient(135deg, #ffd700, #ffaa00);
+      color: #333;
+      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    &.mid {
+      background: rgba(100, 200, 255, 0.8);
+      color: #fff;
+    }
+
+    &.low {
+      background: rgba(100, 100, 100, 0.6);
+      color: #ccc;
+    }
   }
 }
 

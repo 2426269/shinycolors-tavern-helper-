@@ -12,6 +12,7 @@ interface HookInstance extends HookDef {
   remaining_turns: number; // 剩余触发回合
   trigger_count: number; // 已触发次数
   is_active: boolean; // 是否激活
+  play_turn: number; // EV3: Hook 注册时的回合号
 }
 
 // ==================== HookManager 类 ====================
@@ -28,8 +29,10 @@ export class HookManager {
 
   /**
    * 注册一个新的 Hook
+   * @param hookDef Hook 定义
+   * @param currentTurn 当前回合号（EV3: 用于 play_turn 元数据）
    */
-  public register(hookDef: HookDef): void {
+  public register(hookDef: HookDef, currentTurn: number = 1): void {
     // 如果同 ID 已存在，覆盖
     if (this.hooks.has(hookDef.id)) {
       console.log(`⚠️ [HookManager] 覆盖已存在的Hook: ${hookDef.id}`);
@@ -40,10 +43,11 @@ export class HookManager {
       remaining_turns: hookDef.duration_turns ?? -1, // -1 表示永久
       trigger_count: 0,
       is_active: true,
+      play_turn: currentTurn, // EV3: 记录注册时的回合号
     };
 
     this.hooks.set(hookDef.id, instance);
-    console.log(`🪝 [HookManager] 注册Hook: ${hookDef.id} (${hookDef.trigger})`);
+    console.log(`🪝 [HookManager] 注册Hook: ${hookDef.id} (${hookDef.trigger}) [play_turn=${currentTurn}]`);
   }
 
   /**
@@ -107,7 +111,12 @@ export class HookManager {
 
       // 检查条件
       if (hook.condition) {
-        const conditionMet = this.ruleEvaluator.evaluateCondition(hook.condition, context);
+        // EV3: 注入 play_turn 到上下文
+        const contextWithPlayTurn: BattleContext = {
+          ...context,
+          play_turn: hook.play_turn,
+        };
+        const conditionMet = this.ruleEvaluator.evaluateCondition(hook.condition, contextWithPlayTurn);
         if (!conditionMet) {
           console.log(`❌ [HookManager] Hook条件不满足: ${id}`);
           continue;
@@ -168,6 +177,56 @@ export class HookManager {
    */
   public hasHook(hookId: string): boolean {
     return this.hooks.has(hookId);
+  }
+
+  // ==================== T8: 固有能力支持 ====================
+
+  /**
+   * T8: 为卡牌注册固有能力（战斗开始时调用）
+   * @param card 卡牌实例
+   */
+  public registerIntrinsicHooks(card: { id: string; engine_data?: { intrinsic_hooks?: HookDef[] } }): void {
+    const hooks = card.engine_data?.intrinsic_hooks ?? [];
+    if (hooks.length === 0) return;
+
+    for (const hookDef of hooks) {
+      const intrinsicId = `${card.id}::intrinsic::${hookDef.id}`;
+      const instance: HookInstance = {
+        ...hookDef,
+        id: intrinsicId,
+        remaining_turns: -1, // 永久
+        trigger_count: 0,
+        is_active: true,
+        play_turn: 0, // 固有能力从战斗开始就存在
+        _cardId: card.id, // 绑定卡牌 ID 用于清理
+      } as HookInstance & { _cardId: string };
+
+      this.hooks.set(intrinsicId, instance);
+      console.log(`🔮 [HookManager] 注册固有能力: ${intrinsicId}`);
+    }
+  }
+
+  /**
+   * T8: 注销指定卡牌的所有固有能力 Hook
+   * @param cardId 卡牌 ID
+   */
+  public unregisterCardHooks(cardId: string): void {
+    const toRemove: string[] = [];
+    for (const [hookId, hook] of this.hooks) {
+      // 检查 Hook ID 是否属于该卡牌
+      if (hookId.startsWith(`${cardId}::intrinsic::`)) {
+        toRemove.push(hookId);
+      }
+      // 检查 _cardId 属性（备用）
+      if ((hook as any)._cardId === cardId) {
+        toRemove.push(hookId);
+      }
+    }
+
+    for (const hookId of toRemove) {
+      this.hooks.delete(hookId);
+      console.log(`☠️ [HookManager] 清理固有能力: ${hookId}`);
+    }
   }
 
   // ==================== 重置 ====================

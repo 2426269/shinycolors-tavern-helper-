@@ -337,6 +337,17 @@
                   <i class="fas fa-lock sealed-lock" :class="{ spinning: isGenerating }"></i>
                   <h3 class="sealed-title">{{ isGenerating ? '正在生成中...' : '技能卡尚未生成' }}</h3>
                   <p class="sealed-hint">{{ isGenerating ? 'AI 正在为你打造专属技能' : '需要AI生成此卡的专属技能' }}</p>
+                  <!-- 用户描述输入框 -->
+                  <div class="user-description-input">
+                    <label for="userDescInput"> <i class="fas fa-lightbulb"></i> 特殊要求（可选） </label>
+                    <input
+                      id="userDescInput"
+                      v-model="userDescriptionInput"
+                      type="text"
+                      placeholder="例如：无限抽牌、消耗所有元气获得大量得分..."
+                      :disabled="isGenerating"
+                    />
+                  </div>
                   <button class="generate-skill-btn" :disabled="isGenerating" @click="handleGenerateSkill">
                     <i class="fas" :class="isGenerating ? 'fa-spinner fa-spin' : 'fa-magic'"></i>
                     <span>{{ isGenerating ? '生成中...' : '生成技能卡' }}</span>
@@ -452,8 +463,10 @@
                   </div>
 
                   <!-- 卡牌简介 -->
-                  <div v-if="selectedCard.skill.flavor" class="skill-flavor-text">
-                    {{ selectedCard.skill.flavor }}
+                  <!-- 卡牌简介 -->
+                  <div v-if="selectedCard.skill.flavor || selectedCard.skill.flavorJP" class="skill-flavor-text">
+                    <div v-if="selectedCard.skill.flavorJP" class="flavor-jp">{{ selectedCard.skill.flavorJP }}</div>
+                    <div v-if="selectedCard.skill.flavor" class="flavor-cn">{{ selectedCard.skill.flavor }}</div>
                   </div>
 
                   <!-- 限制信息 -->
@@ -471,6 +484,11 @@
                   <button v-if="rawAIOutput" class="view-raw-output-btn" @click="showRawOutput = !showRawOutput">
                     <i class="fas" :class="showRawOutput ? 'fa-eye-slash' : 'fa-code'"></i>
                     <span>{{ showRawOutput ? '隐藏原始输出' : '查看原始输出' }}</span>
+                  </button>
+
+                  <!-- 修复按钮 (图标版) -->
+                  <button v-if="selectedCard.skill" class="repair-icon-btn" title="修复技能" @click="openRepairModal">
+                    <i class="fas fa-tools"></i>
                   </button>
                   <!-- 原始输出显示区域 -->
                   <div v-if="showRawOutput && rawAIOutput" class="raw-output-container">
@@ -500,6 +518,80 @@
         @click.stop
       />
     </div>
+
+    <!-- 技能卡修复弹窗 -->
+    <div v-if="showRepairModal" class="repair-modal" @click="closeRepairModal">
+      <div class="modal-content repair-content" @click.stop>
+        <div class="modal-header">
+          <h3><i class="fas fa-tools"></i> 修复技能卡</h3>
+          <button class="close-btn" @click="closeRepairModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="repair-info">
+            <p>如果技能卡描述与实际效果不符，或存在数值错误，请在此描述问题，AI 将尝试修复。</p>
+            <div class="original-preview">
+              <h4>当前技能: {{ selectedCard?.skill?.name }}</h4>
+              <div class="preview-desc">
+                <template v-if="selectedCard?.skill?.effectEntries && selectedCard.skill.effectEntries.length > 0">
+                  <div
+                    v-for="(entry, index) in selectedCard.skill.effectEntries"
+                    :key="index"
+                    class="effect-entry-item"
+                  >
+                    <span class="entry-bullet">●</span>
+                    <span class="entry-text">{{ entry.effect || formatEffectEntry(entry) }}</span>
+                  </div>
+                  <template v-if="selectedCard.skill.conditionalEffects?.length">
+                    <div
+                      v-for="(ce, index) in selectedCard.skill.conditionalEffects"
+                      :key="'cond-' + index"
+                      class="effect-entry-item conditional-effect"
+                    >
+                      <span class="entry-bullet">💡</span>
+                      <span class="entry-text">{{ ce.condition }} {{ ce.effect }}</span>
+                    </div>
+                  </template>
+                </template>
+                <template v-else>
+                  {{ selectedCard?.skill?.description }}
+                </template>
+              </div>
+            </div>
+            <!-- Engine Data 展示区域 -->
+            <div class="engine-data-preview">
+              <h4>Engine Data (只读):</h4>
+              <pre>{{
+                selectedCard?.skill?.engine_data ? JSON.stringify(selectedCard.skill.engine_data, null, 2) : '{}'
+              }}</pre>
+            </div>
+          </div>
+
+          <div class="repair-input-area">
+            <label for="repairIssue">问题描述:</label>
+            <textarea
+              id="repairIssue"
+              v-model="repairIssueInput"
+              placeholder="例如：效果描述说是增加30元气，但实际只增加了20..."
+              rows="4"
+              :disabled="isRepairing"
+            ></textarea>
+          </div>
+
+          <div v-if="repairError" class="repair-error"><i class="fas fa-exclamation-circle"></i> {{ repairError }}</div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="cancel-btn" :disabled="isRepairing" @click="closeRepairModal">取消</button>
+          <button class="confirm-btn" :disabled="isRepairing" @click="handleRepairSkill">
+            <i class="fas" :class="isRepairing ? 'fa-spinner fa-spin' : 'fa-check'"></i>
+            <span>{{ isRepairing ? '修复中...' : '开始修复' }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -520,7 +612,7 @@ import type { AttributeType, RecommendedStyle } from '../../类型/卡牌属性�
 import { getAttributeColor, getAttributeIcon, getStyleIcon } from '../../类型/卡牌属性类型';
 
 // 导入 AI 生成助手
-import { generateSkillCard } from '../../世界书管理';
+import { generateSkillCard, generateSkillCardRepair } from '../../世界书管理';
 import type {
   CardRestrictions,
   ConditionalEffectEntry,
@@ -528,6 +620,7 @@ import type {
   ProducePlan,
   SkillCardRarity,
 } from '../../战斗/类型/技能卡类型';
+import { saveSkillCard } from '../服务/图鉴服务';
 
 interface DisplayCard {
   fullCardName: string;
@@ -564,6 +657,21 @@ interface DisplayCard {
     conditionalEffectsEnhanced?: ConditionalEffectEntry[];
     restrictions?: CardRestrictions;
     flavor?: string;
+    flavorJP?: string; // T-12: 日语氛围文本
+    cost?: string; // 费用
+    display?: {
+      name: string;
+      description: string;
+      flavor: string;
+    }; // 显示信息
+    // T-Repair: 修复模式字段
+    engine_data?: any;
+    engine_data_original?: any;
+    repair_meta?: {
+      issue: string;
+      repairedAt: number;
+      version: number;
+    };
   } | null; // 技能卡信息（null 表示未生成）
 }
 
@@ -593,6 +701,12 @@ const rawAIOutput = ref<string | null>(null); // 存储 AI 原始输出
 const showRawOutput = ref(false); // 控制原始输出显示
 const isSkillEnhanced = ref(false); // 控制技能卡强化状态
 
+// 修复模式状态
+const showRepairModal = ref(false);
+const repairIssueInput = ref('');
+const isRepairing = ref(false);
+const repairError = ref<string | null>(null);
+
 // 原始卡片列表和显示的卡片列表
 const allCards = ref<DisplayCard[]>([]);
 const displayCards = ref<DisplayCard[]>([]);
@@ -612,6 +726,9 @@ const filters = ref({
   ownership: 'all' as 'all' | 'owned' | 'not-owned',
   attributes: [] as string[],
 });
+
+// AI 生成用户特殊要求输入
+const userDescriptionInput = ref('');
 
 // 组合数据（从配置文件导入 - 权威数据源）
 const units = IDOL_UNITS;
@@ -999,6 +1116,8 @@ async function handleGenerateSkill() {
       // 多模态支持：发送卡面图片（未觉醒 + 觉醒）
       cardImageUrl: card.fullImageUrl,
       awakenedImageUrl: card.awakenedImageUrl,
+      // 用户特殊要求（高优先级）
+      userDescription: userDescriptionInput.value,
     });
 
     // 保存原始输出（无论成功或失败）
@@ -1009,22 +1128,40 @@ async function handleGenerateSkill() {
 
     if (result.success && result.skillCard) {
       const skillCard = result.skillCard;
+      console.log('🔍 [handleGenerateSkill] Generated card flavorJP:', skillCard.flavorJP);
+      console.log('🔍 [handleGenerateSkill] Full skillCard object:', JSON.parse(JSON.stringify(skillCard)));
 
       // 保存到 localStorage（完整的技能卡数据）
+      // T-15: 必须包含 engine_data 和其他 NG 引擎字段，否则战斗时无法正确执行
       const skillKey = `skill_${card.fullCardName}`;
       const skillData = JSON.stringify({
         name: skillCard.name,
+        nameCN: skillCard.name, // 中文名
         cost: skillCard.cost,
+        type: skillCard.type || '主动',
+        plan: skillCard.plan,
+        rarity: card.rarity,
         effect: skillCard.effect_before,
+        effect_before: skillCard.effect_before,
+        effect_after: skillCard.effect_after,
         effectEnhanced: skillCard.effect_after,
         description: '闪耀的偶像之力',
-        // 新增：词条式格式字段
+        // 词条式格式字段
         effectEntries: skillCard.effectEntries || [],
         effectEntriesEnhanced: skillCard.effectEntriesEnhanced || [],
         conditionalEffects: skillCard.conditionalEffects || [],
         conditionalEffectsEnhanced: skillCard.conditionalEffectsEnhanced || [],
         restrictions: skillCard.restrictions || { isDuplicatable: true, usesPerBattle: null },
         flavor: skillCard.flavor || '',
+        flavorJP: skillCard.flavorJP || '',
+        // T-15: NG 引擎必需字段 - 缺失这些字段会导致卡牌效果不执行
+        engine_data: skillCard.engine_data,
+        display: skillCard.display || {
+          name: skillCard.name,
+          description: skillCard.effect_before,
+          flavor: skillCard.flavor || '',
+        },
+        visual_hint: skillCard.visual_hint,
       });
 
       try {
@@ -1067,6 +1204,8 @@ async function handleGenerateSkill() {
         conditionalEffectsEnhanced: skillCard.conditionalEffectsEnhanced || [],
         restrictions: skillCard.restrictions || { isDuplicatable: true, usesPerBattle: null },
         flavor: skillCard.flavor || '',
+        flavorJP: skillCard.flavorJP || '', // T-12: 更新日语 Flavor
+        engine_data: skillCard.engine_data, // T-15: 确保内存中更新 engine_data
       };
 
       // 更新 allCards 和 displayCards 中对应的卡片
@@ -1090,6 +1229,97 @@ async function handleGenerateSkill() {
     toastr.error(`生成失败: ${generateError.value}`, '', { timeOut: 3000 });
   } finally {
     isGenerating.value = false;
+  }
+}
+
+/**
+ * 打开修复弹窗
+ */
+function openRepairModal() {
+  if (!selectedCard.value || !selectedCard.value.skill) return;
+  repairIssueInput.value = '';
+  repairError.value = null;
+  showRepairModal.value = true;
+}
+
+/**
+ * 关闭修复弹窗
+ */
+function closeRepairModal() {
+  showRepairModal.value = false;
+  repairIssueInput.value = '';
+  repairError.value = null;
+}
+
+/**
+ * 处理技能卡修复
+ */
+async function handleRepairSkill() {
+  if (!selectedCard.value || !selectedCard.value.skill) return;
+  if (!repairIssueInput.value.trim()) {
+    toastr.warning('请输入需要修复的问题', '', { timeOut: 1500 });
+    return;
+  }
+  if (isRepairing.value) return;
+
+  isRepairing.value = true;
+  repairError.value = null;
+
+  try {
+    const card = selectedCard.value;
+    const skill = card.skill;
+
+    // 准备修复选项
+    const options = {
+      originalCardJson: JSON.stringify(skill),
+      originalEngineData: JSON.stringify((skill as any).engine_data || {}),
+      repairIssue: repairIssueInput.value,
+      streaming: true,
+    };
+
+    const result = await generateSkillCardRepair(options);
+
+    if (result.success && result.skillCard) {
+      // 构造新的技能对象（保持 DisplayCard.skill 结构）
+      const newSkill = {
+        ...skill!, // 保留原有字段 (断言非空)
+        ...result.skillCard, // 覆盖新字段
+        // 确保 description 存在
+        description: skill!.description,
+        // 确保 effect 存在 (DisplayCard.skill 需要 effect 字段)
+        effect: result.skillCard.effect_before || skill!.effect || '',
+        // 确保 engine_data 更新
+        engine_data: result.skillCard.engine_data,
+        // 确保 repair_meta 更新
+        repair_meta: (result.skillCard as any).repair_meta,
+      };
+
+      // 更新当前选中卡片
+      selectedCard.value.skill = newSkill;
+
+      // 更新列表中的卡片
+      const updateCardSkill = (cardsList: DisplayCard[]) => {
+        const index = cardsList.findIndex(c => c.fullCardName === card.fullCardName);
+        if (index !== -1) {
+          cardsList[index].skill = newSkill;
+        }
+      };
+      updateCardSkill(allCards.value);
+      updateCardSkill(displayCards.value);
+
+      // 保存到本地存储
+      saveSkillCard(card.fullCardName, newSkill);
+
+      toastr.success('技能卡修复成功！', '', { timeOut: 1500 });
+      closeRepairModal();
+    } else {
+      repairError.value = result.error || '修复失败，请重试';
+    }
+  } catch (error) {
+    console.error('修复过程出错:', error);
+    repairError.value = error instanceof Error ? error.message : String(error);
+  } finally {
+    isRepairing.value = false;
   }
 }
 
@@ -2563,6 +2793,7 @@ onMounted(async () => {
 
 // 技能卡信息显示（新版词条式格式）
 .skill-card-new {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -2746,12 +2977,26 @@ onMounted(async () => {
       padding: 18px 24px;
       background: rgba(102, 126, 234, 0.08);
       border-radius: 12px;
-      font-size: 16px;
-      color: #555;
-      font-style: italic;
-      line-height: 1.8;
       border-left: 4px solid #667eea;
       margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .flavor-jp {
+        font-size: 14px;
+        color: #888;
+        font-family: 'Yu Mincho', 'MS PMincho', serif;
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      .flavor-cn {
+        font-size: 16px;
+        color: #555;
+        font-style: italic;
+        line-height: 1.8;
+      }
     }
 
     // 限制信息（单独一行，底部紫色）
@@ -2953,6 +3198,327 @@ onMounted(async () => {
     font-size: 24px;
     top: 20px;
     right: 20px;
+  }
+}
+
+/* AI 生成用户描述输入框 */
+.user-description-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  text-align: left;
+
+  label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 8px;
+
+    i {
+      color: #ffd700;
+      margin-right: 6px;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    &::placeholder {
+      color: #999;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #ffd700;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+
+    &:disabled {
+      background: rgba(200, 200, 200, 0.5);
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* 修复按钮样式 */
+/* 修复按钮样式 (图标版) */
+.repair-icon-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
+
+/* 修复弹窗样式 */
+.repair-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+
+  .repair-content {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+  }
+
+  .modal-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .repair-info {
+      p {
+        margin: 0 0 15px;
+        color: #666;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .original-preview {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #e74c3c;
+
+        h4 {
+          margin: 0 0 8px;
+          color: #2c3e50;
+          font-size: 16px;
+        }
+
+        .preview-desc {
+          margin: 0;
+          color: #555;
+          font-size: 14px;
+          line-height: 1.6;
+
+          .effect-entry-item {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+
+            .entry-bullet {
+              color: #667eea;
+              font-size: 12px;
+              margin-top: 2px;
+            }
+
+            &.conditional-effect {
+              color: #e67e22;
+              margin-top: 8px;
+
+              .entry-bullet {
+                color: #e67e22;
+              }
+            }
+          }
+        }
+      }
+
+      .engine-data-preview {
+        margin-top: 15px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #3498db;
+
+        h4 {
+          margin: 0 0 8px;
+          color: #2c3e50;
+          font-size: 14px;
+        }
+
+        pre {
+          margin: 0;
+          color: #555;
+          font-size: 12px;
+          font-family: monospace;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          max-height: 150px;
+          overflow-y: auto;
+          background: #fff;
+          padding: 10px;
+          border: 1px solid #eee;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .repair-input-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+        resize: vertical;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: #e74c3c;
+          box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        &:disabled {
+          background: #f5f5f5;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .repair-error {
+      padding: 12px;
+      background: #fdecea;
+      border-radius: 8px;
+      color: #e74c3c;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    background: #f8f9fa;
+
+    button {
+      padding: 10px 24px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.cancel-btn {
+        background: white;
+        border: 1px solid #ddd;
+        color: #666;
+
+        &:hover {
+          background: #f1f1f1;
+        }
+      }
+
+      &.confirm-btn {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        }
+
+        &:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+          transform: none;
+        }
+      }
+    }
   }
 }
 </style>

@@ -68,29 +68,29 @@ export const P_DRINK_DATABASE: PDrink[] = [
   },
   {
     id: 'common_008',
-    nameJP: '初星ホエイプロテイン',
-    nameCN: '初星乳清蛋白',
+    nameJP: 'シマセンブリソーダ',
+    nameCN: '獐牙菜苏打',
     type: '通用',
     rarity: '高级',
-    effect: '"技能卡使用数追加"+1',
+    effect:
+      '数值提升量增加10%（5回合），从牌堆抽取2张技能卡移动到手牌，消耗2体力，接下来的5回合，回合开始时，额外抽取1张技能卡',
   },
   {
     id: 'common_009',
+    nameJP: '初星ホエイプロテイン',
+    nameCN: '初星乳清蛋白',
+    type: '通用',
+    rarity: '特级',
+    effect: '"技能卡使用数追加"+1',
+  },
+  {
+    id: 'common_010',
     nameJP: '初星スペシャル青汁',
     nameCN: '初星特制青汁',
     type: '通用',
     rarity: '特级',
     effect: '在手牌中随机"生成"一张已强化的SSR稀有度技能卡',
   },
-  {
-    id: 'common_010',
-    nameJP: '特製ハツボシエキス',
-    nameCN: '特制初星浓缩',
-    type: '通用',
-    rarity: '特级',
-    effect: '下次使用的A类技能卡额外发动一次效果（1次·1回合），体力消费2点，"消费体力增加"层数+1',
-  },
-
   // ========== 感性专属饮料 ==========
   {
     id: 'sense_001',
@@ -113,7 +113,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
   {
     id: 'sense_003',
     nameJP: 'スタミナ爆発ドリンク',
-    nameCN: '能量爆发饮料',
+    nameCN: '体力爆发饮料',
     type: '感性专属',
     rarity: '高级',
     effect: '"绝好调"层数+1，元气+9',
@@ -125,7 +125,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '严选初星玛奇朵',
     type: '感性专属',
     rarity: '特级',
-    effect: '使用后，每个出牌回合结束时，"集中"层数+1',
+    effect: '使用后，每个回合结束时，"集中"层数+1',
     exclusivePlan: '感性',
   },
   {
@@ -135,6 +135,16 @@ export const P_DRINK_DATABASE: PDrink[] = [
     type: '感性专属',
     rarity: '特级',
     effect: '"绝好调"层数+2，将所有手牌进行"训练中强化"',
+    exclusivePlan: '感性',
+  },
+  {
+    id: 'sense_006',
+    nameJP: '初星黒酢',
+    nameCN: '初星黑醋',
+    type: '感性专属',
+    rarity: '特级',
+    effect:
+      '"选择抽牌区或弃牌区中的一张技能卡移动到手牌，接下来使用的两张技能卡不消耗体力，消耗2体力，消耗体力增加1回合"',
     exclusivePlan: '感性',
   },
 
@@ -154,7 +164,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '热咖啡',
     type: '理性专属',
     rarity: '普通',
-    effect: '"有干劲"层数+3',
+    effect: '"干劲"层数+3',
     exclusivePlan: '理性',
   },
   {
@@ -181,7 +191,16 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '严选初星混合咖啡',
     type: '理性专属',
     rarity: '特级',
-    effect: '使用后，每个出牌回合结束时，"有干劲"层数+1',
+    effect: '使用后，每个出牌回合结束时，"干劲"层数+1',
+    exclusivePlan: '理性',
+  },
+  {
+    id: 'logic_006',
+    nameJP: '特製ハツボシエキス',
+    nameCN: '特制初星浓缩',
+    type: '理性专属',
+    rarity: '特级',
+    effect: '下次使用的A类技能卡额外发动一次效果（1次·1回合），体力消费2点，"消费体力增加"层数+1',
     exclusivePlan: '理性',
   },
 
@@ -192,7 +211,7 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '姜汁汽水',
     type: '非凡专属',
     rarity: '普通',
-    effect: '强气转化，全力值+1',
+    effect: '状态转化为强气，全力值+1',
     exclusivePlan: '非凡',
   },
   {
@@ -201,13 +220,13 @@ export const P_DRINK_DATABASE: PDrink[] = [
     nameCN: '焙茶',
     type: '非凡专属',
     rarity: '普通',
-    effect: '温存转化，全力值+2',
+    effect: '状态转化为温存，全力值+2',
     exclusivePlan: '非凡',
   },
   {
     id: 'anomaly_003',
     nameJP: 'ほっと緑茶',
-    nameCN: '暖心的绿茶',
+    nameCN: '热绿茶',
     type: '非凡专属',
     rarity: '高级',
     effect: '从牌堆或弃牌堆中选择一张技能卡，将其移动至温存卡堆中，指针转化为温存二阶段',

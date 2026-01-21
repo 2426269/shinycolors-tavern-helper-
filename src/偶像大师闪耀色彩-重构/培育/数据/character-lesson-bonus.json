@@ -1,0 +1,4070 @@
+{
+  "【ナチュラルモード】櫻木真乃": {
+    "enzaId": "1030010010",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 8.6,
+      "visual": 24.8
+    }
+  },
+  "【ぐうぜんBOOKS】櫻木真乃": {
+    "enzaId": "1030010020",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 10,
+      "visual": 24.3
+    }
+  },
+  "【しじまに華ひととき】櫻木真乃": {
+    "enzaId": "1030010030",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 8.6,
+      "visual": 23.8
+    }
+  },
+  "【花結びゆくゆく】櫻木真乃": {
+    "enzaId": "1030010040",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 8.1,
+      "visual": 13.2
+    }
+  },
+  "【一番星の魔法】櫻木真乃": {
+    "enzaId": "1030010050",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 9.4,
+      "visual": 24.5
+    }
+  },
+  "【ピックアップ・ スプリング】櫻木真乃": {
+    "enzaId": "1030010060",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9.8,
+      "visual": 12.6
+    }
+  },
+  "【ほわっとスマイル】櫻木真乃": {
+    "enzaId": "1040010010",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 8.6,
+      "visual": 24.8
+    }
+  },
+  "【ハ♡トフェルトゥギフト】櫻木真乃": {
+    "enzaId": "1040010020",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 9.5,
+      "visual": 24.3
+    }
+  },
+  "【はじけてスマイル】櫻木真乃": {
+    "enzaId": "1040010030",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.7,
+      "visual": 24.3
+    }
+  },
+  "【深染め、いろみぐさ】櫻木真乃": {
+    "enzaId": "1040010040",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 9.2,
+      "visual": 23.8
+    }
+  },
+  "【ソラを跳ね】櫻木真乃": {
+    "enzaId": "1040010050",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 8.5,
+      "visual": 25.3
+    }
+  },
+  "【花風Smiley】櫻木真乃": {
+    "enzaId": "1040010060",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9.2,
+      "visual": 13
+    }
+  },
+  "【ひとつ、はたたく】櫻木真乃": {
+    "enzaId": "1040010070",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 8.2,
+      "visual": 25
+    }
+  },
+  "【interStellar-Stella】櫻木真乃": {
+    "enzaId": "1040010080",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.6,
+      "visual": 13.6
+    }
+  },
+  "【きみと巡り行く】櫻木真乃": {
+    "enzaId": "1040010090",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 9.3,
+      "visual": 24.3
+    }
+  },
+  "【私のハルモニア】櫻木真乃": {
+    "enzaId": "1040010100",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.4,
+      "visual": 21.8
+    }
+  },
+  "【あなたと、いただきます】櫻木真乃": {
+    "enzaId": "1040010110",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.7,
+      "visual": 13.4
+    }
+  },
+  "【はるかなる】櫻木真乃": {
+    "enzaId": "1040010120",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 9.5,
+      "visual": 26
+    }
+  },
+  "【アイドルロード】櫻木真乃": {
+    "enzaId": "1940010010",
+    "characterId": "mano",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9,
+      "visual": 21.2
+    }
+  },
+  "【手作りの心遣い】風野灯織": {
+    "enzaId": "1030020010",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 23.5,
+      "dance": 12.4,
+      "visual": 8.9
+    }
+  },
+  "【マフラー直して、心は解けて】風野灯織": {
+    "enzaId": "1030020020",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 20.4,
+      "visual": 9.3
+    }
+  },
+  "【落下予測地点】風野灯織": {
+    "enzaId": "1030020030",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 20.4,
+      "visual": 9.6
+    }
+  },
+  "【インビジブルタイム】風野灯織": {
+    "enzaId": "1030020040",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 13,
+      "visual": 9.3
+    }
+  },
+  "【足りない隙間】風野灯織": {
+    "enzaId": "1030020050",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 12.8,
+      "visual": 8.3
+    }
+  },
+  "【柔らかな微笑み】風野灯織": {
+    "enzaId": "1040020010",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 22.4,
+      "visual": 9.5
+    }
+  },
+  "【淡雪の戯れ】風野灯織": {
+    "enzaId": "1040020020",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.5,
+      "visual": 9.9
+    }
+  },
+  "【伸ばす手に乗せるのは】風野灯織": {
+    "enzaId": "1040020030",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 13,
+      "visual": 8.4
+    }
+  },
+  "【清閑に息をひそめて】風野灯織": {
+    "enzaId": "1040020040",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 12.6,
+      "visual": 9.7
+    }
+  },
+  "【黒百合前で待ち合わせ】風野灯織": {
+    "enzaId": "1040020050",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 12.6,
+      "visual": 9
+    }
+  },
+  "【涼】風野灯織": {
+    "enzaId": "1040020060",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 20.6,
+      "visual": 8
+    }
+  },
+  "【洸】風野灯織": {
+    "enzaId": "1040020070",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 13,
+      "visual": 8.9
+    }
+  },
+  "【ひとりじゃない夜のこと】風野灯織": {
+    "enzaId": "1040020080",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 13.4,
+      "visual": 8.2
+    }
+  },
+  "【耿耿】風野灯織": {
+    "enzaId": "1040020090",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 12.2,
+      "visual": 8.1
+    }
+  },
+  "【エバー・リメンバー・ネバー】風野灯織": {
+    "enzaId": "1040020100",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 21,
+      "visual": 9.6
+    }
+  },
+  "【ベター・ザン・ベスト】風野灯織": {
+    "enzaId": "1040020110",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 12.6,
+      "visual": 8.6
+    }
+  },
+  "【The thing is】風野灯織": {
+    "enzaId": "1040020120",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 12.8,
+      "visual": 9.6
+    }
+  },
+  "【キミと今旅立つ】風野灯織": {
+    "enzaId": "1040020130",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 13,
+      "visual": 9.5
+    }
+  },
+  "【お弁当と未来】風野灯織": {
+    "enzaId": "1040020140",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 12.6,
+      "visual": 9.5
+    }
+  },
+  "【アイドルロード】風野灯織": {
+    "enzaId": "1940020010",
+    "characterId": "hiori",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 13,
+      "visual": 8.6
+    }
+  },
+  "【キネマ・リリックで夢見て】八宮めぐる": {
+    "enzaId": "1030030010",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.8,
+      "visual": 9.6
+    }
+  },
+  "【小さな夜のトロイメライ】八宮めぐる": {
+    "enzaId": "1030030020",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 24.5,
+      "visual": 9.9
+    }
+  },
+  "【チエルアルコは流星の】八宮めぐる": {
+    "enzaId": "1030030030",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 20.2,
+      "dance": 24.8,
+      "visual": 8.2
+    }
+  },
+  "【ハロー・ワールド】八宮めぐる": {
+    "enzaId": "1030030040",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 24.3,
+      "visual": 9.5
+    }
+  },
+  "【セツナn】八宮めぐる": {
+    "enzaId": "1030030050",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 20.4,
+      "dance": 24,
+      "visual": 8.8
+    }
+  },
+  "【金色の元気いっぱいガール】八宮めぐる": {
+    "enzaId": "1040030010",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 12.4,
+      "dance": 23.5,
+      "visual": 9.3
+    }
+  },
+  "【夏に恋するピチカート！】八宮めぐる": {
+    "enzaId": "1040030020",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 24.3,
+      "visual": 9.5
+    }
+  },
+  "【シュカのまにまに】八宮めぐる": {
+    "enzaId": "1040030030",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 25.3,
+      "visual": 8.3
+    }
+  },
+  "【日々を紡ぐインヴェルノ】八宮めぐる": {
+    "enzaId": "1040030040",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 24.8,
+      "visual": 9.3
+    }
+  },
+  "【アイの誓い】八宮めぐる": {
+    "enzaId": "1040030050",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 20.4,
+      "dance": 24.8,
+      "visual": 9.8
+    }
+  },
+  "【たまゆらフレーミング】八宮めぐる": {
+    "enzaId": "1040030060",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 24.5,
+      "visual": 8.5
+    }
+  },
+  "【きゅん ♡コメ】八宮めぐる": {
+    "enzaId": "1040030070",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 23.8,
+      "visual": 9.7
+    }
+  },
+  "【たそかれスワッグ】八宮めぐる": {
+    "enzaId": "1040030080",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 24.5,
+      "visual": 8.9
+    }
+  },
+  "【ずっと・グッド・ラック】八宮めぐる": {
+    "enzaId": "1040030090",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 21.4,
+      "visual": 8.4
+    }
+  },
+  "【こころレイヤリング】八宮めぐる": {
+    "enzaId": "1040030100",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.5,
+      "visual": 9.8
+    }
+  },
+  "【ふたり色　クレオール】八宮めぐる": {
+    "enzaId": "1040030110",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 14,
+      "visual": 8.2
+    }
+  },
+  "【そらあいスウィング】八宮めぐる": {
+    "enzaId": "1040030120",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 20.2,
+      "dance": 24,
+      "visual": 8.2
+    }
+  },
+  "【晴れ空オーシニ】八宮めぐる": {
+    "enzaId": "1040030130",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 20.8,
+      "visual": 8.7
+    }
+  },
+  "【アイドルロード】八宮めぐる": {
+    "enzaId": "1940030010",
+    "characterId": "meguru",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 25.8,
+      "visual": 9.7
+    }
+  },
+  "【ばってん長崎恋岬】月岡恋鐘": {
+    "enzaId": "1030040010",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 8.8,
+      "visual": 20.6
+    }
+  },
+  "【ビ～♡バップ海岸】月岡恋鐘": {
+    "enzaId": "1030040020",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.6,
+      "visual": 13
+    }
+  },
+  "【は～と♡に火をつけて】月岡恋鐘": {
+    "enzaId": "1030040030",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 8.7,
+      "visual": 13.2
+    }
+  },
+  "【猫道カントリー】月岡恋鐘": {
+    "enzaId": "1030040040",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 8.2,
+      "visual": 12.6
+    }
+  },
+  "【雪、えとせとら】月岡恋鐘": {
+    "enzaId": "1030040050",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.6,
+      "visual": 12.6
+    }
+  },
+  "【ばりうまかブルース】月岡恋鐘": {
+    "enzaId": "1040040010",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 14.4,
+      "dance": 9.1,
+      "visual": 25.5
+    }
+  },
+  "【月の浜辺で待っとって】月岡恋鐘": {
+    "enzaId": "1040040020",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.9,
+      "visual": 20.6
+    }
+  },
+  "【風吹く丘にはよ来んね】月岡恋鐘": {
+    "enzaId": "1040040030",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 14,
+      "dance": 8.9,
+      "visual": 25.5
+    }
+  },
+  "【うちのリボンは恋結び】月岡恋鐘": {
+    "enzaId": "1040040040",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 8.4,
+      "visual": 13
+    }
+  },
+  "【心の鐘が鳴っとるけん】月岡恋鐘": {
+    "enzaId": "1040040050",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 9.5,
+      "visual": 13
+    }
+  },
+  "【秋空ばくちずさんで】月岡恋鐘": {
+    "enzaId": "1040040060",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8,
+      "visual": 13
+    }
+  },
+  "【あなたと、月の満ちる頃】月岡恋鐘": {
+    "enzaId": "1040040070",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 9.1,
+      "visual": 24.5
+    }
+  },
+  "【よか匂いのする陽気やけん】月岡恋鐘": {
+    "enzaId": "1040040080",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.7,
+      "visual": 13.4
+    }
+  },
+  "【ふりそそぐもの】月岡恋鐘": {
+    "enzaId": "1040040090",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 26,
+      "dance": 9.4,
+      "visual": 13.2
+    }
+  },
+  "【hurray for...】月岡恋鐘": {
+    "enzaId": "1040040100",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 8.2,
+      "visual": 13.4
+    }
+  },
+  "【いつか帰りたか場所】月岡恋鐘": {
+    "enzaId": "1040040110",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 9.1,
+      "visual": 13.6
+    }
+  },
+  "【純雪エモーショナル】月岡恋鐘": {
+    "enzaId": "1040040120",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 8.8,
+      "visual": 22
+    }
+  },
+  "【あなたと、メモリアル】月岡恋鐘": {
+    "enzaId": "1040040130",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 8.4,
+      "visual": 12.6
+    }
+  },
+  "【アイドルロード】月岡恋鐘": {
+    "enzaId": "1940040010",
+    "characterId": "kogane",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.1,
+      "visual": 13.6
+    }
+  },
+  "【裏腹あまのじゃく】田中摩美々": {
+    "enzaId": "1030050010",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 12.6,
+      "visual": 24
+    }
+  },
+  "【夕つ方まみみチック】田中摩美々": {
+    "enzaId": "1030050020",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 12.6,
+      "visual": 24.3
+    }
+  },
+  "【そのまみみ無気力につき】田中摩美々": {
+    "enzaId": "1030050030",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 13,
+      "visual": 24.8
+    }
+  },
+  "【FANCY 24g】田中摩美々": {
+    "enzaId": "1030050040",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 12.4,
+      "visual": 23.8
+    }
+  },
+  "【irodori-corridor】田中摩美々": {
+    "enzaId": "1030050050",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 21.4,
+      "visual": 25
+    }
+  },
+  "【トリッキーナイト】田中摩美々": {
+    "enzaId": "1040050010",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.5,
+      "dance": 13,
+      "visual": 24.8
+    }
+  },
+  "【摩的・アンチテーゼ】田中摩美々": {
+    "enzaId": "1040050020",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 20.8,
+      "visual": 25.3
+    }
+  },
+  "【パープル・ミラージュ】田中摩美々": {
+    "enzaId": "1040050030",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 13.8,
+      "visual": 25.5
+    }
+  },
+  "【フィドル・ファドル】田中摩美々": {
+    "enzaId": "1040050040",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 14,
+      "visual": 25.8
+    }
+  },
+  "【真・TRAVELER】田中摩美々": {
+    "enzaId": "1040050050",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 21.2,
+      "visual": 25
+    }
+  },
+  "【アバウト-ナイト-ライト】田中摩美々": {
+    "enzaId": "1040050060",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.5,
+      "dance": 21.8,
+      "visual": 25
+    }
+  },
+  "【Have a bad day♥︎】田中摩美々": {
+    "enzaId": "1040050070",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.1,
+      "dance": 13.2,
+      "visual": 24
+    }
+  },
+  "【リバーシブル・トースト】田中摩美々": {
+    "enzaId": "1040050080",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 13.6,
+      "visual": 26
+    }
+  },
+  "【PURPLE M】田中摩美々": {
+    "enzaId": "1040050090",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 12.6,
+      "visual": 24.3
+    }
+  },
+  "【まみみスイッチ】田中摩美々": {
+    "enzaId": "1040050100",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 13.6,
+      "visual": 25.5
+    }
+  },
+  "【Find M Trick】田中摩美々": {
+    "enzaId": "1040050110",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24.8,
+      "visual": 21.4
+    }
+  },
+  "【まといてホワイトフル】田中摩美々": {
+    "enzaId": "1040050120",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 22.2,
+      "visual": 25.5
+    }
+  },
+  "【モラトリアム・レポート】田中摩美々": {
+    "enzaId": "1040050130",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 8.5,
+      "dance": 24.8,
+      "visual": 21.4
+    }
+  },
+  "【アイドルロード】田中摩美々": {
+    "enzaId": "1940050010",
+    "characterId": "mamimi",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 13.2,
+      "visual": 25
+    }
+  },
+  "【秘めやかファンサービス】白瀬咲耶": {
+    "enzaId": "1030060010",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 8.4,
+      "visual": 24.5
+    }
+  },
+  "【ふれあい、おもいあい】白瀬咲耶": {
+    "enzaId": "1030060020",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 21.4,
+      "dance": 24.5,
+      "visual": 9.5
+    }
+  },
+  "【雪染めロマンティカ】白瀬咲耶": {
+    "enzaId": "1030060030",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.8,
+      "visual": 8.8
+    }
+  },
+  "【真紅一輪】白瀬咲耶": {
+    "enzaId": "1030060040",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 24.3,
+      "visual": 9.1
+    }
+  },
+  "【紺碧のボーダーライン】白瀬咲耶": {
+    "enzaId": "1040060010",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 14,
+      "visual": 25.3
+    }
+  },
+  "【1／60・NaturalHeart】白瀬咲耶": {
+    "enzaId": "1040060020",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 13.4,
+      "visual": 24.5
+    }
+  },
+  "【幸福のリズム】白瀬咲耶": {
+    "enzaId": "1040060030",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 14.2,
+      "visual": 9.6
+    }
+  },
+  "【海と太陽のプロメッサ】白瀬咲耶": {
+    "enzaId": "1040060040",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24.8,
+      "visual": 13.2
+    }
+  },
+  "【乙女と交わすTrick】白瀬咲耶": {
+    "enzaId": "1040060050",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 14,
+      "dance": 9.3,
+      "visual": 25.5
+    }
+  },
+  "【渦と淵】白瀬咲耶": {
+    "enzaId": "1040060060",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.8,
+      "visual": 8.6
+    }
+  },
+  "【はらりひらり結ぶ】白瀬咲耶": {
+    "enzaId": "1040060070",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.1,
+      "dance": 24.8,
+      "visual": 13.2
+    }
+  },
+  "【私をときめかせて】白瀬咲耶": {
+    "enzaId": "1040060080",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 14,
+      "dance": 9.6,
+      "visual": 25
+    }
+  },
+  "【落ちる音がする】白瀬咲耶": {
+    "enzaId": "1040060090",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24.3,
+      "visual": 13.2
+    }
+  },
+  "【夜が来ても】白瀬咲耶": {
+    "enzaId": "1040060100",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 24.5,
+      "visual": 21.4
+    }
+  },
+  "【記憶が降る街】白瀬咲耶": {
+    "enzaId": "1040060110",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 8.1,
+      "visual": 13
+    }
+  },
+  "【いつかのアルファルドへ】白瀬咲耶": {
+    "enzaId": "1040060120",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 13.8,
+      "visual": 8.3
+    }
+  },
+  "【アイドルロード】白瀬咲耶": {
+    "enzaId": "1940060010",
+    "characterId": "sakuya",
+    "lessonBonus": {
+      "vocal": 9.8,
+      "dance": 25,
+      "visual": 13.8
+    }
+  },
+  "【カラフルメタモルフォーゼ】三峰結華": {
+    "enzaId": "1030070010",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 8.6,
+      "visual": 24
+    }
+  },
+  "【雨色、上機嫌】三峰結華": {
+    "enzaId": "1030070020",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 9.6,
+      "visual": 24
+    }
+  },
+  "【お願い、ただの少女がいい】三峰結華": {
+    "enzaId": "1030070030",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 8.4,
+      "visual": 24.8
+    }
+  },
+  "【Hakoni□a】三峰結華": {
+    "enzaId": "1030070040",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 8.5,
+      "visual": 12.8
+    }
+  },
+  "【お試し／みつゴコロ】三峰結華": {
+    "enzaId": "1040070010",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 21.4,
+      "dance": 8.6,
+      "visual": 24.3
+    }
+  },
+  "【それなら目をつぶりましょう】三峰結華": {
+    "enzaId": "1040070020",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 12.4,
+      "dance": 8.1,
+      "visual": 24.5
+    }
+  },
+  "【NOT≠EQUAL】三峰結華": {
+    "enzaId": "1040070030",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 9.5,
+      "visual": 25
+    }
+  },
+  "【く　ら　く　ら】三峰結華": {
+    "enzaId": "1040070040",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.6,
+      "visual": 13.4
+    }
+  },
+  "【雨に祝福】三峰結華": {
+    "enzaId": "1040070050",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 8.3,
+      "visual": 25.5
+    }
+  },
+  "【♡コメディ】三峰結華": {
+    "enzaId": "1040070060",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 8.7,
+      "visual": 13.4
+    }
+  },
+  "【kaleidoscope-pinball】三峰結華": {
+    "enzaId": "1040070070",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9,
+      "visual": 25
+    }
+  },
+  "【ノー・ライフ】三峰結華": {
+    "enzaId": "1040070080",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 8.4,
+      "visual": 25
+    }
+  },
+  "【鏡界フィクションレイン】三峰結華": {
+    "enzaId": "1040070090",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 8.7,
+      "visual": 24.3
+    }
+  },
+  "【Good-bye ラブレター】三峰結華": {
+    "enzaId": "1040070100",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 22.2,
+      "dance": 9.3,
+      "visual": 25.5
+    }
+  },
+  "【待ちぼうけ次回予告】三峰結華": {
+    "enzaId": "1040070110",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 10,
+      "visual": 23.8
+    }
+  },
+  "【眩いステージ】三峰結華": {
+    "enzaId": "1040070120",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9,
+      "visual": 13.2
+    }
+  },
+  "【映す光】三峰結華": {
+    "enzaId": "1040070130",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 8.7,
+      "visual": 24.8
+    }
+  },
+  "【アイドルロード】三峰結華": {
+    "enzaId": "1940070010",
+    "characterId": "yuika",
+    "lessonBonus": {
+      "vocal": 22,
+      "dance": 9.2,
+      "visual": 26.3
+    }
+  },
+  "【包・帯・組・曲】幽谷霧子": {
+    "enzaId": "1030080010",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 20.4,
+      "dance": 8.8,
+      "visual": 24
+    }
+  },
+  "【伝・伝・心・音】幽谷霧子": {
+    "enzaId": "1030080020",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12,
+      "dance": 9.9,
+      "visual": 24
+    }
+  },
+  "【白・白・白・祈】幽谷霧子": {
+    "enzaId": "1030080030",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 9.2,
+      "visual": 23.8
+    }
+  },
+  "【天・天・白・布】幽谷霧子": {
+    "enzaId": "1030080040",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 9.5,
+      "visual": 24
+    }
+  },
+  "【雨・雨・電・電】幽谷霧子": {
+    "enzaId": "1030080050",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.4,
+      "dance": 9.4,
+      "visual": 23.8
+    }
+  },
+  "【霧・音・燦・燦】幽谷霧子": {
+    "enzaId": "1040080010",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 9.7,
+      "visual": 24.5
+    }
+  },
+  "【夕・音・鳴・鳴】幽谷霧子": {
+    "enzaId": "1040080020",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 9.7,
+      "visual": 25.5
+    }
+  },
+  "【菜・菜・輪・舞】幽谷霧子": {
+    "enzaId": "1040080030",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 8.7,
+      "visual": 24.3
+    }
+  },
+  "【鱗・鱗・謹・賀】幽谷霧子": {
+    "enzaId": "1040080040",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 9,
+      "visual": 24
+    }
+  },
+  "【琴・禽・空・華】幽谷霧子": {
+    "enzaId": "1040080050",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 9.7,
+      "visual": 25
+    }
+  },
+  "【かぜかんむりのこどもたち】幽谷霧子": {
+    "enzaId": "1040080060",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 9,
+      "visual": 24.5
+    }
+  },
+  "【縷・縷・屡・来】幽谷霧子": {
+    "enzaId": "1040080070",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 8.2,
+      "visual": 24.5
+    }
+  },
+  "【空・風・明・鳴】幽谷霧子": {
+    "enzaId": "1040080080",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 9.2,
+      "visual": 24.8
+    }
+  },
+  "【窓・送・巡・歌】幽谷霧子": {
+    "enzaId": "1040080090",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 20.2,
+      "dance": 8.7,
+      "visual": 25
+    }
+  },
+  "【唯・唯・寧・詠】幽谷霧子": {
+    "enzaId": "1040080100",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 9.5,
+      "visual": 25
+    }
+  },
+  "【白・架・祝・幻】幽谷霧子": {
+    "enzaId": "1040080110",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 9,
+      "visual": 24
+    }
+  },
+  "【海へと還る街】幽谷霧子": {
+    "enzaId": "1040080120",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 8.9,
+      "visual": 25.3
+    }
+  },
+  "【援・心・熱・行】幽谷霧子": {
+    "enzaId": "1040080130",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 9.6,
+      "visual": 24.8
+    }
+  },
+  "【アイドルロード】幽谷霧子": {
+    "enzaId": "1940080010",
+    "characterId": "kiriko",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 8.3,
+      "visual": 24.5
+    }
+  },
+  "【マメ丸と一緒！】小宮果穂": {
+    "enzaId": "1030090010",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 25,
+      "visual": 8.3
+    }
+  },
+  "【デコって！ハッピークッキー】小宮果穂": {
+    "enzaId": "1030090020",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 24,
+      "visual": 8.9
+    }
+  },
+  "【キャッチ・ザ・フォール！】小宮果穂": {
+    "enzaId": "1030090030",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 25,
+      "visual": 9.1
+    }
+  },
+  "【窓辺・サイレントタイム】小宮果穂": {
+    "enzaId": "1030090040",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 20.2,
+      "dance": 24,
+      "visual": 9.8
+    }
+  },
+  "【ソー・ディフィカルト！】小宮果穂": {
+    "enzaId": "1030090050",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 8.4
+    }
+  },
+  "【第2形態アーマードタイプ】小宮果穂": {
+    "enzaId": "1040090010",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.5,
+      "visual": 9.2
+    }
+  },
+  "【新装備・バブルバスター！】小宮果穂": {
+    "enzaId": "1040090020",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.8,
+      "visual": 8.8
+    }
+  },
+  "【潮騒のシーショア】小宮果穂": {
+    "enzaId": "1040090030",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 24.8,
+      "visual": 8.6
+    }
+  },
+  "【エクストリーム・ブレイク！】小宮果穂": {
+    "enzaId": "1040090040",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.3,
+      "visual": 8.4
+    }
+  },
+  "【日刊ウィズ・ユー！】小宮果穂": {
+    "enzaId": "1040090050",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 9.8
+    }
+  },
+  "【フルスロットルエイジ！】小宮果穂": {
+    "enzaId": "1040090060",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 21.8,
+      "dance": 24.8,
+      "visual": 8.3
+    }
+  },
+  "【ギア・アップ！ゴー・オン！】小宮果穂": {
+    "enzaId": "1040090070",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 25,
+      "visual": 8.1
+    }
+  },
+  "【スノードーム・シンドローム】小宮果穂": {
+    "enzaId": "1040090080",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 26,
+      "visual": 9.4
+    }
+  },
+  "【両手に兄！】小宮果穂": {
+    "enzaId": "1040090090",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 25,
+      "visual": 8.4
+    }
+  },
+  "【カラーズキャッチ！】小宮果穂": {
+    "enzaId": "1040090100",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25.5,
+      "visual": 8.5
+    }
+  },
+  "【きみだけ！】小宮果穂": {
+    "enzaId": "1040090110",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.5,
+      "visual": 9.3
+    }
+  },
+  "【ななひゃくさんじゅう　えん】小宮果穂": {
+    "enzaId": "1040090120",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13.8,
+      "dance": 25,
+      "visual": 9.7
+    }
+  },
+  "【アイドルじゃなくなったら】小宮果穂": {
+    "enzaId": "1040090130",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 24.3,
+      "visual": 8.9
+    }
+  },
+  "【ねぇねぇ先生、質問です！】小宮果穂": {
+    "enzaId": "1040090140",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 13.4,
+      "visual": 8.2
+    }
+  },
+  "【アイドルロード】小宮果穂": {
+    "enzaId": "1940090010",
+    "characterId": "kaho",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.8,
+      "visual": 9.5
+    }
+  },
+  "【純真チョコレート】園田智代子": {
+    "enzaId": "1030100010",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 12.2,
+      "visual": 24
+    }
+  },
+  "【よろしく♡めしませっ】園田智代子": {
+    "enzaId": "1030100020",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 21.2,
+      "visual": 24.3
+    }
+  },
+  "【錯覚・Darling】園田智代子": {
+    "enzaId": "1030100030",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 9.6,
+      "visual": 24.3
+    }
+  },
+  "【フロイラインに心酔】園田智代子": {
+    "enzaId": "1030100040",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 21,
+      "visual": 24.3
+    }
+  },
+  "【チョコ色×きらきらロマン】園田智代子": {
+    "enzaId": "1040100010",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 14,
+      "visual": 8.8
+    }
+  },
+  "【あそ→と♥ちよこれいと】園田智代子": {
+    "enzaId": "1040100020",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 13.4,
+      "visual": 24.3
+    }
+  },
+  "【かきまぜたら＊ミルク】園田智代子": {
+    "enzaId": "1040100030",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.6,
+      "visual": 13.4
+    }
+  },
+  "【You’re My Dream】園田智代子": {
+    "enzaId": "1040100040",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.2,
+      "visual": 24.3
+    }
+  },
+  "【プリティ・スイート】園田智代子": {
+    "enzaId": "1040100050",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 24.8,
+      "visual": 21.6
+    }
+  },
+  "【砂糖づけ・ビターエンド】園田智代子": {
+    "enzaId": "1040100060",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 23.8,
+      "visual": 10
+    }
+  },
+  "【トコハレ☀コメディ】園田智代子": {
+    "enzaId": "1040100070",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 13.4,
+      "visual": 24.3
+    }
+  },
+  "【うつくしいあした】園田智代子": {
+    "enzaId": "1040100080",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 21.4,
+      "visual": 24.8
+    }
+  },
+  "【チョコ for Y♡U】園田智代子": {
+    "enzaId": "1040100090",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.5,
+      "visual": 9
+    }
+  },
+  "【Kn☆cking. Kn☆cking.】園田智代子": {
+    "enzaId": "1040100100",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.6,
+      "visual": 13.4
+    }
+  },
+  "【はじめましてラストダンス】園田智代子": {
+    "enzaId": "1040100110",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 24.5,
+      "visual": 13.6
+    }
+  },
+  "【T☆ Queen】園田智代子": {
+    "enzaId": "1040100120",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 21.8,
+      "visual": 25
+    }
+  },
+  "【アイドルロード】園田智代子": {
+    "enzaId": "1940100010",
+    "characterId": "chiyoko",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 13.4,
+      "visual": 24.8
+    }
+  },
+  "【バッドガールの羽ばたき】西城樹里": {
+    "enzaId": "1030110010",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 24.3,
+      "visual": 9.5
+    }
+  },
+  "【オフデーゲーム】西城樹里": {
+    "enzaId": "1030110020",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 24.8,
+      "visual": 9.8
+    }
+  },
+  "【STARTRAIN】西城樹里": {
+    "enzaId": "1030110030",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12,
+      "dance": 24.5,
+      "visual": 9.1
+    }
+  },
+  "【夏服にWIND YOU！】西城樹里": {
+    "enzaId": "1030110040",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 20,
+      "dance": 24.5,
+      "visual": 8.7
+    }
+  },
+  "【No.3738 Custom Order】西城樹里": {
+    "enzaId": "1030110050",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 24.5,
+      "visual": 8.1
+    }
+  },
+  "【ラムネ色の覚悟】西城樹里": {
+    "enzaId": "1040110010",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.8,
+      "visual": 9.7
+    }
+  },
+  "【とびっきりジンジャー】西城樹里": {
+    "enzaId": "1040110020",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 21.6,
+      "dance": 26.3,
+      "visual": 9.7
+    }
+  },
+  "【曲がり角のランウェイ】西城樹里": {
+    "enzaId": "1040110030",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 24.3,
+      "visual": 9.1
+    }
+  },
+  "【誰が為シンパシー】西城樹里": {
+    "enzaId": "1040110040",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 9
+    }
+  },
+  "【秋陽のスケッチ】西城樹里": {
+    "enzaId": "1040110050",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25.5,
+      "visual": 9.8
+    }
+  },
+  "【I・OWE・U】西城樹里": {
+    "enzaId": "1040110060",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 25,
+      "visual": 8.5
+    }
+  },
+  "【花染む街で、君と】西城樹里": {
+    "enzaId": "1040110070",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.8,
+      "visual": 9.6
+    }
+  },
+  "【sparkle,,,】西城樹里": {
+    "enzaId": "1040110080",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 20.4,
+      "dance": 24,
+      "visual": 8.1
+    }
+  },
+  "【陽の光、透かせば】西城樹里": {
+    "enzaId": "1040110090",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 25.8,
+      "visual": 8.4
+    }
+  },
+  "【Clashmade】西城樹里": {
+    "enzaId": "1040110100",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 25,
+      "visual": 8.7
+    }
+  },
+  "【あなた色アンダンテ】西城樹里": {
+    "enzaId": "1040110110",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 8.7
+    }
+  },
+  "【きらり、足跡】西城樹里": {
+    "enzaId": "1040110120",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.5,
+      "visual": 9.6
+    }
+  },
+  "【アイドルロード】西城樹里": {
+    "enzaId": "1940110010",
+    "characterId": "juri",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 8.8
+    }
+  },
+  "【想ひいろは】杜野凛世": {
+    "enzaId": "1030120010",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.8,
+      "visual": 20.8
+    }
+  },
+  "【凛凛、凛世】杜野凛世": {
+    "enzaId": "1030120020",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.4,
+      "visual": 12.8
+    }
+  },
+  "【微熱風鈴】杜野凛世": {
+    "enzaId": "1030120030",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9.4,
+      "visual": 13
+    }
+  },
+  "【ふらここのうた】杜野凛世": {
+    "enzaId": "1030120040",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 9.1,
+      "visual": 23.8
+    }
+  },
+  "【階段式純情昇降機】杜野凛世": {
+    "enzaId": "1030120050",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 9.6,
+      "visual": 23.8
+    }
+  },
+  "【春告窓】杜野凛世": {
+    "enzaId": "1030120060",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.6,
+      "visual": 20.8
+    }
+  },
+  "【杜野凛世の印象派】杜野凛世": {
+    "enzaId": "1040120010",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 8.9,
+      "visual": 13.6
+    }
+  },
+  "【凛世花伝】杜野凛世": {
+    "enzaId": "1040120020",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 9,
+      "visual": 13.2
+    }
+  },
+  "【水色感情】杜野凛世": {
+    "enzaId": "1040120030",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.6,
+      "visual": 21.6
+    }
+  },
+  "【十二月短篇】杜野凛世": {
+    "enzaId": "1040120040",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.4,
+      "visual": 20.6
+    }
+  },
+  "【われにかへれ】杜野凛世": {
+    "enzaId": "1040120050",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 8.3,
+      "visual": 20.8
+    }
+  },
+  "【ロー・ポジション】杜野凛世": {
+    "enzaId": "1040120060",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.5,
+      "visual": 20.4
+    }
+  },
+  "【さよならごつこ】杜野凛世": {
+    "enzaId": "1040120070",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 9.8,
+      "visual": 14
+    }
+  },
+  "【晩秋ろまんす】杜野凛世": {
+    "enzaId": "1040120080",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 8.1,
+      "visual": 13.4
+    }
+  },
+  "【花は】杜野凛世": {
+    "enzaId": "1040120090",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.8,
+      "visual": 13.2
+    }
+  },
+  "【染光満月】杜野凛世": {
+    "enzaId": "1040120100",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.5,
+      "visual": 20.8
+    }
+  },
+  "【硝子少女】杜野凛世": {
+    "enzaId": "1040120110",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 8.3,
+      "visual": 13
+    }
+  },
+  "【ラヴ・レター】杜野凛世": {
+    "enzaId": "1040120120",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 9.5,
+      "visual": 21.4
+    }
+  },
+  "【片恋はあと】杜野凛世": {
+    "enzaId": "1040120130",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 8.7,
+      "visual": 21
+    }
+  },
+  "【絵空靴】杜野凛世": {
+    "enzaId": "1050120010",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 9,
+      "visual": 14
+    }
+  },
+  "【アイドルロード】杜野凛世": {
+    "enzaId": "1940120010",
+    "characterId": "rinze",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.4,
+      "visual": 21
+    }
+  },
+  "【ストイックトレーニング】有栖川夏葉": {
+    "enzaId": "1030130010",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 13.4,
+      "visual": 24.5
+    }
+  },
+  "【カトレアの花言葉】有栖川夏葉": {
+    "enzaId": "1030130020",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 12.8,
+      "visual": 24.8
+    }
+  },
+  "【鳥籠をひらいて】有栖川夏葉": {
+    "enzaId": "1030130030",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 24.8,
+      "visual": 21.6
+    }
+  },
+  "【風がかけていくように】有栖川夏葉": {
+    "enzaId": "1030130040",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 24.3,
+      "visual": 13.2
+    }
+  },
+  "【アルティメットマーメイド】有栖川夏葉": {
+    "enzaId": "1040130010",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.2,
+      "dance": 25.3,
+      "visual": 13.6
+    }
+  },
+  "【メイドインナツハ】有栖川夏葉": {
+    "enzaId": "1040130020",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 24.5,
+      "visual": 13.2
+    }
+  },
+  "【Ring a bell】有栖川夏葉": {
+    "enzaId": "1040130030",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 25.5,
+      "visual": 14
+    }
+  },
+  "【♡AKQJ10】有栖川夏葉": {
+    "enzaId": "1040130040",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 21.6,
+      "visual": 24.8
+    }
+  },
+  "【cheer+】有栖川夏葉": {
+    "enzaId": "1040130050",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 21,
+      "visual": 24.8
+    }
+  },
+  "【夏は来ぬ】有栖川夏葉": {
+    "enzaId": "1040130060",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.8,
+      "dance": 25,
+      "visual": 13
+    }
+  },
+  "【マイバレンタイン】有栖川夏葉": {
+    "enzaId": "1040130070",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 10,
+      "dance": 24.5,
+      "visual": 13
+    }
+  },
+  "【Fall】有栖川夏葉": {
+    "enzaId": "1040130080",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 24.5,
+      "visual": 13.4
+    }
+  },
+  "【Birdy BUddy】有栖川夏葉": {
+    "enzaId": "1040130090",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.6,
+      "dance": 13.8,
+      "visual": 25.3
+    }
+  },
+  "【ビューティフル】有栖川夏葉": {
+    "enzaId": "1040130100",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 13.2,
+      "visual": 25.3
+    }
+  },
+  "【TOTTを誓って】有栖川夏葉": {
+    "enzaId": "1040130110",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 24.8,
+      "visual": 13.6
+    }
+  },
+  "【ユアバレンタイン】有栖川夏葉": {
+    "enzaId": "1040130120",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 13.2,
+      "visual": 24.5
+    }
+  },
+  "【summer break】有栖川夏葉": {
+    "enzaId": "1040130130",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 25,
+      "visual": 13.4
+    }
+  },
+  "【アイドルロード】有栖川夏葉": {
+    "enzaId": "1940130010",
+    "characterId": "natsuha",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 24.5,
+      "visual": 13.4
+    }
+  },
+  "【似合うかな？】大崎甘奈": {
+    "enzaId": "1030140010",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 13.4,
+      "visual": 24.5
+    }
+  },
+  "【甜花ちゃんといっしょ☆】大崎甘奈": {
+    "enzaId": "1030140020",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 12.4,
+      "visual": 25
+    }
+  },
+  "【ふたつの雨】大崎甘奈": {
+    "enzaId": "1030140030",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 13.2,
+      "visual": 24.3
+    }
+  },
+  "【見つけたい、だけど……】大崎甘奈": {
+    "enzaId": "1030140040",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 13,
+      "visual": 24.3
+    }
+  },
+  "【竜宮城へ ご招待☆】大崎甘奈": {
+    "enzaId": "1030140050",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 12.8,
+      "visual": 24
+    }
+  },
+  "【スタンバイオッケー】大崎甘奈": {
+    "enzaId": "1040140010",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.1,
+      "dance": 22.2,
+      "visual": 25.8
+    }
+  },
+  "【ゆらゆらアクアリウム】大崎甘奈": {
+    "enzaId": "1040140020",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.2,
+      "dance": 13.4,
+      "visual": 24.8
+    }
+  },
+  "【ないしょのスイーツ】大崎甘奈": {
+    "enzaId": "1040140030",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.1,
+      "dance": 12.8,
+      "visual": 25
+    }
+  },
+  "【お散歩サンライト】大崎甘奈": {
+    "enzaId": "1040140040",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.1,
+      "dance": 24.8,
+      "visual": 21.4
+    }
+  },
+  "【叶えて☆ゴールドフィッシュ】大崎甘奈": {
+    "enzaId": "1040140050",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 13.6,
+      "visual": 25
+    }
+  },
+  "【約束ペタル】大崎甘奈": {
+    "enzaId": "1040140060",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 14.2,
+      "visual": 25.8
+    }
+  },
+  "【雪空セパレート】大崎甘奈": {
+    "enzaId": "1040140070",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 24,
+      "visual": 21
+    }
+  },
+  "【longing】大崎甘奈": {
+    "enzaId": "1040140080",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 24.5,
+      "visual": 13
+    }
+  },
+  "【聞いてマイハート】大崎甘奈": {
+    "enzaId": "1040140090",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 12.4,
+      "visual": 24.8
+    }
+  },
+  "【すれちがいシアター】大崎甘奈": {
+    "enzaId": "1040140100",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 13,
+      "visual": 25.3
+    }
+  },
+  "【憧憬リキュール】大崎甘奈": {
+    "enzaId": "1040140110",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 21.4,
+      "visual": 24.8
+    }
+  },
+  "【輝いてアンドロメダ】大崎甘奈": {
+    "enzaId": "1040140120",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 21.6,
+      "visual": 26.3
+    }
+  },
+  "【挑戦アトラクティブ】大崎甘奈": {
+    "enzaId": "1040140130",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 21,
+      "visual": 24.8
+    }
+  },
+  "【アイドルロード】大崎甘奈": {
+    "enzaId": "1940140010",
+    "characterId": "amana",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 21,
+      "visual": 25
+    }
+  },
+  "【秘密のだらだらタイム】大崎甜花": {
+    "enzaId": "1030150010",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 24.5,
+      "visual": 12.8
+    }
+  },
+  "【シンメトリー・プールサイド】大崎甜花": {
+    "enzaId": "1030150020",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 10,
+      "dance": 24,
+      "visual": 13
+    }
+  },
+  "【氷上バンビーナ】大崎甜花": {
+    "enzaId": "1030150030",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 21.2,
+      "visual": 24.3
+    }
+  },
+  "【お日様染めのマリーナ】大崎甜花": {
+    "enzaId": "1030150040",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 12.6,
+      "visual": 23.5
+    }
+  },
+  "【ストライク狙って】大崎甜花": {
+    "enzaId": "1030150050",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 13,
+      "visual": 24
+    }
+  },
+  "【U♥DOLL】大崎甜花": {
+    "enzaId": "1030150060",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 24.5,
+      "visual": 13.6
+    }
+  },
+  "【事務所。静寂。大輪の華】大崎甜花": {
+    "enzaId": "1040150010",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 24,
+      "visual": 13
+    }
+  },
+  "【好きなものはなんですか？】大崎甜花": {
+    "enzaId": "1040150020",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 24.3,
+      "visual": 12.8
+    }
+  },
+  "【I♡DOLL】大崎甜花": {
+    "enzaId": "1040150030",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.6,
+      "dance": 12.8,
+      "visual": 24
+    }
+  },
+  "【四夜一夜物語】大崎甜花": {
+    "enzaId": "1040150040",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 25.3,
+      "visual": 21.6
+    }
+  },
+  "【BON・BON・DAY！】大崎甜花": {
+    "enzaId": "1040150050",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 12.8,
+      "visual": 24.5
+    }
+  },
+  "【バス・タイムの気分で】大崎甜花": {
+    "enzaId": "1040150060",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 21.8,
+      "visual": 24.8
+    }
+  },
+  "【Feel Like Flower】大崎甜花": {
+    "enzaId": "1040150070",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.6,
+      "dance": 13.4,
+      "visual": 24.5
+    }
+  },
+  "【甜ing Room】大崎甜花": {
+    "enzaId": "1040150080",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 13,
+      "visual": 24
+    }
+  },
+  "【Eve】大崎甜花": {
+    "enzaId": "1040150090",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 13,
+      "visual": 23.8
+    }
+  },
+  "【きみは相棒】大崎甜花": {
+    "enzaId": "1040150100",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.2,
+      "dance": 13.8,
+      "visual": 25
+    }
+  },
+  "【甜der Dream Show】大崎甜花": {
+    "enzaId": "1040150110",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 21.4,
+      "visual": 24.8
+    }
+  },
+  "【LADY♡e-DOL】大崎甜花": {
+    "enzaId": "1040150120",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 9.5,
+      "dance": 13,
+      "visual": 24.5
+    }
+  },
+  "【アイドルロード】大崎甜花": {
+    "enzaId": "1940150010",
+    "characterId": "tenka",
+    "lessonBonus": {
+      "vocal": 8.5,
+      "dance": 24.5,
+      "visual": 20.8
+    }
+  },
+  "【マイフェイバリット】桑山千雪": {
+    "enzaId": "1030160010",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.5,
+      "visual": 13.2
+    }
+  },
+  "【一夏一刻物語】桑山千雪": {
+    "enzaId": "1030160020",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 9.8,
+      "visual": 24.5
+    }
+  },
+  "【よそゆき顔のセレナーデ】桑山千雪": {
+    "enzaId": "1030160030",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.7,
+      "visual": 25
+    }
+  },
+  "【ワン・モア・フラワリング】桑山千雪": {
+    "enzaId": "1030160040",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 9,
+      "visual": 24
+    }
+  },
+  "【夏、イエー】桑山千雪": {
+    "enzaId": "1030160050",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 9.7,
+      "visual": 13
+    }
+  },
+  "【マイ・ピュア・ロマンス】桑山千雪": {
+    "enzaId": "1040160010",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 8.8,
+      "visual": 24.8
+    }
+  },
+  "【シークレット・ヒロイン】桑山千雪": {
+    "enzaId": "1040160020",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9,
+      "visual": 25.3
+    }
+  },
+  "【サマーハニー・シーズン】桑山千雪": {
+    "enzaId": "1040160030",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 8.8,
+      "visual": 24.5
+    }
+  },
+  "【はるかぜまち、1番地】桑山千雪": {
+    "enzaId": "1040160040",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 8,
+      "visual": 25.3
+    }
+  },
+  "【秋空と紅葉】桑山千雪": {
+    "enzaId": "1040160050",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.7,
+      "visual": 24.5
+    }
+  },
+  "【ハッピー・アイ・スクリーム】桑山千雪": {
+    "enzaId": "1040160060",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 9.4,
+      "visual": 24.8
+    }
+  },
+  "【つよがりのためのララバイ】桑山千雪": {
+    "enzaId": "1040160070",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 8.3,
+      "visual": 13.2
+    }
+  },
+  "【ひとひらで紡ぐ世界】桑山千雪": {
+    "enzaId": "1040160080",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 8,
+      "visual": 24.5
+    }
+  },
+  "【ネームレス・ヘヴンに憧れて】桑山千雪": {
+    "enzaId": "1040160090",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 9.7,
+      "visual": 24
+    }
+  },
+  "【剥がされて、虚ろ】桑山千雪": {
+    "enzaId": "1040160100",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.7,
+      "visual": 24.5
+    }
+  },
+  "【やわらかくうけとめて】桑山千雪": {
+    "enzaId": "1040160110",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 8.8,
+      "visual": 24.5
+    }
+  },
+  "【切り拓いて・茨】桑山千雪": {
+    "enzaId": "1040160120",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 10,
+      "visual": 25.3
+    }
+  },
+  "【末永く、ふたり】桑山千雪": {
+    "enzaId": "1040160130",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 22.2,
+      "dance": 9.8,
+      "visual": 25.8
+    }
+  },
+  "【アイドルロード】桑山千雪": {
+    "enzaId": "1940160010",
+    "characterId": "chiyuki",
+    "lessonBonus": {
+      "vocal": 14.2,
+      "dance": 9.4,
+      "visual": 25.8
+    }
+  },
+  "【さかさま世界】芹沢あさひ": {
+    "enzaId": "1030170010",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 21.4,
+      "dance": 25,
+      "visual": 9.6
+    }
+  },
+  "【かしゃーんとがらがら】芹沢あさひ": {
+    "enzaId": "1030170020",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 25.5,
+      "visual": 9.6
+    }
+  },
+  "【はり・はり】芹沢あさひ": {
+    "enzaId": "1030170030",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25.3,
+      "visual": 8.1
+    }
+  },
+  "【黄葉の冠】芹沢あさひ": {
+    "enzaId": "1030170040",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 24,
+      "visual": 9.5
+    }
+  },
+  "【ちぐはぐ姫】芹沢あさひ": {
+    "enzaId": "1030170050",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.4,
+      "dance": 24.5,
+      "visual": 8.2
+    }
+  },
+  "【ジャンプ！スタッグ！！！】芹沢あさひ": {
+    "enzaId": "1040170010",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.8,
+      "visual": 9.2
+    }
+  },
+  "【空と青とアイツ】芹沢あさひ": {
+    "enzaId": "1040170020",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25,
+      "visual": 9.8
+    }
+  },
+  "【不機嫌なテーマパーク】芹沢あさひ": {
+    "enzaId": "1040170030",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 20.8,
+      "dance": 25,
+      "visual": 9.1
+    }
+  },
+  "【Housekeeping!】芹沢あさひ": {
+    "enzaId": "1040170040",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 25,
+      "visual": 8.8
+    }
+  },
+  "【Howling】芹沢あさひ": {
+    "enzaId": "1040170050",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 25.5,
+      "visual": 8.2
+    }
+  },
+  "【光は光へ】芹沢あさひ": {
+    "enzaId": "1040170060",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.2,
+      "dance": 25.5,
+      "visual": 8.9
+    }
+  },
+  "【Boiling Sky】芹沢あさひ": {
+    "enzaId": "1040170070",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.4,
+      "dance": 25.3,
+      "visual": 9.5
+    }
+  },
+  "【Anti-Gravity】芹沢あさひ": {
+    "enzaId": "1040170080",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 20.6,
+      "dance": 25,
+      "visual": 8.7
+    }
+  },
+  "【ムーンライト・ガーデン】芹沢あさひ": {
+    "enzaId": "1040170090",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.8,
+      "visual": 9.8
+    }
+  },
+  "【さよならカイト】芹沢あさひ": {
+    "enzaId": "1040170100",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 25.3,
+      "visual": 8.4
+    }
+  },
+  "【何故、ベルは鳴る】芹沢あさひ": {
+    "enzaId": "1040170110",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 25.3,
+      "visual": 8.4
+    }
+  },
+  "【センパイレッスン】芹沢あさひ": {
+    "enzaId": "1040170120",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 14.4,
+      "dance": 26.3,
+      "visual": 8.6
+    }
+  },
+  "【アイドルロード】芹沢あさひ": {
+    "enzaId": "1940170010",
+    "characterId": "asahi",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 24.5,
+      "visual": 8.3
+    }
+  },
+  "【ザ・冬優子イズム】黛冬優子": {
+    "enzaId": "1030180010",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 9.6,
+      "visual": 24.5
+    }
+  },
+  "【水×天カイヤナイト】黛冬優子": {
+    "enzaId": "1030180020",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 10,
+      "visual": 25
+    }
+  },
+  "【はるさき可憐花】黛冬優子": {
+    "enzaId": "1030180030",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 12.6,
+      "dance": 8.9,
+      "visual": 23.8
+    }
+  },
+  "【アンコンシャス35→80】黛冬優子": {
+    "enzaId": "1030180040",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 9.6,
+      "visual": 25
+    }
+  },
+  "【オ♡フ♡レ♡コ】黛冬優子": {
+    "enzaId": "1040180010",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 21.4,
+      "dance": 8.4,
+      "visual": 24.8
+    }
+  },
+  "【アンシーン・ダブルキャスト】黛冬優子": {
+    "enzaId": "1040180020",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 9.2,
+      "visual": 25.5
+    }
+  },
+  "【starring F】黛冬優子": {
+    "enzaId": "1040180030",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 14,
+      "dance": 9.5,
+      "visual": 26.3
+    }
+  },
+  "【ONSTAGE？】黛冬優子": {
+    "enzaId": "1040180040",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 8.2,
+      "visual": 25
+    }
+  },
+  "【multi-angle】黛冬優子": {
+    "enzaId": "1040180050",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 9.9,
+      "visual": 25
+    }
+  },
+  "【幕間、沸々と高温】黛冬優子": {
+    "enzaId": "1040180060",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 8.9,
+      "visual": 21.6
+    }
+  },
+  "【名モナキ夜ノ標ニ】黛冬優子": {
+    "enzaId": "1040180070",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 9.4,
+      "visual": 25
+    }
+  },
+  "【三文ノワール】黛冬優子": {
+    "enzaId": "1040180080",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.1,
+      "visual": 25.8
+    }
+  },
+  "【ノンセンス・プロンプ】黛冬優子": {
+    "enzaId": "1040180090",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 8.2,
+      "visual": 25
+    }
+  },
+  "【紅茶夢現】黛冬優子": {
+    "enzaId": "1040180100",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 21,
+      "dance": 9.5,
+      "visual": 24.3
+    }
+  },
+  "【ア・冬優子イズム】黛冬優子": {
+    "enzaId": "1040180110",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 21.2,
+      "dance": 10,
+      "visual": 24.5
+    }
+  },
+  "【誘爆ハートビート】黛冬優子": {
+    "enzaId": "1050180010",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 8.2,
+      "visual": 21.4
+    }
+  },
+  "【アイドルロード】黛冬優子": {
+    "enzaId": "1940180010",
+    "characterId": "fuyuko",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 9,
+      "visual": 25.3
+    }
+  },
+  "【気になる！？染めちゃう！？】和泉愛依": {
+    "enzaId": "1030190010",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 25,
+      "visual": 12.6
+    }
+  },
+  "【てへっ♪】和泉愛依": {
+    "enzaId": "1030190020",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 24,
+      "visual": 13
+    }
+  },
+  "【ご褒美、いるよね♪】和泉愛依": {
+    "enzaId": "1030190030",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 13.2,
+      "visual": 24.3
+    }
+  },
+  "【見つかっちゃった♪】和泉愛依": {
+    "enzaId": "1030190040",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 13,
+      "visual": 24.3
+    }
+  },
+  "【ちょっとあげる～】和泉愛依": {
+    "enzaId": "1040190010",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.8,
+      "dance": 24.8,
+      "visual": 13.6
+    }
+  },
+  "【メイ・ビー】和泉愛依": {
+    "enzaId": "1040190020",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 24.5,
+      "visual": 13.4
+    }
+  },
+  "【シャッターチャンス！？】和泉愛依": {
+    "enzaId": "1040190030",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 24.8,
+      "visual": 13.6
+    }
+  },
+  "【今のうちは走らない】和泉愛依": {
+    "enzaId": "1040190040",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 24.8,
+      "visual": 13.2
+    }
+  },
+  "【ちょー早い！】和泉愛依": {
+    "enzaId": "1040190050",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 21.2,
+      "visual": 24.8
+    }
+  },
+  "【あたし流・かっこいい】和泉愛依": {
+    "enzaId": "1040190060",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.8,
+      "dance": 24.8,
+      "visual": 12.6
+    }
+  },
+  "【うちと幸せ】和泉愛依": {
+    "enzaId": "1040190070",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 25.3,
+      "visual": 13.6
+    }
+  },
+  "【何度転んだって】和泉愛依": {
+    "enzaId": "1040190080",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 25,
+      "visual": 21.8
+    }
+  },
+  "【あたし・マスト】和泉愛依": {
+    "enzaId": "1040190090",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 26,
+      "visual": 21.6
+    }
+  },
+  "【今、できることを全て】和泉愛依": {
+    "enzaId": "1040190100",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 25,
+      "visual": 20.8
+    }
+  },
+  "【心安らげる場所】和泉愛依": {
+    "enzaId": "1040190110",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 25.3,
+      "visual": 20.6
+    }
+  },
+  "【アイドルロード】和泉愛依": {
+    "enzaId": "1940190010",
+    "characterId": "mei",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 25,
+      "visual": 13.6
+    }
+  },
+  "【まわるものについて】浅倉透": {
+    "enzaId": "1030200010",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 12,
+      "visual": 24
+    }
+  },
+  "【おかえり、ギター】浅倉透": {
+    "enzaId": "1030200020",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 9.6,
+      "dance": 12.6,
+      "visual": 24.3
+    }
+  },
+  "【聞こえててよ、babe】浅倉透": {
+    "enzaId": "1030200030",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 12.2,
+      "visual": 24.3
+    }
+  },
+  "【10個、光】浅倉透": {
+    "enzaId": "1040200010",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 13.4,
+      "visual": 24.8
+    }
+  },
+  "【途方もない午後】浅倉透": {
+    "enzaId": "1040200020",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 21,
+      "visual": 25
+    }
+  },
+  "【つづく、】浅倉透": {
+    "enzaId": "1040200030",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 21.2,
+      "visual": 25
+    }
+  },
+  "【国道沿いに、憶光年】浅倉透": {
+    "enzaId": "1040200040",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.9,
+      "dance": 12.6,
+      "visual": 25
+    }
+  },
+  "【夜はなにいろ】浅倉透": {
+    "enzaId": "1040200050",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 12.8,
+      "visual": 24.3
+    }
+  },
+  "【あてもなく、風】浅倉透": {
+    "enzaId": "1040200060",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.6,
+      "dance": 21,
+      "visual": 25.3
+    }
+  },
+  "【雪あたりの季節】浅倉透": {
+    "enzaId": "1040200070",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 21.6,
+      "visual": 25.5
+    }
+  },
+  "【ヘブンリーブルーをつかまえて】浅倉透": {
+    "enzaId": "1040200080",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 9.2,
+      "dance": 21.8,
+      "visual": 25
+    }
+  },
+  "【テープエンドの行き先】浅倉透": {
+    "enzaId": "1040200090",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 21.8,
+      "visual": 24.8
+    }
+  },
+  "【アルマ】浅倉透": {
+    "enzaId": "1040200100",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 9.1,
+      "dance": 13.2,
+      "visual": 25
+    }
+  },
+  "【アイドルロード】浅倉透": {
+    "enzaId": "1940200010",
+    "characterId": "toru",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 13,
+      "visual": 24.5
+    }
+  },
+  "【ダウト】樋口円香": {
+    "enzaId": "1030210010",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9.3,
+      "visual": 12.8
+    }
+  },
+  "【カラメル】樋口円香": {
+    "enzaId": "1030210020",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 9.1,
+      "visual": 24
+    }
+  },
+  "【カラカラカラ】樋口円香": {
+    "enzaId": "1040210010",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.8,
+      "visual": 13.2
+    }
+  },
+  "【ギンコ・ビローバ】樋口円香": {
+    "enzaId": "1040210020",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 8.5,
+      "visual": 13
+    }
+  },
+  "【ピトス・エルピス】樋口円香": {
+    "enzaId": "1040210030",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 9.7,
+      "visual": 13
+    }
+  },
+  "【オイサラバエル】樋口円香": {
+    "enzaId": "1040210040",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 8.2,
+      "visual": 21.2
+    }
+  },
+  "【Merry】樋口円香": {
+    "enzaId": "1040210050",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.4,
+      "visual": 12.8
+    }
+  },
+  "【バグ・ル】樋口円香": {
+    "enzaId": "1040210060",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 8.6,
+      "visual": 21
+    }
+  },
+  "【キン・コン】樋口円香": {
+    "enzaId": "1040210070",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.7,
+      "visual": 21.8
+    }
+  },
+  "【フリークス・アリー】樋口円香": {
+    "enzaId": "1040210080",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 8.2,
+      "visual": 20.8
+    }
+  },
+  "【ジャンク・ション】樋口円香": {
+    "enzaId": "1040210090",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 8.6,
+      "visual": 22.2
+    }
+  },
+  "【アマテラス】樋口円香": {
+    "enzaId": "1050210010",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 9.5,
+      "visual": 13.2
+    }
+  },
+  "【アイドルロード】樋口円香": {
+    "enzaId": "1940210010",
+    "characterId": "madoka",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 8.9,
+      "visual": 13.4
+    }
+  },
+  "【はれのひ喫茶店】福丸小糸": {
+    "enzaId": "1030220010",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 9.1,
+      "visual": 12.8
+    }
+  },
+  "【福はうち】福丸小糸": {
+    "enzaId": "1030220020",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 8.9,
+      "visual": 24.3
+    }
+  },
+  "【ポシェットの中には】福丸小糸": {
+    "enzaId": "1040220010",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 9.2,
+      "visual": 24.8
+    }
+  },
+  "【おみくじ結びますか】福丸小糸": {
+    "enzaId": "1040220020",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 9.4,
+      "visual": 21.2
+    }
+  },
+  "【てのひらの答え】福丸小糸": {
+    "enzaId": "1040220030",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 21.6,
+      "dance": 8.8,
+      "visual": 25
+    }
+  },
+  "【なつやすみ学校】福丸小糸": {
+    "enzaId": "1040220040",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.8,
+      "visual": 13.6
+    }
+  },
+  "【セピア色の孤独】福丸小糸": {
+    "enzaId": "1040220050",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 22,
+      "dance": 9.1,
+      "visual": 25
+    }
+  },
+  "【雲のかなたまで】福丸小糸": {
+    "enzaId": "1040220060",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.7,
+      "visual": 21.2
+    }
+  },
+  "【あなた様へ紡ぐ】福丸小糸": {
+    "enzaId": "1040220070",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 8.6,
+      "visual": 13.2
+    }
+  },
+  "【窓をあけて】福丸小糸": {
+    "enzaId": "1040220080",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 8.4,
+      "visual": 24.5
+    }
+  },
+  "【羽をやすめて】福丸小糸": {
+    "enzaId": "1040220090",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.1,
+      "visual": 13.2
+    }
+  },
+  "【ちいさな巣立ち】福丸小糸": {
+    "enzaId": "1040220100",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 9.7,
+      "visual": 13.6
+    }
+  },
+  "【アイドルロード】福丸小糸": {
+    "enzaId": "1940220010",
+    "characterId": "koito",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 9.9,
+      "visual": 14.2
+    }
+  },
+  "【♯SS】市川雛菜": {
+    "enzaId": "1030230010",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 8.7,
+      "dance": 24,
+      "visual": 12.6
+    }
+  },
+  "【Makeup♡Box】市川雛菜": {
+    "enzaId": "1030230020",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 8.5,
+      "dance": 24.3,
+      "visual": 13
+    }
+  },
+  "【HAPPY-!NG】市川雛菜": {
+    "enzaId": "1040230010",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 25.5,
+      "visual": 20.8
+    }
+  },
+  "【♡LOG】市川雛菜": {
+    "enzaId": "1040230020",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 10,
+      "dance": 25.8,
+      "visual": 21.4
+    }
+  },
+  "【TRICK☆☆☆】市川雛菜": {
+    "enzaId": "1040230030",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 8.8,
+      "dance": 24.5,
+      "visual": 13.4
+    }
+  },
+  "【S!GNATURE】市川雛菜": {
+    "enzaId": "1040230040",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.3,
+      "dance": 24.5,
+      "visual": 13.2
+    }
+  },
+  "【DE-S!GN】市川雛菜": {
+    "enzaId": "1040230050",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 25.5,
+      "visual": 13.2
+    }
+  },
+  "【UNCHARTED】市川雛菜": {
+    "enzaId": "1040230060",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.5,
+      "dance": 25,
+      "visual": 13.4
+    }
+  },
+  "【Keep→it up♡】市川雛菜": {
+    "enzaId": "1040230070",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 25.5,
+      "visual": 12.6
+    }
+  },
+  "【change___】市川雛菜": {
+    "enzaId": "1040230080",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 8,
+      "dance": 25,
+      "visual": 12.4
+    }
+  },
+  "【d!scovery】市川雛菜": {
+    "enzaId": "1040230090",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9,
+      "dance": 25.3,
+      "visual": 13.6
+    }
+  },
+  "【loading...】市川雛菜": {
+    "enzaId": "1040230100",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 8.4,
+      "dance": 21.2,
+      "visual": 24.3
+    }
+  },
+  "【アイドルロード】市川雛菜": {
+    "enzaId": "1940230010",
+    "characterId": "hinana",
+    "lessonBonus": {
+      "vocal": 9.9,
+      "dance": 24.8,
+      "visual": 12.6
+    }
+  },
+  "【一億回めくらいの、その夏】七草にちか": {
+    "enzaId": "1030240010",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 12.2,
+      "visual": 9.3
+    }
+  },
+  "【泣けよ洗濯機】七草にちか": {
+    "enzaId": "1030240020",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.3,
+      "visual": 9.9
+    }
+  },
+  "【♡まっクろはムウサぎ♡】七草にちか": {
+    "enzaId": "1040240010",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 12.6,
+      "visual": 9.1
+    }
+  },
+  "【ヴぇりべりいかシたサマー】七草にちか": {
+    "enzaId": "1040240020",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 12.8,
+      "visual": 8.3
+    }
+  },
+  "【夜よこノ窓は塗らないデ】七草にちか": {
+    "enzaId": "1040240030",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 13.2,
+      "visual": 8.6
+    }
+  },
+  "【↓ろウTea】七草にちか": {
+    "enzaId": "1040240040",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 13.6,
+      "visual": 9.2
+    }
+  },
+  "【ふラiとぅTHE】七草にちか": {
+    "enzaId": "1040240050",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 21,
+      "visual": 9.8
+    }
+  },
+  "【とキどき間氷期】七草にちか": {
+    "enzaId": "1040240060",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 13.2,
+      "visual": 9.9
+    }
+  },
+  "【伝えテ niiid U】七草にちか": {
+    "enzaId": "1040240070",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 13.2,
+      "visual": 8.4
+    }
+  },
+  "【日々、想】七草にちか": {
+    "enzaId": "1040240080",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 12.2,
+      "visual": 9.4
+    }
+  },
+  "【受けトル sun Q】七草にちか": {
+    "enzaId": "1040240090",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 13.6,
+      "visual": 10
+    }
+  },
+  "【アイドルロード】七草にちか": {
+    "enzaId": "1940240010",
+    "characterId": "nichika",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 13.4,
+      "visual": 8.5
+    }
+  },
+  "【SEASON】緋田美琴": {
+    "enzaId": "1030250010",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 12.8,
+      "dance": 24.5,
+      "visual": 9.2
+    }
+  },
+  "【MANNEQUIN】緋田美琴": {
+    "enzaId": "1030250020",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 25,
+      "visual": 9.8
+    }
+  },
+  "【ROUNDLY】緋田美琴": {
+    "enzaId": "1040250010",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.8,
+      "visual": 8.1
+    }
+  },
+  "【CHILLY】緋田美琴": {
+    "enzaId": "1040250020",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 21.4,
+      "dance": 24.5,
+      "visual": 9.5
+    }
+  },
+  "【CONTRAIL】緋田美琴": {
+    "enzaId": "1040250030",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 25.8,
+      "dance": 13.8,
+      "visual": 9
+    }
+  },
+  "【DIVA】緋田美琴": {
+    "enzaId": "1040250040",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 14,
+      "dance": 25.3,
+      "visual": 10
+    }
+  },
+  "【YOU＆I】緋田美琴": {
+    "enzaId": "1040250050",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13,
+      "dance": 24.3,
+      "visual": 8.6
+    }
+  },
+  "【This way】緋田美琴": {
+    "enzaId": "1040250060",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 21.8,
+      "visual": 8.5
+    }
+  },
+  "【SUGARLESS】緋田美琴": {
+    "enzaId": "1040250070",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 21.4,
+      "visual": 8.7
+    }
+  },
+  "【POLARIS】緋田美琴": {
+    "enzaId": "1040250080",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 25.5,
+      "visual": 8.9
+    }
+  },
+  "【GLIMMER】緋田美琴": {
+    "enzaId": "1040250090",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13.6,
+      "dance": 25.3,
+      "visual": 9.8
+    }
+  },
+  "【アイドルロード】緋田美琴": {
+    "enzaId": "1940250010",
+    "characterId": "mikoto",
+    "lessonBonus": {
+      "vocal": 13.2,
+      "dance": 24.3,
+      "visual": 9.1
+    }
+  },
+  "【Blind Driver】斑鳩ルカ": {
+    "enzaId": "1030260010",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 8.7,
+      "visual": 20.4
+    }
+  },
+  "【broken shout】斑鳩ルカ": {
+    "enzaId": "1040260010",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 25.5,
+      "dance": 8.4,
+      "visual": 13.4
+    }
+  },
+  "【Noisy Rush】斑鳩ルカ": {
+    "enzaId": "1040260020",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 9.2,
+      "visual": 13
+    }
+  },
+  "【BLUES】斑鳩ルカ": {
+    "enzaId": "1040260030",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 25.3,
+      "dance": 8.2,
+      "visual": 13.6
+    }
+  },
+  "【SMASH】斑鳩ルカ": {
+    "enzaId": "1040260040",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 9.7,
+      "visual": 21.4
+    }
+  },
+  "【Could Be】斑鳩ルカ": {
+    "enzaId": "1040260050",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 26.5,
+      "dance": 8.8,
+      "visual": 14.2
+    }
+  },
+  "【new or ...】斑鳩ルカ": {
+    "enzaId": "1040260060",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 24,
+      "dance": 8.3,
+      "visual": 12.6
+    }
+  },
+  "【NoNoNoBunny】斑鳩ルカ": {
+    "enzaId": "1040260070",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 8.3,
+      "visual": 12.4
+    }
+  },
+  "【アイドルロード】斑鳩ルカ": {
+    "enzaId": "1940260010",
+    "characterId": "luca",
+    "lessonBonus": {
+      "vocal": 24.3,
+      "dance": 8.6,
+      "visual": 13
+    }
+  },
+  "【優You】鈴木羽那": {
+    "enzaId": "1030270010",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24,
+      "visual": 13
+    }
+  },
+  "【Eyes On You】鈴木羽那": {
+    "enzaId": "1040270010",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 12.6,
+      "visual": 24.8
+    }
+  },
+  "【Marry You？】鈴木羽那": {
+    "enzaId": "1040270020",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 9.7,
+      "dance": 21.2,
+      "visual": 24.8
+    }
+  },
+  "【Scene With You】鈴木羽那": {
+    "enzaId": "1040270030",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 8.5,
+      "dance": 13,
+      "visual": 24.8
+    }
+  },
+  "【From You】鈴木羽那": {
+    "enzaId": "1040270040",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 9.6,
+      "dance": 21,
+      "visual": 25
+    }
+  },
+  "【純白の君へ】鈴木羽那": {
+    "enzaId": "1040270050",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 9.2,
+      "dance": 24.3,
+      "visual": 13.2
+    }
+  },
+  "【アイドルロード】鈴木羽那": {
+    "enzaId": "1940270010",
+    "characterId": "hana",
+    "lessonBonus": {
+      "vocal": 9.4,
+      "dance": 14.4,
+      "visual": 26
+    }
+  },
+  "【漂白花火】郁田はるき": {
+    "enzaId": "1030280010",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 23.8,
+      "dance": 13,
+      "visual": 9.8
+    }
+  },
+  "【Hopeland】郁田はるき": {
+    "enzaId": "1040280010",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24.3,
+      "visual": 12.8
+    }
+  },
+  "【連綿と、桜】郁田はるき": {
+    "enzaId": "1040280020",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 13.4,
+      "dance": 24.5,
+      "visual": 9.8
+    }
+  },
+  "【桜花拾】郁田はるき": {
+    "enzaId": "1040280030",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 24.5,
+      "dance": 13.4,
+      "visual": 8.3
+    }
+  },
+  "【流星パレット】郁田はるき": {
+    "enzaId": "1040280040",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 24.8,
+      "dance": 13.4,
+      "visual": 9.9
+    }
+  },
+  "【song for you】郁田はるき": {
+    "enzaId": "1040280050",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 8.3,
+      "dance": 24.5,
+      "visual": 13.6
+    }
+  },
+  "【アイドルロード】郁田はるき": {
+    "enzaId": "1940280010",
+    "characterId": "haruki",
+    "lessonBonus": {
+      "vocal": 25,
+      "dance": 13.8,
+      "visual": 9.3
+    }
+  }
+}

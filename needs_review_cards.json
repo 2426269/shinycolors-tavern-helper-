@@ -1,0 +1,539 @@
+[
+  {
+    "id": "ASSR_010",
+    "name": "新たなステージ",
+    "effect_before": "山札か捨て札にあるスキルカードを選択し、保留に移動 全力値+1 スキルカード使用数追加+1 ※重複不可",
+    "effect_after": "山札か捨て札にあるスキルカードを選択し、保留に移動 全力値+2 スキルカード使用数追加+1 保留にあるスキルカードのパラメータ値増加+5 ※重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 3
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "MOVE_CARD_TO_ZONE",
+              "from_zones": [
+                "deck",
+                "discard"
+              ],
+              "to_zone": "reserve",
+              "count": 1,
+              "selector": {}
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "AllPower",
+              "value": 1,
+              "turns": -1
+            },
+            {
+              "action": "MODIFY_PLAY_LIMIT",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "MOVE_CARD_TO_ZONE",
+              "from_zones": [
+                "deck",
+                "discard"
+              ],
+              "to_zone": "reserve",
+              "count": 1,
+              "selector": {}
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "AllPower",
+              "value": 2,
+              "turns": -1
+            },
+            {
+              "action": "MODIFY_PLAY_LIMIT",
+              "value": 1
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "ScoreBonus",
+              "value": 5,
+              "turns": -1
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "exhaust_on_play": true
+      },
+      "_uncertain": true
+    }
+  },
+  {
+    "id": "ASSR_024",
+    "name": "待ち望んだ瞬間",
+    "effect_before": "温存2段階目に変更 以降、直接効果で全力値が増加後、温存の場合、全力値+1 ※レッスン中1回 重複不可",
+    "effect_after": "元気-1 温存2段階目に変更 以降、直接効果で全力値が増加後、温存の場合、全力値+1 ※レッスン中1回 重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 4
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "ConserveState",
+              "value": 2,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "ASSR_024::allpower_bonus",
+                "name": "温存状态全力值加成",
+                "trigger": "ON_AFTER_CARD_PLAY",
+                "condition": {
+                  ">": [
+                    {
+                      "var": "player.buffs.ConserveState"
+                    },
+                    0
+                  ]
+                },
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "AllPower",
+                    "value": 1,
+                    "turns": 0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "MODIFY_GENKI",
+              "value": -1
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "ConserveState",
+              "value": 2,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "ASSR_024::allpower_bonus",
+                "name": "温存状态全力值加成",
+                "trigger": "ON_AFTER_CARD_PLAY",
+                "condition": {
+                  ">": [
+                    {
+                      "var": "player.buffs.ConserveState"
+                    },
+                    0
+                  ]
+                },
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "AllPower",
+                    "value": 1,
+                    "turns": 0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "exhaust_on_play": true
+      }
+    }
+  },
+  {
+    "id": "ASR_020",
+    "name": "第一印象",
+    "effect_before": "強気に変更 以降、強気効果のスキルカード使用時、すべてのスキルカードのパラメータ値増加+2 ※レッスン中1回 重複不可",
+    "effect_after": "強気に変更 以降、強気効果のスキルカード使用時、すべてのスキルカードのパラメータ値増加+3 ※レッスン中1回 重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 5
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "ResoluteState",
+              "value": 1,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "ASR_020::resolute_boost",
+                "name": "第一印象-强气提升",
+                "trigger": "ON_BEFORE_CARD_PLAY",
+                "duration_turns": -1,
+                "condition": {
+                  "card_has_tag": "Resolute"
+                },
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "ScoreBonus",
+                    "value": 2,
+                    "turns": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "ResoluteState",
+              "value": 1,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "ASR_020::resolute_boost",
+                "name": "第一印象-强气提升",
+                "trigger": "ON_BEFORE_CARD_PLAY",
+                "duration_turns": -1,
+                "condition": {
+                  "card_has_tag": "Resolute"
+                },
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "ScoreBonus",
+                    "value": 3,
+                    "turns": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "exhaust_on_play": true
+      }
+    }
+  },
+  {
+    "id": "LSSR_046",
+    "name": "微熱ノスタルジー",
+    "effect_before": "体力消費7 好印象が10以上の場合、使用可 元気+2 やる気+2 山札か捨札にあるスキルカード1枚ごとに、好印象+2 スキルカード使用数追加+1 ※レッスン中1回 重複不可",
+    "effect_after": "体力消費5 好印象が10以上の場合、使用可 元気+6 やる気+4 山札か捨札にあるスキルカード1枚ごとに、好印象+2 スキルカード使用数追加+1 ※レッスン中1回 重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 0
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "MODIFY_STAMINA",
+              "value": -7
+            },
+            {
+              "action": "MODIFY_GENKI",
+              "value": 2
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "Motivation",
+              "value": 2,
+              "turns": 0
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "GoodImpression",
+              "value_expression": {
+                "*": [
+                  2,
+                  {
+                    "+": [
+                      {
+                        "var": "player.deck_count"
+                      },
+                      {
+                        "var": "player.discard_count"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "turns": 0
+            },
+            {
+              "action": "MODIFY_PLAY_LIMIT",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "MODIFY_STAMINA",
+              "value": -5
+            },
+            {
+              "action": "MODIFY_GENKI",
+              "value": 6
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "Motivation",
+              "value": 4,
+              "turns": 0
+            },
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "GoodImpression",
+              "value_expression": {
+                "*": [
+                  2,
+                  {
+                    "+": [
+                      {
+                        "var": "player.deck_count"
+                      },
+                      {
+                        "var": "player.discard_count"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "turns": 0
+            },
+            {
+              "action": "MODIFY_PLAY_LIMIT",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "usable_when": {
+          ">=": [
+            {
+              "var": "player.buffs.GoodImpression"
+            },
+            10
+          ]
+        },
+        "exhaust_on_play": true
+      }
+    }
+  },
+  {
+    "id": "SSSR_042",
+    "name": "もうためらわない",
+    "effect_before": "以降、直接効果で集中が7以上増加後、パラメーター+12（集中効果を1.5倍適用） ※レッスン中1回 重複不可",
+    "effect_after": "体力-3 ※レッスン中1回 重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 0
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "MODIFY_STAMINA",
+              "value": -6
+            }
+          ]
+        },
+        {
+          "do": [
+            {
+              "action": "MODIFY_BUFF_EFFECT_MULTIPLIER",
+              "buff_id": "Concentration",
+              "multiplier": 1.5
+            }
+          ]
+        },
+        {
+          "do": [
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "SSSR_042::passive",
+                "name": "集中增加奖励",
+                "trigger": "ON_AFTER_CARD_PLAY",
+                "condition": {
+                  ">=": [
+                    {
+                      "var": "context.buff_deltas.Concentration"
+                    },
+                    7
+                  ]
+                },
+                "actions": [
+                  {
+                    "action": "GAIN_SCORE",
+                    "value": 12
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "MODIFY_STAMINA",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "do": [
+            {
+              "action": "MODIFY_BUFF_EFFECT_MULTIPLIER",
+              "buff_id": "Concentration",
+              "multiplier": 1.5
+            }
+          ]
+        },
+        {
+          "do": [
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "SSSR_042::passive",
+                "name": "集中增加奖励",
+                "trigger": "ON_AFTER_CARD_PLAY",
+                "condition": {
+                  ">=": [
+                    {
+                      "var": "context.buff_deltas.Concentration"
+                    },
+                    7
+                  ]
+                },
+                "actions": [
+                  {
+                    "action": "GAIN_SCORE",
+                    "value": 12
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "exhaust_on_play": true
+      }
+    }
+  },
+  {
+    "id": "AR_011",
+    "name": "セッティング",
+    "effect_before": "全力値が5以上の場合、使用可 全力値+5 次のターン、手札のパラメータ値増加+8 ※レッスン中1回 重複不可",
+    "effect_after": "全力値が5以上の場合、使用可 全力値+5 次のターン、手札のパラメータ値増加+8 ※レッスン中1回 重複不可",
+    "engine_data": {
+      "cost": {
+        "genki": 3
+      },
+      "logic_chain": [
+        {
+          "do": [
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "AllPower",
+              "value": 5,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "AR_011::next_turn_param",
+                "name": "下回合参数增加",
+                "trigger": "ON_TURN_START",
+                "duration_turns": 2,
+                "max_triggers": 1,
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "HandParameterBonus",
+                    "value": 8,
+                    "turns": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "logic_chain_enhanced": [
+        {
+          "do": [
+            {
+              "action": "ADD_BUFF",
+              "buff_id": "AllPower",
+              "value": 5,
+              "turns": -1
+            },
+            {
+              "action": "REGISTER_HOOK",
+              "hook_def": {
+                "id": "AR_011::next_turn_param",
+                "name": "下回合参数增加",
+                "trigger": "ON_TURN_START",
+                "duration_turns": 2,
+                "max_triggers": 1,
+                "actions": [
+                  {
+                    "action": "ADD_BUFF",
+                    "buff_id": "HandParameterBonus",
+                    "value": 8,
+                    "turns": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "constraints": {
+        "usable_when": {
+          ">=": [
+            {
+              "var": "player.buffs.AllPower"
+            },
+            5
+          ]
+        },
+        "exhaust_on_play": true
+      }
+    }
+  }
+]

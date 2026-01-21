@@ -42,7 +42,17 @@ export const LYRICS_CDN = `${CDN_BASE}/歌词`;
 // 组合相关
 export const UNIT_CDN = `${CDN_BASE}/组合`;
 
+// P饮料
+export const P_DRINK_CDN = `${CDN_BASE}/p饮料`;
+
 // ============ 辅助函数 ============
+
+/**
+ * 获取 P饮料图片 URL
+ */
+export function getPDrinkUrl(drinkId: string): string {
+  return `${P_DRINK_CDN}/${drinkId}.webp`;
+}
 
 /**
  * 获取背景图 URL

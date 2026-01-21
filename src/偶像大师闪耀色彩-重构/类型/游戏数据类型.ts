@@ -116,6 +116,20 @@ export interface SkillCard {
   unique: boolean; // 是否"重复不可"
   enhanced: boolean; // 是否已强化
   source: 'ai' | 'official'; // 来源（AI生成/官方数据）
+
+  // T-Repair: 修复模式字段
+  engine_data?: any; // 引擎数据
+  engine_data_original?: any; // 修复前的引擎数据备份
+  repair_meta?: {
+    issue: string; // 问题描述
+    repairedAt: number; // 修复时间戳
+    version: number; // 版本号
+  };
+  display?: {
+    name: string;
+    description: string;
+    flavor: string;
+  }; // 显示信息（V2格式保留）
 }
 
 // ==================== 抽卡相关 ====================
@@ -313,6 +327,19 @@ export interface DisplayCard extends RealCard {
     name: string;
     description: string;
     effect: string;
+    // T-Repair: 修复模式字段
+    engine_data?: any;
+    engine_data_original?: any;
+    repair_meta?: {
+      issue: string;
+      repairedAt: number;
+      version: number;
+    };
+    display?: {
+      name: string;
+      description: string;
+      flavor: string;
+    };
   } | null; // null表示未生成
 }
 

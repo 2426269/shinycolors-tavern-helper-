@@ -9,6 +9,8 @@
 export enum ChainOfThoughtMode {
   /** 技能卡生成模式 */
   SKILL_CARD_GENERATION = 'skill_card_generation',
+  /** 技能卡修复模式 */
+  SKILL_CARD_REPAIR = 'skill_card_repair',
   /** Chain 回复模式（偶像回复玩家消息） */
   CHAIN_REPLY = 'chain_reply',
   /** Chain 主动模式（偶像主动发消息） */
@@ -40,48 +42,122 @@ export enum ChainOfThoughtMode {
  */
 export class ChainOfThoughtManager {
   /**
-   * 技能卡生成模式思维链
+   * 技能卡生成模式思维链（NG 引擎对齐 + 文本时代特性保留）
+   *
+   * 目标：
+   * - 机制/词条（description）：学园偶像大师风格（规则精确、可执行）
+   * - 文案/氛围（flavor）：闪耀色彩风格（舞台感、留白、台词味）
+   * - 人物归人物、数据归数据：人物只影响 name/flavor，不允许"性格推导数值/机制"
    */
   static getSkillCardGenerationChain(): string {
-    return `[Chain of thought]
-<think>
-## 1. 角色理解
-- 角色名称和主题卡是什么？
-- 这位偶像的核心性格特点？
-- 如果有卡面图，图中展现了什么场景/氛围？
+    return `[INTERNAL WORKFLOW - DO NOT OUTPUT]
+你必须在内部遵循以下步骤，但最终只输出一个 SkillCardV2 JSON（或 UNSUPPORTED_EFFECT）。
 
-## 2. 卡牌类型选择
-- 这张卡应该是主动卡还是精神卡？
-- 主动卡：包含"数值+X"，直接提分
-- 精神卡：仅资源/状态，不含数值
+## 0. 学习规则（示例可信度）
+- 上下文示例可能带 example_confidence:
+  - manual_gold: 权威示例（可含复杂动作/Hook）
+  - high: 高可信自动转码示例（严格白名单动作/变量）
+  - low_text_only: 仅供世界观/语气参考（禁止学习其结构/字段）
+- 只学习 manual_gold / high 的 engine_data 结构与写法；low_text_only 只学"氛围与命名语气"。
 
-## 3. 命名构思
-- 命名灵感来源：角色性格、卡牌主题、角色台词、故事场景
-- ❌ 禁止：从培育计划联想（理性→演算、非凡→挑战）
+## 0.5 👑 用户需求解析 (User Request Analysis)
+- **用户说了什么？** "{{userDescription}}"
+- **核心诉求**：是想要数值怪？还是想要特定机制？还是想要还原某个剧情梗？
+- **冲突决策**：如果用户要求与默认规则冲突，优先满足用户（仅在引擎无法实现时降级）
 
-## 4. 流派确认
-- 当前推荐流派是什么？
-- 该流派的核心资源是什么？
-- 效果是否围绕核心资源设计？
+## 1. 角色与主题理解（只影响文案，不影响机制数值）
+- 角色是谁？主题卡是什么？卡面/场景/氛围关键词（季节、灯光、情绪转折、动作意象）是什么？
+- 如果不确定具体梗/台词：用"氛围句"代替，不要捏造剧情细节或原句。
 
-## 5. 效果设计
-- 参考示例卡的数值范围
-- 主动卡必须包含"数值+X"
-- 强化后提升是否明显？
+## 2. 卡牌类型选择（机制定位，禁止用性格当理由）
+- type: A(主动) / M(精神)
+- 主动(A)一般包含直接得分或强爆发（通常会有 GAIN_SCORE）
+- 精神(M)偏资源/Buff/状态管理
+- 机制选择只看：平衡目标、计划(plan)、示例数值区间、引擎可表达能力。
+- ❌禁止："因为她很XX所以给YY机制/数值" 的因果写法。
 
-## 6. 格式检查
-- type字段是否为"主动"或"精神"？
-- effectEntries 数组非空？
-- 所有 effect 字段纯中文？
+## 2.5 ⚡ 机制升华 (The Spark)
+* **拒绝平庸**：单纯的"得分+抽卡"是 R 卡水平。如果是 SSR/UR，必须有一个"质变点"。
+* **设计感检查**：
+  - 这张卡是否有**负面代价**？（有代价才能给更高数值）
+  - 这张卡是否有**联动性**？（比如：消耗好印象来恢复元气，或者根据集中层数加分）
+  - 这张卡是否**打破了常规**？（例如：跳过回合换取下回合爆发）
+* **构思一个疯狂的 Combo**：例如 "消耗所有元气，每消耗 1 点元气获得 10 点得分"。
 
-## 7. （可选）engine_data 设计
-- 如果输出 engine_data，构建 logic_chain
-- 持续效果用 REGISTER_HOOK
-- 创造新机制用 ADD_TAG + visuals
-</think>
+## 3. 命名构思（只影响 flavor）
+- 命名灵感：主题意象、舞台动作、情绪转折、角色口癖的"风格化改写"。
+- ❌禁止：从培养计划/流派词汇硬联想命名（例如把 logic 强行写成'演算'，anomaly 强行写成'挑战'）。
 
-以下是生成的技能卡JSON：
-[/Chain of thought]
+## 4. 先写 engine_data（硬规则：engine_data-first）
+- 先定 cost.genki（费用只写数字）。
+- 再写 logic_chain：每个 step 只能有 when? + do[]；do[] 里只能是 AtomicAction，禁止嵌套 {when, do}。
+- 条件表达只用 JSON Logic，且仅用白名单变量路径/操作符。
+- "训练中限1次/レッスン中1回"语义：用 constraints.exhaust_on_play = true（打出后除外），不要用 uses_per_battle 来模拟。
+- "重复不可/不可重复"语义：写 restrictions.is_unique = true。
+
+## 5. 再写 effectEntries（双文体，职责分离）
+### 5.1 effectEntries（学园偶像大师风格：规则文本）
+- effectEntries 只能"逐条翻译"engine_data 的效果，不得新增未实现机制。
+- 用清晰规则句：触发条件、次数上限、持续回合、数值变化要明确。
+- 禁止在 effectEntries 写情绪化修辞、台词、比喻、梗。
+
+### 5.2 flavor（闪耀色彩风格：氛围/台词）
+- flavor 允许舞台感、留白、内心独白、短台词风格、同人梗（轻微）。
+- 但 flavor **禁止**出现任何可执行信息：
+  - 禁止数字/层数/回合/次数/概率
+  - 禁止 Buff/Tag 名称、Action 名称
+  - 禁止条件句（"若/当/仅在/此后/直到…"）
+- flavor 只写"人"和"场景"，不写"规则"。
+
+## 6. 视觉提示 visual_hint（仅在你发明新机制时）
+- 只有当你引入了新的 ai:/flow: tag 或自定义 buff（非内置机制）时，才需要提供 visual_hint 与 mechanicRefs。
+- 内置机制（标准 Buff、以及项目已实现的核心机制）不要求你额外造 visual_hint。
+
+## 7. 最终输出
+- 只输出一个 JSON：SkillCardV2（字段正确、无旧字段）
+- 若无法用白名单动作/变量表达：输出 { "error": "UNSUPPORTED_EFFECT" }
+
+[SELF CHECK YES/NO]
+- engine_data 是否先于 effectEntries/ flavor 完成？
+- logic_chain 是否仅 when/do（无嵌套）？
+- effectEntries 是否与 engine_data.logic_chain 一一对应？
+- 是否完全没有旧字段（usesPerBattle/visuals/player.turn）？
+- flavor 是否完全不含规则信息？
+- 【设计感】如果是 UR，效果是否看起来"甚至有点赖皮"？
+- 【复杂度】logic_chain 是否至少包含 2 个以上的步骤或条件？
+- 【联动性】词条之间是否有逻辑联系（而非独立词条堆砌）？
+[/INTERNAL WORKFLOW - DO NOT OUTPUT]
+`;
+  }
+
+  /**
+   * 技能卡修复模式思维链
+   */
+  static getSkillCardRepairChain(): string {
+    return `[INTERNAL WORKFLOW - DO NOT OUTPUT]
+你必须在内部遵循以下步骤，但最终只输出一个 SkillCardV2 JSON（或 UNSUPPORTED_EFFECT）。
+
+## 0. 修复模式核心原则
+- **目标**：修正 engine_data 与描述的不一致，或修复错误的 engine_data。
+- **禁止**：
+  - 禁止修改卡牌名称、稀有度、角色、类型。
+  - 禁止重新设计整张卡，只修正有问题的地方。
+  - 禁止输出解释性文字，只输出 JSON。
+
+## 1. 问题分析
+- 用户反馈的问题是什么？("{{repairIssue}}")
+- 原始 engine_data 哪里有问题？
+- 原始描述是否需要微调以匹配新的效果？
+
+## 2. 修正执行
+- 如果是数值问题 -> 修改数值。
+- 如果是机制实现错误 -> 重写 logic_chain。
+- 如果是描述不准确 -> 微调 effectEntries 或 flavor。
+
+## 3. 最终输出
+- 输出完整的 SkillCardV2 JSON。
+- 确保 engine_data 字段完整且合法。
+[/INTERNAL WORKFLOW - DO NOT OUTPUT]
 `;
   }
 
@@ -305,6 +381,8 @@ export class ChainOfThoughtManager {
     switch (mode) {
       case ChainOfThoughtMode.SKILL_CARD_GENERATION:
         return this.getSkillCardGenerationChain();
+      case ChainOfThoughtMode.SKILL_CARD_REPAIR:
+        return this.getSkillCardRepairChain();
       case ChainOfThoughtMode.CHAIN_REPLY:
         return this.getChainReplyChain();
       case ChainOfThoughtMode.CHAIN_PROACTIVE:
@@ -340,6 +418,8 @@ export class ChainOfThoughtManager {
     switch (mode) {
       case ChainOfThoughtMode.SKILL_CARD_GENERATION:
         return this.getSkillCardGenerationChain();
+      case ChainOfThoughtMode.SKILL_CARD_REPAIR:
+        return this.getSkillCardRepairChain();
       case ChainOfThoughtMode.CHAIN_REPLY:
         return this.getChainReplyChain();
       case ChainOfThoughtMode.CHAIN_PROACTIVE:
@@ -359,6 +439,7 @@ export class ChainOfThoughtManager {
   private static getModeName(mode: ChainOfThoughtMode): string {
     const modeNames: Record<ChainOfThoughtMode, string> = {
       [ChainOfThoughtMode.SKILL_CARD_GENERATION]: '技能卡生成思维链',
+      [ChainOfThoughtMode.SKILL_CARD_REPAIR]: '技能卡修复思维链',
       [ChainOfThoughtMode.CHAIN_REPLY]: 'Chain回复思维链',
       [ChainOfThoughtMode.CHAIN_PROACTIVE]: 'Chain主动思维链',
       [ChainOfThoughtMode.CHAIN_GROUP_REPLY]: 'Chain群组回复思维链',

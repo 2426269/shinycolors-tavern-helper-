@@ -50,6 +50,9 @@ export interface SkillCard {
   /** 卡牌类型 (A/M/T) */
   cardType: SkillCardType;
 
+  /** 卡牌类型 (JSON兼容：主动/精神) */
+  type?: '主动' | '精神';
+
   /** 消耗成本 */
   cost: string;
 
@@ -85,6 +88,37 @@ export interface SkillCard {
 
   /** 风味文本（卡牌背景故事） */
   flavor?: string;
+
+  /** 日语风味文本（T-12: 双语支持） */
+  flavorJP?: string;
+
+  // ==================== NG 引擎专用字段 ====================
+
+  /** NG 引擎执行数据（AI 生成时必填，旧卡可选） */
+  engine_data?: {
+    cost: { genki: number };
+    logic_chain: any[];
+    logic_chain_enhanced?: any[];
+    constraints?: { exhaust_on_play?: boolean };
+  };
+
+  /** 视觉提示（用于自定义标签/Buff 的 UI 显示） */
+  visual_hint?: {
+    key: string;
+    kind?: 'tag' | 'buff';
+    symbol: string;
+    color: string;
+    isDebuff: boolean;
+    shortName: string;
+    description: string;
+  };
+
+  /** 显示信息 (AI生成时包含) */
+  display?: {
+    name: string;
+    description: string;
+    flavor: string;
+  };
 }
 
 /**

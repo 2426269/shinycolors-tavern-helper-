@@ -6,6 +6,27 @@
 import type { BuffType, Effect, EffectCondition } from '../类型';
 import type { AtomicAction, AtomicStep, JsonLogicExpression, StandardBuffId } from './types';
 
+// ==================== 子任务5: 约束解析 ====================
+
+/**
+ * 从效果文本中解析 constraints
+ * 用于检测 "训练中限1次" / "レッスン中1回" 等
+ */
+export function parseConstraintsFromText(effectTexts: string[]): { exhaust_on_play?: boolean } {
+  const constraints: { exhaust_on_play?: boolean } = {};
+
+  const exhaustPattern = /(?:训练|演出|レッスン)中[限1１]?\s*[1１]?\s*[次回]/;
+
+  for (const text of effectTexts) {
+    if (exhaustPattern.test(text)) {
+      constraints.exhaust_on_play = true;
+      break;
+    }
+  }
+
+  return constraints;
+}
+
 // ==================== BuffType 映射 ====================
 
 const BUFF_TYPE_MAP: Record<BuffType, StandardBuffId | string> = {
@@ -65,10 +86,10 @@ function convertEffect(effect: Effect): AtomicAction | null {
       return { action: 'MODIFY_GENKI', value: -(value ?? 0) };
 
     case 'ADD_STAMINA':
-      return { action: 'MODIFY_GENKI', value: value ?? 0 }; // 体力恢复也用 MODIFY_GENKI
+      return { action: 'MODIFY_STAMINA', value: value ?? 0 };
 
     case 'CONSUME_STAMINA':
-      return { action: 'MODIFY_GENKI', value: -(value ?? 0) };
+      return { action: 'MODIFY_STAMINA', value: -(value ?? 0) };
 
     // ========== 属性操作（感性）==========
     case 'ADD_CONCENTRATION':
@@ -96,11 +117,11 @@ function convertEffect(effect: Effect): AtomicAction | null {
       };
 
     case 'CONSUME_MOTIVATION':
+      // 消耗干劲（减少层数）
       return {
-        action: 'ADD_BUFF',
+        action: 'REMOVE_BUFF',
         buff_id: 'Motivation',
-        value: -(value ?? 1),
-        turns: -1,
+        stacks: value ?? 1,
       };
 
     case 'ADD_GOOD_IMPRESSION':
@@ -119,24 +140,27 @@ function convertEffect(effect: Effect): AtomicAction | null {
       };
 
     // ========== 属性操作（非凡）==========
+    // P1-3: 改为 Buff 模式
     case 'ADD_ALL_POWER':
       return {
-        action: 'ADD_TAG',
-        tag: 'std:all_power_gained',
+        action: 'ADD_BUFF',
+        buff_id: 'AllPower',
+        value: value ?? 1,
         turns: -1,
       };
 
     case 'CONSUME_ALL_POWER':
       return {
-        action: 'ADD_TAG',
-        tag: 'std:all_power_consumed',
-        turns: 1,
+        action: 'REMOVE_BUFF',
+        buff_id: 'AllPower',
+        stacks: value ?? 1,
       };
 
     case 'ADD_HEAT':
       return {
-        action: 'ADD_TAG',
-        tag: 'std:heat_gained',
+        action: 'ADD_BUFF',
+        buff_id: 'Heat',
+        value: value ?? 1,
         turns: -1,
       };
 
@@ -154,20 +178,19 @@ function convertEffect(effect: Effect): AtomicAction | null {
       };
 
     case 'REMOVE_BUFF':
-      // 移除 Buff 暂时用 ADD_BUFF 负值模拟
+      // 移除 Buff（完全移除或指定层数）
       return {
-        action: 'ADD_BUFF',
+        action: 'REMOVE_BUFF',
         buff_id: BUFF_TYPE_MAP[target as BuffType] || target || '',
-        value: -(value ?? 999), // 大负数以完全移除
-        turns: -1,
+        stacks: value, // undefined 表示完全移除
       };
 
     case 'CONSUME_BUFF':
+      // 消耗 Buff（减少指定层数）
       return {
-        action: 'ADD_BUFF',
+        action: 'REMOVE_BUFF',
         buff_id: BUFF_TYPE_MAP[target as BuffType] || target || '',
-        value: -(value ?? 1),
-        turns: -1,
+        stacks: value ?? 1,
       };
 
     // ========== 得分操作 ==========
